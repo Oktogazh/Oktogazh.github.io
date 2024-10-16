@@ -1,16 +1,26 @@
-# Astro Starter Kit: Basics
+# 📅 Meeting Minutes structure
 
-```sh
-npm create astro@latest -- --template basics
+```md
+# Meeting Minutes - 2023-09-01
+
+## Attendees
+The usual suspects.
+
+## Agenda
+1. Discuss progress on research question.
+2. Review code changes.
+3. Plan next steps.
+
+## Discussion
+- Research question refined to focus on XYZ.
+- Code review completed; minor adjustments suggested.
+- Next steps: Implement feature ABC and prepare for next meeting.
+
+## Action Items
+- [Alan]: Implement feature ABC by next meeting.
+- [Bill]: Review and provide feedback on feature ABC.
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
 ## 🚀 Project Structure
 
