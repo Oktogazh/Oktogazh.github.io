@@ -1,0 +1,16 @@
+---
+// Props passed from the dynamic project page.
+const { minutes } = Astro.props;
+---
+
+<h2>Meeting Minutes</h2>
+
+<ul>
+  {
+    minutes.map((minute: { slug: any; date: unknown }) => (
+      <li>
+        <a href={`/projects/${minute.slug}`}>{minute.date}</a>
+      </li>
+    ))
+  }
+</ul>

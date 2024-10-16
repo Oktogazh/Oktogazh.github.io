@@ -3,7 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Card from '../components/Card.astro';
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects');
+const projects = (await getCollection('projects')).map(
+	(p: any, i: any, a: any[]) =>
+		a.find((p: { data: { id: number } }) => p.data.id === i),
+);
 console.log(projects);
 ---
 
@@ -37,7 +40,7 @@ console.log(projects);
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>Hi, I'm Alan</h1>
+		<h1>Demat deoc'h, I'm Alan</h1>
 		<p class="instructions">
 			I am currently doing a MSc in Language Technology at Bangor University,
 			North Wales. This web site is primarily intended to keep track of the
@@ -45,19 +48,23 @@ console.log(projects);
 		</p>
 		<ul role="list" class="link-card-grid">
 			{
-				projects.map((project) => (
-					<Card
-						href={`/projects/${project.slug}`}
-						title={project.title}
-						body={project.description}
-					/>
-				))
+				projects.map(
+					(project: {
+						id: string;
+						slug: string;
+						body: string;
+						collection: string;
+						data: { title: string; description: string };
+						render: () => any;
+					}) => (
+						<Card
+							href={`/projects/${project.slug}`}
+							title={project.data.title}
+							body={project.data.description}
+						/>
+					),
+				)
 			}
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
 		</ul>
 	</main>
 </BaseLayout>

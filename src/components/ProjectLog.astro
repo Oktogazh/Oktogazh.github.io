@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+
+const { projectId } = Astro.props;
+const projectLog = await getCollection('projects', projectId, 'project-log');
+---
+
+<article>
+  <h2>Project Log</h2>
+  {
+    projectLog.entries.map((entry) => (
+      <div>
+        <h3>{entry.date}</h3>
+        <p>{entry.content}</p>
+      </div>
+    ))
+  }
+</article>

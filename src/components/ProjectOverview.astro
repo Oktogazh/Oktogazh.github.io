@@ -1,0 +1,15 @@
+---
+// Props passed from the dynamic project page.
+const { project } = Astro.props;
+---
+
+<h1>{project.title}</h1>
+
+<h2>Research Question</h2>
+<p>{project.researchQuestion}</p>
+
+<h2>Objectives</h2>
+<p>{project.objectives}</p>
+
+<h2>Dissertation</h2>
+<p><a href={project.dissertation}>View Dissertation</a></p>
