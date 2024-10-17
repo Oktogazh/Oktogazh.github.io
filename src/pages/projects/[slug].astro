@@ -1,19 +1,21 @@
 ---
 import { getCollection } from 'astro:content';
+
 export async function getStaticPaths() {
-  const projects = (await getCollection('projects')).map(
-    (p: any, i: any, a: any[]) => ({
-      params: { slug: p.slug },
-      props: { ...p.data, body: p.body },
-    }),
-  );
+  const projects = (await getCollection('projects')).map((p) => ({
+    params: { slug: p.slug },
+    props: { ...p.data, render: p.render },
+  }));
+
   return projects;
 }
 import BaseLayout from '@/layouts/BaseLayout.astro';
 const props = Astro.props;
+const { Content } = await props.render();
 ---
 
-<BaseLayout title="Alan Kersaudy">
+<BaseLayout title={props.title}>
   <h1>{props.title}</h1>
   <p>{props.description}</p>
+  <Content />
 </BaseLayout>
