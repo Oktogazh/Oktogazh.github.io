@@ -10,12 +10,27 @@ export async function getStaticPaths() {
   return projects;
 }
 import BaseLayout from '@/layouts/BaseLayout.astro';
-const props = Astro.props;
+const { props, params } = Astro;
 const { Content } = await props.render();
+const meetings = await Promise.all(
+  (
+    await getCollection(
+      'meetings',
+      (entry) => entry.data.project.slug === params.slug,
+    )
+  ).map(async (m) => {
+    const { Content } = await m.render();
+    return { ...m, Content };
+  }),
+);
 ---
 
 <BaseLayout title={props.title}>
   <h1>{props.title}</h1>
   <p>{props.description}</p>
   <Content />
+  {meetings.map((meeting) => (
+    <h1>{meeting.data.title}</h1>
+    <meeting.Content />
+  ))}
 </BaseLayout>
