@@ -33,7 +33,11 @@ const orderedPosts = posts.sort((a, b) => {
   <p>{props.description}</p>
   <Content />
   {orderedPosts.map((post) => (
+    <hr />
     <h1>{post.data.title}</h1>
+    <Fragment>
+      <p>{new Date(post.data.date).toLocaleDateString()}</p>
+    </Fragment>
     <post.Content />
   ))}
 </BaseLayout>
