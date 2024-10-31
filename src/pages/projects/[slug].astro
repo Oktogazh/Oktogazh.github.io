@@ -12,10 +12,10 @@ export async function getStaticPaths() {
 import BaseLayout from '@/layouts/BaseLayout.astro';
 const { props, params } = Astro;
 const { Content } = await props.render();
-const meetings = await Promise.all(
+const posts = await Promise.all(
   (
     await getCollection(
-      'meetings',
+      'posts',
       (entry) => entry.data.project.slug === params.slug,
     )
   ).map(async (m) => {
@@ -23,14 +23,15 @@ const meetings = await Promise.all(
     return { ...m, Content };
   }),
 );
+console.log(posts);
 ---
 
 <BaseLayout title={props.title}>
   <h1>{props.title}</h1>
   <p>{props.description}</p>
   <Content />
-  {meetings.map((meeting) => (
-    <h1>{meeting.data.title}</h1>
-    <meeting.Content />
+  {posts.map((post) => (
+    <h1>{post.data.title}</h1>
+    <post.Content />
   ))}
 </BaseLayout>

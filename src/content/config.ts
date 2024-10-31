@@ -9,7 +9,7 @@ export const collections = {
       id: z.number(),
     }).strict(),
   }),
-  meetings: defineCollection({
+  posts: defineCollection({
     type: 'content',
     schema: z.object({
       title: z.string(),
