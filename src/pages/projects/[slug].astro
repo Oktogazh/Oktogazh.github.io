@@ -23,14 +23,16 @@ const posts = await Promise.all(
     return { ...m, Content };
   }),
 );
-console.log(posts);
+const orderedPosts = posts.sort((a, b) => {
+  return a.data.date - b.data.date;
+});
 ---
 
 <BaseLayout title={props.title}>
   <h1>{props.title}</h1>
   <p>{props.description}</p>
   <Content />
-  {posts.map((post) => (
+  {orderedPosts.map((post) => (
     <h1>{post.data.title}</h1>
     <post.Content />
   ))}

@@ -14,8 +14,11 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.string().transform((str) => {
-        str.split('/').reverse().join('-')
-        return new Date(str)
+        const s = str.split('/').reverse().join('-')
+        const date = new Date(s).getTime()
+        if (isNaN(date)) {
+          throw new Error(`${str} is an invalid date.`)
+        } else return date
       }),
       project: reference('projects'),
     }).strict(),

@@ -3,9 +3,8 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Card from '@/components/Card.astro';
 import { getCollection } from 'astro:content';
 
-const projects = (await getCollection('projects')).map(
-	(p: any, i: any, a: any[]) =>
-		a.find((p: { data: { id: number } }) => p.data.id === i),
+const projects = (await getCollection('projects')).map((p, i, a) =>
+	a.find((p) => p.data.id === i),
 );
 ---
 
@@ -48,9 +47,9 @@ const projects = (await getCollection('projects')).map(
 		{
 			projects.map((project) => (
 				<Card
-					href={`/projects/${project.slug}`}
-					title={project.data.title}
-					body={project.data.description}
+					href={`/projects/${project!.slug}`}
+					title={project!.data.title}
+					body={project!.data.description}
 				/>
 			))
 		}
