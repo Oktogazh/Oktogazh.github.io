@@ -35,9 +35,16 @@ const orderedPosts = posts.sort((a, b) => {
   {orderedPosts.map((post) => (
     <hr />
     <h1>{post.data.title}</h1>
-    <Fragment>
-      <p>{new Date(post.data.date).toLocaleDateString()}</p>
-    </Fragment>
+      <p class="date-placeholder">{post.data.date}</p>
     <post.Content />
   ))}
 </BaseLayout>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const datePlaceholders = document.querySelectorAll('.date-placeholder');
+      [...datePlaceholders]
+        .forEach((placeholder: Element) => {
+          placeholder.textContent = new Intl.DateTimeFormat(navigator.languages[0], { dateStyle: 'full' }).format(new Date(Number(placeholder.textContent)));
+        });
+    });
+  </script>
