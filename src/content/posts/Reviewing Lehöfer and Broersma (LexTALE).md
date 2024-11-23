@@ -1,7 +1,7 @@
 ---
 date: "20/11/2024"
 title: Examining LexTALE
-project: Litterature Reviews
+project: reviews
 ---
 
 
