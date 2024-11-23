@@ -1,9 +1,9 @@
 ---
-title: "Add Welsh to Language Tools"
-description: "Part of: ICE-4005 - MSc Generalist Mini-project 2024-25"
-id: 0
+title: "LanguageTool"
+description: "Rhan o: ICE-4001 - Prosiect MSc Unigol 2024-25"
+id: 1
 ---
 
-# Project Overview
+# Drosolwg y Prosiect
 
-Here you can write a more detailed overview of the project.
+Dechreuais y prosiect gan y syniad gwneud y gwaith yma yn rhan o'r [mini-prosiect](/projects/corpora) gan Bill Teahan. Dyna pam ydyw cofnodion y cyfarfodau cyntaf yn Saesneg.

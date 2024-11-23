@@ -1,15 +1,14 @@
 ---
-date: 4/11/2024
-title: Week 4
-project: languagetool
+date: 2024-11-18
+title: Corpora Meeting 1
+project: corpora
 ---
 ## Meeting
 
 **Attendance**: Alan, Bill
 
 **Agenda**:
-  - Discuss hypotetical funding opportunities for the project.
-  - Follow up on the project
+  - Present 
 
 **Main discussion points**:
 

@@ -13,13 +13,7 @@ export const collections = {
     type: 'content',
     schema: z.object({
       title: z.string(),
-      date: z.string().transform((str) => {
-        const s = str.split('/').reverse().join('-')
-        const date = new Date(s).getTime()
-        if (isNaN(date)) {
-          throw new Error(`${str} is an invalid date.`)
-        } else return date
-      }),
+      date: z.date(),
       project: reference('projects'),
     }).strict(),
   })

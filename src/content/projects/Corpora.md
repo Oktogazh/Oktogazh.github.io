@@ -1,8 +1,7 @@
 ---
-title: "Corpora"
-description: "Rhan o: ICE-4001 - Prosiect MSc Unigol 2024-25"
-id: 1
+title: Corpora
+description: "Part of: ICE-4005 - MSc Generalist Mini-project 2024-25"
+id: 0
 ---
 
-# Drosolwg y Prosiect
-
+So far, a 'simple' vocabulary counter for people wanting find out how many words they know in a given language.

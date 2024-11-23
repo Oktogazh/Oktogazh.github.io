@@ -20,11 +20,11 @@ const posts = await Promise.all(
     )
   ).map(async (m) => {
     const { Content } = await m.render();
-    return { ...m, Content };
+    return { ...m, Content, ["data.date"]: new Date(m.data.date).getTime() as number };
   }),
 );
 const orderedPosts = posts.sort((a, b) => {
-  return a.data.date - b.data.date;
+  return a["data.date"] - b["data.date"];
 });
 ---
 

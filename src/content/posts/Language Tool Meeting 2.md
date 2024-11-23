@@ -1,5 +1,5 @@
 ---
-date: "20/10/2024"
+date: 2024-10-21
 title: Week 2
 project: languagetool
 ---
