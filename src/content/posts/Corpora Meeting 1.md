@@ -8,28 +8,21 @@ project: corpora
 **Attendance**: Alan, Bill
 
 **Agenda**:
-  - Present 
-
-**Main discussion points**:
+  - Present to bill create a lexical test aiming at counting the number of words in the mind of the testee using the Zipf law and a variation of the binary search algorithm.
 
 **Actions**:
+- **Alan**: Write a dummy python version of the test.
 
-## Noteworthy commits
+**Discussions**
+- Alan presented the problematic and interest of vocabulary tests, pointing out that the ways current tests are subobtimal and how the use of pseudowords and a variation of the binary search algorithm could improve the way we count the number of words known by individuals. A granular evaluation of vocabulary knowledge would have applications in the following area: L2 research, psycholinguistics, cognitive psychology, AI (testing LLMs verbal abilities), placement testing (students, immigration) etc...
+- Bill agreed with Alan's proposision.
+- Bill mentioned that the distribution of the "point of failure" in such a lexical test should be a [negative biniomial distribution](https://en.wikipedia.org/wiki/Negative_binomial_distribution) instead of a normal distribution as Alan thought.
 
-As I started the Welsh module for LT on a fork that I could not run `mvn clean install` on, I had to create a patch file of the commits that I made in this old fork (with `git format-patch`) and apply the patch on the fork from the updated repo (see previous post) with the `git am` command. The first time I used this git command. This is why we can see three commits made at the same time [here](https://github.com/Oktogazh/languagetool/commits/master/?since=2024-11-04&until=2024-11-04)
 
-## New concepts
-- Java:
-- Hunspell dictionaries:
-	- the .aff file format
-- HAL: Hyperspace Analog Language, how words proximity can be considered as an analog to their semantic proximity (articles: [Nasharuddin](https://researchinbox.wordpress.com/2010/03/22/introduction-to-hyperspace-analogue-to-language-hal/) and her [example here](https://researchinbox.wordpress.com/2012/10/09/hal-example/))
-	- weight (in the case, the proximity between two words), and how one may use similar weights patterns in parallel text to find words translations.
-	- window size, used to define the wieghts
-	- Tuples as vectors: I understood that vectors can have many more dimentions that defined in the Euclidian space, and that the maths still holds, especially for the following:
-	- cosines similarity, Euclidian norm, vector normalisation 
-	- See my conversation with [mistral](https://chat.mistral.ai/chat/43cc0557-f51f-4849-a542-ee5acebcfd71) as I digested the new concept
-- [Vector space model](https://en.wikipedia.org/wiki/Vector_space_model): same concepts as HAL, but used more to categorize document instead of analizing the relationship between words
+## Articles
 
-## Read articles
-Found in the wikipedia article "n-gram"
-- Claude E. Shannon: The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions
+Maera, P. and Jones, G. (1988) ‘Vocabulary size as a placement indicator’.
+
+_Claude E. Shannon: The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions_ (1953).
+
+‘EXPRESS: UniPseudo : A Universal Pseudoword Generator | Request PDF’ (2024) _ResearchGate_ [Preprint]. Available at: https://doi.org/10.1177/17470218231164373.
