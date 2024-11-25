@@ -20,11 +20,11 @@ const posts = await Promise.all(
     )
   ).map(async (m) => {
     const { Content } = await m.render();
-    return { ...m, Content, ["data.date"]: new Date(m.data.date).getTime() as number };
+    return { ...m, Content, data: { ...m.data, date: new Date(m.data.date).getTime() }};
   }),
 );
 const orderedPosts = posts.sort((a, b) => {
-  return a["data.date"] - b["data.date"];
+  return a.data.date - b.data.date;
 });
 ---
 
@@ -35,7 +35,7 @@ const orderedPosts = posts.sort((a, b) => {
   {orderedPosts.map((post) => (
     <hr />
     <h1>{post.data.title}</h1>
-      <p class="date-placeholder">{post.data.date}</p>
+    <p class="date-placeholder">{post.data.date}</p>
     <post.Content />
   ))}
 </BaseLayout>
@@ -44,6 +44,7 @@ const orderedPosts = posts.sort((a, b) => {
       const datePlaceholders = document.querySelectorAll('.date-placeholder');
       [...datePlaceholders]
         .forEach((placeholder: Element) => {
+          console.log(placeholder.textContent);
           placeholder.textContent = new Intl.DateTimeFormat(navigator.languages[0], { dateStyle: 'full' }).format(new Date(Number(placeholder.textContent)));
         });
     });
