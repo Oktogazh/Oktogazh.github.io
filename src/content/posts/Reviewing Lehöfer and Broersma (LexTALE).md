@@ -36,7 +36,8 @@ Maera, P. and Jones, G. (1988) ‘Vocabulary size as a placement indicator’.
 
 Smith, N. _et al._ (2010) _The Signs of a Genius: Language Against the Odds_. Cambridge: Cambridge University Press. Available at: https://doi.org/10.1017/CBO9780511780530.
 
-**On how to create pseudo words using n-gram algorithms** 
-_Claude E. Shannon: The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions_ (1953).
+**On how to create pseudo words using n-gram algorithms**
 
-‘EXPRESS: UniPseudo : A Universal Pseudoword Generator | Request PDF’ (2024) _ResearchGate_ [Preprint]. Available at: https://doi.org/10.1177/17470218231164373.
+New, B., Bourgin J., Barra J., and Pallier, C. (2004) *UniPseudo : A Universal Pseudoword Generator.* _ResearchGate_ [Preprint]. Available at: https://doi.org/10.1177/17470218231164373.
+
+Shannon, Claude E. *The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions_ (1953).

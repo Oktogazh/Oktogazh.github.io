@@ -1,6 +1,6 @@
 ---
-date: 2024-11-25
-title: Corpora Meeting 2
+date: 2024-12-02
+title: Corpora Meeting 3
 project: corpora
 ---
 ## Meeting
@@ -8,11 +8,11 @@ project: corpora
 **Attendance**: Alan, Bill
 
 **Agenda**:
-  - Discussing after Alan presents the algorithm implementation for his [vocabulary test implementation](https://github.com/Oktogazh/leximenter/releases/tag/v0.1.0).
+  - Discussing the difficulty of finding a "good list" for a several languages.
   
 **Actions**:
 - **Alan**:
-	- Add the list of words ordered by frequency, a list of fake words. Add Welsh and English versions.
+	- Ways to create pseudo-words
 	- investigate the points raised by Bill
 
 **Discussions**
