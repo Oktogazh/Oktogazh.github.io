@@ -1,7 +1,7 @@
 ---
 date: 2024-11-21
 title: Examining LexTALE
-project: reviews
+category: reviews
 ---
 
 

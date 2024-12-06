@@ -3,17 +3,18 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 
 import { getCollection } from 'astro:content';
 
-const projects = await getCollection('projects');
-const orderedProjects = projects.sort((a, b) => a.data.id - b.data.id);
+const categories = await getCollection('categories');
+const orderedCategories = categories.sort((a, b) => a.data.id - b.data.id);
 
 const posts = await getCollection('posts');
-const postsProjectsSlugsAndDates = posts.map((p) => ({
+const postsWithCategorySlugsAndDates = posts.map((p) => ({
 	slug: p.slug,
-	project: p.data.project,
+	category: p.data.category,
 	date: new Date(p.data.date).getTime(),
 }));
-const orderedPosts = postsProjectsSlugsAndDates.sort((a, b) => b.date - a.date);
-console.log(orderedProjects);
+const orderedPosts = postsWithCategorySlugsAndDates.sort(
+	(a, b) => b.date - a.date,
+);
 ---
 
 <BaseLayout title="Alan Kersaudy">
@@ -53,14 +54,13 @@ console.log(orderedProjects);
 	</p>
 	<ul role="list" class="link-card-grid">
 		{
-			orderedProjects.map((project) => (
+			orderedCategories.map((category) => (
 				<div>
-					{project.data.title}
+					{category.data.title}
 					<br />
 					<ul>
 						{orderedPosts.map((post) => {
-							console.log(post.project.slug === project.slug);
-							if (post.project.slug === project.slug) {
+							if (post.category.id === category.slug) {
 								return (
 									<li>
 										<a href={`/posts/${post.slug}`}>{post.slug}</a>

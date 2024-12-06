@@ -1,7 +1,7 @@
 ---
 date: 2024-10-28
 title: Week 3
-project: languagetool
+category: languagetool
 ---
 ## Meeting
 

@@ -11,14 +11,10 @@
             "id": "d55b41a5b957aea1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "projects/Reviews.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Reviews"
+              "title": "New tab"
             }
           }
         ]
@@ -164,6 +160,11 @@
   },
   "active": "d55b41a5b957aea1",
   "lastOpenFiles": [
+    "projects/Reviews.md",
+    "categories/Reviews.md",
+    "categories/LanguageTool.md",
+    "categories/Corpora.md",
+    "categories",
     "projects/LanguageTool.md",
     "projects/Corpora.md",
     "posts/Corpora Meeting 3.md",
@@ -175,7 +176,6 @@
     "Untitled",
     "posts/Language Tool Meeting 2.md",
     "posts/Invalid date.md",
-    "projects/Reviews.md",
     "projects/Corpor.md",
     "projects/LitteratureReviews.md",
     "templates/template.md",

@@ -1,7 +1,7 @@
 ---
 date: 2024-11-25
 title: Corpora Meeting 2
-project: corpora
+category: corpora
 ---
 ## Meeting
 
