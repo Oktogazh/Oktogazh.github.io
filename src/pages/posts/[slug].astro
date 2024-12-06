@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts')).map((p) => ({
+    params: { slug: p.slug },
+    props: {
+      ...p,
+      data: { ...p.data, date: new Date(p.data.date).getTime() },
+      render: p.render,
+    },
+  }));
+
+  return posts;
+}
+const { props: post, params } = Astro;
+const { Content } = await post.render();
+---
+
+<BaseLayout title={post.data.title}>
+  <h1>{post.data.title}</h1>
+  <p class="date-placeholder">{post.data.date}</p>
+  <Content />
+</BaseLayout>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const datePlaceholders = document.querySelectorAll('.date-placeholder');
+    [...datePlaceholders].forEach((placeholder: Element) => {
+      console.log(placeholder.textContent);
+      placeholder.textContent = new Intl.DateTimeFormat(
+        navigator.languages[0],
+        { dateStyle: 'full' },
+      ).format(new Date(Number(placeholder.textContent)));
+    });
+  });
+</script>
