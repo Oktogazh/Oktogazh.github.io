@@ -44,20 +44,18 @@ const orderedPosts = postsWithCategorySlugsAndDates.sort(
 			orderedCategories.map((category) => (
 				<div class="basis-1/2 min-w-96 max-w-[50%] ">
 					<h2>{category.data.title}</h2>
-					<div class="p-4">
-						<p>{category.data.description}</p>
-						<ul>
-							{orderedPosts.map((post) => {
-								if (post.category.id === category.slug) {
-									return (
-										<li>
-											<a href={`/posts/${post.slug}`}>{post.title}</a>
-										</li>
-									);
-								}
-							})}
-						</ul>
-					</div>
+					<p>{category.data.description}</p>
+					<ul class="ps-4">
+						{orderedPosts.map((post) => {
+							if (post.category.id === category.slug) {
+								return (
+									<li>
+										<a href={`/posts/${post.slug}`}>{post.title}</a>
+									</li>
+								);
+							}
+						})}
+					</ul>
 				</div>
 			))
 		}
