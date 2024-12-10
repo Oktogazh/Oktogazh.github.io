@@ -3,8 +3,6 @@ date: 2024-11-21
 title: Examining LexTALE
 category: reviews
 ---
-
-
 A Review of the article **Introducing LexTALE: A quick and valid LexicalTest for Advanced Learners of English** by *Kristin Lemhöfer* and *Mirjam Broersma* from Radboud University, Netherlands
 
 This paper (Lemhöfer & Broersma, 2012) aims at validating the LexTALE vocabulary test ability to reliably locate test takers in CEFR-like fluency categories for advanced learners of English. The study is ogarnised around a comparision of the test results with those of control tests usually used in psycholinguistic studies. The ultimate goal being to have a reliable, free, short, easy to access test that could be used in future studies. As pointed out below, this work stems out of previous works by Paul Meara in the field of second language acquisition and is not the first study evaluating LexTALE.
