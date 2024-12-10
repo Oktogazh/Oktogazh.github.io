@@ -3,7 +3,7 @@ const props = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en, cy, br">
+<html lang="en, cy, br" data-theme="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,16 +11,79 @@ const props = Astro.props;
 	</head>
 	<body>
 		<main>
-			<nav>
-				<a href="/">Gartref</a>
+			<nav class="p-4">
+				<a href="/" class="flex align-center text-stone-600">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+					>
+						<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
+					</svg>
+				</a>
 			</nav>
-			<slot />
+			<div class="container mx-auto p-4">
+				<slot />
+			</div>
 		</main>
 	</body>
 </html>
 <style is:global>
+	:root[data-theme='light'] {
+		--text: #202122;
+		--background: #cccfd7;
+		--primary: #08447d;
+		--secondary: #4d78a3;
+		--accent: #e4e4e4;
+	}
+	:root[data-theme='dark'] {
+		--text: #dddedf;
+		--background: #282b33;
+		--primary: #82bff7;
+		--secondary: #5c87b2;
+		--accent: #171717;
+	}
+	body {
+		background-color: var(--background);
+		color: var(--text);
+	}
+	h1 {
+		font-size: 2rem;
+		font-weight: 600;
+		line-height: 1;
+		margin-bottom: 1em;
+	}
+	h2 {
+		font-size: 1.7rem;
+		font-weight: 500;
+		line-height: 1;
+		margin: 1em 0;
+	}
+	p {
+		font-size: 1rem;
+		line-height: 1.5;
+		margin-bottom: 1em;
+	}
+	a {
+		color: var(--primary);
+	}
+	a:hover {
+		color: var(--secondary);
+	}
 	img {
-		max-width: 400px;
+		max-width: 100%;
 		height: auto;
+	}
+
+	ul {
+		list-style-type: none;
+		padding-left: 1.5em;
+	}
+	li {
+		margin-bottom: 0.5em;
+	}
+	ul ul {
+		padding-left: 1.5em;
 	}
 </style>

@@ -20,6 +20,7 @@ The mean reesults of each of the two groups are given for each test independentl
 In conclusion, this study displays consistent evidences confirming the hypothesis that the LexTALE test can be used to differentiate intermediate, from upper-intermediate, from advanced non-native speakers of English. This result can be used in selecting participants for psycholinguistic studies in L2 research, regardless of the L1 with a high degree of confidence. Without pretending to be the only candidate metrics for this end, it has several advantages that could make it a reliable standard if researchers in the field were to systematically integrate it to their studies. But some may find it too specialized to become a standard, arguing that a potential standard ought to have finer disambiguation granularity (not just CEFR levels) and should not rely on a fixed list of words in order to allow successive evaluations.
 
 **References**
+
 Anderson, R.C. and Freebody, P. (1979) ‘Vocabulary Knowledge, Technical Repert No. 136.’, Center for the study of reading [Preprint].
 
 Council of Europe (2020) _Common European Framework of Reference for Languages: Companion Volume_. Namur: Council of Europe.
@@ -38,4 +39,4 @@ Smith, N. _et al._ (2010) _The Signs of a Genius: Language Against the Odds_. Ca
 
 New, B., Bourgin J., Barra J., and Pallier, C. (2004) *UniPseudo : A Universal Pseudoword Generator.* _ResearchGate_ [Preprint]. Available at: https://doi.org/10.1177/17470218231164373.
 
-Shannon, Claude E. *The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions_ (1953).
+Shannon, Claude E. *The Redundancy of English. Aus: Cybernetics. The Macy Conferences 1946–1953. The Complete Transactions* (1953).

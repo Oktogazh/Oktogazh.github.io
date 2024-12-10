@@ -25,4 +25,7 @@ Astro, yes you know it, as in, the server rendered static website framework.
 
 And because both can parse MD so well, I decided to try publishing this obsidian vault with it.
 
-# Introducing, Astro
+# Introducing: Astro
+Astro is a framework that mixes the strength of modern frameworks with the efficiency of the good ol' server rendering. How? By building a copy of all the pages on the server before starting to serve them. Even the JS/TS of the front-end is rendered on a front-end engine in the server, unless otherwise specified, and the only thing the server has to do when recieving a request is to serve pure HTML and CSS. No need for API calls to populate the pages after they are opened by the client, even though these pages might be built in your favorite front end framework of the week.
+All of the content of the website can be contained in the `./src/content/` directory in the markdown format. And you gessed it, this `/content` directory is nothing less than... my obsidian vault! 
+All the instructions to build an Astro website can be found in their documentation. But what I liked is the ability to add GitHub Action to my website
