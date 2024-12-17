@@ -16,5 +16,8 @@ export const collections = {
       date: z.date(),
       category: reference('categories'),
     }).strict(),
-  })
+  }),
+  assets: defineCollection({
+    type: undefined,
+  }),
 };

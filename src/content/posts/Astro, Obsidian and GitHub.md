@@ -1,11 +1,11 @@
 ---
 date: 2024-12-10
-title: Publishing a blog using Astro, Obsidian and GitHub
+title: 1. Publishing a blog using Astro, Obsidian and GitHub
 category: about
 ---
 As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, decided to enter everything in this public blog. Here is how this website is built and how I work on it.
 
-# Obsidian
+## Obsidian
 All the content is being edited in Obsidian. So far, I have three folders in my vault: assets, categories and posts. Here is an overview of what my editing interface looks like:
 
 ![gg](../assets/obsidian.png)
@@ -25,15 +25,15 @@ Astro, yes you know it, as in, the server rendered static website framework.
 
 And because both can parse MD so well, I decided to try publishing this obsidian vault with it.
 
-# Introducing: Astro
+## Introducing: Astro
 Astro is a framework that mixes the strength of modern frameworks with the efficiency of the good ol' server rendering. How? By building a copy of all the pages on the server before starting to serve them. Even the JS/TS of the front-end is rendered on a front-end engine in the server, unless otherwise specified, and the only thing the server has to do when recieving a request is to serve pure HTML and CSS. No need for API calls to populate the pages after they are opened by the client, even though these pages might be built in your favorite front end framework of the week.
 All of the content of the website can be contained in the `./src/content/` directory in the markdown format. And you gessed it, this `/content` directory is nothing less than... my obsidian vault! 
 
-# With GitHub
+## With GitHub
 All the instructions to build an Astro website can be found in their documentation. But what you can also find in their docs is [this tutorial](https://docs.astro.build/en/guides/deploy/github/) to deploy your astro project as your GitHub website.
 Follow these instructions and simply push your repo to a GitHub remote named [{your GH pseudo}.github.com](https://pages.github.com/) and let the magic GitHub Actions CI pipeline do the rest! 
 
-# Pro tip: Type Check Your Frontmatters
+## Pro tip: Type Check Your Frontmatters
 As you are likely to use the data in the frontmatter of your md files. You don't want the one misconfigured frontmatter to ruin your website. That's why you should use TypeScript in combination with [Zod](https://zod.dev/). It is quite simple to do, simply create a `config.ts` file in the `/content` directory adapt this schema for your needs:
 
 ```TS
