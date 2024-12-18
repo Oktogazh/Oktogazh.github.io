@@ -4,15 +4,15 @@ title: Elo Rating and Rasch Model
 category: testing
 ---
 ## Context
-When telling my spycholinguistic lecturer about my idea of using the Elo rating system to assess the difficulty of word and non-words items, alongside the testees themselves and avoid having to make preliminary studies, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed, really similar to my idea.
+When telling my psycholinguistics lecturer about my idea of using the Elo rating system to assess the difficulty of word and non-words items, alongside the testees themselves and avoid having to make preliminary studies, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed, really similar to my idea.
 
 ## A Look at the Adjustment Mechanism in the Elo System
-The Elo rating system can be best described as a self-fulfilling profecy. Based on the rating of to participents, the system gives a probability for the outcome of a match. If the profecy is fulfilled, it means that the ratings are correct and nothing changes, otherwise, the system gradually adjusts these ratings for the next time, and keeps doing so until reaching a point of equilibrium, that is, untill the profecy is fulfilled.
+The Elo rating system can be best described as a self-fulfilling prophecy. Based on the rating of to participants, the system gives a probability for the outcome of a match. If the prophecy is fulfilled, it means that the ratings are correct and nothing changes, otherwise, the system gradually adjusts these ratings for the next time, and keeps doing so until reaching a point of equilibrium, that is, until the prophecy is fulfilled.
 
-This correction is made by constantly adding to the current rating the difference of actual outcome and the expected result. If the expected output was correct, nothing changes. If 1 is expected (a win in chess) and 1 occures, then the rating does not change. If the rating difference underestimated the outcome, the rating of the winner grows, the one of the looser decrease. Here is another example when the ratings are equal. 
-Often time, we want challenges where there is a 50% chance of success, so that the ratings keep evolving towards their "intrinsic value". In chess, we select players with aproximatively the same rating, so that their chances of winning are equal. If one player win, when the expected score was 50%-50%, then one player will increase their rating by $1-0.5=+0.5$ and the other by $0-0.5=-0.5$.
+This correction is made by constantly adding to the current rating the difference of actual outcome and the expected result. If the expected output was correct, nothing changes. If 1 is expected (a win in chess) and 1 occurs, then the rating does not change. If the rating difference underestimated the outcome, the rating of the winner grows, the one of the looser decrease. Here is another example when the ratings are equal. 
+Often time, we want challenges where there is a 50% chance of success, so that the ratings keep evolving towards their "intrinsic value". In chess, we select players with approximatively the same rating, so that their chances of winning are equal. If one player win, when the expected score was 50%-50%, then one player will increase their rating by $1-0.5=+0.5$ and the other by $0-0.5=-0.5$.
 
-Still in chess, this difference is multiplied by a factor called a $K$ value, to speed up the adjustment process and make it so that less matches have to be played to find out the stable rating of the player. In the case of the **Rasch model**, the idea is exactly the same, exept that half of the participents are a task to accomplish and those tasks are given the same rating as the test takers in a way that, if test takers find the solution for tasks that most player fail at, their rating will increase faster than if they find the right answer to simpler questions (that is, a task that most test takers succeed at). The only difference between the two systems so far is absence of a $K$ value in the Rasch model, but as we saw, it is not a necessity neither.
+Still in chess, this difference is multiplied by a factor called a $K$ value, to speed up the adjustment process and make it so that fewer matches have to be played to find out the stable rating of the player. In the case of the **Rasch model**, the idea is exactly the same, except that half of the participants are a task to accomplish, and those tasks are given the same rating as the test takers in a way that, if test takers find the solution for tasks that most player fail at, their rating will increase faster than if they find the right answer to simpler questions (that is, a task that most test takers succeed at). The only difference between the two systems so far is absence of a $K$ value in the Rasch model, but as we saw, it is not a necessity neither.
 
 "So, where is the difference?" askest thou. Behold, the end will surprise you!
 
@@ -27,14 +27,14 @@ Pr\{X_{AB} = 1\} = \frac{1}{1+10^{\frac{R_B-R_A}{400}}}
 $$
 
 
-Ok, let's brake this down:
+OK, let's break this down:
 
 $\{X_{AB} = 1\}$ stands for "the chances for a victory of A over B".
 
-The $400$ is used to spread the ratings between values of less than a hundred to several thousands, making the ratings more human readable. Without this "spreading fraction", the Elo rating of Magnus Carlsen would bearly reach $7.205$. Multiplying all the ratings by $400$, simply allows us avoid dealing with decimals, and makes the system "cleaner". This spreading is also the reason why we need a $K$ value when adjusting the ratings. Without this fraction, we don't need a $K$ value anymore, of maybe one between $0$ and $1$ in order to slow the progression of the ratings and limit their volativity.
+The $400$ is used to spread the ratings between values of less than a hundred to several thousands, making the ratings more human-readable. Without this "spreading fraction", the Elo rating of Magnus Carlsen would barely reach $7.205$. Multiplying all the ratings by $400$, simply allows us to avoid dealing with decimals, and makes the system "cleaner". This spreading is also the reason why we need a $K$ value when adjusting the ratings. Without this fraction, we don't need a $K$ value any more, of maybe one between $0$ and $1$ in order to slow the progression of the ratings and limit their volatility.
 
 If $\frac{R_B-R_A}{400} = 0$, then the chances of wining are of $\frac{1}{1+10^0} = \frac{1}{1+1} = \frac{1}{2}$. If less, the chances will be less than a half, or more if more than a half.
-The $10$ stands for "in order to have ten time more chances to win, the value $\frac{R_B-R_A}{400}$ must equal 1". Although, it is not exactly, ten, but rather eleven times more chances, which means a probability of victory of $\frac{1}{1+10-1} = \frac{1}{1+ 0.1} = \frac{1}{1.1}=0.9091$ in the case where the rating of our player $A$ is 400 superior to that of player $B$. We could just as well have used $9$ instead of $10$, but it must have been deemed an unnecessary optimisation.
+The $10$ stands for "in order to have ten time more chances to win, the value $\frac{R_B-R_A}{400}$ must equal 1". Although, it is not exactly, ten, but rather eleven times more chances, which means a probability of victory of $\frac{1}{1+10-1} = \frac{1}{1+ 0.1} = \frac{1}{1.1}=0.9091$ in the case where the rating of our player $A$ is 400 superior to that of player $B$. We could just as well have used $9$ instead of $10$, but it must have been deemed an unnecessary optimization.
 
 The truth is that any value above $1$ could do instead of $10$, and the quotient is also unnecessary. If we were to use the following formula, the results would still stand as a correct Elo rating variant:
 
@@ -49,13 +49,13 @@ This means that for a game where the players' rating difference is $1$, the play
 
 ## The Rasch Model
 
-As we saw, the readjustment process is the same for the Rasch Model, exept for the unnecessary $K$ value. The only subtle differences lie in the way the predictions are made, and as we mentioned, that instead of a player against another one, we have an examinee trying to achieve a task. For convenience, we'll call the examinee $A$, and their associated rating $R_A$ and the task $B$, with an associated rating of $R_B$. We call $\{X_{AB} = 1\}$ the successful completion of the task $B$:
+As we saw, the readjustment process is the same for the Rasch Model, except for the unnecessary $K$ value. The only subtle differences lie in the way the predictions are made, and as we mentioned, that instead of a player against another one, we have an examinee trying to achieve a task. For convenience, we'll call the examinee $A$, and their associated rating $R_A$ and the task $B$, with an associated rating of $R_B$. We call $\{X_{AB} = 1\}$ the successful completion of the task $B$:
 
 $$
 Pr\{X_{AB} = 1\} = \frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}
 $$
 
-Looks, familiar doesn't it? Let's refactor this $e^{R_A-R_B}$ a little:
+Looks, familiar, doesn't it? Let's refactor this $e^{R_A-R_B}$ a little:
 
 ## Part 1
 
@@ -134,10 +134,10 @@ Wow, that was long... But as we can see, the syntax for calculating the probabil
 
 After finding out that the two systems share the same internal logic, one may ask "Did either Rasch or Elo copied the other's system?"
 
-Both systems where invended at the same period, that is, around 1960 with Elo's first publication on the matter in 1961 (Elo 1961) and Rasch's in 1960 (Rasch 1980, p. 197). But on inspection of the sources, none of them mentions the other's work, Elo claims he started working on the question in 1959 (Elo 1986, p. 4). Furthermore, their first publications come as the solutions to problems that have their own history, tracing back many years before these systems where implemented or published the first time. The truth is, those system may well have been invented independently from each other without nor Rasch nor Elo ever learning about the other's work...
+Both systems where invented at the same period, that is, around 1960 with Elo's first publication on the matter in 1961 (Elo 1961) and Rasch's in 1960 (Rasch 1980, p. 197). But on inspection of the sources, none of them mentions the other's work, Elo claims he started working on the question in 1959 (Elo 1986, p. 4). Furthermore, their first publications come as the solutions to problems that have their own history, tracing back many years before these systems were implemented or published the first time. The truth is, those systems may well have been invented independently of each other without nor Rasch nor Elo ever learning about the other's work...
 
 As a matter of fact, Elo (*ibid.*) mentions that yet a similar system for chess was independently invented in 1969 by Gyorgy Karoly and Roger Cook for the New South Wales Chess Association. He must have learned about it many years later, solely due to the fact that this other solution tackled the exact same problem, chess players rating.
-Now, I wonder how much science or tooling from other fields scientists could successfully implement in their own domains. For example, marketing and language learning; what if language learning app relied on the same algorithms as those selecting the adds we see everyday? But to "feed" the learners with exactly the content they need to keep progressing or stay motivated... What about other fields of education?
+Now, I wonder how much science or tooling from other fields scientists could successfully implement in their own domains. For example, marketing and language learning; what if language learning app relied on the same algorithms as those selecting the ads we see every day? But to "feed" the learners with exactly the content they need to keep progressing or stay motivated... What about other fields of education?
 
 
 ## References
