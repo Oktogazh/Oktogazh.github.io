@@ -28,6 +28,7 @@ $$
 
 
 Ok, let's brake this down:
+
 $\{X_{AB} = 1\}$ stands for "the chances for a victory of A over B".
 
 The $400$ is used to spread the ratings between values of less than a hundred to several thousands, making the ratings more human readable. Without this "spreading fraction", the Elo rating of Magnus Carlsen would bearly reach $7.205$. Multiplying all the ratings by $400$, simply allows us avoid dealing with decimals, and makes the system "cleaner". This spreading is also the reason why we need a $K$ value when adjusting the ratings. Without this fraction, we don't need a $K$ value anymore, of maybe one between $0$ and $1$ in order to slow the progression of the ratings and limit their volativity.
@@ -101,26 +102,24 @@ $$
 $$
 \frac{1}{1+\frac{1}{x}}
 $$
+## Summing Up
 
-we can now state that:
-
+We can now conclude that
 $$
 \frac{1}{1+e^{R_B-R_A}}
 $$
 
-(following **Part 1**)
+is (following **Part 1**) the same as
 $$
 \frac{1}{1+\frac{1}{e^{R_A-R_B}}}
 $$
 
 
 
-(following **Part 2**)
+which is (following **Part 2**) the same as
 $$
-\frac{1}{1+e^{R_B-R_A}}
+\frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}
 $$
-
-
 
 
 Therefore:
