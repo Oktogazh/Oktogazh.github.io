@@ -12,6 +12,7 @@ export default defineConfig({
   base: "/",
   integrations: [
     mdx({
+      syntaxHighlight: "prism",
       remarkPlugins: [remarkMath],
       rehypePlugins: [rehypeKatex],
     }),

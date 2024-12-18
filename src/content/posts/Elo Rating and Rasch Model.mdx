@@ -21,7 +21,10 @@ Now that we know how the rating evolve based on the expected result, we need to 
 ## Predicting the Outcome of a Match in Chess
 Here is the formula to predict the chances a player $A$ has to win against a player $B$:
 
-$$Pr\{X_{AB} = 1\} = \frac{1}{1+10^{\frac{R_B-R_A}{400}}}$$
+
+$$
+Pr\{X_{AB} = 1\} = \frac{1}{1+10^{\frac{R_B-R_A}{400}}}
+$$
 
 
 Ok, let's brake this down:
@@ -33,59 +36,98 @@ If $\frac{R_B-R_A}{400} = 0$, then the chances of wining are of $\frac{1}{1+10^0
 The $10$ stands for "in order to have ten time more chances to win, the value $\frac{R_B-R_A}{400}$ must equal 1". Although, it is not exactly, ten, but rather eleven times more chances, which means a probability of victory of $\frac{1}{1+10-1} = \frac{1}{1+ 0.1} = \frac{1}{1.1}=0.9091$ in the case where the rating of our player $A$ is 400 superior to that of player $B$. We could just as well have used $9$ instead of $10$, but it must have been deemed an unnecessary optimisation.
 
 The truth is that any value above $1$ could do instead of $10$, and the quotient is also unnecessary. If we were to use the following formula, the results would still stand as a correct Elo rating variant:
-$$Pr\{X_{AB} = 1\} = \frac{1}{1+e^{R_B-R_A}}$$Where $e$ is Euler's value: $2.71828...$
+
+
+$$
+Pr\{X_{AB} = 1\}=\frac{1}{1+e^{R_B-R_A}}
+$$
+
+
+Where $e$ is Euler's value: $2.71828...$
 This means that for a game where the players' rating difference is $1$, the player with the strongest rating has $\frac{1}{1+e^{-1}}=0.731...$ chances of wining.
 
 ## The Rasch Model
 
 As we saw, the readjustment process is the same for the Rasch Model, exept for the unnecessary $K$ value. The only subtle differences lie in the way the predictions are made, and as we mentioned, that instead of a player against another one, we have an examinee trying to achieve a task. For convenience, we'll call the examinee $A$, and their associated rating $R_A$ and the task $B$, with an associated rating of $R_B$. We call $\{X_{AB} = 1\}$ the successful completion of the task $B$:
 
-$$Pr\{X_{AB} = 1\} = \frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}$$
+$$
+Pr\{X_{AB} = 1\} = \frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}
+$$
 
 Looks, familiar doesn't it? Let's refactor this $e^{R_A-R_B}$ a little:
 
 ## Part 1
 
-$$e^{R_A-R_B}$$
+$$
+e^{R_A-R_B}
+$$
 
-$$\Leftrightarrow e^{R_A} \div e^{R_B}$$
+$$
+e^{R_A} \div e^{R_B}
+$$
 
-$$\Leftrightarrow \frac{1}{e^{-R_A}} \times \frac{1}{e^{R_B}}$$
+$$
+\frac{1}{e^{-R_A}} \times \frac{1}{e^{R_B}}
+$$
 
-$$ \Leftrightarrow \frac{1}{e^{-R_A} \times e^{R_B}}$$
+$$
+\frac{1}{e^{-R_A} \times e^{R_B}}
+$$
 
-$$ \Leftrightarrow \frac{1}{e^{R_B-R_A}}$$
+$$
+\frac{1}{e^{R_B-R_A}}
+$$
+
 
 Now, we can rewrite our probability of $A$ completing the task in terms of  $\frac{1}{e^{R_B-R_A}}$. But let's abstract this expression with $\frac{1}{x}$ because I am tired of writing everything in $\LaTeX$.
 
 ## Part 2
 
 
-$$\frac{x}{1+x}$$ 
+$$
+\frac{x}{1+x}
+$$ 
 
-$$\Leftrightarrow \frac{1}{\frac{1+x}{x}}$$  
+$$
+\frac{1}{\frac{1+x}{x}}
+$$  
 
 
-$$\Leftrightarrow \frac{1}{\frac{x}{x}+\frac{1}{x}}$$
+$$
+\frac{1}{\frac{x}{x}+\frac{1}{x}}
+$$
 
 
-$$\Leftrightarrow \frac{1}{1+\frac{1}{x}}$$
+$$
+\frac{1}{1+\frac{1}{x}}
+$$
 
 we can now state that:
 
-$$\frac{1}{1+e^{R_B-R_A}}$$
+$$
+\frac{1}{1+e^{R_B-R_A}}
+$$
 
-$$\Leftrightarrow \frac{1}{1+\frac{1}{e^{R_A-R_B}}}$$ (following **Part 1**)
+(following **Part 1**)
+$$
+\frac{1}{1+\frac{1}{e^{R_A-R_B}}}
+$$
 
 
-$$\Leftrightarrow \frac{1}{1+e^{R_B-R_A}}$$
+
 (following **Part 2**)
+$$
+\frac{1}{1+e^{R_B-R_A}}
+$$
+
 
 
 
 Therefore:
 
-$$Pr\{X_{AB} = 1\} = \frac{1}{1+e^{R_B-R_A}} = \frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}$$
+$$
+Pr\{X_{AB} = 1\} = \frac{1}{1+e^{R_B-R_A}} = \frac{e^{R_A-R_B}}{1+e^{R_A-R_B}}
+$$
 
 Wow, that was long... But as we can see, the syntax for calculating the probability of the outcome means exactly the same thing as the one in the Elo system!
 
