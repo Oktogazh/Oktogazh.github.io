@@ -5,11 +5,11 @@ category: testing
 ---
 ### Update
 
-Everything I attempted to expose here has already been said, and analysed in more depth by [Pelánek (2016)](https://doi.org/10.1016/j.compedu.2016.03.017). This article only contains a short explanation of Elo's formula details and proof that the way both system make predictions based on rating difference is the same when we refactor everything in therm of $R_B-R_A$ (used by Elo) instead of $R_A-R_B$ (used by Rasch), those two terms representing the ratings of $A$, the player whose chances are being calculated, and $B$, its opponent, or the task they are trying to complete.
+Everything I attempted to expose here has already been said, and analysed in more depth by [Pelánek (2016)](https://doi.org/10.1016/j.compedu.2016.03.017). This article only contains a short explanation of Elo's formula details and proof that the way both system make predictions based on rating difference is the same when we refactor everything in therm of $R_B-R_A$ (used by Elo) instead of $R_A-R_B$ (used by Rasch), those two terms respectively representing the ratings of $A$, the player whose chances are being calculated, and $B$, its opponent, or the task they are trying to complete.
 
 ## Context
  
- After brainstorming for a while the question of measuring vocabulary knowledge, I came up with the idea of giving words an Elo rating similar to the one used in chess, and base the results of the test on the difficulty rating of the items. After discussing the idea with the excellent [Preben Vanberg](http://prv.cymru/), he explained to me that the users can share the same rating as the items, which significantly simplified my design. Little did we know that we just had reinvented the wheel. When telling my psycholinguistics lecturer about this brilliant idea, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed, really similar to what I just described.
+ After brainstorming for a while the question of measuring vocabulary knowledge, I came up with the idea of giving words an Elo rating similar to the one used in chess, and base the results of the test on the difficulty rating of the items. After discussing the idea with the excellent [Preben Vanberg](http://prv.cymru/), the spreadsheet guru explained to me that the users can share the same rating scale as the items, which significantly simplified my design. Little did we know that we just had reinvented the wheel. When telling my psycholinguistics lecturer about this brilliant idea, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed really similar.
 
 ## A Look at the Adjustment Mechanism in the Elo System
 
