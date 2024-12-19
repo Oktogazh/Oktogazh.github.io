@@ -3,22 +3,29 @@ date: 2024-12-10
 title: Elo Rating and Rasch Model
 category: testing
 ---
+### Update
+
+Everything I attempted to expose here has already been said, and analysed in more depth by [Pelánek (2016)](https://doi.org/10.1016/j.compedu.2016.03.017). This article only contains a short explanation of Elo's formula details and proof that the way both system make predictions based on rating difference is the same when we refactor everything in therm of $R_B-R_A$ (used by Elo) instead of $R_A-R_B$ (used by Rasch), those two terms representing the ratings of $A$, the player whose chances are being calculated, and $B$, its opponent, or the task they are trying to complete.
+
 ## Context
-When telling my psycholinguistics lecturer about my idea of using the Elo rating system to assess the difficulty of word and non-words items, alongside the testees themselves and avoid having to make preliminary studies, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed, really similar to my idea.
+ 
+ When telling my psycholinguistics lecturer about my idea of using the Elo rating system to assess the difficulty of word and non-words items, alongside the testees themselves and avoid having to make preliminary studies, she told me about the Rasch model. I never heard of it before, and after a quick look to it, it seemed indeed, really similar to my idea.
 
 ## A Look at the Adjustment Mechanism in the Elo System
-The Elo rating system can be best described as a self-fulfilling prophecy. Based on the rating of to participants, the system gives a probability for the outcome of a match. If the prophecy is fulfilled, it means that the ratings are correct and nothing changes, otherwise, the system gradually adjusts these ratings for the next time, and keeps doing so until reaching a point of equilibrium, that is, until the prophecy is fulfilled.
+
+The Elo rating system can be best described as a self-fulfilling prophecy. Based on the rating of participants, the system gives a probability for the outcome of a match. If the prophecy is fulfilled, it means that the ratings are correct and nothing changes, otherwise, the system gradually adjusts these ratings for the next time, and keeps doing so until reaching a point of equilibrium, that is, until the prophecy is fulfilled.
 
 This correction is made by constantly adding to the current rating the difference of actual outcome and the expected result. If the expected output was correct, nothing changes. If 1 is expected (a win in chess) and 1 occurs, then the rating does not change. If the rating difference underestimated the outcome, the rating of the winner grows, the one of the looser decrease. Here is another example when the ratings are equal. 
 Often time, we want challenges where there is a 50% chance of success, so that the ratings keep evolving towards their "intrinsic value". In chess, we select players with approximatively the same rating, so that their chances of winning are equal. If one player win, when the expected score was 50%-50%, then one player will increase their rating by $1-0.5=+0.5$ and the other by $0-0.5=-0.5$.
 
 Still in chess, this difference is multiplied by a factor called a $K$ value, to speed up the adjustment process and make it so that fewer matches have to be played to find out the stable rating of the player. In the case of the **Rasch model**, the idea is exactly the same, except that half of the participants are a task to accomplish, and those tasks are given the same rating as the test takers in a way that, if test takers find the solution for tasks that most player fail at, their rating will increase faster than if they find the right answer to simpler questions (that is, a task that most test takers succeed at). The only difference between the two systems so far is absence of a $K$ value in the Rasch model, but as we saw, it is not a necessity neither.
 
-"So, where is the difference?" askest thou. Behold, the end will surprise you!
+"So, where is the difference?" asken you. Behold, the end will surprise you!
 
 Now that we know how the rating evolve based on the expected result, we need to figure out how this expected result is calculated...
 
 ## Predicting the Outcome of a Match in Chess
+
 Here is the formula to predict the chances a player $A$ has to win against a player $B$:
 
 
@@ -31,12 +38,12 @@ OK, let's break this down:
 
 $\{X_{AB} = 1\}$ stands for "the chances for a victory of A over B".
 
-The $400$ is used to spread the ratings between values of less than a hundred to several thousands, making the ratings more human-readable. Without this "spreading fraction", the Elo rating of Magnus Carlsen would barely reach $7.205$. Multiplying all the ratings by $400$, simply allows us to avoid dealing with decimals, and makes the system "cleaner". This spreading is also the reason why we need a $K$ value when adjusting the ratings. Without this fraction, we don't need a $K$ value any more, of maybe one between $0$ and $1$ in order to slow the progression of the ratings and limit their volatility.
-
+The $400$ is used to spread the ratings, making them more human-readable. Without this "spreading fraction", the Elo rating of Magnus Carlsen would barely reach $7.205$. Multiplying all the ratings by $400$, simply allows us to avoid dealing with decimals. Adding this variable also has the advantage to make the Elo ratings compatible to other rating systems that were used before it in the chess world. This spreading is also the reason why we need a $K$ value when adjusting the ratings. Without this fraction, we don't need a $K$ value any more, of maybe one between $0$ and $1$ in order to slow the progression of the ratings and limit their volatility.
 If $\frac{R_B-R_A}{400} = 0$, then the chances of wining are of $\frac{1}{1+10^0} = \frac{1}{1+1} = \frac{1}{2}$. If less, the chances will be less than a half, or more if more than a half.
+
 The $10$ stands for "in order to have ten time more chances to win, the value $\frac{R_B-R_A}{400}$ must equal 1". Although, it is not exactly, ten, but rather eleven times more chances, which means a probability of victory of $\frac{1}{1+10-1} = \frac{1}{1+ 0.1} = \frac{1}{1.1}=0.9091$ in the case where the rating of our player $A$ is 400 superior to that of player $B$. We could just as well have used $9$ instead of $10$, but it must have been deemed an unnecessary optimization.
 
-The truth is that any value above $1$ could do instead of $10$, and the quotient is also unnecessary. If we were to use the following formula, the results would still stand as a correct Elo rating variant:
+The truth is that any value above $1$ could do instead of $10$, and the fraction is also unnecessary. If we were to use the following formula, the results would still stand as a correct Elo rating variant:
 
 
 $$
@@ -90,10 +97,9 @@ $$
 $$
 \frac{1}{\frac{x}{x}+\frac{1}{x}}
 $$
-
 $$
 \frac{1}{\frac{1+x}{x}}
-$$ 
+$$
 $$
 \frac{x}{1+x}
 $$ 
@@ -125,23 +131,30 @@ $$
 
 Wow, that was long... But as we can see, the syntax for calculating the probability of the outcome means exactly the same thing as the one in the Elo system!
 
-## Conclusion
+## Who found it first?
 
 After finding out that the two systems share the same internal logic, one may ask "Did either Rasch or Elo copied the other's system?"
 
-Both systems where invented at the same period, that is, around 1960 with Elo's first publication on the matter in 1961 (Elo 1961) and Rasch's in 1960 (Rasch 1980, p. 197). But on inspection of the sources, none of them mentions the other's work, Elo claims he started working on the question in 1959 (Elo 1986, p. 4). Furthermore, their first publications come as the solutions to problems that have their own history, tracing back many years before these systems were implemented or published the first time. The truth is, those systems may well have been invented independently of each other without nor Rasch nor Elo ever learning about the other's work...
+Both systems were invented at the same period, that is, around 1960 with Elo's first publication on the matter in 1961 [(Elo 1961)](http://uscf1-nyc1.aodhosting.com/CL-AND-CR-ALL/CL-ALL/1961/1961_06.pdf#page=8) and Rasch's in 1960 [(Rasch 1980, p. 197)](https://archive.org/details/probabilisticmod0000rasc/page/196/mode/2up). But on inspection of the sources, none of them mentions the other's work, Elo claims he started working on the question in 1959 [(Elo 1986, p. 4)](https://gwern.net/doc/statistics/order/comparison/1978-elo-theratingofchessplayerspastandpresent.pdf#page=20). Furthermore, their first publications come as the solutions to problems that have their own history, tracing back many years before these systems were implemented or published the first time. The truth is, those systems may well have been invented independently of each other without nor Rasch nor Elo ever learning about the other's work...
 
-As a matter of fact, Elo (*ibid.*) mentions that yet a similar system for chess was independently invented in 1969 by Gyorgy Karoly and Roger Cook for the New South Wales Chess Association. He must have learned about it many years later, solely due to the fact that this other solution tackled the exact same problem, chess players rating.
-Now, I wonder how much science or tooling from other fields scientists could successfully implement in their own domains. For example, marketing and language learning; what if language learning app relied on the same algorithms as those selecting the ads we see every day? But to "feed" the learners with exactly the content they need to keep progressing or stay motivated... What about other fields of education?
+As a matter of fact, Elo [(*ibid.*)](https://gwern.net/doc/statistics/order/comparison/1978-elo-theratingofchessplayerspastandpresent.pdf#page=20) mentions that yet a similar system for chess was independently invented in 1969 by Gyorgy Karoly and Roger Cook for the New South Wales Chess Association. He must have learned about it many years later, solely due to the fact that this other solution tackled the exact same problem, chess players rating.
 
+## Conclusion
+
+The only true difference between these systems is the presence of a $K$ value, which can speed, slow, or nullify chances as it can be tuned based on different factors, such as response time, number of evaluations, the days since last evaluation, combinations of the previous two etc... [(Pelánek 2016)](https://doi.org/10.1016/j.compedu.2016.03.017). This aspect makes it a better suited tool for evaluations in dynamic systems where we want to study progress instead of level.
+
+Now, I wonder how much science or tooling from other fields scientists could successfully implement in their own domains. For example, advertisement and language learning; what if language learning app relied on the same algorithms as those selecting the ads we see every day? But to "feed" the learners with exactly the content they need to keep progressing or stay motivated... What about other fields of education?
 
 ## References
 
-Elo, A. (1961) ‘The USCF Rating System  - A Scientific Achievement’, _Chess Life_, pp. 160–161.
+Elo, A. (1961) ‘The USCF Rating System - A Scientific Achievement’, _Chess Life_, pp. 160–161.
 
 Elo, A. (1986) _The Rating of Chessplayers, Past and Present_. Second ed. New York: Arco Publishing, Inc. Available at: https://gwern.net/doc/statistics/order/comparison/1978-elo-theratingofchessplayerspastandpresent.pdf.
 
-Hedberg, S. and Nasra, S. (2023) _Ability Estimation Methods : An Introduction to Item Response Theory and Elo Education Systems_. Available at: https://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-214601 (Accessed: 8 December 2024).
-
 Rasch, G. (Georg) (1980) _Probabilistic models for some intelligence and attainment tests_. Chicago : University of Chicago Press. Available at: http://archive.org/details/probabilisticmod0000rasc (Accessed: 18 December 2024).
 
+## Related
+
+Hedberg, S. and Nasra, S. (2023) _Ability Estimation Methods : An Introduction to Item Response Theory and Elo Education Systems_. Available at: https://urn.kb.se/resolve?urn=urn:nbn:se:su:diva-214601 (Accessed: 8 December 2024).
+
+Pelánek, R. (2016) ‘Applications of the Elo rating system in adaptive educational systems’, _Computers & Education_, 98, pp. 169–179. Available at: https://doi.org/10.1016/j.compedu.2016.03.017.
