@@ -9,10 +9,11 @@ The meeting was supposed to happen online as I was back in Brittany for the Chri
 But there must have been a mismatch in the understanding of the meeting time nobody showed up at the time the other was expecting.
 Here is a summary of my activities since the last meeting.
 
+[link](astro-obsidian-and-github)
 ## Writing and reading
 I read a [comparison of different pseudo-word generating algorithm](https://journals.sagepub.com/doi/10.1177/17470218231164373), and settled on one using Markov chains of orthographic n-gram, for its versatility and ease of implementation.
 
-I wrote a [blog post](https://oktogazh.github.io/posts/elo-rating-and-rasch-model/) about how the Elo rating system works and relates to the Rasch model.
+I wrote a [blog post](./elo-rating-and-rasch-model) about how the Elo rating system works and relates to the Rasch model.
 As I was researching who else did this comparison between the two systems, I found the following article:
 
 Pelánek, R. (2016) 'Applications of the Elo rating system in adaptive educational systems', _Computers & Education_, 98, pp. 169–179. Available at: https://doi.org/10.1016/j.compedu.2016.03.017.
@@ -21,7 +22,7 @@ I might write a review on it later, but as I may as well never do it, here is a 
 
 The good folk of Masaryk University Brno's Computer Science department in the Czech Republic has been using modified versions of the Elo rating system for adaptive learning softwares for more than a decade now. One cool example of these is the website [practiceanatomy.com](https://practiceanatomy.com), which does not show directly the rating to the users, but uses it to ensure that the questions presented to them keeps a 75-80% chances of being answered correctly. They created other applications, but most of them in Czech, or destined to a Czech public (e.g. to learn English vocabulary from Czech) and others have already been shut down because they were simple B.Sc. or alike short-lived experiments.
 
-Nevertheless, Pelánek's article brings an experienced insight on how and why to use the Elo system and which variants may be useful for which context. Of particular importance is the uncertainty function used to modify the "strength" of the $K$ value. They used grid search to find an optimal uncertainty function $U(n)=4/(1+0.5n)$, where n is the number of item questions a student were given or the number of answers a question were given.
+Nevertheless, Pelánek's article brings an experienced insight on how and why to use the Elo system and which variants may be useful for which context. Of particular importance is the uncertainty function used to modify the "strength" of the $K$ value. They used grid search to find an optimal uncertainty function $U(n)=4/(1+0.05n)$, where n is the number of item questions a student were given or the number of answers a question were given.
 
 ![](https://ars.els-cdn.com/content/image/1-s2.0-S036013151630080X-gr2.jpg)
 

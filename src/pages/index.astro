@@ -15,7 +15,7 @@ const postsWithCategorySlugsAndDates = posts.map((p) => ({
 }));
 const postsInCategories = posts.reduce(
 	(acc: { [key: string]: number }, post) => {
-		if (post.data.category.id) {
+		if (post.data.category?.id) {
 			acc[post.data.category.id] = acc[post.data.category.id] + 1 || 1;
 		}
 		return acc;
@@ -47,7 +47,7 @@ const orderedPosts = postsWithCategorySlugsAndDates.sort(
 					<p>{category.data.description}</p>
 					<ul class="ps-4">
 						{orderedPosts.map((post) => {
-							if (post.category.id === category.slug) {
+							if (post.category?.id === category.slug) {
 								return (
 									<li>
 										<a href={`/posts/${post.slug}`}>{post.title}</a>

@@ -1,8 +1,9 @@
-// @ts-check
+// @ts-nocheck
 import { defineConfig } from 'astro/config';
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
 import mdx from "@astrojs/mdx";
+import wikiLinkPlugin from "@portaljs/remark-wiki-link";
 
 import tailwind from "@astrojs/tailwind";
 
@@ -18,4 +19,8 @@ export default defineConfig({
     }),
     tailwind(),
   ],
+  markdown: {
+    remarkPlugins: [
+    ]
+  }
 });

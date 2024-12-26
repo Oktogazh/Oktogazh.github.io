@@ -16,7 +16,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.date(),
-      category: reference('categories'),
+      category: reference('categories').optional(),
     }).strict(),
   }),
   assets: defineCollection({
