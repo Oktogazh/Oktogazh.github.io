@@ -7,8 +7,13 @@ export const collections = {
     type: 'content',
     schema: z.object({
       title: z.string(),
-      description: z.string(),
-      id: z.number(),
+      description: z.string().optional(),
+    }).strict(),
+  }),
+  indices: defineCollection({
+    type: 'content',
+    schema: z.object({
+      title: z.string(),
     }).strict(),
   }),
   posts: defineCollection({

@@ -1,7 +1,6 @@
 ---
 date: 2024-11-25
 title: ICE-4005 - Week 5
-category: cyfarfodydd
 ---
 ## Meeting
 

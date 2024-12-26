@@ -1,7 +1,6 @@
 ---
 date: 2024-12-10
 title: 1. Publishing a blog using Astro, Obsidian and GitHub
-category: about
 ---
 As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, decided to enter everything in this public blog. Here is how this website is built and how I work on it.
 

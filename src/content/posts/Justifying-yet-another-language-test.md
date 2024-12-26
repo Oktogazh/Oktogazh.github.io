@@ -1,7 +1,6 @@
 ---
 date: 2024-12-09
 title: Why do we need yet a new testing framework
-category: testing
 ---
 ## Context: automated teaching requires dynamic testing
 Teaching low ressources languages poses a great deal of challenges. Logically, a good teaching framework for those would be highly scalable, so that it would be easy to port to other low resources languages. Scalability and portability become the key features that could allow the concentration of the strengths and efforts of low resources languages advocates, otherwise scattered across the diversity of the languages they work for.

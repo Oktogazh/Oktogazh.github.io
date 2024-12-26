@@ -1,7 +1,6 @@
 ---
 date: 2024-12-16
 title: ICE-4005 - Week 8
-category: cyfarfodydd
 ---
 ## Meeting, aborted
 

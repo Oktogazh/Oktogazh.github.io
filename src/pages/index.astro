@@ -1,11 +1,15 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-import { getCollection } from 'astro:content';
+import { getCollection, getEntry } from 'astro:content';
 
 const categories = await getCollection('categories');
 
 const posts = await getCollection('posts');
+
+const index = await getEntry('indices', 'main');
+
+console.log(index);
 
 const postsWithCategorySlugsAndDates = posts.map((p) => ({
 	slug: p.slug,
@@ -22,14 +26,6 @@ const postsInCategories = posts.reduce(
 	},
 	{},
 );
-
-const orderedCategories = categories
-	.filter((p) => Boolean(postsInCategories[p.slug]))
-	.sort((a, b) => a.data.id - b.data.id);
-
-const orderedPosts = postsWithCategorySlugsAndDates.sort(
-	(a, b) => a.date - b.date,
-);
 ---
 
 <BaseLayout title="Alan Kersaudy">
@@ -40,7 +36,7 @@ const orderedPosts = postsWithCategorySlugsAndDates.sort(
 		univesity projects.
 	</p>
 	<div class="flex flex-wrap">
-		{
+		<!-- {
 			orderedCategories.map((category) => (
 				<div class="basis-1/2 min-w-96 max-w-[50%] ">
 					<h2>{category.data.title}</h2>
@@ -58,7 +54,7 @@ const orderedPosts = postsWithCategorySlugsAndDates.sort(
 					</ul>
 				</div>
 			))
-		}
+		} -->
 	</div>
 </BaseLayout>
 

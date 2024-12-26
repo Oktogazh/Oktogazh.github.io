@@ -1,7 +1,6 @@
 ---
 date: 2024-10-28
 title: ICE-4005 - Week 3
-category: cyfarfodydd
 ---
 ## Meeting
 

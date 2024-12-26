@@ -1,7 +1,6 @@
 ---
 date: 2024-12-13
 title: How should we teach languages
-category: learning
 ---
 - acquiring vocabulary and grammar is key, the medium does not realy matter
 	- the medium of learning does not matter
