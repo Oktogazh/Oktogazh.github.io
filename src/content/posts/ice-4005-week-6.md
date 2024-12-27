@@ -22,3 +22,5 @@ title: ICE-4005 - Week 6
 	- substract the cross entropy
 
 
+
+## [Mini-project Dashboard](<./ice-4005-dashboard>)

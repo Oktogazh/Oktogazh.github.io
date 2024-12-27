@@ -12,3 +12,7 @@ title: ICE-4005 - Week 2
 
 **Actions**:
   - [Alan]: Start the Meaven project.
+
+
+
+## [Mini-project Dashboard](<./ice-4005-dashboard>)

@@ -19,3 +19,5 @@ title: ICE-4005 - Week 1
   - [Alan]: Create a system to log the meetings (this website), find a Research Question to justify the mini-project academically
   - [Bill]: Giving Alan access to former students mini-project logs and dissertation.
   - [Bill] Sending Alan last year's introduction to programming lectures
+
+## [Mini-project Dashboard](<./ice-4005-dashboard>)

@@ -19,3 +19,6 @@ title: ICE-4005 - Week 7
 - For Bill: send the ethical approval questionnaire
 - For Alan: fill out the questionnaire
 - Start working on the project
+
+
+## [Mini-project Dashboard](<./ice-4005-dashboard>)

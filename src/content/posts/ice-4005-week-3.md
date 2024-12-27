@@ -24,3 +24,6 @@ title: ICE-4005 - Week 3
 	- cosines similarity, Euclidian norm, vector normalisation 
 	- See my conversation with [mistral](https://chat.mistral.ai/chat/43cc0557-f51f-4849-a542-ee5acebcfd71) as I digested the new concept
 - [Vector space model](https://en.wikipedia.org/wiki/Vector_space_model): same concepts as HAL, but used more to categorize document instead of analizing the relationship between words
+
+
+## [Mini-project Dashboard](<./ice-4005-dashboard>)

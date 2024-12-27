@@ -29,7 +29,7 @@ const props = Astro.props;
 					</svg>
 				</a>
 			</nav>
-			<div class="container mx-auto p-4">
+			<div class="container mx-auto p-4 flex flex-col items-stretch">
 				<slot />
 			</div>
 		</main>
@@ -97,19 +97,7 @@ const props = Astro.props;
 		overflow-x: auto;
 	}
 
-	ul {
-		list-style-type: none;
-		padding-left: 1.5em;
-	}
-	li {
-		margin-bottom: 0.5em;
-	}
-	ul {
-		padding-left: 1.5em;
-	}
-
 	/* .dashboard */
-
 	.dashboard {
 		font-family: inherit;
 		padding-left: 25px !important;
