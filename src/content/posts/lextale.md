@@ -1,6 +1,6 @@
 ---
 date: 2024-11-21
-title: Examining LexTALE
+title: Reviewing Lehöfer and Broersma (LexTALE)
 ---
 A Review of the article **Introducing LexTALE: A quick and valid LexicalTest for Advanced Learners of English** by *Kristin Lemhöfer* and *Mirjam Broersma* from Radboud University, Netherlands
 

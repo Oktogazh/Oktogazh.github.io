@@ -14,6 +14,7 @@ export const collections = {
     type: 'content',
     schema: z.object({
       title: z.string(),
+      cssclass: z.string().optional(),
     }).strict(),
   }),
   posts: defineCollection({

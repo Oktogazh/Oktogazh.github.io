@@ -7,9 +7,10 @@ const categories = await getCollection('categories');
 
 const posts = await getCollection('posts');
 
-const index = await getEntry('indices', 'main');
+const index = await getEntry('indices', 'main')!;
+const { Content } = await index?.render()!;
 
-console.log(index);
+console.log(Content);
 
 const postsWithCategorySlugsAndDates = posts.map((p) => ({
 	slug: p.slug,
@@ -35,45 +36,48 @@ const postsInCategories = posts.reduce(
 		North Wales. This web site is primarily intended to keep track my different
 		univesity projects.
 	</p>
-	<div class="flex flex-wrap">
-		<!-- {
-			orderedCategories.map((category) => (
-				<div class="basis-1/2 min-w-96 max-w-[50%] ">
-					<h2>{category.data.title}</h2>
-					<p>{category.data.description}</p>
-					<ul class="ps-4">
-						{orderedPosts.map((post) => {
-							if (post.category?.id === category.slug) {
-								return (
-									<li>
-										<a href={`/posts/${post.slug}`}>{post.title}</a>
-									</li>
-								);
-							}
-						})}
-					</ul>
-				</div>
-			))
-		} -->
+	<div class={index.data?.cssclass}>
+		<Content />
 	</div>
 </BaseLayout>
 
-<style>
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
+<style is:global>
+	.dashboard {
+		font-family: inherit;
+		padding-left: 25px !important;
+		padding-right: 25px !important;
+		padding-top: 20px !important;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		padding: 1.5rem;
+
+	.dashboard h1 {
+		margin-top: 1em;
 	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+	.dashboard > ul {
+		font-weight: 600;
+		display: flex !important;
+		flex-wrap: wrap !important;
+		width: 100%;
+	}
+	.dashboard > ul > li {
+		border-bottom-style: dotted !important;
+		border-width: 1px 0 0 0 !important;
+		margin-top: 1em !important;
+		padding-top: 1em;
+		padding: 1rem 0rem;
+		flex: 0 1 350px;
+		max-width:;
+		padding-right: 3em;
+	}
+	.dashboard li::marker {
+		color: gray;
+	}
+	.dashboard ul {
+		padding-left: 0px !important;
+	}
+	.dashboard ul li ul li {
+		list-style-type: disc;
+		font-weight: 400;
+		margin-left: 2em !important;
+		margin-bottom: 0;
 	}
 </style>
