@@ -14,7 +14,7 @@ export const collections = {
     type: 'content',
     schema: z.object({
       title: z.string(),
-      cssclass: z.string().optional(),
+      cssclasses: z.array(z.string()).optional(),
     }).strict(),
   }),
   posts: defineCollection({
@@ -22,6 +22,7 @@ export const collections = {
     schema: z.object({
       title: z.string(),
       date: z.date(),
+      cssclasses: z.array(z.string()).optional(),
       category: reference('categories').optional(),
     }).strict(),
   }),

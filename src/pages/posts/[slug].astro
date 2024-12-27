@@ -23,7 +23,7 @@ const { Content } = await post.render();
     <div class="max-w-[700px] flex flex-col justify-center">
       <h1>{post.data.title}</h1>
       <p class="date-placeholder my-3 self-end">{post.data.date}</p>
-      <div class="basis 2/3">
+      <div class={`${post.data?.cssclasses} basis 2/3`}>
         <Content />
       </div>
     </div>
