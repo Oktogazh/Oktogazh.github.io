@@ -7,7 +7,7 @@ date: 2024-12-27
 # ICE-4005 Generalist Mini-project Dashboard
 
 
--  🛠️ Code
+-  🛠️ The Project
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
 	- [Report](<./report-mini-project>)
 - 🗓️ Log Book
@@ -20,7 +20,7 @@ date: 2024-12-27
 	- [Week 2](<./ice-4005-week-2>)
 	- [Week 1](<./ice-4005-week-1>)
 - 🔗 Related Articles
-	- [Why we need a new language test](justifying-yet-another-language-test.md)
+	- [Pelánek 2016](posts/pelanek-2016)
 	- [Elo Rating an Rasch Model](elo-rating-and-rasch-model)
 	- [Reviewing Lehöfer and Broersma (LexTALE)](<./lextale>)
 
