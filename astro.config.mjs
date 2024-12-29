@@ -11,6 +11,9 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   site: "https://Oktogazh.github.io",
   base: "/",
+  build: {
+    format: 'file'
+  },
   trailingSlash: "never",
   integrations: [
     mdx({
