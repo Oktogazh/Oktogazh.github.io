@@ -9,7 +9,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://Oktogazh.github.io",
+  site: "https://oktogazh.github.io",
   base: "/",
   build: {
     format: 'file'

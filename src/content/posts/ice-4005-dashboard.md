@@ -9,7 +9,7 @@ date: 2024-12-27
 
 -  🛠️ The Project
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Report](<./report-mini-project>)
+	- [Report](report-mini-project)
 - 🗓️ Log Book
 	- [Week 8](<./ice-4005-week-8>)
 	- [Week 7](<./ice-4005-week-7>)
@@ -20,7 +20,7 @@ date: 2024-12-27
 	- [Week 2](<./ice-4005-week-2>)
 	- [Week 1](<./ice-4005-week-1>)
 - 🔗 Related Articles
-	- [Pelánek 2016](posts/pelanek-2016)
+	- [Pelánek 2016](pelanek-2016)
 	- [Elo Rating an Rasch Model](elo-rating-and-rasch-model)
-	- [Reviewing Lehöfer and Broersma (LexTALE)](<./lextale>)
+	- [Reviewing Lehöfer and Broersma (LexTALE)](lextale)
 
