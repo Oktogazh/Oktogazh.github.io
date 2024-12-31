@@ -3,7 +3,7 @@ date: 2024-12-10
 title: 1. Publishing a blog using Astro, Obsidian and GitHub
 ---
 As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, decided to enter everything in this public blog. Here is how this website is built and how I work on it.
-
+[link](../assets/outstanding-dissertation.pdf)
 ## Obsidian
 All the content is being edited in Obsidian. So far, I have three folders in my vault: assets, categories and posts. Here is an overview of what my editing interface looks like:
 

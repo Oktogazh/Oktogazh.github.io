@@ -19,3 +19,5 @@ Ni wnaf i'n awr ond dyfynnu un tudalen sydd yn olyniaeth Ellis Wynne... => Ne ri
 
 
 Ar un wedd dyna ddatguddiad rhyfeddaf a mwyaf cyffrous y Llyfrau Gleision. => War ar memes ton, setu kavadenn iskisañ ha hoalusañ al Levrioù Glas (Gallet am bije implijout ar ger "gwez" en e stêr "doare, tres", met dianav eo ar ger-se e Brezhoneg)
+
+Yr oedd Anghydffurfiaeth Gymraeg yn clymu’n undod wlad a thref. A’r un pryd yn eu cadw yn eu hunfan. => Edo ilizioù an Digengrediezh Kembraek o skoulmañ a-gevret maezioù ha kêrioù. Ha war un dro en o dalc’he en o sav. (Ger brezhoneg ebet evit treiñ Anghydffurfiaeth, ouzhpenn-se, daoust d'ar ger bezañ en unander, e ra anv eus ur strollad liesseurt a soñje Lewis enno pa implije al liester er frazenn da heul, setu perak e rankis ouzhpennañ "ilizioù", evit derc'hel poell ha tostidigezh ar frazenn ziwezhañ.)
