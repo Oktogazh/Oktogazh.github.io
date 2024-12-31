@@ -11,6 +11,8 @@ date: 2024-12-27
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
 	- [Report](report-mini-project)
 - 🗓️ Log Book
+	- [Week 9](ice-4005-week-9)
+	- (Xmas break)
 	- [Week 8](<./ice-4005-week-8>)
 	- [Week 7](<./ice-4005-week-7>)
 	- [Week 6](<./ice-4005-week-6>)
