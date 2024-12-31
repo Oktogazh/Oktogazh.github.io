@@ -6,7 +6,7 @@ title: ICE-4005 - Week 9
 
 **New Repo:**
 [Here is the repository](), it is written in python and so far I am doing it following the principles of TDD.
-here is the work that has bees done so far:
+Here is the work that has bees done so far:
 - added a CI workflow to create automatically releases as the code is being pushed to the remote
 - made sure the tests are ran before attempting to create a new release (in the CI workflow)
 - implemented a pseudo-word generator for a given hunspell dictionary.
@@ -16,6 +16,7 @@ here is the work that has bees done so far:
 - send an email to the responsible people for the hunspell dictionary
 - Load the items in a sqlite database
 - create a small front end for the application
+
 
 **Next:**
 - show the words in the front end
