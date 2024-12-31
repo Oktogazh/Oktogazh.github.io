@@ -23,7 +23,7 @@ cssclasses:
 
 # <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
 - 🌐 Troidigezhioù
-	- [Tonkad ar yezh (Tynged yr Iaith gan Sanders Lewis)](posts/tonkad-ar-yezh)
+	- [Tonkad ar yezh (Tynged yr Iaith gan Saunders Lewis)](posts/tonkad-ar-yezh)
 - 📝 Barzhonegoù
 	- [Trid an tridi](posts/tridi)
 
