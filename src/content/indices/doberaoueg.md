@@ -4,8 +4,7 @@ title: Doberaoueg
 
 Skol-Veur:
 - Hentenn enklask
-	- Dibab ur c'houn-skrid da adwelet
-	- Sevel an adweladenn
+	- [Sevel an adweladenn](posts/dissertation-review)
 - Psikoyezhoniezh
 	- steuñv an arnodenn
 	- kinnig

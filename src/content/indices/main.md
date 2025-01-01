@@ -11,13 +11,10 @@ cssclasses:
 	- [Report](posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
 	- [Last Week Log](posts/ice-4005-week-9)
-
 - 🧠 QXL-4449-0 Psycholinguistics
 	- [Experimental Design](posts/experimental-design)
-
 - 🧐 Reviews
 	- [Reviewing Lehöfer and Broersma (LexTALE)](posts/lextale)
-	
 -  💼 M.Sc. Individual Project
 	- [Report](posts/report-mini-project)
 
