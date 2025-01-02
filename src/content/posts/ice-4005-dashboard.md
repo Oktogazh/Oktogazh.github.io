@@ -23,6 +23,6 @@ date: 2024-12-27
 	- [Week 1](<./ice-4005-week-1>)
 - 🔗 Related Articles
 	- [Pelánek 2016](pelanek-2016)
-	- [Elo Rating an Rasch Model](elo-rating-and-rasch-model)
+	- [Elo Rating and Rasch Model](elo-rating-and-rasch-model)
 	- [Reviewing Lehöfer and Broersma (LexTALE)](lextale)
 
