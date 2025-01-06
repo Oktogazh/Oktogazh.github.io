@@ -3,11 +3,9 @@ title: Doberaoueg
 ---
 
 Skol-Veur:
-- Hentenn enklask
-	- [Sevel an adweladenn](posts/dissertation-review)
 - Psikoyezhoniezh
 	- steuñv an arnodenn
-	- kinnig
+	- kinnig PowerPoint
 
 About:
 - Patreon

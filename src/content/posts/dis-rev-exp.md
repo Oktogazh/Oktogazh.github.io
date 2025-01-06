@@ -1,10 +1,5 @@
----
-title: Outstanding Dissertation Review
-date: 2025-01-01
-cssclasses: []
----
-This review focuses on [this M.Sc. dissertation](../assets/outstanding-dissertation.pdf).
-<!-- [export version](dis-rev-exp.md) -->
+This is a review of the dissertation "Transfer Learning for Speech-to-Text: Investigating the Impact of the Base Language on the Performance of Models".
+
 #### Introduction (150 words)  
 The dissertation stated goal is to confirm or disprove the hypothesis that the base language used to make speech-to-text models through transfer learning influences the performance of the models. This hypothesis means that phonetic similarities between the base and target languages influence the models' performance. If this proves to be true, the metrics correlating with accuracy improvements could help to optimize the base languages choice for different target languages in transfer learning for speech-to-text.  
 Such optimization would extend the reach of the technology and the applications derived from it, avoiding a "digital death" of some languages. It is especially relevant for minority languages like Welsh and Breton, which are generally less studied in the literature and have to rely on smaller datasets in a field dominated by the neural network scaling law (Henighan, T. et al. 2020). This makes the topic relevant in regard to academia, but also the industry and those smaller linguistic communities.
