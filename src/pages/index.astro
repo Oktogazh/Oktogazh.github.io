@@ -1,32 +1,10 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
 
-import { getCollection, getEntry } from 'astro:content';
-
-const categories = await getCollection('categories');
-
-const posts = await getCollection('posts');
+import { getEntry } from 'astro:content';
 
 const index = await getEntry('indices', 'main')!;
 const { Content } = await index?.render()!;
-
-console.log(Content);
-
-const postsWithCategorySlugsAndDates = posts.map((p) => ({
-	slug: p.slug,
-	category: p.data.category,
-	date: new Date(p.data.date).getTime(),
-	title: p.data.title,
-}));
-const postsInCategories = posts.reduce(
-	(acc: { [key: string]: number }, post) => {
-		if (post.data.category?.id) {
-			acc[post.data.category.id] = acc[post.data.category.id] + 1 || 1;
-		}
-		return acc;
-	},
-	{},
-);
 ---
 
 <BaseLayout title="Alan Kersaudy">
