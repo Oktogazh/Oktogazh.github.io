@@ -2,7 +2,7 @@
 date: 2024-12-02
 title: ICE-4005 - Week 6
 ---
-## [[Meeting]]
+## Meeting
 
 **Attendance**: Alan, Bill
 

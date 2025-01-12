@@ -4,7 +4,7 @@ title: Doberaoueg
 
 Skol-Veur:
 - Psikoyezhoniezh
-	- steuñv an arnodenn
+	- [steuñv an amprouenn](posts/experimental-design)
 	- kinnig PowerPoint
 
 About:
@@ -22,4 +22,7 @@ Brezhoneg
 
 Pennadoù etimologiezh:
 - [Gerioù keltiek er yezhoù slavek](posts/kelto-slavek.md)
-- 
+
+
+$\pi = \begin{pmatrix} \pi_1 \ \pi_2 \end{pmatrix}$
+
