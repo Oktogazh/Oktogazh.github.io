@@ -6,6 +6,8 @@ Skol-Veur:
 - Psikoyezhoniezh
 	- [steuñv an amprouenn](posts/experimental-design)
 	- kinnig PowerPoint
+- Hentenn Enklask:
+	- [Research Proposal](posts/research-proposal)
 
 About:
 - Patreon
