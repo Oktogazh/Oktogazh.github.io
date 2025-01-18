@@ -25,8 +25,13 @@ cssclasses:
 - 📝 Barzhonegoù
 	- [Trid an tridi](posts/tridi)
 
-<!--
+# Misc.
+- 🛠️ How this website is build
+	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
+- 🗣️ Languages
+	- [Experimental Design](posts/experimental-design)
 
+<!--
 # Testing
 - 🛠️ ICE-4005-0 Generalist Mini-project
 	- [Mini-project Dashboard](<posts/ice-4005-dashboard>)

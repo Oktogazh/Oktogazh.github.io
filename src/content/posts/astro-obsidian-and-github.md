@@ -1,14 +1,26 @@
 ---
 date: 2024-12-10
-title: 1. Publishing a blog using Astro, Obsidian and GitHub
+title: Publishing an Obsidian Zettelkasten with Astro
 ---
-As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, decided to enter everything in this public blog. Here is how this website is built and how I work on it.
+# Context
+As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, I decided to publish this logbook online. If the readers want to access the content in another language, they can let the in-browser translators do their jobs. As time passed, I noticed that publishing my thoughts proved to be extremely beneficial for a variety of reasons, and decided to keep track of any noteworthy thoughts going through my head. There is actually a word about this sort of note-taking, a German word to be precise, "[Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)". Basically a personal Wikipedia in which the structure emerges based on links (references) between the notes in a bottom-to-top process. One of the best apps to create Zettelkästen is Obsidian; although it is not the only one, it is the one with the biggest community and the most mature ecosystem of plugins and snippets for personalization. But if you don't want to pay 10 usd a month to publish your vault, you need to be a little bit nifty.
+This note explains how I publish my Obsidian vault using Astro and GitHub.
 
 
 ## Obsidian
-All the content is being edited in Obsidian. So far, I have three folders in my vault: assets, categories and posts. Here is an overview of what my editing interface looks like:
+The big difference between a physical and a digital Zettelkasten is that in a digital one, one does not need to store the notes in different boxes, this is because the indexation and link system are core features of the app the app. This is, in fact, the point of an app like Obsidian compared with other text editors.
+This is why my system is organised in this way:
 
-![gg](../assets/obsidian.png)
+![.](../assets/obsidian.png)
+
+TODO:
+- explain the three directories
+	- show how the vault is the "content" dir of the astro project
+	- how to use a symlink to link the vault's assets to astro's own public/assets directory
+- explain the file naming convention of the file (URL) and the frontmatter's purpose
+- how to use LaTeX
+- How to use cssclasses and snippets
+- how to publish a using github actions
 
 Before you ask, yes, the dark theme in this blog comes from this brillant "Atom" custom theme in Obsidian. Now, the only thing that might look a bit unusual to people unfamiliar with the specifics of markdown (file format used by obsidian under the hood) the the properties in the top of the post, these are called a front matter. In the editing mode they are parse by the obsidian app, but here is what this section for this file would look like if opened by another text editor:
 
@@ -16,7 +28,6 @@ Before you ask, yes, the dark theme in this blog comes from this brillant "Atom"
 ---
 date: 2024-12-09
 title: 1. Publishing a blog using Astro, Obsidian and GitHub
-category: about
 ---
 ```
 
@@ -40,14 +51,6 @@ As you are likely to use the data in the frontmatter of your md files. You don't
 import { defineCollection, reference, z } from 'astro:content'
 
 export const collections = {
-	categories: defineCollection({
-		type: 'content',
-		schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		id: z.number(),
-		}).strict(),
-	}),
 	posts: defineCollection({
 		type: 'content',
 		schema: z.object({
