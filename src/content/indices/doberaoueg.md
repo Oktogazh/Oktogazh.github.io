@@ -1,11 +1,16 @@
 ---
 title: Doberaoueg
+cssclasses:
+  - dashboard
 ---
 
+Blog:
+- Turn snippets into class for Astro
+	- Put 'academic' in a separate file
+	- Create a "translation" class
+	- Put "Dashboard" in a separate file
+
 Skol-Veur:
-- Psikoyezhoniezh
-	- [steuñv an amprouenn](posts/experimental-design)
-	- kinnig PowerPoint
 - Hentenn Enklask:
 	- [Research Proposal](posts/research-proposal)
 
@@ -26,5 +31,4 @@ Pennadoù etimologiezh:
 - [Gerioù keltiek er yezhoù slavek](posts/kelto-slavek.md)
 
 
-$\pi = \begin{pmatrix} \pi_1 \ \pi_2 \end{pmatrix}$
 

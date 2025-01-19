@@ -1,0 +1,41 @@
+@import url('https://cdn.jsdelivr.net/npm/latin-modern-web/style/latinmodern-roman.css');
+
+.academic {
+	font-family: 'Latin Modern Roman', serif;
+	line-height: 1.6;
+}
+
+.academic h1,
+.academic h2,
+.academic h3,
+.academic h4,
+.academic h5,
+.academic h6 {
+	font-weight: 600;
+	font-size: 1.5em;
+}
+
+.academic p,
+.academic {
+	text-align: justify;
+}
+
+.academic svg * {
+	stroke-linecap: square;
+	stroke-linejoin: miter;
+	rx: 0;
+	ry: 0;
+}
+
+.academic ul {
+	list-style: none !important;
+	text-indent: -2em;
+	/* Negative indent for first line */
+	margin-bottom: 1em;
+	/* Space between references */
+}
+
+ul .list-bullet::after {
+	background-color: transparent;
+	content: "";
+}

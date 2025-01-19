@@ -1,6 +1,8 @@
 ---
 title: LDT-Elo Vocabulary Test
 date: 2024-12-27
+cssclasses:
+  - academic
 ---
 # Vocabulary Megastudy for non-LOL languages
 
@@ -53,59 +55,60 @@ As the task is dependent on reading skill, while most languages in the world are
 
 # References
 
-Benítez-Burraco, A., Chen, S., Gil, D., 2024. Typology and the cognitive science of non-WEIRD languages: The role of memory types. A research project. https://doi.org/10.31234/osf.io/b8un7
+- Benítez-Burraco, A., Chen, S., Gil, D., 2024. Typology and the cognitive science of non-WEIRD languages: The role of memory types. A research project. https://doi.org/10.31234/osf.io/b8un7
 
-Bowles, R.P., Salthouse, T.A., 2008. Vocabulary test format and differential relations to age. Psychology and Aging 23, 366–376. https://doi.org/10.1037/0882-7974.23.2.366
+- Bowles, R.P., Salthouse, T.A., 2008. Vocabulary test format and differential relations to age. Psychology and Aging 23, 366–376. https://doi.org/10.1037/0882-7974.23.2.366
 
-Brysbaert, M., 2023. Word megastudy data and eye movement corpora available [WWW Document]. URL https://web.archive.org/web/20230208141005/http://crr.ugent.be/programs-data/megastudy-data-available (accessed 1.16.25).
+- Brysbaert, M., 2023. Word megastudy data and eye movement corpora available [WWW Document]. URL https://web.archive.org/web/20230208141005/http://crr.ugent.be/programs-data/megastudy-data-available (accessed 1.16.25).
 
-Brysbaert, M., Lagrou, E., Stevens, M., 2017. Visual word recognition in a second language: A test of the lexical entrenchment hypothesis with lexical decision times. Bilingualism: Language and Cognition 20, 530–548. https://doi.org/10.1017/S1366728916000353
+- Brysbaert, M., Lagrou, E., Stevens, M., 2017. Visual word recognition in a second language: A test of the lexical entrenchment hypothesis with lexical decision times. Bilingualism: Language and Cognition 20, 530–548. https://doi.org/10.1017/S1366728916000353
 
-Brysbaert, M., Stevens, M., Mandera, P., Keuleers, E., 2016. How Many Words Do We Know? Practical Estimates of Vocabulary Size Dependent on Word Definition, the Degree of Language Input and the Participant’s Age. Front Psychol 7, 1116. https://doi.org/10.3389/fpsyg.2016.01116
+- Brysbaert, M., Stevens, M., Mandera, P., Keuleers, E., 2016. How Many Words Do We Know? Practical Estimates of Vocabulary Size Dependent on Word Definition, the Degree of Language Input and the Participant’s Age. Front Psychol 7, 1116. https://doi.org/10.3389/fpsyg.2016.01116
 
-Dahl, Ö., 2015. How WEIRD are WALS languages? Presented at the Diversity Linguistics: Retrospect and Prospect  - Closing conference of the Department of Linguistics at the Max Planck Institute for Evolutionary Anthropology, Leipzig, p. 22.
+- Dahl, Ö., 2015. How WEIRD are WALS languages? Presented at the Diversity Linguistics: Retrospect and Prospect  - Closing conference of the Department of Linguistics at the Max Planck Institute for Evolutionary Anthropology, Leipzig, p. 22.
 
-Eigsti, I.-M., 2013. Peabody Picture Vocabulary Test, in: Volkmar, F.R. (Ed.), Encyclopedia of Autism Spectrum Disorders. Springer, New York, NY, pp. 2143–2146. https://doi.org/10.1007/978-1-4419-1698-3_531
+- Eigsti, I.-M., 2013. Peabody Picture Vocabulary Test, in: Volkmar, F.R. (Ed.), Encyclopedia of Autism Spectrum Disorders. Springer, New York, NY, pp. 2143–2146. https://doi.org/10.1007/978-1-4419-1698-3_531
 
-Elo, A., 1961. The USCF Rating System  - A Scientific Achievement. Chess Life XVI, 160–161.
+- Elo, A., 1961. The USCF Rating System  - A Scientific Achievement. Chess Life XVI, 160–161.
 
-Hajiyeva, K., 2015. Exploring the Relationship between Receptive and Productive Vocabulary Sizes and Their Increased Use by Azerbaijani English Majors. English Language Teaching 8, p31. https://doi.org/10.5539/elt.v8n8p31
+- Hajiyeva, K., 2015. Exploring the Relationship between Receptive and Productive Vocabulary Sizes and Their Increased Use by Azerbaijani English Majors. English Language Teaching 8, p31. https://doi.org/10.5539/elt.v8n8p31
 
-Hartmann, G.W., 1946. Further evidence on the unexpected large size of recognition vocabularies among college students. Journal of Educational Psychology 37, 436–439. https://doi.org/10.1037/h0056310
+- Hartmann, G.W., 1946. Further evidence on the unexpected large size of recognition vocabularies among college students. Journal of Educational Psychology 37, 436–439. https://doi.org/10.1037/h0056310
 
-Henrich, J., Heine, S.J., Norenzayan, A., 2010. Most people are not WEIRD. Nature 466, 29–29. https://doi.org/10.1038/466029a
+- Henrich, J., Heine, S.J., Norenzayan, A., 2010. Most people are not WEIRD. Nature 466, 29–29. https://doi.org/10.1038/466029a
 
-Hodapp, Gerken, 1999. Correlations between Scores for Peabody Picture Vocabulary Test—III and the Wechsler Intelligence Scale for Children—III. https://doi.org/10.2466/pr0.1999.84.3c.1139
+- Hodapp, Gerken, 1999. Correlations between Scores for Peabody Picture Vocabulary Test—III and the Wechsler Intelligence Scale for Children—III. https://doi.org/10.2466/pr0.1999.84.3c.1139
 
-Huibregtse, I., Admiraal, W., Meara, P., 2002. Scores on a yes-no vocabulary test: correction for guessing and response style. Language Testing 19, 227–245. https://doi.org/10.1191/0265532202lt229oa
+- Huibregtse, I., Admiraal, W., Meara, P., 2002. Scores on a yes-no vocabulary test: correction for guessing and response style. Language Testing 19, 227–245. https://doi.org/10.1191/0265532202lt229oa
 
-Kartushina, N.A., Oshchepkova, E.S., Almazova, O.V., Bukhalenkova, D.A., 2022. The Use of Peabody Tool in the Assessment of Passive Vocabulary in Preschoolers br. Clin. Psychol. Spec. Educ. 11, 205–232. https://doi.org/10.17759/cpse.2022110409
+- Kartushina, N.A., Oshchepkova, E.S., Almazova, O.V., Bukhalenkova, D.A., 2022. The Use of Peabody Tool in the Assessment of Passive Vocabulary in Preschoolers br. Clin. Psychol. Spec. Educ. 11, 205–232. https://doi.org/10.17759/cpse.2022110409
 
-Lemhöfer, K., Broersma, M., 2012. Introducing LexTALE: A quick and valid Lexical Test for Advanced Learners of English. Behav Res 44, 325–343. https://doi.org/10.3758/s13428-011-0146-0
+- Lemhöfer, K., Broersma, M., 2012. Introducing LexTALE: A quick and valid Lexical Test for Advanced Learners of English. Behav Res 44, 325–343. https://doi.org/10.3758/s13428-011-0146-0
 
-Levenshtein, V., 1965. Binary codes capable of correcting deletions, insertions, and reversals. Soviet physics. Doklady.
+- Levenshtein, V., 1965. Binary codes capable of correcting deletions, insertions, and reversals. Soviet physics. Doklady.
 
-Lord, F.M., 1980. Applications of Item Response Theory To Practical Testing Problems, 1st edition. ed. Routledge, Hillsdale, N.J.
+- Lord, F.M., 1980. Applications of Item Response Theory To Practical Testing Problems, 1st edition. ed. Routledge, Hillsdale, N.J.
 
-Meara, P., 2012. Imaginary Words, in: The Encyclopedia of Applied Linguistics. John Wiley & Sons, Ltd. https://doi.org/10.1002/9781405198431.wbeal0524
+- Meara, P., 2012. Imaginary Words, in: The Encyclopedia of Applied Linguistics. John Wiley & Sons, Ltd. https://doi.org/10.1002/9781405198431.wbeal0524
 
-Meara, P., 1994. The complexities of simple vocabulary tests. Curriculum research: Different disciplines and common goals 15–28.
+- Meara, P., 1994. The complexities of simple vocabulary tests. Curriculum research: Different disciplines and common goals 15–28.
 
-Meara, P., Jones, G., 1988. Vocabulary size as a placement indicator.
+- Meara, P., Jones, G., 1988. Vocabulary size as a placement indicator.
 
-Meara, P., Lightbown, P.M., Halter, R.H., 1994. The Effect of Cognates on the Applicability of YES/NO Vocabulary Tests. The Canadian Modern Language Review 50, 296–311. https://doi.org/10.3138/cmlr.50.2.296
+- Meara, P., Lightbown, P.M., Halter, R.H., 1994. The Effect of Cognates on the Applicability of YES/NO Vocabulary Tests. The Canadian Modern Language Review 50, 296–311. https://doi.org/10.3138/cmlr.50.2.296
 
-Meyer, D., Schvaneveldt, R., 1971. Facilitation in recognizing pairs of words: Evidence of a dependence between retrieval operations. Journal of experimental psychology 90, 227–34. https://doi.org/10.1037/h0031564
+- Meyer, D., Schvaneveldt, R., 1971. Facilitation in recognizing pairs of words: Evidence of a dependence between retrieval operations. Journal of experimental psychology 90, 227–34. https://doi.org/10.1037/h0031564
 
-New, B., Bourgin, J., Barra, J., Pallier, C., 2023. UniPseudo: A universal pseudoword generator. Quarterly Journal of Experimental Psychology 30. https://doi.org/10.1177/17470218231164373
+- New, B., Bourgin, J., Barra, J., Pallier, C., 2023. UniPseudo: A universal pseudoword generator. Quarterly Journal of Experimental Psychology 30. https://doi.org/10.1177/17470218231164373
 
-Pelánek, R., 2016. Applications of the Elo rating system in adaptive educational systems. Computers & Education 98, 169–179. https://doi.org/10.1016/j.compedu.2016.03.017
+- Pelánek, R., 2016. Applications of the Elo rating system in adaptive educational systems. Computers & Education 98, 169–179. https://doi.org/10.1016/j.compedu.2016.03.017
 
-Pelánek, R., Rihák, J., 2016. Properties and Applications of Wrong Answers in Online Educational Systems. International Educational Data Mining Society.
+- Pelánek, R., Rihák, J., 2016. Properties and Applications of Wrong Answers in Online Educational Systems. International Educational Data Mining Society.
 
-Rasch, G. (Georg), 1980. Probabilistic models for some intelligence and attainment tests, 2nd Edition. ed. Chicago : University of Chicago Press.
+- Rasch, G. (Georg), 1980. Probabilistic models for some intelligence and attainment tests, 2nd Edition. ed. Chicago : University of Chicago Press.
 
-Wauters, K., Desmet, P., Van Den Noortgate, W., 2012. Item difficulty estimation: An auspicious collaboration between data and judgment. Computers & Education 58, 1183–1193. https://doi.org/10.1016/j.compedu.2011.11.020
+- Steinberg, J., 2000. Frederic Lord, Who Devised Testing Yardstick, Dies at 87. The New York Times.
 
-Wechsler, D., n.d. Wechsler Adult Intelligence Scale--Third Edition [WWW Document]. URL https://psycnet.apa.org/record/9999-49755-000?doi=1 (accessed 1.14.25).
+- Wauters, K., Desmet, P., Van Den Noortgate, W., 2012. Item difficulty estimation: An auspicious collaboration between data and judgment. Computers & Education 58, 1183–1193. https://doi.org/10.1016/j.compedu.2011.11.020
 
+- Wechsler, D., n.d. Wechsler Adult Intelligence Scale--Third Edition [WWW Document]. URL https://psycnet.apa.org/record/9999-49755-000?doi=1 (accessed 1.14.25).

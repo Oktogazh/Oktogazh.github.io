@@ -1,0 +1,22 @@
+{
+  "serverUrl": "https://api.languagetool.org",
+  "autoCheckDelay": 3000,
+  "shouldAutoCheck": false,
+  "languageVariety": {
+    "en": "en-GB",
+    "de": "de-DE",
+    "pt": "pt-PT",
+    "ca": "ca-ES"
+  },
+  "dictionary": [
+    "Elo",
+    "Rasch"
+  ],
+  "syncDictionary": false,
+  "remoteDictionary": [],
+  "pickyMode": false,
+  "motherTongue": "fr",
+  "staticLanguage": "br-FR",
+  "synonyms": "en",
+  "username": "alan.kersaudy@gmail.com"
+}

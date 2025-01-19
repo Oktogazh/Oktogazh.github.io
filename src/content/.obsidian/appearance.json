@@ -1,0 +1,12 @@
+{
+  "cssTheme": "Atom",
+  "theme": "obsidian",
+  "enabledCssSnippets": [
+    "dashboard",
+    "linelength",
+    "LaTeX",
+    "theme",
+    "latex"
+  ],
+  "accentColor": "#306ee8"
+}

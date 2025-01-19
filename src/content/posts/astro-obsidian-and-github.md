@@ -1,6 +1,7 @@
 ---
 date: 2024-12-10
 title: Publishing an Obsidian Zettelkasten with Astro
+cssclasses: []
 ---
 # Context
 As I had to record my university work and meetings in a logbook, and that part of this work may be either in Welsh or in English, I decided to publish this logbook online. If the readers want to access the content in another language, they can let the in-browser translators do their jobs. As time passed, I noticed that publishing my thoughts proved to be extremely beneficial for a variety of reasons, and decided to keep track of any noteworthy thoughts going through my head. There is actually a word about this sort of note-taking, a German word to be precise, "[Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)". Basically a personal Wikipedia in which the structure emerges based on links (references) between the notes in a bottom-to-top process. One of the best apps to create Zettelkästen is Obsidian; although it is not the only one, it is the one with the biggest community and the most mature ecosystem of plugins and snippets for personalization. But if you don't want to pay 10 usd a month to publish your vault, you need to be a little bit nifty.
