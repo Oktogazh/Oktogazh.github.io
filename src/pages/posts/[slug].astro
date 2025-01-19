@@ -21,7 +21,7 @@ const { Content } = await post.render();
 <BaseLayout title={post.data.title}>
   {!post.data?.cssclasses && <h1>{post.data.title}</h1>}
   <div
-    class={`flex flex-col ${post.data?.cssclasses?.join(' ') || 'self-center w-full max-w-[700px]'}`}
+    class={`flex flex-col self-center w-full max-w-[700px] ${post.data?.cssclasses?.join(' ')}`}
   >
     {
       !post.data?.cssclasses && (

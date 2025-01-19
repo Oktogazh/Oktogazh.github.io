@@ -4,7 +4,6 @@ cssclasses:
   - dashboard
 ---
 
-
 # M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
 - 🛠️ ICE-4005-0 Generalist Mini-project
 	- [Mini-project Dashboard](posts/ice-4005-dashboard)
@@ -28,10 +27,11 @@ cssclasses:
 # Misc.
 - 🛠️ How this website is build
 	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
+<!--
 - 🗣️ Languages
 	- [Experimental Design](posts/experimental-design)
 
-<!--
+
 # Testing
 - 🛠️ ICE-4005-0 Generalist Mini-project
 	- [Mini-project Dashboard](<posts/ice-4005-dashboard>)

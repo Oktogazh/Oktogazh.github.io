@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/dissertation-review.md",
+                "file": "indices/main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "dissertation-review"
+              "title": "main"
             }
           }
         ]
@@ -164,8 +164,8 @@
   },
   "active": "780afff099f75f68",
   "lastOpenFiles": [
-    "posts/dis-rev-exp.md",
     "posts/dissertation-review.md",
+    "posts/dis-rev-exp.md",
     "assets/outstanding-dissertation.pdf",
     "posts/research-proposal.md",
     "posts/kelto-slavek.md",
