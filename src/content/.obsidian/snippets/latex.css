@@ -36,7 +36,7 @@
 	/* Space between references */
 }
 
-ul .list-bullet::after {
+.academic ul .list-bullet::after {
 	background-color: transparent;
 	content: "";
 }

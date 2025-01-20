@@ -27,6 +27,7 @@ cssclasses:
 # Misc.
 - 🛠️ How this website is build
 	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
+
 <!--
 - 🗣️ Languages
 	- [Experimental Design](posts/experimental-design)

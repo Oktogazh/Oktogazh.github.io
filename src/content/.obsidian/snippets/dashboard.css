@@ -8,6 +8,14 @@ This solution is provided by TfT Hacker. Learn more at https://tfthacker.com
     padding-left: 25px !important;
     padding-right: 25px !important;
     padding-top: 20px !important;
+    max-width: 100%;
+}
+
+/* .dashboard */
+.dashboard h1 {
+    border-bottom-style: dotted !important;
+    border-bottom-width: 1px !important;
+    padding-bottom: 14px !important;
 }
 
 .dashboard .markdown-preview-section {
@@ -21,12 +29,6 @@ This solution is provided by TfT Hacker. Learn more at https://tfthacker.com
     font-size: 26pt !important;
     font-weight: bolder;
     letter-spacing: 8px;
-}
-
-.dashboard h1 {
-    border-bottom-style: dotted !important;
-    border-width: 1px !important;
-    padding-bottom: 3px !important;
 }
 
 
@@ -43,19 +45,10 @@ This solution is provided by TfT Hacker. Learn more at https://tfthacker.com
 
 div.markdown-preview-section>div>ul.has-list-bullet>li {
     padding-left: 0p !important;
+    margin-left: 0 1em;
 }
 
-.dashboard div>ul {
-    list-style: none;
-    display: flex;
-    column-gap: 50px;
-    flex-flow: row wrap;
-}
 
-.dashboard div>ul>li {
-    min-width: 250px;
-    width: 15%;
-}
 
 /* Dataview support */
 .dashboard ul.dataview {
@@ -69,6 +62,45 @@ div.markdown-preview-section>div>ul.has-list-bullet>li {
     table-layout: fixed !important;
 }
 
+.dashboard>ul {
+    list-style-type: none;
+    padding-left: 0px !important;
+}
+
+.dashboard ul {
+    font-weight: 600;
+    width: 100%;
+    padding-top: 1em;
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+
+.dashboard ul li {
+    flex: 1 0;
+    min-width: 250px;
+    max-width: 350px;
+    margin-bottom: 0;
+}
+
+.dashboard>ul>li>ul {
+    font-weight: 400;
+    padding-right: 2em;
+    width: auto;
+}
+
+
+.dashboard li::marker {
+    color: gray;
+}
+
+.dashboard table {
+    width: 100%;
+    table-layout: fixed;
+}
+
 .dashboard td {
-    padding-right: 0 8px;
+    padding-right: 8px;
+    padding-top: 0.7em;
+    vertical-align: baseline;
 }

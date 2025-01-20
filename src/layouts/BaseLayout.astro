@@ -2,6 +2,7 @@
 const props = Astro.props;
 
 import '@/style/snippets/latex.css';
+import '@/style/snippets/dashboard.css';
 ---
 
 <!doctype html>
@@ -103,51 +104,5 @@ import '@/style/snippets/latex.css';
 		list-style-type: disc;
 		padding-left: 2em !important;
 		margin-bottom: 2em;
-	}
-
-	/* .dashboard */
-	.dashboard {
-		font-family: inherit;
-		padding-left: 25px !important;
-		padding-right: 25px !important;
-		padding-top: 20px !important;
-	}
-
-	.dashboard h1 {
-		margin-top: 1em;
-	}
-	.dashboard > ul {
-		list-style-type: none;
-		border-bottom-style: dotted !important;
-		border-width: 1px 0 0 0 !important;
-		margin-top: 1em !important;
-		font-weight: 600;
-		display: flex !important;
-		flex-wrap: wrap !important;
-		width: 100%;
-		padding-left: 0px !important;
-	}
-	.dashboard > ul > li {
-		padding-top: 1em;
-		padding: 1rem 0rem;
-		flex: 0 1 350px;
-		max-width:;
-		padding-right: 3em;
-	}
-	.dashboard li::marker {
-		color: gray;
-	}
-	.dashboard ul li ul li {
-		font-weight: 400;
-		margin-bottom: 0;
-	}
-	.dashboard table {
-		width: 100%;
-		table-layout: fixed;
-	}
-	.dashboard td {
-		padding-right: 8px;
-		padding-top: 0.7em;
-		vertical-align: baseline;
 	}
 </style>
