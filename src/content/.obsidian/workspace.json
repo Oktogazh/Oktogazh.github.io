@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "indices/main.md",
-                "mode": "preview",
+                "file": "posts/report-mini-project.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "main"
+              "title": "report-mini-project"
             }
           }
         ]
@@ -164,16 +164,27 @@
   },
   "active": "780afff099f75f68",
   "lastOpenFiles": [
+    "posts/ice-4005-week-12.md",
+    "posts/report-mini-project.md",
+    "posts/2024-12-26.md",
+    "posts/ice-4005-dashboard.md",
+    "indices/main.md",
+    "posts/ice-4005-week-11.md",
+    "posts/ice-4005-week-10.md",
+    "posts/zettelkasten.md",
+    "posts/hayes-2008.md",
+    "posts/conflicting-constraints.md",
+    "posts/elegant-solution-to-a-problem.md",
+    "posts/experimental-design.md",
+    "assets/experimental-design.pdf",
+    "posts/astro-obsidian-and-github.md",
     "posts/dissertation-review.md",
     "posts/dis-rev-exp.md",
     "assets/outstanding-dissertation.pdf",
     "posts/research-proposal.md",
     "posts/kelto-slavek.md",
     "indices/doberaoueg.md",
-    "posts/experimental-design.md",
-    "posts/astro-obsidian-and-github.md",
     "posts/tonkad-ar-yezh.md",
-    "indices/main.md",
     "posts/ice-4005-week-9.md",
     "assets/obsidian.png",
     "categories/Learning.md",
@@ -183,17 +194,8 @@
     "categories/Reviews.md",
     "categories/Testing.md",
     "assets/dissertation-figure.png",
-    "posts/ice-4005-dashboard.md",
-    "posts/ice-4005-week-10.md",
-    "posts/justifying-yet-another-language-test.md",
-    "posts/ice-4005-week-7.md",
     "posts/elo-rating-and-rasch-model.mdx",
-    "elo-rating-and-rasch-model.md",
-    "posts/ice-4005-week-6.md",
-    "dis-rev-exp.md",
-    "posts/pelanek-2016.md",
     "assets/Screenshot 2025-01-04 at 19.54.09.png",
-    "posts/lextale.md",
     "assets/Transfer_Learning_for_Speech_to_Text__Investigating_the_Impact_of_the_Base_Language_on_the_Performance_of_Models.pdf",
     "assets/obsidian copy.png",
     "assets/outstandingdissertation.pdf",
@@ -204,7 +206,6 @@
     "assets",
     "images/obsidian.png",
     "images",
-    "assets/images",
     "Pasted image 20241209225552.png"
   ]
 }

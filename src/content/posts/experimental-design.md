@@ -4,6 +4,11 @@ date: 2024-12-27
 cssclasses:
   - academic
 ---
+
+![](../assets/experimental-design.pdf)
+<iframe src="../assets/experimental-design.pdf" style="min-height: 90vh"/>
+
+<!--
 # Vocabulary Megastudy for non-LOL languages
 
 2 196 words

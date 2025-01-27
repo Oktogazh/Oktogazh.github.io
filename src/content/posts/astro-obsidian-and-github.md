@@ -14,6 +14,8 @@ This is why my system is organised in this way:
 
 ![.](../assets/obsidian.png)
 
+
+
 TODO:
 - explain the three directories
 	- show how the vault is the "content" dir of the astro project

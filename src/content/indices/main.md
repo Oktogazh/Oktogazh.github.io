@@ -27,6 +27,8 @@ cssclasses:
 # Misc.
 - 🛠️ How this website is build
 	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
+- Ar reuz
+	- [Zettelkasten](posts/zettelkasten)
 
 <!--
 - 🗣️ Languages
@@ -44,5 +46,3 @@ cssclasses:
 
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
 -  🗣️ Tystysgrif Sgiliau Iaith
-
-
