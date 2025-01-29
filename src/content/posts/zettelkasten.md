@@ -7,9 +7,14 @@ cssclasses:
 # Linguistics
 - 🛠️ Reading
 	- [Bruce Hayes (2008)](hayes-2008)
-# Learning
-- 🛠️ Machine learning
+# Learning Resources
+- 🛠️ Machine Learning
 	- [Brownlee books](https://ebook.utem.edu.my/)
-- Calculus
+- Math
 	- [Paul's Online Notes](https://tutorial.math.lamar.edu/)
+
+# Stupid questions
+My stupid questions for discusions with LLMs
+- 🛠️ Linguistic
+	- [Words are a superposition of Hidden Markov Chains, sharing the same surface](words-markov)
 

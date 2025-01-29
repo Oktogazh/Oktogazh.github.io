@@ -13,6 +13,10 @@ Blog:
 Skol-Veur:
 - Hentenn Enklask:
 	- [Research Proposal](posts/research-proposal)
+- Mini-project
+	- Kregiñ gant ar rentañ-kont
+	- Kregiñ gant ar c'hod
+- 
 
 About:
 - Patreon
