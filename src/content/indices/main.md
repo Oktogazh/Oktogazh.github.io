@@ -17,12 +17,21 @@ cssclasses:
 	- [Reviewing Lehöfer and Broersma (LexTALE)](posts/lextale)
 -  💼 M.Sc. Individual Project
 	- [Report](posts/report-mini-project)
+-  💼 NLP labs
+	- [Report 1](posts/nlp-lab-1)
 
 # <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
 - 🌐 Troidigezhioù
 	- [Tonkad ar yezh (Tynged yr Iaith gan Saunders Lewis)](posts/tonkad-ar-yezh)
-- 📝 Barzhonegoù
+- 🪶 Barzhonegoù
 	- [Trid an tridi](posts/tridi)
+
+
+# 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
+-  🗣️ Tystysgrif Sgiliau Iaith
+- 📝 Traethodau
+	- [Osgoi methu cyfle mwyaf hannes eis hieithoedd](posts/cyfle-mawr)
+	- 
 
 # Misc.
 - 🛠️ How this website is build
@@ -43,6 +52,3 @@ cssclasses:
 	- [Last Week Log](<posts/ice-4005-week-8>)
 
 
-
-# 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
--  🗣️ Tystysgrif Sgiliau Iaith

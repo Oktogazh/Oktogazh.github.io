@@ -1,7 +1,7 @@
 {
   "serverUrl": "https://api.languagetool.org",
   "autoCheckDelay": 3000,
-  "shouldAutoCheck": false,
+  "shouldAutoCheck": true,
   "languageVariety": {
     "en": "en-GB",
     "de": "de-DE",
@@ -10,13 +10,17 @@
   },
   "dictionary": [
     "Elo",
-    "Rasch"
+    "lemmatizer",
+    "lemmatizers",
+    "Rasch",
+    "tokens",
+    "Zipf"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],
   "pickyMode": false,
-  "motherTongue": "fr",
-  "staticLanguage": "br-FR",
+  "motherTongue": "en",
+  "staticLanguage": "en-GB",
   "synonyms": "en",
-  "username": "alan.kersaudy@gmail.com"
+  "username": ""
 }

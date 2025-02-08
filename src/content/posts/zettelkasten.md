@@ -12,6 +12,8 @@ cssclasses:
 	- [Brownlee books](https://ebook.utem.edu.my/)
 - Math
 	- [Paul's Online Notes](https://tutorial.math.lamar.edu/)
+- NLP
+	- [Stanford 224N (2021)](https://www.youtube.com/watch?v=rmVRLeJRkl4&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=1)
 
 # Stupid questions
 My stupid questions for discusions with LLMs
