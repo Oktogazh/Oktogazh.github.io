@@ -7,6 +7,9 @@ import wikiLinkPlugin from "@portaljs/remark-wiki-link";
 
 import tailwind from "@astrojs/tailwind";
 
+import expressiveCode from "astro-expressive-code";
+import remarkMermaid from 'remark-mermaidjs'
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://oktogazh.github.io",
@@ -15,16 +18,15 @@ export default defineConfig({
     format: 'file'
   },
   trailingSlash: "never",
-  integrations: [
-    mdx({
-      syntaxHighlight: "prism",
-      remarkPlugins: [remarkMath],
-      rehypePlugins: [rehypeKatex],
-    }),
-    tailwind(),
-  ],
+  integrations: [expressiveCode(),
+  mdx({
+    syntaxHighlight: "prism",
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [rehypeKatex],
+  }), tailwind(),],
   markdown: {
     remarkPlugins: [
+      remarkMermaid
     ]
   }
 });

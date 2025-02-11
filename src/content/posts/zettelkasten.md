@@ -20,3 +20,6 @@ My stupid questions for discusions with LLMs
 - 🛠️ Linguistic
 	- [Words are a superposition of Hidden Markov Chains, sharing the same surface](words-markov)
 
+# Kelenn
+- [IA](kelenn-ai)
+- [Comparative grammar of Breton and Welsh](comparative-grammar-br-cy)

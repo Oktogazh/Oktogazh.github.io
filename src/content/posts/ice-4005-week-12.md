@@ -1,6 +1,6 @@
 ---
 date: 2025-01-20
-title: ICE-4005 - Week 12
+title: ICE-4005 - Week 12 (learning MAXENT)
 ---
 ## Work Report
 
@@ -16,6 +16,7 @@ As generating phonotactically correct words may include a variaty of different l
 - Read Brownlee's book.
 
 **References:**
+Complexity Explorer [WWW Document], n.d. URL [https://www.complexityexplorer.org/courses/33-maximum-entropy-methods/segments/3780?summary](https://www.complexityexplorer.org/courses/33-maximum-entropy-methods/segments/3780?summary) (accessed 1.20.25).
 Brownlee. "Deep Learning For Natural Language Processing", n.d. MachineLearningMastery.com. URL [https://www.machinelearningmastery.com/deep-learning-for-nlp/](https://www.machinelearningmastery.com/deep-learning-for-nlp/) (accessed 1.27.25).
 Hayes, B., Wilson, C., 2008. A Maximum Entropy Model of Phonotactics and Phonotactic Learning. Linguistic Inquiry 39, 379–440. [https://doi.org/10.1162/ling.2008.39.3.379](https://doi.org/10.1162/ling.2008.39.3.379)
 

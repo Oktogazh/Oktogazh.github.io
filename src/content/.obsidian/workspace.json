@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/words-markov.md",
+                "file": "posts/matris-evel-rouedad.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "words-markov"
+              "title": "matris-evel-rouedad"
             }
           }
         ]
@@ -165,13 +165,24 @@
   },
   "active": "780afff099f75f68",
   "lastOpenFiles": [
-    "indices/main.md",
-    "posts/cyfle-mawr.md",
+    "posts/kelenn-ai.md",
+    "posts/matris-evel-rouedad.md",
     "posts/zettelkasten.md",
+    "posts/comparative-grammar-br-cy.md",
+    "posts/sim-but-uncom.md",
+    "posts/ice-4005-week-12.md",
+    "posts/ice-4005-dashboard.md",
+    "posts/ice-4005-week-13.md",
+    "posts/ice-4005-week-14.md",
+    "posts/ice-4005-week-10.md",
+    "indices/main.md",
+    "assets/Pasted.md",
+    "assets/rouedad-1.png",
+    "posts/words-markov.md",
+    "posts/cyfle-mawr.md",
     "posts/nlp-lab-1.md",
     "posts/experimental-design.md",
     "posts/report-mini-project.md",
-    "posts/words-markov.md",
     "posts/code-switching and language level.md",
     "posts/How should we teach languages.md",
     "posts/justifying-yet-another-language-test.md",
@@ -181,17 +192,7 @@
     "posts/tridi.md",
     "posts/notennou-tonkad.md",
     "posts/kelto-slavek.md",
-    "posts/tonkad-ar-yezh.md",
     "posts/elo-rating-and-rasch-model.mdx",
-    "posts/research-proposal.md",
-    "posts/dissertation-review.md",
-    "posts/dis-rev-exp.md",
-    "posts/astro-obsidian-and-github.md",
-    "posts/elegant-solution-to-a-problem.md",
-    "posts/conflicting-constraints.md",
-    "posts/hayes-2008.md",
-    "posts/ice-4005-week-10.md",
-    "posts/ice-4005-week-12.md",
     "assets/heaps-large2.png",
     "assets/heaps-large.png",
     "assets/heaps-law-log.png",
@@ -204,7 +205,6 @@
     "assets/experimental-design.pdf",
     "assets/outstanding-dissertation.pdf",
     "assets/obsidian.png",
-    "assets/dissertation-figure.png",
     "assets/Transfer_Learning_for_Speech_to_Text__Investigating_the_Impact_of_the_Base_Language_on_the_Performance_of_Models.pdf",
     "assets/outstandingdissertation.pdf",
     "indices",
