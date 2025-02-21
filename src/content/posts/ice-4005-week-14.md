@@ -2,32 +2,10 @@
 title: ICE-4005 - Week 14 Prototyping
 date: 2025-02-10
 ---
+# Work achieved
+After starting to read the book previously mentioned, I understood that I could use [Keris](https://keras.io/) as wrapper for torch (because of its straightforward API) to chain an embedding layer with  LSTM layers to train a models to predict the next characters for my sequences of characters.
+I asked an LLM to provide me with a prototype and started testing how the architecture behaved.
 
-```mermaid
-graph TD
-    subgraph "Word 1 (Sequence)"
-        subgraph "Time Step 1"
-            T1[0]
-            T2[1]
-            T3[0]
-            T4[0]
-        end
-        subgraph "Time Step 2"
-            T5[0]
-            T6[0]
-            T7[1]
-            T8[0]
-        end
-        subgraph "Time Step 3"
-            T9[0]
-            T10[0]
-            T11[0]
-            T12[1]
-        end
-    end
 
-    style T2 fill:#f96
-    style T7 fill:#f96
-    style T12 fill:#f96
-    
-```
+# Discussions
+Bill tested my knowledge of the code that was in the prototype. I was unable to explain what the shape of the X and Y of the model look like. As I was unable to answer those question it was decided to focus on understanding that prototype more in depth.

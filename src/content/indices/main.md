@@ -30,7 +30,7 @@ cssclasses:
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
 -  🗣️ Tystysgrif Sgiliau Iaith
 - 📝 Traethodau
-	- [Osgoi methu cyfle mwyaf hannes eis hieithoedd](posts/cyfle-mawr)
+	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)
 	- 
 
 # Misc.

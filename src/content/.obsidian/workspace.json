@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/matris-evel-rouedad.md",
+                "file": "posts/ice-4005-week-15.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "matris-evel-rouedad"
+              "title": "ice-4005-week-15"
             }
           }
         ]
@@ -165,22 +165,24 @@
   },
   "active": "780afff099f75f68",
   "lastOpenFiles": [
-    "posts/kelenn-ai.md",
+    "posts/ice-4005-week-14.md",
+    "posts/ice-4005-week-13.md",
     "posts/matris-evel-rouedad.md",
+    "posts/ice-4005-week-15.md",
+    "posts/ice-4005-dashboard.md",
+    "indices/main.md",
+    "posts/nlp-lab-2.md",
+    "posts/nlp-lab-1.md",
+    "posts/kelenn-ai.md",
     "posts/zettelkasten.md",
     "posts/comparative-grammar-br-cy.md",
     "posts/sim-but-uncom.md",
     "posts/ice-4005-week-12.md",
-    "posts/ice-4005-dashboard.md",
-    "posts/ice-4005-week-13.md",
-    "posts/ice-4005-week-14.md",
     "posts/ice-4005-week-10.md",
-    "indices/main.md",
     "assets/Pasted.md",
     "assets/rouedad-1.png",
     "posts/words-markov.md",
     "posts/cyfle-mawr.md",
-    "posts/nlp-lab-1.md",
     "posts/experimental-design.md",
     "posts/report-mini-project.md",
     "posts/code-switching and language level.md",
@@ -190,8 +192,6 @@
     "posts/ice-4005-week-8.md",
     "posts/pelanek-2016.md",
     "posts/tridi.md",
-    "posts/notennou-tonkad.md",
-    "posts/kelto-slavek.md",
     "posts/elo-rating-and-rasch-model.mdx",
     "assets/heaps-large2.png",
     "assets/heaps-large.png",
