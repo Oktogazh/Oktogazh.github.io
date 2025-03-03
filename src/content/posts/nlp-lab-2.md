@@ -3,403 +3,651 @@ title: NLP Lab 2
 date: 2025-02-19
 ---
 
-![](../assets/nlp-lab-1.pdf)
+![](../assets/nlp-lab-2.pdf)
 
-<iframe src="../assets/nlp-lab-1.pdf" style="min-height: 90vh"/>
+<iframe src="../assets/nlp-lab-2.pdf" style="min-height: 90vh"/>
 
-
+<!--
 > The repository for this class can be found [here on GitHub](https://github.com/Oktogazh/NLP/tree/master/Lab_02).
-# Exercise 1.1 Basic Encryption Using Python
+# Exercise 2.1 Playing around with the NLTK Book Collection
 
+First, we import the module and download the books. The outputs are shown as comments.  
 ```python
-"""
-convertupper.py
-"""
-
-cesars_dictionary = {i: 93 + (94 - i) for i in range(65, 123)}
-print(cesars_dictionary)
-  
-
-def capitalize(filename):
-	"""Creates a new file with the prefix 'encrypted_'
-	added to the name of the original file.
-	Then translates the characters using Cesar's cypher algorithm."""
-	
-	with open(filename, "r") as infile:
-		with open("encrypted_" + filename, "w") as outfile:
-			for line in infile:
-			new_line = line[::-1].translate(cesars_dictionary)
-			print(new_line)
-			print(new_line, file=outfile)
-
-  
-  
-
-# output
-"""
-{65: 122, 66: 121, 67: 120, 68: 119, 69: 118, 70: 117, 71: 116, 72: 115, 73: 114, 74: 113, 75: 112, 76: 111, 77: 110, 78: 109, 79: 108, 80: 107, 81: 106, 82: 105, 83: 104, 84: 103, 85: 102, 86: 101, 87: 100, 88: 99, 89: 98, 90: 97, 91: 96, 92: 95, 93: 94, 94: 93, 95: 92, 96: 91, 97: 90, 98: 89, 99: 88, 100: 87, 101: 86, 102: 85, 103: 84, 104: 83, 105: 82, 106: 81, 107: 80, 108: 79, 109: 78, 110: 77, 111: 76, 112: 75, 113: 74, 114: 73, 115: 72, 116: 71, 117: 70, 118: 69, 119: 68, 120: 67, 121: 66, 122: 65}
-
-  
-
-.MLRGZIZKVH VSG LG NVSG OVKNR SXRSD HVHFZX VSG VIZOXVW WOFLSH BVSG GZSG HVIRFJVI WMRPMZN UL HMLRMRKL VSG LG GXVKHVI GMVXVW Z ,NVSG VOGRGMV WLt H'VIFGZm UL WMZ VIFGZm UL HDZo VSG SXRSD LG MLRGZGH OZFJV WMZ VGZIZKVH VSG ,SGIZV VSG UL HIVDLK VSG TMLNZ VNFHHZ LG WMZ ,IVSGLMZ SGRD NVSG WVGXVMMLX VEZS SXRSD HWMZY OZXRGROLK VSG VEOLHHRW LG VOKLVK VML ILU BIZHHVXVM HVNLXVY GR ,HGMVEV MZNFS UL VHIFLx VSG MR MVSd
-
-.WOILD WRWMZX Z LG WVGGRNYFH VY HGXZu GVO ,HRSG VELIK Lg .HVGZGh VHVSG IVEL BMMZIBg VGFOLHYZ MZ UL GMVNSHROYZGHV VSG GXVQYL GXVIRW MR TMREZS OOZ ,HMLRGZKIFHF WMZ HVRIFQMR WVGZVKVI UL BILGHRS Z HR MRZGRIy GZVIt UL TMRp GMVHVIK VSG UL BILGHRS VSg .GMVNMIVELt UL HNVGHBh IVNILU IRVSG IVGOZ LG NVSG HMRZIGHMLX SXRSD BGRHHVXVM VSG DLM HR SXFH WMZ ;HVRMLOLx VHVSG UL VXMZIVUUFH GMVRGZK VSG MVVY HZS SXFh--.BGRIFXVH VIFGFU IRVSG ILU HWIZFt DVM VWRELIK LG WMZ ,GMVNMIVELt SXFH UUL DLISG LG ,BGFW IRVSG HR GR ,GSTRI IRVSG HR GR ,NHRGLKHVw VGFOLHYZ IVWMF NVSG VXFWVI LG MTRHVW Z HVXMREV GXVQYl VNZH VSG BOYZRIZEMR TMRFHIFK ,HMLRGZKIFHF WMZ HVHFYZ UL MRZIG TMLO Z MVSD GFy .WVNLGHFXXZ VIZ BVSG SXRSD LG HNILU VSG TMRSHROLYZ BY HVEOVHNVSG GSTRI LG MZSG ,VOYZIVUUFH VIZ HOREV VORSD ,IVUUFH LG WVHLKHRW VILN VIZ WMRPMZN GZSG ,MDVSH SGZS VXMVRIVKCV OOZ BOTMRWILXXZ WMZ ;HVHFZX GMVRHMZIG WMZ GSTRO ILU WVTMZSX VY GLM WOFLSH WVSHROYZGHV TMLO HGMVNMIVELt GZSG VGZGXRW OORD ,WVVWMR ,VXMVWFIk .HHVMRKKZs WMZ BGVUZh IRVSG GXVUUV LG BOVPRO GHLN NVVH OOZSH NVSG LG HZ ,NILU SXFH MR HIVDLK HGRTMRARMZTIL WMZ HVOKRXMRIK SXFH ML MLRGZWMFLU HGR TMRBZO ,GMVNMIVELt DVM VGFGRGHMR LG WMZ ,GR SHROLYZ LG IL IVGOZ LG VOKLVk VSG UL GSTRi VSG HR GR ,HWMV VHVSG UL VERGXFIGHVW HVNLXVY GMVNMIVELt UL NILu BMZ IVEVMVSD GZSg-- ,WVMIVELT VSG UL GMVHMLX VSG NLIU HIVDLK GHFQ IRVSG TMRERIVW ,MVn TMLNZ WVGFGRGHMR VIZ HGMVNMIVELt ,HGSTRI VHVSG VIFXVH LG GZSg--.HHVMRKKZs UL GRFHIFK VSG WMZ BGIVYRo ,VURo VIZ VHVSG TMLNZ GZSG ,HGSTRi VOYZMVROZMF MRZGIVX SGRD ILGZVIx IRVSG BY WVDLWMV VIZ BVSG GZSG ,OZFJV WVGZVIX VIZ MVN OOZ GZSG ,GMVWREV-UOVH VY LG HSGFIG VHVSG WOLS Vd
-"""
-```
-
-# Exercise 1.2 Coping with Noisy Text
-The program does not lematize the words before or after grouping them by length, the special characters `' -- , ` etc.. are present, in some cases, two different words are grouped together. Here is my proposed correction, without use NLTK.
-
-```python
-""" Uses a dictionary to group the words in a text file according to
-their length (number of letters). """
-
-import sys # For argv global command line arguments list
-
-def main():
-	"""Group the words by length in a text file."""
-	if len(sys.argv) < 2: # Did the user not supply a file name?
-		print("Usage: python groupwords.py <filename>")
-		print(" where <filename> is the name of a text file.")
-	else: # User provided file name
-		filename = sys.argv[1]
-		groups = {} # Initialize grouping dictionary
-		with open(filename, "r") as f: # Open the file for reading
-			content = f.read() # Read in content of the entire file
-			words = (
-				content.replace("'s", " 's")
-				.replace("n't", "")
-				.replace(".", " ")
-				.replace("--", " ")
-				.split()
-			) # Make list of individual words, remove some punctuation
-			
-			for word in words:
-				word = word.lower() # Make the word all in lower case
-				# Compute the word's length
-				size = len(word)
-				if size in groups:
-				if word not in groups[size]: # Avoid duplicates
-					groups[size] += [word] # Add the word to its group
-				else:
-					groups[size] = [word] # Add the word to a new group
-			
-			# Show the groups
-			for size, group in sorted(groups.items()):
-				print(size, ":", group)
-
-if __name__ == "__main__":
-	main()
-  
-
-# output
-"""
-1 : ['a']
-2 : ['in', 'of', 'it', 'to', "'s", 'we', 'be', 'by', 'is', 'or', 'on', 'as', 'an']
-3 : ['the', 'for', 'one', 'and', 'god', 'all', 'men', 'are', 'any', 'it,', 'new', 'its', 'not', 'but', 'off', 'has', 'now', 'let']
-4 : ['when', 'have', 'them', 'with', 'laws', 'that', 'they', 'hold', 'men,', 'just', 'from', 'form', 'such', 'seem', 'most', 'will', 'long', 'hath', 'more', 'than', 'same', 'been', 'king', 'over']
-5 : ['human', 'bands', 'which', 'among', 'equal', 'them,', 'impel', 'these', 'their', 'life,', 'ends,', 'right', 'alter', 'form,', 'shall', 'light', 'while', 'evils', 'forms', 'train', 'under', 'duty,', 'throw', 'great', 'prove', 'this,', 'facts', 'world']
-6 : ['course', 'people', 'assume', 'powers', 'earth,', 'nature', 'decent', 'should', 'causes', 'truths', 'equal,', 'secure', 'laying', 'likely', 'effect', 'safety', 'shewn,', 'abuses', 'object', 'design', 'reduce', 'right,', 'guards', 'future', 'former', 'having', 'direct', 'states', 'candid']
-7 : ['events,', 'becomes', 'station', 'entitle', 'respect', 'mankind', 'declare', 'created', 'endowed', 'creator', 'certain', 'rights,', 'liberty', 'pursuit', 'consent', 'abolish', 'indeed,', 'dictate', 'changed', 'causes;', 'suffer,', 'evinces', 'provide', 'patient', 'systems', 'history', 'present', 'britain', 'tyranny']
-8 : ['dissolve', 'another,', 'separate', 'opinions', 'requires', 'deriving', 'whenever', 'disposed', 'pursuing', 'absolute', 'security', 'repeated', 'injuries']
-9 : ['necessary', 'political', 'connected', 'happiness', 'governed,', 'institute', 'prudence,', 'transient', 'colonies;', 'necessity', 'submitted']
-10 : ['separation', 'instituted', 'government', 'foundation', 'principles', 'experience', 'themselves', 'abolishing', 'accustomed', 'invariably', 'despotism,', 'sufferance', 'constrains']
-11 : ['unalienable', 'governments', 'destructive', 'government,', 'established', 'accordingly', 'sufferable,']
-12 : ['usurpations,']
-13 : ['self-evident,', 'organizingits', 'establishment']
-"""
-```
-
-# 1.3 Understand Zipf's Law
-
-![Zipf Figure](../assets/zipf-english.png)
-
-This graph shows the correlation between orders and frequency for three English corpora. It uses a logarithmic scale to make the correlation more obvious. As the number of words become more significant, this logarithmic representation looks more linear (in the graph), and yields what would be called a [harmonic progression](https://en.wikipedia.org/wiki/Harmonic_progression_(mathematics)) of the shape for $f(x)=\frac{1}{r^{x}}=r^{-x}$ where $r$ is the rank of the word, and $x$ a constant that can vary depending on the source, especially the language. If a Spearman correlation was expected here, the presence of a strong Pearson correlation would be expected if they were to be normalized, which is less obvious.  
-
-![Zipf Figure](../assets/zipf-english2.jpeg)
-
-To illustrate this prediction – that is, as the corpus grow, the logarithmic representation gives an ever straighter line – I tried to add another text and to sum the frequencies between different texts all together. As we can see, the purple line is slightly more straight than the others. Although I tried to find a long text, we can see another interesting aspect of the Zipf's law with the new text added. The order of magnitude of the length of the so-called "Longest Text Ever" is not big enough to influence the total significantly and a hollow is observed in the total, where a bump is found in this other text. I decided to keep it to highlight this property of the logarithmic distribution. To try to have better results, I tried to lower the casing of all words before adding them in the frequency dictionaries. It is still not a perfect line, though.  
-
-```python
-from matplotlib import pyplot as plt
-
 import re
 
-def plot_frequency(frequency: dict[str, int], label: str) -> None:
-    """
-    Plots the frequency of words in the text.
-    @param frequency: dictionary of word frequencies
-    @param label: label for the plot
-    @return: None
-    """
-    most_frequent = dict(
-        sorted(frequency.items(), key=lambda elem: elem[1], reverse=True)
-    )
+# Started with the following to load the book corpus
+# in the module's data directory (only once)
+import nltk
+nltk.download()
+nltk.download('punkt_tab')
+from nltk import book as books
 
-    y = []
-    for idx, (words, frequency) in enumerate(most_frequent.items()):
-        y += (frequency,)
-
-    plt.plot(range(1, len(y) + 1), y, label=label)
-
-
-def plot_Zipfs_Law(filenames: list[str]) -> None:
-    """
-    Plots Zipf's Law for the text in the file named filename.
-    @param    filenames: list of filenames
-    @return: None
-    """
-    total_frequency = {}
-    for file in filenames:
-        frequency = {}
-        with open(file, "r", encoding="UTF8") as content:
-            text_string = content.read()
-            words = re.findall(r"\b[A-Za-z][a-z]{2,9}\b", text_string)
-
-            for word in words:
-                count = frequency.get(word.lower(), 0)
-                frequency[word.lower()] = count + 1
-                total_count = total_frequency.get(word.lower(), 0)
-                total_frequency[word.lower()] = total_count + 1
-        plot_frequency(frequency, file)
-
-    plot_frequency(total_frequency, "Total")
-
-
-plot_Zipfs_Law(["Brown.txt", "Shake.txt", "Bible.txt", "Longest_Text_Ever.txt"])
-
-
-plt.title("Zipf's Law for different texts (using log scales)")
-plt.legend()
-plt.xlabel("Rank")
-plt.ylabel("Frequency")
-plt.xscale("log")  # Use log scale for the X axis
-plt.yscale("log")  # Use log scale for the Y axis
-
-plt.show()
-
+""" outputs
+*** Introductory Examples for the NLTK Book ***
+Loading text1, ..., text9 and sent1, ..., sent9
+Type the name of the text or sentence to view it.
+Type: 'texts()' or 'sents()' to list the materials.
+text1: Moby Dick by Herman Melville 1851
+text2: Sense and Sensibility by Jane Austen 1811
+text3: The Book of Genesis
+text4: Inaugural Address Corpus
+text5: Chat Corpus
+text6: Monty Python and the Holy Grail
+text7: Wall Street Journal
+text8: Personals Corpus
+text9: The Man Who Was Thursday by G . K . Chesterton 1908
+"""
 ```
 
-
-# 1.4 Dictionaries Again and Sparse Data Problem
-
-Here is the new graph with the Sparse Data stats in the description.  
-
-![fig](zipf-3.png)
-
-Here is the part of the file that was modified for this new version of the graph:  
-
+Then, we start playing the methods and discovering the parameters of the book module (imported as "books" above).  As we can see, some methods are more useful than others. The `sents` method for instance doesn't do anything but printing the first sentence from each book.  
 ```python
-from matplotlib import pyplot as plt
-import math
+print(books.text1.name)  # Moby Dick by Herman Melville 1851
+books.sents()
+"""
+sent1: Call me Ishmael .
+sent2: The family of Dashwood had long been settled in Sussex .
+sent3: In the beginning God created the heaven and the earth .
+sent4: Fellow - Citizens of the Senate and of the House of Representatives :
+sent5: I have a problem with people PMing me to lol JOIN
+sent6: SCENE 1 : [ wind ] [ clop clop clop ] KING ARTHUR : Whoa there !
+sent7: Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .
+sent8: 25 SEXY MALE , seeks attrac older single lady , for discreet encounters .
+sent9: THE suburb of Saffron Park lay on the sunset side of London , as red and ragged as a cloud of sunset .
+"""
 
-import re
+books.text3.concordance("thou")
+""" 
+Displaying 25 of 284 matches:
+saying , Of every tree of the garden thou mayest freely e But of the tree of t
+ of the knowledge of good and evil , thou shalt not eat of for in the day that
+shalt not eat of for in the day that thou eatest thereof thou shalt surely die
+ in the day that thou eatest thereof thou shalt surely die . And the LORD God 
+Adam , and said unto him , Where art thou ? And he said , I heard thy voice in
+f . And he said , Who told thee that thou wast naked ? Hast thou eaten of the 
+old thee that thou wast naked ? Hast thou eaten of the tree , whereof I comman
+tree , whereof I commanded thee that thou shouldest not eat ? And the man said
+ ? And the man said , The woman whom thou gavest to be with me , she gave me o
+d unto the woman , What is this that thou hast done ? And the woman said , The
+ God said unto the serpent , Because thou hast done this , thou art cursed abo
+pent , Because thou hast done this , thou art cursed above all cattle , and ab
+ of the field ; upon thy belly shalt thou go , and dust shalt thou eat all the
+belly shalt thou go , and dust shalt thou eat all the days of thy li And I wil
+eed ; it shall bruise thy head , and thou shalt bruise his heel . Unto the wom
+orrow and thy conception ; in sorrow thou shalt bring forth children ; and thy
+ee . And unto Adam he said , Because thou hast hearkened unto the voice of thy
+of which I commanded thee , saying , Thou shalt not eat of cursed is the groun
+round for thy sake ; in sorrow shalt thou eat of it all the days of thy life ;
+s shall it bring forth to thee ; and thou shalt eat the herb of the field ; In
+eld ; In the sweat of thy face shalt thou eat bread , till thou return unto th
+thy face shalt thou eat bread , till thou return unto the ground ; for out of 
+unto the ground ; for out of it wast thou tak for dust thou art , and unto dus
+for out of it wast thou tak for dust thou art , and unto dust shalt thou retur
+ dust thou art , and unto dust shalt thou return . And Adam called his wife ' """
 
-fig, ax = plt.subplots()
+print(books.text6.generate())
+""" 
+SOLDIER # 1 : Until you come and get a bit . # 2 : Hic ! ARTHUR : How
+can we come up and have a plan , sir . roar ] MAYNARD : Armaments ,
+Chapter Two , verses Nine to Twenty - one . Heh . DINGO : Yes , yes ,
+you ain ' t . , great . Ni ! who , when he seemed about to recover ,
+suddenly felt the icy hand of death upon him . No SCENE 19 : ARTHUR :
+Walk away . squeak ] [ howl ] [ creak
+SOLDIER # 1 : Until you come and get a bit . # 2 : Hic ! ARTHUR : How
+can we come up and have a plan , sir . roar ] MAYNARD : Armaments ,
+Chapter Two , verses Nine to Twenty - one . Heh . DINGO : Yes , yes ,
+you ain ' t . , great . Ni ! who , when he seemed about to recover ,
+suddenly felt the icy hand of death upon him . No SCENE 19 : ARTHUR :
+Walk away . squeak ] [ howl ] [ creak
+"""
+```
 
-plots = []
+Using the shell I could discover the other methods of the texts modules.  
+```python
+# example of methods coming with a text
+""" 
+book.text4.collocation_list(  book.text4.concordance_list(  book.text4.generate(          book.text4.readability(                                     
+book.text4.collocations(      book.text4.count(             book.text4.index(             book.text4.similar(                                         
+book.text4.common_contexts(   book.text4.dispersion_plot(   book.text4.name               book.text4.tokens                                           
+book.text4.concordance(       book.text4.findall(           book.text4.plot(              book.text4.vocab()                                          
+>>> book.text4.
+ """
+```
 
+Finding the first 100 words of 'Monty Python and the Holy Grail' depends on what we define as a word. In the code bellow, we admit two definitions, a word as a token and a word as a type.  
+```python
 
-def plot_frequency(frequency: dict[str, int], label: str) -> None:
-    """
-    Plots the frequency of words in the text.
-    @param frequency: dictionary of word frequencies
-    @param label: label for the plot
-    @return: None
-    """
-    most_frequent = dict(
-        sorted(frequency.items(), key=lambda elem: elem[1], reverse=True)
-    )
-
-    y = []
-    for idx, (words, frequency) in enumerate(most_frequent.items()):
-        y += (frequency,)
-
-    plots.append(ax.plot(range(1, len(y) + 1), y, label=label))
-
-
-total_frequency = {}
-
-
-def plot_Zipfs_Law(filenames: list[str]) -> None:
-    """
-    Plots Zipf's Law for the text in the file named filename.
-    @param    filenames: list of filenames
-    @return: None
-    """
-    for file in filenames:
-        frequency = {}
-        with open(file, "r", encoding="UTF8") as content:
-            text_string = content.read()
-            words = re.findall(r"\b[A-Za-z][a-z]{2,9}\b", text_string)
-
-            for word in words:
-                count = frequency.get(word.lower(), 0)
-                frequency[word.lower()] = count + 1
-                total_count = total_frequency.get(word.lower(), 0)
-                total_frequency[word.lower()] = total_count + 1
-        plot_frequency(frequency, file)
-        print(
-            f"""Proportions for {file}:
-            one ocurence: {math
-                .ceil(100 * len([word for word, freq in frequency.items() if freq == 1]) / len(frequency))}
-            two ocurences: {math
-                .ceil(100 * len([word for word, freq in frequency.items() if freq == 2]) / len(frequency))}
-            more than two: {math
-                .ceil(100 * len([word for word, freq in frequency.items() if freq > 2]) / len(frequency))}
-            """
-        )
-
-    plot_frequency(total_frequency, "Global")
-    print(
-        f"""Proportions for all corpora:
-            one ocurence: {math
-                .ceil(100 * len([word for word, freq in total_frequency.items() if freq == 1]) / len(total_frequency))}
-            two ocurences: {math
-                .ceil(100 * len([word for word, freq in total_frequency.items() if freq == 2]) / len(total_frequency))}
-            more than two: {math
-                .ceil(100 * len([word for word, freq in total_frequency.items() if freq > 2]) / len(total_frequency))}
-            """
-    )
-
-
-plot_Zipfs_Law(["Brown.txt", "Shake.txt", "Bible.txt", "Longest_Text_Ever.txt"])
+types = set()
+for word in books.text6:
+    if len(types) == 100:
+        break
+    # Include in the set if it contains a letter
+    types |= {re.sub(r"^[^a-zA-Z]+$", "", word) or None}
 
 
-plt.title("Zipf's Law for different texts (using log scales)")
-ax.add_artist(ax.legend())
-plt.gca().set_position((0.1, 0.22, 0.8, 0.7))
-plt.figtext(
-    0.5,
-    0.01,
-    f"""In the global frequency dictionary,
-the words mentioned once represent as much as {math
-    .ceil(100 * len([word for word, freq in total_frequency.items() if freq == 1]) / len(total_frequency))}% of the corpus.
-The words present twice represent {math
-    .ceil(100 * len([word for word, freq in total_frequency.items() if freq == 2]) / len(total_frequency))}% of all these texts.""",
-    weight="medium",
-    ha="center",
+print("Analyse of the Monty Python and the Holy Grail:")
+print(
+    f"""First 100 tokens: {books.text6[:100]}
+First 100 wordtypes: {types}
+"""
 )
-plt.xlabel("Rank")
-plt.ylabel("Frequency")
-plt.xscale("log")  # Use log scale for the X axis
-plt.yscale("log")  # Use log scale for the Y axis
 
-plt.show()
+"""
+Analyse of the Monty Python and the Holy Grail:
 
-# output
+First 100 tokens: ['SCENE', '1', ':', '[', 'wind', ']', '[', 'clop', 'clop', 'clop', ']', 'KING', 'ARTHUR', ':', 'Whoa', 'there', '!', '[', 'clop', 'clop', 'clop', ']', 'SOLDIER', '#', '1', ':', 'Halt', '!', 'Who', 'goes', 'there', '?', 'ARTHUR', ':', 'It', 'is', 'I', ',', 'Arthur', ',', 'son', 'of', 'Uther', 'Pendragon', ',', 'from', 'the', 'castle', 'of', 'Camelot', '.', 'King', 'of', 'the', 'Britons', ',', 'defeator', 'of', 'the', 'Saxons', ',', 'sovereign', 'of', 'all', 'England', '!', 'SOLDIER', '#', '1', ':', 'Pull', 'the', 'other', 'one', '!', 'ARTHUR', ':', 'I', 'am', ',', '...', 'and', 'this', 'is', 'my', 'trusty', 'servant', 'Patsy', '.', 'We', 'have', 'ridden', 'the', 'length', 'and', 'breadth', 'of', 'the', 'land', 'in']
+First 100 types: First 100 types (including punctuation): {'is', 'England', 'a', 'Ridden', 've', 'join', 'snows', 'goes', 'winter', 'Whoa', 'tropical', 'Found', None, 'am', 'Where', 'son', 'We', 'will', 'found', 'King', 'Arthur', 'SCENE', 'knights', 'Camelot', 'me', 'at', 'lord', 'and', 'em', 'using', 'together', 'SOLDIER', 'two', 'coconut', 'halves', 'must', 'coconuts', 'kingdom', 'speak', 's', 'Yes', 'Mercea', 'It', 'defeator', 'court', 'got', 'land', 'clop', 'other', 'covered', 'them', 'I', 'breadth', 'from', 'You', 'empty', 'since', 'horse', 'there', 'ARTHUR', 're', 'In', 'Uther', 'servant', 'Pendragon', 'castle', 'sovereign', 'wind', 'What', 'all', 'you', 'through', 'Pull', 'one', 'in', 'Saxons', 'bangin', 'my', 'this', 'So', 'Halt', 'your', 'The', 'KING', 'd', 'have', 'master', 'ridden', 'Patsy', 'with', 'who', 'Who', 'the', 'length', 'search', 'Britons', 'get', 'on', 'trusty', 'of'}
 """
-Proportions for Brown.txt:
-            one ocurence: 37%
-            two ocurences: 15%
-            more than two: 49%
-            
-Proportions for Shake.txt:
-            one ocurence: 37%
-            two ocurences: 14%
-            more than two: 50%
-            
-Proportions for Bible.txt:
-            one ocurence: 31%
-            two ocurences: 14%
-            more than two: 57%
-            
-Proportions for Longest_Text_Ever.txt:
-            one ocurence: 58%
-            two ocurences: 16%
-            more than two: 27%
-            
-Proportions for all:
-            one ocurence: 37%
-            two ocurences: 14%
-            more than two: 51%
-"""
+
 ```
 
-This output shows us that half of the words used in the corpora here are not present more than two times. This limits the capacity exploit their proximity to other words to properly analyse their usage and meaning. It underscores the importance of gathering large corpora. Although, these data ought to be taken with a pinch of salt, because once again, we did not use a lemmatizer here, so a good proportion of the words found once are simply inflected forms of words more common in the corpus. This aspect also shows us the importance of lemmatizers to analyse texts and exploit the available information optimally, especially for under-resourced languages.  
+# Exercise 2.2 Introducing Regular Expressions
 
-# 1.5 The Zero Frequency Problem
+In this section, we will learn new English words that we can list based on different criteria using regular expressions.  
+```python
+
+import re
+import nltk
+
+words = nltk.corpus.words.words("en")
+
+only_vowel_words = [word for word in words if re.match("^[aeiouAEIOU]{3}$", word)]
+print(only_vowel_words)
+# ['iao', 'oii']
+
+vcv = [
+    word for word in words if re.match("^[aeiouAEIOU][b-df-hj-np-tv-z][aeiou]$", word)
+]
+print(vcv)
+# ['aba', 'Abe', 'Abo', 'Abu', 'abu', 'ace', 'Ada', 'Ade', 'ade', 'ado', 'aga', 'age', 'ago', 'aha', 'aho', 'ahu', 'Aka', 'aka', 'ake', 'ako', 'aku', 'ala', 'ale', 'alo', 'ama', 'ame', 'Ami', 'ami', 'Ana', 'ana', 'ani', 'apa', 'ape', 'ara', 'are', 'Aro', 'aru', 'Asa', 'ase', 'Ata', 'ate', 'Ati', 'ava', 'Ave', 'ave', 'avo', 'awa', 'awe', 'axe', 'aye', 'ayu', 'azo', 'Edo', 'ego', 'eke', 'Eli', 'eme', 'emu', 'era', 'ere', 'eta', 'Eva', 'Eve', 'eve', 'Ewe', 'ewe', 'eye', 'iba', 'Ibo', 'ice', 'Ida', 'ide', 'Ido', 'ife', 'ihi', 'Ijo', 'Ike', 'Ila', 'Ima', 'imi', 'imu', 'Ino', 'Ira', 'ire', 'iso', 'Ita', 'Ito', 'iva', 'iwa', 'iyo', 'obe', 'obi', 'oda', 'ode', 'Ofo', 'oho', 'oka', 'oki', 'Ole', 'Ona', 'ona', 'one', 'ope', 'ora', 'ore', 'ose', 'Oto', 'Ova', 'ova', 'owe', 'ubi', 'Uca', 'Udi', 'udo', 'uji', 'uke', 'ula', 'ule', 'ulu', 'ume', 'umu', 'Una', 'upo', 'ura', 'ure', 'Uri', 'Uro', 'Uru', 'use', 'Uta', 'uta', 'Ute', 'utu', 'uva']
+
+vcvv = [
+    word
+    for word in words
+    if re.match("^[aeiouAEIOU][b-df-hj-np-tv-z][aeiou]{2}$", word)
+]
+print(vcvv)
+# ['Abie', 'Adai', 'Agao', 'Agau', 'agee', 'agio', 'agua', 'ague', 'akee', 'akia', 'Alea', 'alee', 'aloe', 'Amia', 'anoa', 'apii', 'apio', 'aqua', 'aquo', 'area', 'aria', 'arui', 'awee', 'Eboe', 'eboe', 'edea', 'eheu', 'ejoo', 'Ekoi', 'Elia', 'epee', 'eria', 'Erie', 'etua', 'etui', 'Evea', 'evoe', 'idea', 'ilia', 'Inia', 'Itea', 'Ixia', 'oboe', 'ogee', 'ohia', 'Ohio', 'okee', 'okia', 'Okie', 'Olea', 'oleo', 'olio', 'omao', 'oxea', 'Ubii', 'Ulua', 'ulua', 'unau', 'unie', 'Unio', 'unio', 'urao', 'urea', 'Uria', 'usee', 'utai', 'uvea']
+
+
+vcvvv = [
+    word
+    for word in words
+    if re.match("^[aeiouAEIOU][b-df-hj-np-tv-z][aeiou]{3}$", word)
+]
+print(vcvvv)
+# ['adieu', 'Araua', 'Arioi', 'iliau', 'Umaua']
+
+len_7_adehins = [word for word in words if re.match(r"^[adehins]{7}$", word)]
+print(len_7_adehins)
+# ['addenda', 'adenase', 'adenine', 'ahaaina', 'anidian', 'aniseed', 'asinine', 'asshead', 'daisied', 'danaide', 'danaine', 'dasheen', 'deadish', 'deaness', 'deedeed', 'disdain', 'disease', 'enshade', 'hashish', 'hennish', 'insense', 'nandine', 'saddish', 'sadness', 'seaside', 'shadine', 'shedded']
+
+textonyms = [word for word in words if re.match("^[defDEF][ghi][jkl][mno]$", word)]
+print(textonyms)
+# ['dilo', 'film', 'filo']
+```
+
+# 2.3 Tagging Parts of Speech (POS)
 
 ```python
 import re
-import math
+import nltk
 
 
-def get_distance(filenames: list[str]) -> None:
-    """
-    find the distance between a list of texts
-    @param filenames: list of filenames
-    @return: None
-    """
-    texts = {}
-    for file in filenames:
-        frequency = {}
-        with open(file, "r", encoding="UTF8") as content:
-            text_string = content.read()
-            words = re.findall(r"\b[A-Za-z][a-z]{2,9}\b", text_string)
+def extract_first_noun_phrase(sentence: str) -> str:
+    # Tokenize the text into words
+    tokens = nltk.word_tokenize(sentence)
 
-            for word in words:
-                count = frequency.get(word.lower(), 0)
-                frequency[word.lower()] = count + 1
-        texts[file] = frequency
+    first_noun_phrase = []
+    for token in nltk.pos_tag(tokens):
+        if (
+            len(first_noun_phrase) > 0
+            and "NN" == first_noun_phrase[-1][1][:2]
+            and (token[1][:2] != "NN" and token[1][:2] != "IN" and token[1][:2] != "PR")
+        ):
+            # end the loop if the first noun phrase has ended
+            break
+        elif re.match(r"^(DT|JJ|IN|NNS?|PR.*)$", token[1]):
+	        # extend the phrase as long as a POS tag is a valid part of a NP
+            first_noun_phrase.append(token)
 
-    distances = {}
-    normalized_distances = {}
-    for file, frequency in texts.items():
-        for other_file, other_frequency in texts.items():
-            if file != other_file and f"{other_file}-{file}" not in distances:
-                distance = len(
-                    [word for word in frequency if word not in other_frequency]
-                )
-                distances[f"{file}-{other_file}"] = distance
-                normalized_distances[f"{file}-{other_file}"] = distance / (
-                    len(frequency) + len(other_frequency)
-                )
-    print(
-        "Sum of word types absent in the other corpus by pair:",
-        "".join([f"\n\t{pair}: {distance}" for pair, distance in distances.items()]),
-    )
-    print(
-        "Normalized distance by pair:",
-        "".join(
-            [
-                f"\n\t{pair}: {math.ceil(distance*10000)/100}%"
-                for pair, distance in normalized_distances.items()
-            ]
-        ),
-    )
+    return " ".join([word for word, tag in first_noun_phrase])
 
 
-get_distance(["Brown.txt", "Shake.txt", "Bible.txt"])
+# testing the code with sample sentences
+sample_sentences = [
+    "Should all good men to come to the aid of their party?",
+    "And now is the time for all good men to come to the aid of their party",
+    "and for all good men to come to the aid of their party.",
+    "Come to the aid of your party.",
+    "Your party needs you.",
+]
 
+for sentence in sample_sentences:
+    print(f"Sentence: {sentence}")
+    print(f"First noun phrase: {extract_first_noun_phrase(sentence)}")
+    print()
 
-# output
 """
-Sum of word types absent in the other corpus by pair: 
-  Brown.txt-Shake.txt: 22906
-  Brown.txt-Bible.txt: 29023
-  Shake.txt-Bible.txt: 16995
-Normalized distance by pair: 
-  Brown.txt-Shake.txt: 39.09%
-  Brown.txt-Bible.txt: 62.12%
-  Shake.txt-Bible.txt: 48.39%
+Sentence: Should all good men to come to the aid of their party?
+First noun phrase: all good men
+
+Sentence: And now is the time for all good men to come to the aid of their party
+First noun phrase: the time for all good men
+
+Sentence: and for all good men to come to the aid of their party.
+First noun phrase: for all good men
+
+Sentence: Come to the aid of your party.
+First noun phrase: the aid of your party
+
+Sentence: Your party needs you.
+First noun phrase: Your party needs you
+"""
+```
+In this program I attempted to use regular expressions to extract the first noun phrase from a given sentence. To do so I had to extend the definition provided in the assignment to take more part of speech (POS) tags into account. Especially, the plurial nouns, `NNS`, the personal pronouns (which are between determinants and adjectives), and the tag "TO" which symbolizes a preposition.  
+It is important to point out that no matter how complete the function we use to extract the noun phrase can be, it is always dependant on the tagging that is made by the NLTK `pos_tag` module. This module might fail to recognise properly the the parts of a sentence. In the last sample sentence, the toke "needs" is parsed as a plurial noun `NNS`, although it is in reality a conjugated verb. Since NLTK did not categorise the verb properly, my function also integrated the following pronoun as a part of the noun phrase, despite English syntax not allowing a noun phrase to end by a pronoun... I still keep this output for reference.  
+
+# 2.4 Making syntactic trees
+
+```python
+import nltk
+from nltk import book
+
+np_grammar = "NP: {<DT>?<JJ>*<NN>+}"
+
+np_parser = nltk.RegexpParser(np_grammar)
+
+sentences = [
+    nltk.pos_tag(sentence) for sentence in [book.sent2, book.sent3, book.sent5]
+]
+res = ""
+for sentence in sentences:
+    print(" ".join([token for token, tag in sentence]))
+    result = np_parser.parse(sentence)
+    print(result)
+    result.pretty_print()
+    result.draw()
+
+""" output
+The family of Dashwood had long been settled in Sussex .
+(S
+  (NP The/DT family/NN)
+  of/IN
+  Dashwood/NNP
+  had/VBD
+  long/RB
+  been/VBN
+  settled/VBN
+  in/IN
+  Sussex/NNP
+  ./.)
+                                                 S                                               
+   ______________________________________________|___________________________________             
+  |        |          |       |       |          |        |       |       |          NP          
+  |        |          |       |       |          |        |       |       |     _____|______      
+of/IN Dashwood/NNP had/VBD long/RB been/VBN settled/VBN in/IN Sussex/NNP ./. The/DT     family/NN
+
+2025-02-26 15:51:32.042 Python[6713:91178] +[IMKClient subclass]: chose IMKClient_Modern
+2025-02-26 15:51:32.042 Python[6713:91178] +[IMKInputSession subclass]: chose IMKInputSession_Modern
+In the beginning God created the heaven and the earth .
+(S
+  In/IN
+  (NP the/DT beginning/NN)
+  God/NNP
+  created/VBD
+  (NP the/DT heaven/NN)
+  and/CC
+  (NP the/DT earth/NN)
+  ./.)
+                                       S                                                             
+   ____________________________________|__________________________________________________            
+  |      |         |        |     |          NP                      NP                   NP         
+  |      |         |        |     |     _____|_______           _____|______         _____|_____      
+In/IN God/NNP created/VBD and/CC ./. the/DT     beginning/NN the/DT     heaven/NN the/DT     earth/NN
+
+Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .
+(S
+  Pierre/NNP
+  Vinken/NNP
+  ,/,
+  61/CD
+  years/NNS
+  old/JJ
+  ,/,
+  will/MD
+  join/VB
+  (NP the/DT board/NN)
+  as/IN
+  (NP a/DT nonexecutive/JJ director/NN)
+  Nov./NNP
+  29/CD
+  ./.)
+                                                                S                                                                                 
+     ___________________________________________________________|_____________________________________________________________                     
+    |          |       |    |       |       |     |     |       |      |      |       |    |          NP                      NP                  
+    |          |       |    |       |       |     |     |       |      |      |       |    |     _____|_____        __________|_____________       
+Pierre/NNP Vinken/NNP ,/, 61/CD years/NNS old/JJ ,/, will/MD join/VB as/IN Nov./NNP 29/CD ./. the/DT     board/NN a/DT nonexecutive/JJ director/NN
+"""
+
+"""
+
+```
+![[../assets/nlp-synt-tree1.png]]
+![[../assets/nlp-synt-tree2.png]]
+![[nlp-synt-tree3.png]]
+As I initially struggled to get tkinter working, I added a `pretty_print` of the tree to render them in the terminal. Those pretty print are not ideal because they show the noun phrase at the end of the tree. One important thing to notice about the chunks made by the simple grammar `"NP: {<DT>?<JJ>*<NN>+}"` is that they will not take into a plurial nouns (NNS) nor proper nouns (NNP) like "God" in the second sentence above. This underscore the importance of intensive testing in the field of NLP, as rules are not always so straightforward as one might think.  
+# 2.5 Bluild an advanced chunker
+
+```python
+import nltk
+
+np_grammar = r"""
+    NP: {<POS>?(<DT>?<PRP\$>?<\#>?<CC>?<JJS?R?>*<VBG>*<NNP?S?|(CD)>+)+}
+"""
+
+np_parser = nltk.RegexpParser(np_grammar)
+
+phrases = """another/DT sharp/JJ dive/NN
+trade/NN figures/NNS
+any/DT new/JJ policy/NN measures/NNS
+earlier/JJR stages/NNS
+Panamanian/JJ dictator/NN Manuel/NNP Noriega/NNP
+his/PRP$ Mansion/NNP House/NNP speech/NN
+the/DT price/NN cutting/VBG
+3/CD %/NN to/TO 4/CD %/NN
+more/JJR than/IN 10/CD %/NN
+the/DT fastest/JJS developing/VBG trends/NNS
+'s/POS skill/NN""".split(
+    "\n"
+)
+# First, we prepare the samples in order to process them with nltk
+phrases = [[tuple(word.split("/")) for word in phrase.split(" ")] for phrase in phrases]
+
+# using the chunkparser to reach an F-score of 75%
+# Precision: 81% and Recall 70%
+# nltk.app.chunkparser()
+
+for phrase in phrases:
+    parsed = np_parser.parse(phrase)
+    print(parsed)
+
+"""
+(S (NP another/DT sharp/JJ dive/NN))
+(S (NP trade/NN figures/NNS))
+(S (NP any/DT new/JJ policy/NN measures/NNS))
+(S (NP earlier/JJR stages/NNS))
+(S (NP Panamanian/JJ dictator/NN Manuel/NNP Noriega/NNP))
+(S (NP his/PRP$ Mansion/NNP House/NNP speech/NN))
+(S (NP the/DT price/NN) cutting/VBG)
+(S (NP 3/CD %/NN) to/TO (NP 4/CD %/NN))
+(S more/JJR than/IN (NP 10/CD %/NN))
+(S (NP the/DT fastest/JJS developing/VBG trends/NNS))
+(S (NP 's/POS skill/NN))
+"""
+```
+In this section I managed to build a grammar with an F-score of 75%. It was hard to go higher, but also unnecessary for the short sample set given in the assignment. It is noteworthy that there are some mistakes in these phrases. "more than 10%" technically does not contain any noun phrase, because 10% is a quantifier phrase, it has no proper NP head. But based on the provided data, tagging "%" as a noun, and not a quantifier, the phrase "10%" is parsed as a noun by my grammar. This relates to the problem of the dependance on correct tagging that I highlighted in part 3. This shows how bad data can corrupt the whole pipeline in a cascading effect.  
+# 2.6 Named Entities
+
+```python
+import nltk
+
+sentences = """
+Throughout history, never has the USA seen such an incompetent administration.
+Throughout history, never has the USA seen such an Incompetent Administration.
+The 47th president Donald Duck's impredictability is only surpassed by his amateurism.
+The only thing the king of D.C. is ruining faster than the American credibility is the American economy.
+Since January, the stock exchange market seems to reach new low every hour.
+Especially bad is the value of Musk's companies shares, with Tesla share trading at 281$ at 8 p.m. today.
+The White house is in trouble, because the USA biggest hazard is already inside.
+"""
+
+cleaned_sentences = [
+    nltk.pos_tag(nltk.word_tokenize(sentence))
+    for sentence in sentences.strip().split("\n")
+]
+
+for sentence in cleaned_sentences:
+    print(nltk.ne_chunk(sentence))
+
+"""
+(S
+  Throughout/IN
+  history/NN
+  ,/,
+  never/RB
+  has/VBZ
+  the/DT
+  (ORGANIZATION USA/NNP)
+  seen/VBN
+  such/PDT
+  an/DT
+  incompetent/JJ
+  administration/NN
+  ./.)
+(S
+  Throughout/IN
+  history/NN
+  ,/,
+  never/RB
+  has/VBZ
+  the/DT
+  (ORGANIZATION USA/NNP)
+  seen/VBN
+  such/PDT
+  an/DT
+  incompetent/JJ
+  (ORGANIZATION Administration/NN)
+  ./.)
+(S
+  Throughout/IN
+  history/NN
+  ,/,
+  never/RB
+  has/VBZ
+  the/DT
+  (ORGANIZATION USA/NNP)
+  seen/VBN
+  such/PDT
+  an/DT
+  Incompetent/NNP
+  administration/NN
+  ./.)
+(S
+  The/DT
+  47th/CD
+  president/NN
+  (PERSON Donald/NNP Duck/NNP)
+  's/POS
+  impredictability/NN
+  is/VBZ
+  only/RB
+  surpassed/VBN
+  by/IN
+  his/PRP$
+  amateurism/NN
+  ./.)
+(S
+  The/DT
+  only/JJ
+  thing/NN
+  the/DT
+  king/NN
+  of/IN
+  (GPE D.C./NNP)
+  is/VBZ
+  ruining/VBG
+  faster/RBR
+  than/IN
+  the/DT
+  (GPE American/JJ)
+  credibility/NN
+  is/VBZ
+  the/DT
+  (GPE American/JJ)
+  economy/NN
+  ./.)
+(S
+  Since/IN
+  January/NNP
+  ,/,
+  the/DT
+  stock/NN
+  exchange/NN
+  market/NN
+  seems/VBZ
+  to/TO
+  reach/VB
+  new/JJ
+  low/JJ
+  every/DT
+  hour/NN
+  ./.)
+(S
+  Especially/RB
+  bad/JJ
+  is/VBZ
+  the/DT
+  value/NN
+  of/IN
+  (PERSON Musk/NNP)
+  's/POS
+  companies/NNS
+  shares/NNS
+  ,/,
+  with/IN
+  (PERSON Tesla/NNP)
+  share/NN
+  trading/NN
+  at/IN
+  281/CD
+  $/$
+  at/IN
+  8/CD
+  p.m./NN
+  today/NN
+  ./.)
+(S
+  The/DT
+  (FACILITY White/NNP)
+  house/NN
+  is/VBZ
+  in/IN
+  trouble/NN
+  ,/,
+  because/IN
+  the/DT
+  (ORGANIZATION USA/NNP)
+  biggest/JJS
+  hazard/NN
+  is/VBZ
+  already/RB
+  inside/RB
+  ./.)
 """
 ```
 
-In this program, I summed the sums of words absent in the other corpus of each pair. For comparison, I thought of normalizing the results by dividing the sums by the total number of words in both corpus of the pair. This is essential as a smaller corpus will have fewer chances to have a lot of works than a bigger corpus. Surprisingly, after the normalization, Brown's corpus seems less far from Shakespeare than Shakespeare from King James' Bible. This must be dues to the relatively smaller size of the Bible.  
+I tried to include all the different named entities (NE) listed in the assignment in my sample sententences to see how the system would categorize them. Some of the words used are voluntarily abiguous, such as the word "administration" in the first sentence. If I turn the first letter of this word to uppercase ("Administration"), the system parse it as a NE (namely, `Organisation`). But initial uppercase does not turn any word into a named entity, see the third sentence with an uppercase "Incompetent" not being parsed as a NE.  
+But the system is not "intelligent" enough to correct language mistakes. I found out that I misspelled the word "White House" in the last sentece, and only the word White was included as a NE. The system also failed to recognise "Tesla" as an `Organisation`, and parsed it as a `Person` instead. "USA" is aparently an `Organisation` and not a `GPE` for the system, which is another mistake.  
+Overall, the system rather successfully recognise where the NE are located in the sentences. But this is just the first layer of understanding, the next layer of conceptualisation is a harder task and the system performs significantly worse when trying to categorise precisely what sort of NE they are facing. Nowaday, transformer-based architectures cracked this next level of abstraction by mixing the embedded value of the word with the value of the other elements of the surounding context.  
+# 2.7 Relation Extraction
+```python
+import nltk
+from nltk import ne_chunk, pos_tag, word_tokenize
+import re
+import requests
+from bs4 import BeautifulSoup
+
+# Extract the History section of the Artificial_intelligence" Wikipedia page
+# Get Wikipedia page
+url = "https://en.wikipedia.org/wiki/Bell_labs"
+print("Loading the page content")
+response = requests.get(url)
+soup = BeautifulSoup(response.text, "html.parser")
+
+print("Parsing the page content")
+# Find history section (starts after heading "History")
+page = soup.find("div", {"id": "bodyContent"})
+
+text_content = []
+
+# Get all paragraphs
+paragraphs = page.find_all("p")
+
+# Extract text from each paragraph
+for p in paragraphs:
+    # Skip empty paragraphs and footnotes
+    if p.text.strip() and not p.find_parent(class_="reference"):
+        text_content.append(p.text)
 
 
-# 1.6 Understand Heap's Law
+# Join paragraphs and clean text
+text = " ".join(text_content)
+text = text.replace("\n", " ").replace("[edit]", "").strip()
+# Remove citations [1], [2], etc.
+text = (
+    re.sub(r"\[\d+\]", "", text) + " The Bell Labs was located in New Jersey in 1970."
+)
 
-![](../assets/heaps-law.png)
-![](../assets/heaps-law-log.png)
+print("tokenizing, tagging and chunking")
+sequences = [
+    ne_chunk(pos_tag(word_tokenize(sentence + ". "))) for sentence in text.split(". ")
+]
 
-The plots show the progression of the count of word types as more and more tokens are encountered. The new words encountered are put into one bag (y-axis), and the total of words encountered in another bag (x-axis). Each line is a function of the progression of the size of the bags for a given corpus. The first one uses a linear scale, whereas the second one displays a logarithmic scale. The logarithmic scale shows the regularity of the Heap's Law. One important observation, here, is that the initial speed of diversity (new types over tokens ratio) appears to be somehow correlated to the size of the corpus. This is not the Heap's Law proper, but it may account to another principle that one may summarize as "the least one has to say on a topic, the least one will say". This hold for the Bible, but let's see if it does for other corpora.  
+print("Start ectracting the relations")
+rels = []
+for sequence in sequences:
+    new_relation = {"ORG": None, "isIn": False, "LOC": None}
+    for chunk in sequence:
+        if type(chunk) != tuple:
+            if chunk.label() == "ORGANIZATION":
+                new_relation["ORG"] = " ".join([leaf[0] for leaf in chunk])
+            elif (
+                (chunk.label() == "GPE" or chunk.label() == "LOCATION")
+                and new_relation["ORG"] != None
+                and new_relation["isIn"]
+            ):
+                new_relation["LOC"] = " ".join([leaf[0] for leaf in chunk])
+                rels.append(new_relation)
+                new_relation = {"ORG": None, "isIn": False, "LOC": None}
 
-![](../assets/heaps-large.png)
+        elif new_relation["ORG"] is not None and chunk[1] == "IN" and chunk[0] == "in":
+            new_relation["isIn"] = True
+for rel in rels:
+    print(f"[ORG: '{rel["ORG"]}'] 'in' [LOC: '{rel["LOC"]}'] ")
 
-As we can see here, the Iliad follows the progression of Shakespeare, yet it is considerably shorter. This invalidates the observation made previously and underscore the importance of testing a theory against more data before making any claim. If my theory did not hold, the Heap's law stays for instance unchallenged with the addition of more corpora. As can be seen below, the 'Heapsian progressions' stay mostly parallel in a logarithmic progression.  
+"""
+Loading the page content
+Parsing the page content
+tokenizing, tagging and chunking
+Start ectracting the relations
+[ORG: 'Bell Telephone Laboratories'] 'in' [LOC: 'Western Electric'] 
+[ORG: 'Volta Laboratory'] 'in' [LOC: 'Washington'] 
+[ORG: 'Bell'] 'in' [LOC: 'Western Electric'] 
+[ORG: 'Bell Laboratories'] 'in' [LOC: 'New Jersey'] 
+[ORG: 'Bell Laboratories'] 'in' [LOC: 'New Jersey'] 
+[ORG: 'Bell Lab'] 'in' [LOC: 'United States'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Bell Labs'] 'in' [LOC: 'Freehold'] 
+[ORG: 'Bell Laboratories Fellow'] 'in' [LOC: 'United States'] 
+[ORG: 'National Medal'] 'in' [LOC: 'Technology'] 
+[ORG: 'Yokosuka Research Park'] 'in' [LOC: 'Yokosuka'] 
+[ORG: 'Bell Labs Fellow Award'] 'in' [LOC: 'Network Architecture'] 
+[ORG: 'Professional Services'] 'in' [LOC: 'Cable'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Bell Labs Fellow'] 'in' [LOC: 'North'] 
+[ORG: 'Bell Labs'] 'in' [LOC: 'Information'] 
+[ORG: 'Bell Labs'] 'in' [LOC: 'Tel Aviv'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Chemistry'] 
+[ORG: 'Nobel Prize'] 'in' [LOC: 'Physics'] 
+[ORG: 'Bell Labs'] 'in' [LOC: 'New Jersey'] 
+[ORG: 'Bell Labs'] 'in' [LOC: 'New Jersey'] 
+"""
+```
 
-![](../assets/heaps-large2.png)
+In this snippet, I tried to extract the relations between locations and organisation from the wikipedia article of the Bell Labs (and one sentence that I used for testing the parsing code, as the whole thing take more than two minutes to run). We learn about sister organisations like the Volta laboratory and the Bell Labs Fellow, as well as the different locations where the labs used to be located.  
+One noteworthy phenomenon here is how Nobel prices get parsed as an organisation located in Physics, which is not a region of Sweden. For the same reasons as in the previous exercise, the title Nobel Prize in Physics is tagged and chunked inproperly by NLTK, which make this kind of error almost impossible to correct in subsequent layers. This shows how essential is the data preparation and a proper testing of the more basic building blocs of any NLP pipeline.
 
-Similarly to the Zipf's Law, this highlights the importance of gathering ever larger corpora in order to gain ever smaller gains in information. This is relevant for NLP, but also for us humans, living in the age of information.  

@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "a3d2a1c329f2b4f9",
+        "id": "9be295c45a1bfcee",
         "type": "tabs",
         "children": [
           {
-            "id": "780afff099f75f68",
+            "id": "9ad4a36289ceca60",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/ice-4005-week-15.md",
+                "file": "indices/main.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ice-4005-week-15"
+              "title": "main"
             }
           }
         ]
@@ -163,16 +163,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "780afff099f75f68",
+  "active": "9ad4a36289ceca60",
   "lastOpenFiles": [
+    "posts/ice-4005-week-1718.md",
+    "assets/nlp-synt-tree3.png",
+    "posts/nlp-lab-2.md",
+    "posts/nlp-lab-1.md",
+    "assets/nlp-lab-2.pdf",
+    "assets/nlp-synt-tree2.png",
+    "assets/nlp-synt-tree1.png",
+    "assets/Pasted image 20250226153534.png",
+    "assets/zipf-english2.jpeg",
+    "posts/ice-4005-dashboard.md",
+    "indices/main.md",
+    "posts/ice-4005-week-16.md",
+    "posts/ice-4005-week-15.md",
+    "posts/ice-4005-week-3.md",
+    "posts/ice-4005-week-2.md",
+    "posts/ice-4005-week-1.md",
     "posts/ice-4005-week-14.md",
     "posts/ice-4005-week-13.md",
     "posts/matris-evel-rouedad.md",
-    "posts/ice-4005-week-15.md",
-    "posts/ice-4005-dashboard.md",
-    "indices/main.md",
-    "posts/nlp-lab-2.md",
-    "posts/nlp-lab-1.md",
     "posts/kelenn-ai.md",
     "posts/zettelkasten.md",
     "posts/comparative-grammar-br-cy.md",
@@ -186,30 +197,17 @@
     "posts/experimental-design.md",
     "posts/report-mini-project.md",
     "posts/code-switching and language level.md",
-    "posts/How should we teach languages.md",
-    "posts/justifying-yet-another-language-test.md",
-    "posts/lextale.md",
-    "posts/ice-4005-week-8.md",
-    "posts/pelanek-2016.md",
-    "posts/tridi.md",
     "posts/elo-rating-and-rasch-model.mdx",
     "assets/heaps-large2.png",
     "assets/heaps-large.png",
     "assets/heaps-law-log.png",
-    "assets/heaps-law.png",
-    "assets/zipf-english2.jpeg",
-    "assets/zipf-english.png",
-    "assets/zipf-english2.png",
-    "assets/zipf-3.png",
     "assets/nlp-lab-1.pdf",
     "assets/experimental-design.pdf",
     "assets/outstanding-dissertation.pdf",
-    "assets/obsidian.png",
     "assets/Transfer_Learning_for_Speech_to_Text__Investigating_the_Impact_of_the_Base_Language_on_the_Performance_of_Models.pdf",
     "assets/outstandingdissertation.pdf",
     "indices",
     "Untitled",
-    "content.config.ts",
-    "assets"
+    "content.config.ts"
   ]
 }

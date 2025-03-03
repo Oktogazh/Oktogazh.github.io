@@ -38,6 +38,8 @@ cssclasses:
 	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
 - Ar reuz
 	- [Zettelkasten](posts/zettelkasten)
+- Cool Links
+	- [Draw Neural Nets](https://alexlenail.me/NN-SVG/index.html)
 
 <!--
 - 🗣️ Languages

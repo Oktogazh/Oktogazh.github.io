@@ -11,6 +11,9 @@ date: 2024-12-27
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
 	- [Report](report-mini-project)
 - 🗓️ Log Book
+	- [Week 17 Coding everything](ice-4005-week-1718)
+	- [Week 16 Exploring Finite-State Transducer for testing](ice-4005-week-16)
+	- [Week 15 Diving in the architecture, understandin LSTM](ice-4005-week-15)
 	- [Week 14 (first prototype with Keras and PyTorch)](ice-4005-week-14)
 	- [Week 13 (starting Deep learning)](ice-4005-week-13)
 	- [Week 12 (learning MAXENT)](ice-4005-week-12)
