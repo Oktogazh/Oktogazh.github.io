@@ -9,7 +9,7 @@ cssclasses:
 	- [Mini-project Dashboard](posts/ice-4005-dashboard)
 	- [Report](posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Last Week Log](posts/ice-4005-week-10)
+	- [Last Week Log](posts/ice-4005-week-17)
 - 🧠 QXL-4449-0 Psycholinguistics
 	- [Experimental Design](posts/experimental-design)
 - 🧐 Reviews
@@ -19,12 +19,18 @@ cssclasses:
 	- [Report](posts/report-mini-project)
 -  💼 NLP labs
 	- [Report 1](posts/nlp-lab-1)
+	- [Report 2](posts/nlp-lab-2)
+-  💻 Technoleg Iaith
+	- [Report 1](posts/techiaith-1)
+	- [Report 2](posts/techiaith-2)
 
 # <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
 - 🌐 Troidigezhioù
 	- [Tonkad ar yezh (Tynged yr Iaith gan Saunders Lewis)](posts/tonkad-ar-yezh)
+	- [Ar Bisklavret](posts/bisklavret) 🐺
 - 🪶 Barzhonegoù
-	- [Trid an tridi](posts/tridi)
+	- [Trid an tridi](posts/tridi) 🐦‍⬛
+	- [Ar Bisklavret](posts/bisklavret)
 
 
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
