@@ -12,6 +12,7 @@ cssclasses:
 	- [Last Week Log](posts/ice-4005-week-17)
 - 🧠 QXL-4449-0 Psycholinguistics
 	- [Experimental Design](posts/experimental-design)
+	- [Research Proposal](posts/research-proposal)
 - 🧐 Reviews
 	- [Outstanding Dissertation Review](posts/dissertation-review)
 	- [Reviewing Lehöfer and Broersma (LexTALE)](posts/lextale)
@@ -20,6 +21,7 @@ cssclasses:
 -  💼 NLP labs
 	- [Report 1](posts/nlp-lab-1)
 	- [Report 2](posts/nlp-lab-2)
+	- [Report 3](posts/nlp-lab-3)
 -  💻 Technoleg Iaith
 	- [Report 1](posts/techiaith-1)
 	- [Report 2](posts/techiaith-2)
@@ -31,13 +33,15 @@ cssclasses:
 - 🪶 Barzhonegoù
 	- [Trid an tridi](posts/tridi) 🐦‍⬛
 	- [Ar Bisklavret](posts/bisklavret)
-
+- Liammoù
+	- [data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
 
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
 -  🗣️ Tystysgrif Sgiliau Iaith
 - 📝 Traethodau
+	- [Anodd yw creu geiriau Cymraeg](posts/creu-geiriau-cymraeg)
 	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)
-	- 
+- 
 
 # Misc.
 - 🛠️ How this website is build
