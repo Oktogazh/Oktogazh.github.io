@@ -2,7 +2,9 @@
 title: Fast and Versatile Vocabulary Test
 date: 2025-01-14
 ---
-I'w wneud: ffeindio Cwestiwn Ywmchwil.
+I'w wneud:
+ffeindio Cwestiwn Ywmchwil
+
 [notes](notes-meeting-24-03)
 # 1 Introduction (320 words)
 A recurrent critique levelled at psycholinguistics is its focus on predominantly educated Western populations, most likely English-speaking, and the risk of wrongly be generalizing potentially biased findings. Its status as lingua franca make English the main focus even on L2 research (citation_needed maybe Paul Nation) and little account is given in the litterature on lower resource languages, apart from code-switching, which is in a way an extension of the research on the "stronger" languages, rather than studies on the other languages. For example, if a correlation is found between a higher proficiency in L2 and in L1 where English is one of the two langauges, can we predict that all bilinguals are likely to speak better than average in their L1? The sociolinguistic background of people from developed countries learning English, or vice versa may well bias conclusions on this matter. In looking for such correlations, it is essential to gather data from as many language pairs as possible to offset potential bias. The experimental design below presents a protocol to answer the following question: "Do above-than-average proficiencies in L2 and L1 correlate?". 
