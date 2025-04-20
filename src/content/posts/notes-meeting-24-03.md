@@ -8,5 +8,7 @@ My test could focus on it's reliability.
 In the psycholinguistic experimental designed I focused on the linguistic aspect. In this research proposal I should focus on the technical aspect of the testing framework.
 
 
+
 # Notes
+[Notes on "The Routledge Handbook of Second Language Acquisition and Language Testing"](SLA-handbook-note)
 

@@ -10,21 +10,22 @@ cssclasses:
 	- [Report](posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
 	- [Last Week Log](posts/ice-4005-week-17)
-- 🧠 QXL-4449-0 Psycholinguistics
+- 🧠 Psycholinguistics
 	- [Experimental Design](posts/experimental-design)
+- 🧐 Research Methodology
 	- [Research Proposal](posts/research-proposal)
-- 🧐 Reviews
-	- [Outstanding Dissertation Review](posts/dissertation-review)
+	- [Review of an Outstanding Dissertation](posts/dissertation-review)
 	- [Reviewing Lehöfer and Broersma (LexTALE)](posts/lextale)
--  💼 M.Sc. Individual Project
-	- [Report](posts/report-mini-project)
 -  💼 NLP labs
 	- [Report 1](posts/nlp-lab-1)
 	- [Report 2](posts/nlp-lab-2)
 	- [Report 3](posts/nlp-lab-3)
+	- [Report 4](posts/nlp-lab-4)
 -  💻 Technoleg Iaith
 	- [Report 1](posts/techiaith-1)
 	- [Report 2](posts/techiaith-2)
+	- [Report 3](posts/techiaith-3)
+	- [Report 4](posts/techiaith-4)
 
 # <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
 - 🌐 Troidigezhioù

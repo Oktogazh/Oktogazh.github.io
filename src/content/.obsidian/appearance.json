@@ -1,6 +1,6 @@
 {
-  "cssTheme": "Atom",
-  "theme": "obsidian",
+  "cssTheme": "LaTeX",
+  "theme": "moonstone",
   "enabledCssSnippets": [
     "dashboard",
     "linelength",

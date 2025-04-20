@@ -8,9 +8,11 @@ date: 2024-12-27
 
 
 -  🛠️ The Project
-	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
+	- [Repository](https://github.com/Oktogazh/sudogen)
 	- [Report](report-mini-project)
 - 🗓️ Log Book
+	- [Weeks 22 Building the model](ice-4005-week-22)
+	- [Weeks 21 Fetching dictionaries](ice-4005-week-21)
 	- [Week 20 learning jupyter](ice-4005-week-20.md)
 	- [Week 19 discovering torch-rnn](ice-4005-week-19)
 	- [Weeks 17 and 18 Understanding LSTM](ice-4005-week-1718.md)
