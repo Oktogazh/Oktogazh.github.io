@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/nlp-lab-4.md",
+                "file": "posts/IVG P2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nlp-lab-4"
+              "title": "IVG P2"
             }
           },
           {
@@ -189,23 +189,27 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d6ef1212e1472ada",
+  "active": "9ad4a36289ceca60",
   "lastOpenFiles": [
-    "assets/pca_percentile.png",
+    "posts/IVG P1.md",
+    "posts/IVG P2.md",
     "posts/nlp-lab-4.md",
+    "posts/Untitled 1.md",
+    "posts/nlp-lab-3.md",
+    "posts/Untitled.md",
+    "posts/research-proposal.md",
+    "indices/main.md",
+    "assets/pca_percentile.png",
     "assets/pos_mansfield.png",
     "assets/mansfield_characters.png",
     "assets/pca-tsne.png",
     "assets/tsne_percentile.png",
     "posts/SLA-handbook-note.md",
     "posts/notes-meeting-24-03.md",
-    "posts/research-proposal.md",
-    "posts/nlp-lab-3.md",
     "posts/techiaith-3.md",
     "posts/ice-4005-dashboard.md",
     "posts/ice-4005-week-22.md",
     "posts/ice-4005-week-21.md",
-    "indices/main.md",
     "posts/ice-4005-week-19.md",
     "assets/outstanding-dissertation.pdf",
     "posts/techiaith-4.md",
@@ -222,9 +226,6 @@
     "posts/2025-03-10.md",
     "posts/nlp-lab-2.md",
     "posts/nlp-lab-1.md",
-    "posts/report-mini-project.md",
-    "posts/techiaith-1.md",
-    "posts/techiaith-2.md",
     "assets/eval-loss1.png",
     "assets/training-loss1.png",
     "assets/koumoulenn-geriou.png",
