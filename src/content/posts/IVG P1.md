@@ -1,5 +1,5 @@
 ---
-title: Itron Varia Garmez
+title: Itron Varia Garmez P1
 date: 2025-04-21
 ---
 Paol, emañ ho koan war an daol. Deuit da

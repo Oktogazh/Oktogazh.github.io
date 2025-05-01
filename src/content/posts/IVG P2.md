@@ -1,5 +1,5 @@
 ---
-title: Itron Varia Garmez
+title: Itron Varia Garmez P2
 date: 2025-04-21
 ---
 Unan eus kant stêrig ar vro, ur wazh-

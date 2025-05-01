@@ -13,30 +13,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/IVG P2.md",
+                "file": "posts/experimental-design.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IVG P2"
+              "title": "experimental-design"
             }
           },
           {
-            "id": "cfed09465c2838b7",
+            "id": "43aeeb9c971f5d10",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/nlp-lab-3.md",
+                "file": "posts/NDB2.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "nlp-lab-3"
+              "title": "NDB2"
             }
           },
           {
-            "id": "5e5c9a60768b5d72",
+            "id": "f89375935dc9383b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "posts/NDB3.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "NDB3"
+            }
+          },
+          {
+            "id": "9dcd7f7a0cb3c2b7",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -47,7 +61,8 @@
               "title": "outstanding-dissertation"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -189,53 +204,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9ad4a36289ceca60",
+  "active": "d6ef1212e1472ada",
   "lastOpenFiles": [
+    "posts/NDB3.md",
+    "posts/NDB2.md",
+    "posts/NDB1.md",
+    "posts/bisklavret.md",
+    "indices/main.md",
+    "posts/research-proposal.md",
+    "assets/outstanding-dissertation.pdf",
+    "posts/notes-meeting-24-03.md",
+    "posts/experimental-design.md",
+    "posts/IVG P3.md",
+    "posts/SLA-handbook-note.md",
+    "P3_1 (dragged).pdf",
     "posts/IVG P1.md",
     "posts/IVG P2.md",
+    "assets/transcluded-example.png",
+    "posts/report-mini-project.md",
+    "posts/nlp-lab-3.md",
+    "posts/ice-4005-dashboard.md",
     "posts/nlp-lab-4.md",
     "posts/Untitled 1.md",
-    "posts/nlp-lab-3.md",
-    "posts/Untitled.md",
-    "posts/research-proposal.md",
-    "indices/main.md",
     "assets/pca_percentile.png",
     "assets/pos_mansfield.png",
     "assets/mansfield_characters.png",
     "assets/pca-tsne.png",
     "assets/tsne_percentile.png",
-    "posts/SLA-handbook-note.md",
-    "posts/notes-meeting-24-03.md",
     "posts/techiaith-3.md",
-    "posts/ice-4005-dashboard.md",
     "posts/ice-4005-week-22.md",
     "posts/ice-4005-week-21.md",
     "posts/ice-4005-week-19.md",
-    "assets/outstanding-dissertation.pdf",
     "posts/techiaith-4.md",
     "posts/creu-geiriau-cymraeg.md",
     "indices/doberaoueg.md",
     "posts/tonkad-ar-yezh.md",
-    "posts/bisklavret.md",
     "posts/ice-4005-week-20.md",
-    "posts/ice-4005-week-1718.md",
     "assets/mel-arpeggio.png",
     "assets/spectrogramm.png",
     "assets/nlp-lab-3.pdf",
-    "posts/ice-4005-week-16.md",
-    "posts/2025-03-10.md",
-    "posts/nlp-lab-2.md",
-    "posts/nlp-lab-1.md",
     "assets/eval-loss1.png",
     "assets/training-loss1.png",
-    "assets/koumoulenn-geriou.png",
     "assets/nlp-lab-2.pdf",
     "posts/elo-rating-and-rasch-model.mdx",
     "assets/nlp-lab-1.pdf",
     "assets/experimental-design.pdf",
     "assets/Transfer_Learning_for_Speech_to_Text__Investigating_the_Impact_of_the_Base_Language_on_the_Performance_of_Models.pdf",
     "assets/outstandingdissertation.pdf",
-    "indices",
-    "Untitled"
+    "indices"
   ]
 }
