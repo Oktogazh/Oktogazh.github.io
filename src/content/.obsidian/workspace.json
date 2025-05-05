@@ -8,49 +8,21 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9ad4a36289ceca60",
+            "id": "56762b89245b18aa",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/experimental-design.md",
+                "file": "posts/tsi-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "experimental-design"
+              "title": "tsi-1"
             }
           },
           {
-            "id": "43aeeb9c971f5d10",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/NDB2.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NDB2"
-            }
-          },
-          {
-            "id": "f89375935dc9383b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/NDB3.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "NDB3"
-            }
-          },
-          {
-            "id": "9dcd7f7a0cb3c2b7",
+            "id": "0ee9363a4f83ec91",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -61,8 +33,7 @@
               "title": "outstanding-dissertation"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -204,22 +175,33 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d6ef1212e1472ada",
+  "active": "56762b89245b18aa",
   "lastOpenFiles": [
-    "posts/NDB3.md",
-    "posts/NDB2.md",
-    "posts/NDB1.md",
-    "posts/bisklavret.md",
+    "assets/Papur enghreifftiol 1_atebion model - Tagged.pdf",
+    "assets/Papur enghreifftiol 2_atebion model - Tagged.pdf",
+    "assets/Papur enghreifftiol 3_atebion model - Tagged.pdf",
+    "assets/Papur enghreifftiol 4_atebion model - Tagged.pdf",
     "indices/main.md",
+    "posts/tsi-1.md",
+    "posts/suzanne-cohen.md",
+    "posts/Untitled.md",
     "posts/research-proposal.md",
     "assets/outstanding-dissertation.pdf",
-    "posts/notes-meeting-24-03.md",
-    "posts/experimental-design.md",
+    "posts/nlp-corpus-report.md",
+    "posts/NDB3.md",
     "posts/IVG P3.md",
-    "posts/SLA-handbook-note.md",
-    "P3_1 (dragged).pdf",
-    "posts/IVG P1.md",
+    "posts/NDB1.md",
+    "posts/NDB2.md",
     "posts/IVG P2.md",
+    "posts/IVG P1.md",
+    "assets/scanning-error-2.png",
+    "assets/scanning-error-1.png",
+    "posts/experimental-design.md",
+    "posts/ice-4005-week-9.md",
+    "P3_1 (dragged).pdf",
+    "posts/bisklavret.md",
+    "posts/notes-meeting-24-03.md",
+    "posts/SLA-handbook-note.md",
     "assets/transcluded-example.png",
     "posts/report-mini-project.md",
     "posts/nlp-lab-3.md",
@@ -234,23 +216,12 @@
     "posts/techiaith-3.md",
     "posts/ice-4005-week-22.md",
     "posts/ice-4005-week-21.md",
-    "posts/ice-4005-week-19.md",
-    "posts/techiaith-4.md",
-    "posts/creu-geiriau-cymraeg.md",
-    "indices/doberaoueg.md",
-    "posts/tonkad-ar-yezh.md",
-    "posts/ice-4005-week-20.md",
     "assets/mel-arpeggio.png",
     "assets/spectrogramm.png",
     "assets/nlp-lab-3.pdf",
-    "assets/eval-loss1.png",
-    "assets/training-loss1.png",
     "assets/nlp-lab-2.pdf",
     "posts/elo-rating-and-rasch-model.mdx",
     "assets/nlp-lab-1.pdf",
-    "assets/experimental-design.pdf",
-    "assets/Transfer_Learning_for_Speech_to_Text__Investigating_the_Impact_of_the_Base_Language_on_the_Performance_of_Models.pdf",
-    "assets/outstandingdissertation.pdf",
-    "indices"
+    "assets/experimental-design.pdf"
   ]
 }

@@ -21,6 +21,7 @@ cssclasses:
 	- [Report 2](posts/nlp-lab-2)
 	- [Report 3](posts/nlp-lab-3)
 	- [Report 4](posts/nlp-lab-4)
+	- [Corpus Report](nlp-corpus-report.md)
 -  💻 Technoleg Iaith
 	- [Report 1](posts/techiaith-1)
 	- [Report 2](posts/techiaith-2)
@@ -31,6 +32,7 @@ cssclasses:
 - 🌐 Troidigezhioù
 	- [Tonkad ar yezh (Tynged yr Iaith gan Saunders Lewis)](posts/tonkad-ar-yezh)
 	- [Ar Bisklavret](posts/bisklavret) 🐺
+	- [Suzanne](posts/suzanne-cohen)
 - 🪶 Barzhonegoù
 	- [Trid an tridi](posts/tridi) 🐦‍⬛
 	- [Ar Bisklavret](posts/bisklavret)
@@ -39,6 +41,10 @@ cssclasses:
 
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
 -  🗣️ Tystysgrif Sgiliau Iaith
+	- [Sesiwn paratoi TSI 1](tsi-1)
+	- [Sesiwn paratoi TSI 2](tsi-2)
+	- [Sesiwn paratoi TSI 3](tsi-3)
+	- [Sesiwn paratoi TSI 4](tsi-4)
 - 📝 Traethodau
 	- [Anodd yw creu geiriau Cymraeg](posts/creu-geiriau-cymraeg)
 	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)
