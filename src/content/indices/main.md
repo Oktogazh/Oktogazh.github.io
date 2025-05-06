@@ -41,10 +41,10 @@ cssclasses:
 
 # 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
 -  🗣️ Tystysgrif Sgiliau Iaith
-	- [Sesiwn paratoi TSI 1](tsi-1)
-	- [Sesiwn paratoi TSI 2](tsi-2)
-	- [Sesiwn paratoi TSI 3](tsi-3)
-	- [Sesiwn paratoi TSI 4](tsi-4)
+	- [Sesiwn paratoi TSI 1](posts/tsi-1)
+	- [Sesiwn paratoi TSI 2](posts/tsi-2)
+	- [Sesiwn paratoi TSI 3](posts/tsi-3)
+	- [Sesiwn paratoi TSI 4](posts/tsi-4)
 - 📝 Traethodau
 	- [Anodd yw creu geiriau Cymraeg](posts/creu-geiriau-cymraeg)
 	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)

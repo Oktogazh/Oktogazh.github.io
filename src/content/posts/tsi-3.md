@@ -15,4 +15,4 @@ Mi greues i fy musnes siocled bach "Soclyd yma" yn Nolgellau pedair mlynedd yn Ã
 
 Dealles i'n gyflym beth ddygwyddodd. Nid y siocled oedd y problem, mae o i flas pawb ac mae blas siocled i bop un! Un dydd, dywedodd John i mi yr oedd o'n mynd i ddechreu dysgu Cymraeg (i fercheta merch y cicty!). I'w helpu yn ei ymdrech, gwnaethwm ni, fi a'm nghariad, ei hyfforddi i werthu siocled trwy gyffrwng y Gymraeg, a dercheues basio'r gair i bobl y cumned yr oedd John amgen cleiens i siarad Cymraeg ganddo. Mewn mis, tyfodd fy musnes fel byth eto, cymaint mai bu rhaid i mi symud y siop mewn lle newydd yn y dref i allu croesawu pawb.
 
-Mae yn llun yn werth miloedd o eiriau. Wel, byddaf yn dodi yma lun o briodas John gan ferch y cicdy gan y gobaith fy mod i wedi eich arcyhoeddu pa mor lwyddiannus a gwerthfawr a all fod cefnogi arfer y Gymraeg yn y gweithle.
+Mae yn llun yn werth miloedd o eiriau. Wel, byddaf yn dodi yma lun o briodas John gan ferch y cicdy gan y gobaith fy mod i wedi eich arcyhoeddu pa mor lwyddiannus a gwerthfawr a all fod cefnogi arfer y Gymraeg yn y gweithle.gi
