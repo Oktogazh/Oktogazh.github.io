@@ -13,24 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/tsi-1.md",
+                "file": "posts/tsi-3.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "tsi-1"
+              "title": "tsi-3"
             }
           },
           {
-            "id": "0ee9363a4f83ec91",
+            "id": "ed74461a7e5deaf0",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "assets/outstanding-dissertation.pdf"
+                "file": "posts/tsi-4.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "outstanding-dissertation"
+              "icon": "lucide-file",
+              "title": "tsi-4"
             }
           }
         ]
@@ -90,7 +92,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "517a6d8b8068134d",
@@ -177,16 +179,24 @@
   },
   "active": "56762b89245b18aa",
   "lastOpenFiles": [
+    "posts/tsi-4.md",
+    "posts/tsi-1.md",
+    "posts/tsi-3.md",
+    "posts/tsi-2.md",
+    "posts/research-proposal.md",
+    "assets/papur-2.pdf",
+    "assets/papur-3.pdf",
+    "assets/papur-4.pdf",
+    "assets/papur-1.pdf",
+    "assets/outstanding-dissertation.pdf",
+    "indices/main.md",
+    "posts/experimental-design.md",
     "assets/Papur enghreifftiol 1_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 2_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 3_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 4_atebion model - Tagged.pdf",
-    "indices/main.md",
-    "posts/tsi-1.md",
     "posts/suzanne-cohen.md",
     "posts/Untitled.md",
-    "posts/research-proposal.md",
-    "assets/outstanding-dissertation.pdf",
     "posts/nlp-corpus-report.md",
     "posts/NDB3.md",
     "posts/IVG P3.md",
@@ -196,7 +206,6 @@
     "posts/IVG P1.md",
     "assets/scanning-error-2.png",
     "assets/scanning-error-1.png",
-    "posts/experimental-design.md",
     "posts/ice-4005-week-9.md",
     "P3_1 (dragged).pdf",
     "posts/bisklavret.md",
@@ -214,14 +223,7 @@
     "assets/pca-tsne.png",
     "assets/tsne_percentile.png",
     "posts/techiaith-3.md",
-    "posts/ice-4005-week-22.md",
-    "posts/ice-4005-week-21.md",
     "assets/mel-arpeggio.png",
-    "assets/spectrogramm.png",
-    "assets/nlp-lab-3.pdf",
-    "assets/nlp-lab-2.pdf",
-    "posts/elo-rating-and-rasch-model.mdx",
-    "assets/nlp-lab-1.pdf",
-    "assets/experimental-design.pdf"
+    "assets/spectrogramm.png"
   ]
 }
