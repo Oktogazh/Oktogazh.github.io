@@ -3,24 +3,17 @@
   "autoCheckDelay": 3000,
   "shouldAutoCheck": true,
   "languageVariety": {
-    "en": "en-GB",
+    "en": "en-US",
     "de": "de-DE",
     "pt": "pt-PT",
     "ca": "ca-ES"
   },
   "dictionary": [
-    "Elo",
-    "lemmatizer",
-    "lemmatizers",
-    "Rasch",
-    "tokens",
-    "Zipf"
+    "recomender",
+    "modelization",
+    "gichenik"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],
-  "pickyMode": false,
-  "motherTongue": "en",
-  "staticLanguage": "en-GB",
-  "synonyms": "en",
-  "username": ""
+  "pickyMode": false
 }

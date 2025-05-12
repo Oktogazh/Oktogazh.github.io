@@ -1,6 +1,6 @@
 ---
 date: 2024-12-16
-title: ICE-4005 - Week 8
+title: ICE-4005 - Meeting 8
 ---
 ## Meeting aborted
 

@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9be295c45a1bfcee",
+        "id": "745c39796e5c39da",
         "type": "tabs",
         "children": [
           {
-            "id": "56762b89245b18aa",
+            "id": "92f6f4eb9415847e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "indices/main.md",
+                "file": "posts/report-mini-project.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "main"
-            }
-          },
-          {
-            "id": "ed74461a7e5deaf0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "posts/tsi-4.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "tsi-4"
+              "title": "report-mini-project"
             }
           }
         ]
@@ -54,7 +40,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "byModifiedTime",
+                "sortOrder": "alphabetical",
                 "autoReveal": false
               },
               "icon": "lucide-folder-closed",
@@ -177,52 +163,52 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "56762b89245b18aa",
+  "active": "92f6f4eb9415847e",
   "lastOpenFiles": [
-    "posts/tsi-3.md",
-    "posts/tsi-4.md",
-    "posts/tsi-1.md",
-    "posts/tsi-2.md",
-    "posts/research-proposal.md",
+    "posts/ice-4005-dashboard.md",
+    "posts/ice-4005-meeting-21.md",
+    "posts/ice-4005-meeting-17.md",
+    "posts/ice-4005-meeting-19.md",
+    "posts/ice-4005-meeting-20.md",
+    "posts/ice-4005-meeting-18.md",
+    "posts/ice-4005-meeting-16.md",
+    "posts/ice-4005-meeting-15.md",
+    "posts/ice-4005-meeting-14.md",
+    "posts/ice-4005-meeting-13.md",
+    "posts/ice-4005-meeting-1718.md",
+    "posts/ice-4005-meeting-12.md",
+    "posts/ice-4005-meeting-11.md",
+    "posts/ice-4005-meeting-10.md",
+    "posts/ice-4005-meeting-9.md",
+    "posts/ice-4005-meeting-8.md",
+    "posts/ice-4005-meeting-7.md",
+    "posts/ice-4005-meeting-6.md",
+    "posts/ice-4005-meeting-5.md",
+    "posts/ice-4005-meeting-4.md",
+    "posts/ice-4005-meeting-3.md",
+    "posts/ice-4005-meeting-2.md",
+    "posts/ice-4005-meeting-1.md",
+    "indices/main.md",
+    "posts/nlp-corpus-report.md",
+    "posts/bisklavret.md",
     "assets/papur-2.pdf",
     "assets/papur-3.pdf",
     "assets/papur-4.pdf",
     "assets/papur-1.pdf",
     "assets/outstanding-dissertation.pdf",
-    "indices/main.md",
-    "posts/experimental-design.md",
     "assets/Papur enghreifftiol 1_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 2_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 3_atebion model - Tagged.pdf",
     "assets/Papur enghreifftiol 4_atebion model - Tagged.pdf",
-    "posts/suzanne-cohen.md",
-    "posts/Untitled.md",
-    "posts/nlp-corpus-report.md",
-    "posts/NDB3.md",
-    "posts/IVG P3.md",
-    "posts/NDB1.md",
-    "posts/NDB2.md",
-    "posts/IVG P2.md",
-    "posts/IVG P1.md",
     "assets/scanning-error-2.png",
     "assets/scanning-error-1.png",
-    "posts/ice-4005-week-9.md",
     "P3_1 (dragged).pdf",
-    "posts/bisklavret.md",
-    "posts/notes-meeting-24-03.md",
-    "posts/SLA-handbook-note.md",
     "assets/transcluded-example.png",
-    "posts/report-mini-project.md",
-    "posts/nlp-lab-3.md",
-    "posts/ice-4005-dashboard.md",
-    "posts/nlp-lab-4.md",
-    "posts/Untitled 1.md",
     "assets/pca_percentile.png",
     "assets/pos_mansfield.png",
     "assets/mansfield_characters.png",
     "assets/pca-tsne.png",
     "assets/tsne_percentile.png",
-    "posts/techiaith-3.md",
     "assets/mel-arpeggio.png",
     "assets/spectrogramm.png"
   ]

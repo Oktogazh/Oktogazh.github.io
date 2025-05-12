@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Weeks 17 and 18 Understanding LSTM
+title: ICE-4005 - Weeks 17 Understanding LSTM
 date: 2025-03-10
 ---
 # Reading

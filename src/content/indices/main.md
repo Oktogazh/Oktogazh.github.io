@@ -9,7 +9,7 @@ cssclasses:
 	- [Mini-project Dashboard](posts/ice-4005-dashboard)
 	- [Report](posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Last Week Log](posts/ice-4005-week-17)
+	- [Last Week Log](ice-4005-meeting-17.md)
 - 🧠 Psycholinguistics
 	- [Experimental Design](posts/experimental-design)
 - 🧐 Research Methodology
@@ -35,7 +35,7 @@ cssclasses:
 	- [Suzanne](posts/suzanne-cohen)
 - 🪶 Barzhonegoù
 	- [Trid an tridi](posts/tridi) 🐦‍⬛
-	- [Ar Bisklavret](posts/bisklavret)
+	- [Ar Bisklavret](posts/bisklavret) 🐺
 - Liammoù
 	- [data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
 

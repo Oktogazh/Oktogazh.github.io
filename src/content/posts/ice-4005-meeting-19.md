@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Weeks 20 Discovering Jupyter
+title: ICE-4005 - Meeting 19 Discovering Jupyter
 date: 2025-03-24
 ---
 # Discutions

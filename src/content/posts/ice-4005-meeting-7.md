@@ -1,6 +1,6 @@
 ---
 date: 2024-12-09
-title: ICE-4005 - Week 7
+title: ICE-4005 - Meeting 7
 ---
 ## Meeting
 

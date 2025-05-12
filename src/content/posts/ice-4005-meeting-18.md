@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Weeks 19 Discovering torch-rnn
+title: ICE-4005 - Meeting 18 Discovering torch-rnn
 date: 2025-03-17
 ---
 # Discussions

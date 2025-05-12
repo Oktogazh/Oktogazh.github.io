@@ -1,6 +1,6 @@
 ---
 date: 2025-01-06
-title: ICE-4005 - Week 10
+title: ICE-4005 - Meeting 10
 ---
 ## Work Report
 

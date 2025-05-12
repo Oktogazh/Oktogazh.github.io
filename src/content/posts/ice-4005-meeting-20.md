@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Weeks 21 Fetching dictionaries
+title: ICE-4005 - Meeting 20 Fetching dictionaries
 date: 2025-03-24
 ---
 # Discutions

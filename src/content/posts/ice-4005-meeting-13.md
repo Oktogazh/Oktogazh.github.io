@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Week 13 Discovering Deep Learning
+title: ICE-4005 - Meeting 13 Discovering Deep Learning
 date: 2025-02-03
 ---
 # Discussions

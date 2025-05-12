@@ -1,6 +1,6 @@
 ---
 date: 2024-10-14
-title: ICE-4005 - Week 1
+title: ICE-4005 - Meeting 1
 ---
 ## Meeting
 

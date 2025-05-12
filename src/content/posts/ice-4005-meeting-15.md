@@ -1,5 +1,5 @@
 ---
-title: ICE-4005 - Week 15 Understanding the prototype
+title: ICE-4005 - Meeting 15 Understanding the prototype
 date: 2025-02-20
 ---
 # Work achieved
