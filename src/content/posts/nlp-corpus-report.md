@@ -122,5 +122,6 @@ french_model = Word2Vec(
 french_model.save("french_word2vec.model")
 ```
 
-# Next
-The only interresting thing to do going forward is to try to align the embeddings to try to generate a French-Breton dictionary from them with tools like Meta's [MUSE](https://github.com/facebookresearch/MUSE) library. Unfortunately, the mannual preparation and cleaning work of the text took me too much time and I could not learn and push this analysis further in the required time. but depending when you read this, you can always check the [repository on github](https://github.com/Oktogazh/NLP/tree/master/Corpus) and see if I ended up creating a translation dictionary since the report was written.
+# Aligning the corpora
+The only interesting thing left to do going forward is to try to align the embeddings to try to generate a French-Breton dictionary from them with tools like Meta's [MUSE](https://github.com/facebookresearch/MUSE) library. This technique is called unsupervised embedding alignment. But unfortunately, I was unable to properly aligned the embeddings because the Breton embeddings were not good enough due to the poor quality of the digitalization of the book. For instance, while testing the embeddings, the word "mousc'hoazh" (smile) gave as close words the words "mousc'" and "hoarzh", meaning that the word was split in two by the OCR system, many other similar problems happened to virtually the entire corpus.
+This highlights the need for improved systems of optical character recognition, as well as the importance of post-processing the gross corpora in order to ensure their usability in later stages of an NLP pipeline.

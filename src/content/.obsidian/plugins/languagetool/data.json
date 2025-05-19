@@ -9,11 +9,14 @@
     "ca": "ca-ES"
   },
   "dictionary": [
-    "recomender",
+    "bigrams",
+    "gichenik",
     "modelization",
-    "gichenik"
+    "recomender",
+    "detokenized"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],
-  "pickyMode": false
+  "pickyMode": false,
+  "disabledRules": "EN_UPPER_CASE_NGRAM"
 }
