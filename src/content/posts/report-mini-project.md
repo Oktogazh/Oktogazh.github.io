@@ -20,7 +20,6 @@ This work presents a new way to programmatically generate large sets of pseudo-w
 Overall, the experience conduced on a Breton pseudo-word generator seems conclusive, with the small exception of the really short words, two and three characters long that become under-represented due to a low availability of plausible combinations not already associated to a meaning. We finally offer ways to offset these problems as well as discussing the importance of the problem in regard of the experimental goal.  
 
 
-
 # Content
 1. [Introduction](#introduction)
 2. [Background](#background)
@@ -154,7 +153,7 @@ Generating pseudo-words will always necessitate some language-specific linguisti
 
 # Discussions and Conclusion
 In this experience, we demonstrated the viability of using RNN to generate large sets of language-specific pseudo-words. We also highlighted the limitations regarding the possibility of creating plausible very short words, regardless of the method used, because of the lack of available combination, a problem likely to be present in many languages.  
-On the other hand, the gain in productivity allowed by neural networks opens new prospects. In the case of pseudo-words, it opens the door to large scale experiments, where the qualitative aspect of the items becomes less relevant. This quantity over quality paradigm is also not so accurate because, for as long as there are enough available items to use and to compare together, one can always develop new methods to select the qualitative part from this set. In other words, the abundance offered by generative AI presents a new paradigm in which quantity can become the mother of quality. That is, if the proper tooling is developed in parallel to these large samples of generated data.
+On the other hand, the gain in productivity allowed by neural networks opens new prospects. In the case of pseudo-words, it opens the door to large scale experiments, where the qualitative aspect of the items becomes less relevant. This quantity over quality paradigm is also not so accurate because, for as long as there are enough available items to use and to compare together, one can always develop new methods to select the qualitative part from this set. In other words, the abundance offered by generative AI presents a new paradigm in which quality emerges from quantity. That is, if the proper tooling is developed in parallel to these large samples to filter this qualitative part of the generated data.
 # References
 - Brownlee, J.,  n.d. Deep Learning For Natural Language Processing. MachineLearningMastery.com. URL [https://www.machinelearningmastery.com/deep-learning-for-nlp/](https://www.machinelearningmastery.com/deep-learning-for-nlp/) (accessed 1.27.25).
 - Chomsky, N., Halle, M., (1968) The Sound Pattern of English. The MIT Press.
