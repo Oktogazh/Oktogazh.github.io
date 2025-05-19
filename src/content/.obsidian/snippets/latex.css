@@ -33,10 +33,21 @@
 	text-indent: -2em;
 	/* Negative indent for first line */
 	margin-bottom: 1em;
-	/* Space between references */
 }
 
 .academic ul .list-bullet::after {
+	background-color: transparent;
+	content: "";
+}
+
+.academic ol {
+	/* normal style for ordered list */
+	list-style: decimal !important;
+	text-indent: 0em;
+	margin: 0 2em;
+}
+
+.academic ol .list-bullet::after {
 	background-color: transparent;
 	content: "";
 }

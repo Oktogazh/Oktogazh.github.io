@@ -21,20 +21,21 @@ Overall, the experience conduced on a Breton pseudo-word generator seems conclus
 
 
 
-    
 # Content
-1. Background
-2. Aims and Objectives
-3. Methods Studied
-4. Data Collection
-5. Training the Models
-6. Visualizations
-7. Testing a Pseudo Dictionary
-	1. The length of the words
-	2. General Characters Distribution
-	3. Distribution of the First Characters
-8. Limitations
-9. Discussions and Conclusion
+1. [Introduction](#introduction)
+2. [Background](#background)
+3. [Aims and Objectives](#aims-and-objectives)
+4. [Methods Studied](#methods-studied)
+5. [Data Collection](#data-collection)
+6. [Training the Models and Generating Pseudo-Words](#training-the-models-and-generating-pseudo-words)
+7. [Visualizations](#visualizations)
+8. [Testing a Pseudo Dictionary](#testing-a-pseudo-dictionary)
+	1. [The length of the words](#the-length-of-the-words)
+	2. [General Characters Distribution](#general-characters-distribution)
+	3. [Distribution of the First Characters](#distribution-of-the-first-characters)
+9. [Limitations](#limitations)
+10. [Discussions and Conclusion](#discussions-and-conclusion)
+11. [References](#references)
 
 # Introduction
 This mini-project took many directions and shapes during the months, as can testify the logbook. Initially oriented towards a Welsh spellchecker, it became a planed mini vocabulary test, before settling on the question of generating large sets of pseudo-words for said vocabulary tests.  
@@ -45,11 +46,11 @@ This work finds its root on a wider interest on the questions and challenges of 
 
 # Aims and Objectives
 The goals for this project can be listed as follows:
-- Find an algorithm able to learn the rules specific to a language orthography and phonotactics.
-- Exploit the learned rules to generate arbitrarly long list of plausible words or pseudo-words.
-- Publish a pipeline to enable others to generate such list for as many languages as possible.
-- Produce visualizations to help these people understand what they do and test the results on a large sample of generated items.
-- Test a generated corpus of pseudo-words and discuss the results.
+1. Find an algorithm able to learn the rules specific to a language orthography and phonotactics.
+2. Exploit the learned rules to generate arbitrarly long list of plausible words or pseudo-words.
+3. Publish a pipeline to enable others to generate such list for as many languages as possible.
+4. Produce visualizations to help these people understand what they do and test the results on a large sample of generated items.
+5. Test a generated corpus of pseudo-words and discuss the results.
 
 # Methods Studied
 This section is a brief summary of the methods attempted to solve the problem at hand, and their strengths and weaknesses.
@@ -69,7 +70,7 @@ The [second part](https://github.com/Oktogazh/sudogen/blob/master/2%20Training.i
 When generating pseudo-words, we also ensure that none of the sequence generated is present in the training set, or susceptible to be recognized as real words by using the library [spylls](https://github.com/zverok/spylls), to exploit the Hunspell dictionary downloaded previously, we also capitalize the pseudo words during the spellchecking process to ensure that no proper nouns is generated; a lower cased month name may be interpreted as a spelling mistake by the library, but it is a real word but if the word is capitalized, the spell checker will look for both a proper noun and a lower cased word. In the case of the Breton pseudo-words, we noticed that the dictionary contained more entries than the Hunspell dictionary. This is why we also ensure that each generated pseudo-word is not in the lemmas list before adding it in the generated set.
 When the model is deemed satisfying, it can be saved (or an old one can be loaded) and a large set of pseudo-words can be generated for further testing and analysis, as discussed in the following sections.
 
-# Visualization
+# Visualizations
 [This part](https://github.com/Oktogazh/sudogen/blob/master/3%20Visualisations.ipynb) is inspired by the visualizations of then future co-founder of OpenAI, Andrej Karpathy blog post (2015) on the effectiveness of recurrent neural networks in the context of character-level language models. Before analyzing what happens in the model when it generates words, we start by doing some dimensionality reduction from the embedding layer that was trained on English words, with the aim of seeing the vowels and consonants clusterings.
 ![](../assets/letters-embeddings.png)
 As we can see, this visualization confirms that the model learned to group the vowels together as they can be exchanged for one another in an English word. Then, we start inspecting what happens inside the LSTM cell, during the word generation process. In the picture below, we can see a heat map of the values of the 13 indices of the hidden layer of a model generating fake words in English, the state of the vector changes after a new character is generated, the characters generated are shown in the bottom.
@@ -86,7 +87,7 @@ By playing with the number of hyperparameters such as the `hidden_dim` or `embed
 # Testing a Pseudo Dictionary
 The stated goal of the project being to generate a large set of pseudo-words, which we call here a pseudo dictionary, we'll show here a battery of tests administered to a pseudo Breton dictionary of the same length as the original dictionary the model was trained, that is 62 169 items. As the pseudo-words generated in this project are intended to be used in the context of psycholinguistic studies, we will now test a generated set to try to find out if there are aspects of the pseudo-words that may allow future test takers to spot them based on statistical heuristics. One interesting aspect about training the model on a full dictionary is that we get some fairly rare instances, and we can see, when generating an equally large set of words, how well was the training set "digested" by our model. For instance, our set of Breton lemmas only contains 31 items starting with the character "z" on out of a total of 62 172 items. That is 0.05% chances of having a word starting with a "z" or 1 chance for 2005 items. As we don't only want our model to learn the main traits of our lexis, but the entire diversity of what a "plausible" word in the language looks like, we want our model to be able to reproduce such outlier in similar proportions. One can only inspect this by producing an equally large set of pseudo-words as the original set of words before analyzing it.
 
-## 1. The length of the words
+## The length of the words
 First, let's look at the average length difference between the two sets. As we can see below, the pseudo-words are in average a little longer than their real counterparts. Then we'll try to understand what part of the generated set differs from the original set by comparing the quantity of items for a given length.
 ```python
 8.250639386189258 # real lemmas
@@ -130,7 +131,7 @@ And a graph to help visualize the gap between each length:
 Here we see that the lengths of the generated words varies greatly from the training set. But the explanation is straightforward. The fact is that a large part of the plausible short words are "already taken" and even if the model initially generated the right amount of short words, it would not retain them in the final list because those words were real. This is the reason why the words of length 1 were taken out of the training set too, because only "lone vowels" can make such words, and only the letters "i" and "u" are not taken. But if the model did not learn well to reproduce the exact probabilities of short or long words, it still did what would be impossible for a gram-based HMCM. It can create two-characters-long words, although much fewer of them and very long words, more words of length 26 characters than there is in the training set. In previous tests, we even managed to generate words longer than anything present in the training set. This underscores once again the successful learning of patterns, but it also points out that the model is not that good to learn pure distributions.
 
 Next, we'll look at the characters' distribution.
-## 2. General Characters Distribution
+## General Characters Distribution
 
 First, let's take a look at the distribution of characters regardless of their position in the words. Any model can produce words that look plausible, but the risk is to have all of them being "alike", by creating a "mean of the words in the dictionary" or the "most plausible words", if the temperature used to flatten the distribution of the softmax function (which shows the probabilities of the next character for all characters) were too low. Otherwise, if the temperature is too high, the probabilities painfully learnt by the model during training would be offset by a too strong randomization, and the generated words would be random garbage.
 
@@ -138,7 +139,7 @@ First, let's take a look at the distribution of characters regardless of their p
 This plot is much more encouraging than the previous ones. The characters are ordered left to right from the most to the least frequent. As hoped for, there are a few variations, but as the characters become rarer, the variations become more important. Some low frequency characters display a higher frequency in the generated set. This may be explained by the fact that the characters in questions mostly appears within regular structures, like "à" which often occurs as a contraction to "war" ("àr" meaning on, upon) in the beginning of a word, think of English words like "onwards", "ongoing" etc... Conversely, the location of the hyphens seem to have confused the model to a point that it did not learn properly where to place it. Some characters were not generated at all, but their frequency in the training set is very low, 10 occurrences for "ô" and 3 and less for "â", "û" and "ë" for the entire set. The higher frequency of some rare characters in the generated set indicates a propensity of the model to learn the structures rather than pure probabilities, which is encouraging.
 
 Finally, we'll look at the frequencies of the first characters.
-## 3. Distribution of the First Characters
+## Distribution of the First Characters
 
 Psycholinguists teach us that the beginning of a word is fundamental in the recognition of a word, more so than the way they end. This is why we inspect the distributions of the first characters here.
 
