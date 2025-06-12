@@ -15,12 +15,11 @@ cssclasses:
 ![](https://www.world-education.eu/uploads/c2c8e0e5d955e5667355e58e42dfa863cebb8c03.png)
 
 
-# Abstract
+**Abstract**  
 This work presents a new way to programmatically generate large sets of pseudo-words for psycholinguistic and applied linguistic large scale experiments. The method used is based on LSTM cells designed using PyTorch. Some ways to tests the validity and consistency of a large sample of pseudo words are also proposed.  
 Overall, the experience conduced on a Breton pseudo-word generator seems conclusive, with the small exception of the really short words, two and three characters long that become under-represented due to a low availability of plausible combinations not already associated to a meaning. We finally offer ways to offset these problems as well as discussing the importance of the problem in regard of the experimental goal.  
 
-
-# Content
+**Content**
 1. [Introduction](#introduction)
 2. [Background](#background)
 3. [Aims and Objectives](#aims-and-objectives)
@@ -76,7 +75,7 @@ As we can see, this visualization confirms that the model learned to group the v
 
 ![](../assets/hidden-layer-full.png)
 
-I initially thought this experiment was a failure and could explain by two reasons. Either the hidden state vector is too large and the representation of the memory is too distributed to be associated to a single index, or the same vector is too short, and the model does not learn the pattern recognition enough to attempt any analysis in the first place. But, as it turned out, I was using a set to collect the newly generated words in my original function (so that a word would not be generated twice). This had as effect to output the words in the wrong order... I then turn the set to a list in the generator function and was able to identify patterns in my LSTM cell. In the heatmap above, we can see that the index 10 of the vector is actually displaying consistent behaviors with the line break (that I detokenized into spaces for convenience).
+I initially thought this experiment was a failure that I could explain by either one of two reasons. The hidden state vector is too large and the representation of the memory is too distributed to be associated to a single index, or the same vector is too short, and the model does not learn the pattern recognition enough to attempt any analysis in the first place. But, as it turned out, I was using a python set to collect the newly generated words in my original function (so that a word would not be generated twice). This had as effect to output the words in the wrong order... I then turn the set to a list in the generator function and was able to identify patterns in my LSTM cell. In the heatmap above, we can see that the index 10 of the vector is actually displaying consistent behaviors with the line break (that I detokenized into spaces for convenience).
 
 In the graph below, we drop the other indices to highlight only the one that seemed to measure the length of a word, or more precisely, the chances for a word to finish. In the second word below, the chances a word ends might go down if a new character (chosen in a stochastic process) or sequence of character is an unlikely end for a word; the second word had more chances to stop at "por" than at "pori" for instance.
 ![](../assets/hidden-state-zoom.png)

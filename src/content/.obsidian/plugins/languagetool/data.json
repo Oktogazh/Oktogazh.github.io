@@ -1,7 +1,7 @@
 {
   "serverUrl": "https://api.languagetool.org",
   "autoCheckDelay": 3000,
-  "shouldAutoCheck": true,
+  "shouldAutoCheck": false,
   "languageVariety": {
     "en": "en-US",
     "de": "de-DE",
@@ -13,7 +13,10 @@
     "gichenik",
     "modelization",
     "recomender",
-    "detokenized"
+    "detokenized",
+    "unigram",
+    "Unigram",
+    "combinatorics"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],

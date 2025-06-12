@@ -1,0 +1,23 @@
+---
+title: The evolution of transformers
+date: 2025-05-25
+---
+# Evolution and Future of Language Modeling
+In this short review, we come back on the history of sequence learning for language modeling, with the aim of foreseeing the evolution of the field.
+In 2017, the introduction of the transformer architecture (Vaswani et al.) sparked the AI boom we know today. The only real innovation of the transformer was achieving complete parallelization to learn long-range dependencies while avoiding sequential computation. Both mechanisms of attention and encoder-decoder architecture existed before (Graves, 2014). The fact that transformer-based models beat previous models is almost an unhappy consequence because it pushed the industry to adopt an unmatured resource-intensive technology by scaling it instead of refining the architecture. It is obvious by reading the article that the transformer was thought of more like a breakthrough to be itered and improved on rather than a definitive solution. But what improvements have been achieved since then?  
+Similarly to the transistor technology, an obvious goal going forward would be to miniaturize the architecture to increase the efficiency of the models, akin to what was achieved with the Gated recurrent unit (GRU) in regard to the LSTM cells (Graves, 2014). GRU are able to achieve similar results to LSTM cells while scraping the output gate. Similar improvement keep being done on these RNN architectures like with the minLSTM and minGRU (Feng, 2024). Reducing the size of the architecture mechanically reduces the computational burden of the model, which allows it to run on smaller machines or to scale up the capacities of the larger models. In a way, this miniaturization was partially achieved by GPT-type models by scrapping the encoder from the architecture, this not only allows the dropping of the encoder, but also the cross attention in the decoder, leaving only one masked self-attention and dropping two multi-head attentions which simplifies drastically the architecture. My personal thoughts on a further improvement that can be done on the current auto-regressive architecture of chatbots whould be to have a system able to output several words, or expressions as a single token when deemed useful to save time during of inference, to reproduce the way we can sometine mechanically utter entire sentences or expression from one thought like a single word. Essential as it can be to improve the portability of models, miniaturization has however its limits. As for sequence modelization the length of the sequence treated is the ultimate barrier to scalability. This means that with the current architecture, generating one more token costs almost nothing, it is the number of parameters of the models that determines the cost.  
+This is why the other direction of AI evolution may be the most promising going forward. Building what Karpathy calls an AI operating system, made of several pecialized modules, purpose built SLM or SVF (Sun et al., 2025) that will be able to yield better performence while running on more modest resources. This would follow the way cognitive science describes human cognition, as a constellation of speciallized layers optimized for the tasks most commonly encountered.
+
+# References
+
+Cho, K., Merrienboer, B. van, Gulcehre, C., Bahdanau, D., Bougares, F., Schwenk, H., Bengio, Y., 2014. Learning Phrase Representations using RNN Encoder-Decoder for Statistical Machine Translation. [https://doi.org/10.48550/arXiv.1406.1078](https://doi.org/10.48550/arXiv.1406.1078)
+
+Feng, L., Tung, F., Ahmed, M.O., Bengio, Y., Hajimirsadeghi, H., 2024. Were RNNs All We Needed? [https://doi.org/10.48550/arXiv.2410.01201](https://doi.org/10.48550/arXiv.2410.01201)
+
+Graves, A., 2014. Generating Sequences With Recurrent Neural Networks. [https://doi.org/10.48550/arXiv.1308.0850](https://doi.org/10.48550/arXiv.1308.0850)
+
+Hochreiter, S., Schmidhuber, J., 1997. Long Short-Term Memory. Neural Computation 9, 1735–1780. [https://doi.org/10.1162/neco.1997.9.8.1735](https://doi.org/10.1162/neco.1997.9.8.1735)
+
+Sun, Q., Cetin, E., Tang, Y., 2025. Transformer-Squared: Self-adaptive LLMs. [https://doi.org/10.48550/arXiv.2501.06252](https://doi.org/10.48550/arXiv.2501.06252)
+
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L., Polosukhin, I., 2023. Attention Is All You Need. [https://doi.org/10.48550/arXiv.1706.03762](https://doi.org/10.48550/arXiv.1706.03762)

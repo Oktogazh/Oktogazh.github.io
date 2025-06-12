@@ -1,5 +1,5 @@
 ---
-title: Ymarferol 4
+title: "Ymarferol 4: Speech Recognition"
 date: 2025-03-25
 ---
 # 1 Start Using transcription Models

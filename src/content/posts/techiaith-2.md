@@ -1,5 +1,5 @@
 ---
-title: Ymarferol 2
+title: "Ymarferol 2: Machine Translation"
 date: 2025-03-11
 ---
 # 1 Using Machine Translation Models

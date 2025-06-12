@@ -1,5 +1,5 @@
 ---
-title: Practical 1
+title: "Practical 1: Python Refresher"
 date: 2025-03-09
 ---
 # 1 Extracting the corpus from a wiki

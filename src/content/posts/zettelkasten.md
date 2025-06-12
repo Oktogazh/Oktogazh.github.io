@@ -4,6 +4,9 @@ date: 2025-01-22
 cssclasses:
   - dashboard
 ---
+# Traethawd
+- 🎓 M.Sc. Dissertation 
+	- [Dissertation Ideas](dissertation-ideas)
 # Linguistics
 - 🛠️ Reading
 	- [Bruce Hayes (2008)](hayes-2008)

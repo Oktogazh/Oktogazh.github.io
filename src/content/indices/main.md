@@ -4,7 +4,7 @@ cssclasses:
   - dashboard
 ---
 
-# M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
+# M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25 🎓
 - 🛠️ ICE-4005-0 Generalist Mini-project
 	- [Mini-project Dashboard](posts/ice-4005-dashboard)
 	- [Report](posts/report-mini-project)
@@ -22,11 +22,14 @@ cssclasses:
 	- [Report 3](posts/nlp-lab-3)
 	- [Report 4](posts/nlp-lab-4)
 	- [Corpus Report](nlp-corpus-report.md)
+	- [Final Exam](posts/nlp-exam)
 -  💻 Technoleg Iaith
-	- [Report 1](posts/techiaith-1)
-	- [Report 2](posts/techiaith-2)
-	- [Report 3](posts/techiaith-3)
-	- [Report 4](posts/techiaith-4)
+	- [0. Cyflwyniad](posts/techiaith-1) (4/4)
+	- [1. Dysgu Perianyddol & Chyfieithu Peiranyddol](posts/techiaith-2) (3/3)
+	- [2. Testun i Leferydd](posts/techiaith-3) (2/2)
+	- [3. Adnabod Lleferydd](posts/techiaith-4) (2/2)
+	- [4. Dealluswydd Artiffisial Sgyrsiol](posts/techiaeth-5) (2/2)
+	- [Understand Transformers](posts/understand-transformers)
 
 # <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
 - 🌐 Troidigezhioù
@@ -36,6 +39,9 @@ cssclasses:
 - 🪶 Barzhonegoù
 	- [Trid an tridi](posts/tridi) 🐦‍⬛
 	- [Ar Bisklavret](posts/bisklavret) 🐺
+	- [Kreac'h](posts/kreac'h) 
+- Politikerezh
+	- [Opiom an Intellektualed](posts/opiom)
 - Liammoù
 	- [data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
 
