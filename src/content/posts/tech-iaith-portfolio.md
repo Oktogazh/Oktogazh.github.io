@@ -354,7 +354,7 @@ Yn ogystal â'r holl bethau a wnes i sôn amdanynt yn barod, byddaf yn dweud, ar
 ## 1.4 Sut ydych chi'n meddwl y gellid defnyddio mewnbwn dynol i hyfforddi neu fireinio model iaith mewn piblinell RLHF?
 Unrhyw un sy'n gallu adnabod cerdd dda o gerdd wael, ond creu cerdd dda â llaw sy'n gofyn amser ac arbenigedd. Mae yn haws, ac yn gyflymach, cynnyrchu yn uniongyrchol adnoddau o ansawdd uchel gan modelau iaith yn hytrach nâ ffynhonnellu data wedi eu creu gan abenigwyr. Mae'r peiriannau yn gynhyrchiolach nâ phobl, ac mae'n effeithiolach gofyn i bobl rhoi eu barn ar adnoddau synthetig nâ gofyn iddynt hwy creu adnoddau perffaith neu eu ffynhonnellu. 
  
-![](screenshot-argilla.png)
+![](../assets/screenshot-argilla.png)
 
 # 2 Defnydd Gorau o LLM
 
