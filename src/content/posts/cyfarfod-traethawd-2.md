@@ -14,5 +14,5 @@ date: 2025-06-20
 
 # 2. Priorities for the Next Meeting
 1. Send the files mentioned in 1.2 to the ethical application form ASAP ✅ and sign the application form ❌
-2. Build the core of the test while in order to start collecting the data
+2. Build the core of the test in order to start collecting the data
 3. Start writing the literature review of the dissertation
