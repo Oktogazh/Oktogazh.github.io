@@ -4,14 +4,16 @@ cssclasses:
   - dashboard
 ---
 
-# M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25 🎓
+# 🎓 M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
+
+- 🎓📝 Dissertation 
+	- [Dissertation Dashboard](posts/dissertation-dashboard)
+	- [Experimental Design (Psycholinguistic asignment)](posts/experimental-design)
 - 🛠️ ICE-4005-0 Generalist Mini-project
 	- [Mini-project Dashboard](posts/ice-4005-dashboard)
 	- [Report](posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Last Week Log](ice-4005-meeting-17.md)
-- 🧠 Psycholinguistics
-	- [Experimental Design](posts/experimental-design)
+	- [Last Week Log](ice-4005-meeting-21.md)
 - 🧐 Research Methodology
 	- [Research Proposal](posts/research-proposal)
 	- [Review of an Outstanding Dissertation](posts/dissertation-review)
