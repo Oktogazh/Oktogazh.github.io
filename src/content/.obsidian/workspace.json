@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "posts/cyfarfod-traethawd-2.md",
+                "file": "posts/dissertation-dashboard.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "cyfarfod-traethawd-2"
+              "title": "dissertation-dashboard"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "Untitled",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +74,7 @@
               "title": "Bookmarks"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -164,15 +163,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d0fb641706f43171",
+  "active": "92f6f4eb9415847e",
   "lastOpenFiles": [
-    "posts/dissertation-dashboard.md",
+    "posts/code-switching-and-language-level.md",
+    "posts/cyfarfod-traethawd-1.md",
     "posts/cyfarfod-traethawd-2.md",
+    "posts/dissertation-dashboard.md",
     "posts/Untitled.md",
     "posts/cyfarfod-traethawd-3.md",
     "assets/participant-information-sheet.pdf",
     "assets/participant-consent-form.pdf",
-    "posts/cyfarfod-traethawd-1.md",
     "posts/consent-form.md",
     "posts/participation-information-sheet.md",
     "posts/experimental-design.md",
@@ -194,7 +194,6 @@
     "posts/ice-4005-meeting-17.md",
     "posts/mojenn-war-giz.md",
     "posts/techiaith-4.md",
-    "posts/opiom.md",
     "456941159_798076312536487_9087720162831574831_n.jpg",
     "assets/first-char-distribution.png",
     "assets/char-distribution.png",

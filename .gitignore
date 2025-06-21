@@ -23,7 +23,6 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-.obsidian/*
-!.obsidian/snippets/
-!.obsidian/themes/
-!.obsidian/plugins/
+# Content Obsidian - ignore direct children but keep snippets
+
+!src/content/.obsidian/snippets/*
