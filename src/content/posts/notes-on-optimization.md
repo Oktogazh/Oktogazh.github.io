@@ -2,9 +2,9 @@
 title: Notes on optimization of the system
 date: 2025-06-28
 ---
+This article focuses on the optimization of the Elo rating system features to improve the testing experience and information extraction during the calibration of the items difficulty ratings.
 # 1 Initial Ratings
-To avoid cheating by always clicking the green button, we set the initial ratings of the distractors lower below the zero line than the initial ratings of the keys. In other words, the penalty for recognizing a non-word is bigger than the reward for recognizing a real word, and cheating by pretending knowing the items has a negative effect on the user's rating when the distractors are present in equal proportion as the keys.
-
+To avoid cheating by always clicking the green button, we set the initial ratings of the distractors lower below the zero line than the initial ratings of the keys. In other words, the penalty for recognizing a non-word is bigger than the reward for recognizing a real word, and cheating by pretending knowing the items has a negative effect on the user's rating when the distractors are selected in equal proportion as the keys.
 # 2 Difficulty management during calibration
 Adaptivity is a great idea in theory, that is, when abstracting away the limits in time and resources. But in practice, when the number of test takers are limited as well as the numbers of test sessions they are willing to undergo, the theory hits a painfull, solid wall.
 ## 2.1 Double paradox of adaptivity
