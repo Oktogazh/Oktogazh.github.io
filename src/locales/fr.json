@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "title1": "AI and Languages Specialist,",
+    "title2": "Educator and Consultant",
+    "subtitle": "AI strategy, applied language technologies, and production-grade systems for organizations and learners.",
+    "cta_primary": "Work with me",
+    "cta_secondary": "View my projects"
+  },
+  "services": {
+    "title": "Services",
+    "advisory": {
+      "title": "AI Advisory for Leadership",
+      "item1": "Strategic guidance for C-suite and managers",
+      "item2": "AI governance, policy, and risk management",
+      "item3": "AI adoption roadmaps and capability assessments"
+    },
+    "technical": {
+      "title": "Technical Implementation",
+      "item1": "RAG pipelines, LLM workflows, automation",
+      "item2": "AI-enabled web applications",
+      "item3": "Integration with existing systems"
+    },
+    "learning": {
+      "title": "Learning & Pedagogical Design",
+      "item1": "AI for training and upskilling",
+      "item2": "Adaptive learning systems",
+      "item3": "Applied linguistics expertise"
+    }
+  },
+  "portfolio": {
+    "title": "Selected Work",
+    "subtitle": "AI, software engineering, and learning systems",
+    "project1": {
+      "title": "AI-driven Language Acquisition Platform",
+      "subtitle": "Fluens/eienn",
+      "description": "[Add technical achievements and key features here]"
+    },
+    "project2": {
+      "title": "Adaptive Vocabulary System",
+      "subtitle": "Leksis - Elo Modeling",
+      "description": "[Add technical achievements and key features here]"
+    },
+    "project3": {
+      "title": "AI Implementation Projects",
+      "subtitle": "Web Development + AI Integration",
+      "description": "[Add relevant projects here]"
+    }
+  },
+  "labs": {
+    "badge": "Research & Development",
+    "title": "Language Technology Labs",
+    "subtitle": "Research and experimentation with minority languages to explore complex NLP challenges",
+    "item1": {
+      "title": "LLM Evaluation",
+      "description": "Low-resource language contexts"
+    },
+    "item2": {
+      "title": "Learning Systems",
+      "description": "Experimentation and prototyping"
+    },
+    "item3": {
+      "title": "Speech & Text",
+      "description": "Processing prototypes"
+    },
+    "link": "Read technical notes and blog posts"
+  },
+  "about": {
+    "title": "About",
+    "bio": "I work at the intersection of AI, linguistics, pedagogy, and software engineering. My work spans executive AI advisory, applied LLM engineering, and the development of intelligent learning systems. I combine technical expertise with a deep understanding of human learning and language structure.",
+    "highlight1": "Independent AI consultant",
+    "highlight2": "NLP and small-language R&D",
+    "highlight3": "Creator of Fluens and Leksis",
+    "highlight4": "Web developer and educator"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "For consulting, collaboration, or speaking engagements, reach out here.",
+    "form": {
+      "name": "Name",
+      "name_placeholder": "Your name",
+      "email": "Email",
+      "email_placeholder": "your.email@example.com",
+      "message": "Message",
+      "message_placeholder": "Tell me about your project...",
+      "submit": "Send Message"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Alan. All rights reserved."
+  }
+}
