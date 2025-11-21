@@ -15,3 +15,4 @@ cssclasses:
 	- [Meeting 1: Research Proposal Feedback](cyfarfod-traethawd-1)
 - 📝 Notes
 	- [Notes on optimization of the system](notes-on-optimization)
+	- [Psychometrics for Dummies](psycho-dummies)

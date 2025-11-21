@@ -1,22 +1,9 @@
 ---
-import BaseLayout from '@/layouts/BaseLayout.astro';
-
-import { getEntry } from 'astro:content';
-
-const index = await getEntry('indices', 'main')!;
-const { Content } = await index?.render()!;
+import MySvelteComponent from '../components/HomePage.svelte';
 ---
 
-<BaseLayout title="Alan Kersaudy">
-	<h1>Demat deoc'h, I'm Alan</h1>
-	<p class="mb-8 text basis-1/2 max-w-[600px]">
-		I am currently doing a MSc in Language Technology at Bangor University,
-		North Wales. This web site is primarily intended to keep track my different
-		univesity projects.
-	</p>
-	<div class={`${index.data?.cssclasses}`}>
-		<Content />
-	</div>
-</BaseLayout>
-
-<style></style>
+<html>
+  <body>
+    <MySvelteComponent client:load />
+  </body>
+</html>

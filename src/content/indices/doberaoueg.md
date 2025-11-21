@@ -4,18 +4,12 @@ cssclasses:
   - dashboard
 ---
 
+Vlog:
+- [[geriadur]]
+
 Blog:
-- Turn snippets into class for Astro
-	- Put 'academic' in a separate file
-	- Create a "translation" class
-	- Put "Dashboard" in a separate file
 
 Skol-Veur:
-- Hentenn Enklask:
-	- [Research Proposal](posts/research-proposal)
-- Mini-project
-	- Kregiñ gant ar rentañ-kont
-	- Kregiñ gant ar c'hod
 - 
 
 About:

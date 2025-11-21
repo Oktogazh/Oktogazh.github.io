@@ -10,6 +10,8 @@ import tailwind from "@astrojs/tailwind";
 import expressiveCode from "astro-expressive-code";
 import remarkMermaid from 'remark-mermaidjs'
 
+import svelte from "@astrojs/svelte";
+
 // https://astro.build/config
 export default defineConfig({
   site: "https://oktogazh.github.io",
@@ -18,12 +20,11 @@ export default defineConfig({
     format: 'file'
   },
   trailingSlash: "never",
-  integrations: [expressiveCode(),
-  mdx({
+  integrations: [expressiveCode(), mdx({
     syntaxHighlight: "prism",
     remarkPlugins: [remarkMath],
     rehypePlugins: [rehypeKatex],
-  }), tailwind(),],
+  }), tailwind(), svelte()],
   markdown: {
     remarkPlugins: [
       remarkMermaid

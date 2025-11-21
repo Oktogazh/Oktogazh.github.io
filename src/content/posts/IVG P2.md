@@ -427,7 +427,7 @@ hervez kalon Hor Salver !...
 Neo ket d'ar gêr e oa fustet Katell, p'he doa frapet
 ganti ken dillo he divesker diouzh ar poull. Edo o
 vont, ha tizh warni, da di he c'hoar, Lij Vloagen. Ha
-gwelet e vo ar pezh a vo gwelet, rak Katel a oa droug
+gwelet e vo ar pezh a vo gwelet, rak Katell a oa droug
 enni.
 Pignet he doa laezenn ar Ru-Nevez, anvet ivez Ru
 Hoche, hag edo o treuzin korn plasenn ar Vadalen
