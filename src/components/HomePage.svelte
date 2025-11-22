@@ -323,38 +323,31 @@
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-image">
-            <div class="project-placeholder">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
+            <img
+              src="assets/fluens.png"
+              alt="AI-driven Language Acquisition Platform"
+            />
           </div>
           <div class="project-content">
             <h3>
               {$_('portfolio.project1.title', {
-                default: 'AI-driven Language Acquisition Platform',
+                default: 'Educational Platform',
               })}
             </h3>
             <p class="project-subtitle">
-              {$_('portfolio.project1.subtitle', { default: 'Fluens/eienn' })}
+              <a href="https://fluens.co" target="_blank">Fluens.co</a>
             </p>
             <p class="project-description">
               {$_('portfolio.project1.description', {
-                default: '[Add technical achievements and key features here]',
+                default:
+                  'Following the creation of Eienn.bzh, my MVP project for a Breton language acquisition platform, I created Fluens.co. The SaaS (Software as a Service) platform was designed to help organizations to create, manage and distribute language learning content effectively and at scale. Key features included: a content management system (CMS), a user-friendly interface for both content creators and learners, analytics and a complex payment integration with Stripe to handle subscriptions and transactions securely. Stack: Vue (+ Radix Vue), Firebase (+ node.js).',
               })}
             </p>
             <div class="project-tags">
-              <span>NLP</span>
-              <span>LLM</span>
-              <span>Adaptive Learning</span>
+              <span>B2B2C</span>
+              <span>SaaS</span>
+              <span>end-to-end</span>
+              <span>Pedagogical Content Creation</span>
             </div>
           </div>
         </div>
@@ -362,19 +355,11 @@
         <!-- Project 2 -->
         <div class="project-card">
           <div class="project-image">
-            <div class="project-placeholder">
-              <svg
-                width="48"
-                height="48"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
-            </div>
+            <img
+              src="assets/leksis.png"
+              style="height: fit-content;"
+              alt="AI-driven Language Acquisition Platform"
+            />
           </div>
           <div class="project-content">
             <h3>
@@ -383,25 +368,26 @@
               })}
             </h3>
             <p class="project-subtitle">
-              {$_('portfolio.project2.subtitle', {
-                default: 'Leksis - Elo Modeling',
-              })}
+              <a href="https://leksis.bzh" target="_blank">Leksis.bzh</a>
             </p>
             <p class="project-description">
               {$_('portfolio.project2.description', {
-                default: '[Add technical achievements and key features here]',
+                default:
+                  "Started as my Master's thesis project, Leksis is an adaptive vocabulary learning system that leverages machine learning and deep learning techniques to quickly evaluate language learners's vocabulary level efficiently. Key techniques and algorithms included: a recommendation engine (based on the Elo rating system's logistic model), LSTM cells (PyTorch) to model the phonotactics property of the words in a language and data scrapping and cleaning to prepare the data sets. Stack: PyTorch (on Jupyter notebooks for the data preparation), for the app proper: Firebase (+ TS for the functions) and Vue3 + TS.",
               })}
             </p>
             <div class="project-tags">
-              <span>Machine Learning</span>
-              <span>Spaced Repetition</span>
+              <span>Machine and Deep Learning</span>
+              <span>AIEd</span>
               <span>Algorithm Design</span>
+              <span>NLP</span>
+              <span>Psycholinguistics (Cognitive Science)</span>
             </div>
           </div>
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card">
+        <!-- <div class="project-card">
           <div class="project-image">
             <div class="project-placeholder">
               <svg
@@ -439,7 +425,7 @@
               <span>Full Stack</span>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -448,25 +434,11 @@
   <section id="labs" class="labs" class:visible={visibleSections.has('labs')}>
     <div class="container">
       <div class="section-header">
-        <div class="labs-badge">
-          <svg
-            width="16"
-            height="16"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-          >
-            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-            ></path>
-          </svg>
-          <span>{$_('labs.badge', { default: 'Research & Development' })}</span>
-        </div>
         <h2>{$_('labs.title', { default: 'Language Technology Labs' })}</h2>
         <p class="section-subtitle">
           {$_('labs.subtitle', {
             default:
-              'Research and experimentation with minority languages to explore complex NLP challenges',
+              'Research, experimentation and contribution to open source projects with minority languages to explore complex NLP challenges in low-resource contexts.',
           })}
         </p>
         <div class="section-divider divider-purple"></div>
@@ -474,38 +446,63 @@
 
       <div class="labs-content">
         <div class="labs-grid">
-          <div class="labs-item">
-            <div class="labs-emoji">🔬</div>
-            <h4>{$_('labs.item1.title', { default: 'LLM Evaluation' })}</h4>
+          <button
+            class="labs-item"
+            on:click={() =>
+              window.open('https://huggingface.co/Oktogazh', '_blank')}
+          >
+            <div class="labs-emoji">🤗</div>
+            <h4>Hugging Face</h4>
             <p>
               {$_('labs.item1.description', {
-                default: 'Low-resource language contexts',
+                default: 'Check out my models and datasets on Hugging Face.',
               })}
             </p>
-          </div>
-          <div class="labs-item">
-            <div class="labs-emoji">🧪</div>
-            <h4>{$_('labs.item2.title', { default: 'Learning Systems' })}</h4>
+          </button>
+          <button
+            class="labs-item"
+            on:click={() =>
+              window.open('https://github.com/Oktogazh/languagetool', '_blank')}
+          >
+            <div class="flex align-middle justify-center labs-emoji">
+              <img
+                src="https://avatars.githubusercontent.com/u/5187764?s=200&v=4"
+                alt="LanguageTool Logo"
+                style="background-color: blanchedalmond;"
+                class="rounded labs-emoji self-center"
+                width="50"
+                height="50"
+              />
+            </div>
+            <h4>LanguageTool (Java)</h4>
             <p>
               {$_('labs.item2.description', {
-                default: 'Experimentation and prototyping',
+                default:
+                  'My fork of the famous open-source spelling and grammar checker LanguageTool. Currently working on adding support for Welsh.',
               })}
             </p>
-          </div>
-          <div class="labs-item">
-            <div class="labs-emoji">🎙️</div>
-            <h4>{$_('labs.item3.title', { default: 'Speech & Text' })}</h4>
+          </button>
+          <button
+            class="labs-item"
+            on:click={() =>
+              window.open('posts/techiaith-2#2-models-evaluation', '_blank')}
+          >
+            <div class="labs-emoji">🔬</div>
+            <h4>
+              {$_('labs.item3.title', { default: 'Automated Translation' })}
+            </h4>
             <p>
               {$_('labs.item3.description', {
-                default: 'Processing prototypes',
+                default:
+                  'Fine-tuning and evaluating a translation model (French-Breton) with a newly collected dataset.',
               })}
             </p>
-          </div>
+          </button>
         </div>
         <div class="labs-link">
-          <a href="#">
+          <a href="blog">
             {$_('labs.link', {
-              default: 'Read technical notes and blog posts',
+              default: 'Read technical notes in my blog',
             })}
             <svg
               width="16"
@@ -1298,6 +1295,11 @@
     padding: 1.5rem;
     background: rgba(30, 41, 59, 0.5);
     border-radius: 0.75rem;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    width: 100%;
   }
 
   .labs-emoji {

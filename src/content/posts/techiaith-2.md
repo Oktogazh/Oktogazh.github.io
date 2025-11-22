@@ -149,7 +149,7 @@ We can finally analyze the result. The BLEU score is 14,5. Which is signifantly 
 ```
 
 
-# 3 Training and Fine tuning a MT Engine
+# 3 Training and Fine-tuning a MT Engine
 Here is the orignial value of the Welsh-English model:
 ```python
 {'score': 11.511182155223498, 'counts': [10364, 3892, 1757, 820], 'totals': [23621, 22624, 21628, 20632], 'precisions': [43.876211845391815, 17.202970297029704, 8.123728500092472, 3.9744086855370298], 'bp': 0.9213079194653137, 'sys_len': 23621, 'ref_len': 25557}
@@ -159,7 +159,7 @@ Here is the fine tuned results:
 {'score': 13.268464073731995, 'counts': [11206, 4427, 2064, 1005], 'totals': [24933, 23936, 22939, 21942], 'precisions': [44.944451129025786, 18.49515374331551, 8.997776712149614, 4.580257041290675], 'bp': 0.9752835082550481, 'sys_len': 24933, 'ref_len': 25557}
 ```
 It is a staggering to see how far this improvement is in comparison to the 30.355800 BLEU score clamed against the testing set from the memory translation. This informs us of two facts:
-1. Fine tuning works especially well if the goal is to use the model in a similar context to the one of the data that were used in the fine tuning training set. And conversely, the fine-tuning bring little benefits in a less resrticted context, which underlines the importance of building larger "generalist" models and gathering bigger data sets to train them.
+1. Fine-tuning works especially well if the goal is to use the model in a similar context to the one of the data that were used in the fine tuning training set. And conversely, the fine-tuning bring little benefits in a less resrticted context, which underlines the importance of building larger "generalist" models and gathering bigger data sets to train them.
 2. It is really important to have a testing set as rich as possible to ensure that our testing results are not misleading when trying to build general-purpose models.
 
 Next, we will try to improve these results.
@@ -183,10 +183,10 @@ First, I increased the learning rate a bit, from 2e-5 to 2e-4, as well as the we
 Secondly, I increased the number of epochs from 1 to 5. This increases the time of training significantly, but also the results optained.
 ## 3.2 Training data and graphs
 
-![[../assets/training-loss1.png]]
+![](../assets/training-loss1.png)
 Figure 1. The loss function over the training set.
 
-![[../assets/eval-loss1.png]]
+![](../assets/eval-loss1.png)
 Figure 2. The loss function over the evaluation data set. As we can see, there was no overfitting during the process.
 This table shows the minutes of the training process.
 
