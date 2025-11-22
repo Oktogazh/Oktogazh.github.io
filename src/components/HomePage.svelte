@@ -574,7 +574,7 @@
               <span class="highlight-check">✓</span>
               <span
                 >{$_('about.highlight3', {
-                  default: 'Creator of Fluens and Leksis',
+                  default: 'Specialist in AI adoption and strategy',
                 })}</span
               >
             </div>
@@ -611,7 +611,7 @@
       </div>
 
       <div class="contact-form-wrapper">
-        <div class="contact-form">
+        <!-- <div class="contact-form">
           <div class="form-group">
             <label for="name"
               >{$_('contact.form.name', { default: 'Name' })}</label
@@ -633,7 +633,7 @@
               type="email"
               id="email"
               placeholder={$_('contact.form.email_placeholder', {
-                default: 'your.email@example.com',
+                default: 'alan.kersaudy@gmail.com',
               })}
             />
           </div>
@@ -654,10 +654,10 @@
           <button class="submit-button">
             {$_('contact.form.submit', { default: 'Send Message' })}
           </button>
-        </div>
+        </div> -->
 
         <div class="contact-info">
-          <a href="mailto:your.email@example.com" class="contact-link">
+          <a href="mailto:alan.kersaudy@gmail.com" class="contact-link">
             <svg
               width="20"
               height="20"
@@ -671,10 +671,13 @@
               ></path>
               <polyline points="22,6 12,13 2,6"></polyline>
             </svg>
-            <span>your.email@example.com</span>
+            <span>alan.kersaudy@gmail.com</span>
           </a>
+        </div>
+
+        <div class="contact-info">
           <a
-            href="https://linkedin.com/in/yourprofile"
+            href="https://www.linkedin.com/in/alan-kersaudy-3892b514b/"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
@@ -696,6 +699,19 @@
             <span>LinkedIn</span>
           </a>
         </div>
+
+        <div class="contact-info">
+          <a
+            href="https://www.malt.fr/profile/alankersaudy"
+            target="_blank"
+            class="contact-link"
+          >
+            <img
+              src="https://dam.malt.com/navbar/logos/malt-logo-red.svg?vh=9690b2?w=250&h=70"
+              alt="Malt logo"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </section>
@@ -704,8 +720,9 @@
   <footer class="footer">
     <div class="container">
       <p>
+        © {new Date().getFullYear()} Alan Kersaudy.
         {$_('footer.copyright', {
-          default: '© 2024 Alan. All rights reserved.',
+          default: 'All rights reserved.',
         })}
       </p>
     </div>
@@ -1416,7 +1433,6 @@
 
   .highlight-check {
     color: #22d3ee;
-    margin-top: 0.25rem;
   }
 
   .highlight-item span:last-child {
