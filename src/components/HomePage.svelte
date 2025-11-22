@@ -538,7 +538,10 @@
       <div class="about-content">
         <div class="about-image">
           <div class="portrait-placeholder">
-            <div class="portrait-icon">👤</div>
+            <img
+              src="assets/gibli-lanig.png"
+              alt="AI generated Alan Kersaudy Portrait with Gibli style"
+            />
           </div>
         </div>
 
@@ -546,7 +549,7 @@
           <p class="about-bio">
             {$_('about.bio', {
               default:
-                'I work at the intersection of AI, linguistics, pedagogy, and software engineering. My work spans executive AI advisory, applied LLM engineering, and the development of intelligent learning systems. I combine technical expertise with a deep understanding of human learning and language structure.',
+                'I work at the intersection of AI, linguistics, pedagogy, and programming. My work spans executive AI advisory, applied AI engineering, and the development of intelligent learning systems. I combine technical expertise with a deep understanding of cognitive processes and language structure.',
             })}
           </p>
 
@@ -1377,10 +1380,6 @@
       rgba(6, 182, 212, 0.2),
       rgba(59, 130, 246, 0.2)
     );
-  }
-
-  .portrait-icon {
-    font-size: 6rem;
   }
 
   .about-text {
