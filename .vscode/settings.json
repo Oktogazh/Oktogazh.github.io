@@ -1,5 +1,8 @@
 {
   "git.decorations.enabled": true,
   "explorer.excludeGitIgnore": false,
-  "git.defaultBranchName": "master"
+  "git.defaultBranchName": "master",
+  "i18n-ally.localesPaths": [
+    "src/locales"
+  ]
 }

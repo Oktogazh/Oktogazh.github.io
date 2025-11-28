@@ -449,13 +449,17 @@
           <button
             class="labs-item"
             on:click={() =>
-              window.open('https://huggingface.co/Oktogazh', '_blank')}
+              window.open(
+                'https://huggingface.co/spaces/Oktogazh/miniclone',
+                '_blank',
+              )}
           >
             <div class="labs-emoji">🤗</div>
-            <h4>Hugging Face</h4>
+            <h4>Miniclone</h4>
             <p>
               {$_('labs.item1.description', {
-                default: 'Check out my models and datasets on Hugging Face.',
+                default:
+                  'Ask me anything with my miniclone, a personal RAG pipeline that is trained to answer your questions about me. The project lives on Hugging Face, where you can find my other AI related open source projects.',
               })}
             </p>
           </button>
