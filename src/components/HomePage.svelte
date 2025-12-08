@@ -6,6 +6,14 @@
   let scrollY = 0;
   let visibleSections = new Set();
 
+  const navItems = [
+    { id: 'services', label: 'Services' },
+    { id: 'portfolio', label: 'Portfolio' },
+    { id: 'labs', label: 'Labs' },
+    { id: 'about', label: 'About' },
+    { id: 'contact', label: 'Contact' },
+  ];
+
   onMount(() => {
     const handleScroll = () => {
       scrollY = window.scrollY;
@@ -44,16 +52,27 @@
 
 <div class="landing-page">
   <!-- Navigation -->
-  <nav class="nav" class:scrolled={scrollY > 50}>
-    <div class="nav-container">
-      <div class="nav-logo">Alan Kersaudy</div>
-      <div class="nav-links">
-        <button on:click={() => scrollToSection('services')}>Services</button>
-        <button on:click={() => scrollToSection('portfolio')}>Portfolio</button>
-        <button on:click={() => scrollToSection('labs')}>Labs</button>
-        <button on:click={() => scrollToSection('about')}>About</button>
-        <button on:click={() => scrollToSection('contact')}>Contact</button>
-      </div>
+  <nav
+    style="height: 64px;"
+    class="fixed top-0 w-full z-50 px-4 transition-all duration-500 flex justify-around items-center
+    {scrollY > 50
+      ? 'bg-slate-900/95 backdrop-blur-xl border-b border-slate-700'
+      : ''}"
+  >
+    <div
+      class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent"
+    >
+      Alan Kersaudy
+    </div>
+    <div class="hidden sm:flex gap-4 md:gap-6 lg:gap-8">
+      {#each navItems as { id, label }}
+        <button
+          on:click={() => scrollToSection(id)}
+          class="text-slate-300 hover:text-cyan-400 hover:bg-cyan-400/10 transition-colors duration-300 capitalize px-3 py-2 rounded-md text-lg"
+        >
+          {label}
+        </button>
+      {/each}
     </div>
   </nav>
 
@@ -79,20 +98,24 @@
       {/each}
     </div>
 
-    <div class="hero-content">
-      <h1 class="hero-title">
-        <span class="title-line-1"
-          >{$_('hero.title1', {
-            default: 'AI and Languages Specialist,',
-          })}</span
+    <div class="relative z-10 max-w-[1200px] mx-auto text-center px-6 my-12">
+      <h1 class="text-5xl md:text-7xl font-bold my-6 leading-tight">
+        <span
+          class="bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent"
         >
+          {$_('hero.title1', { default: 'AI and Languages Specialist,' })}
+        </span>
         <br />
-        <span class="title-line-2"
-          >{$_('hero.title2', { default: 'Educator and Consultant' })}</span
+        <span
+          class="bg-gradient-to-r from-blue-200 via-cyan-300 to-cyan-400 bg-clip-text text-transparent"
         >
+          {$_('hero.title2', { default: 'Educator and Consultant' })}
+        </span>
       </h1>
 
-      <p class="hero-subtitle">
+      <p
+        class="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+      >
         {$_('hero.subtitle', {
           default:
             'AI strategy, applied language technologies, and production-grade systems for organizations and learners.',
@@ -100,7 +123,11 @@
       </p>
 
       <div class="hero-cta">
-        <button class="cta-primary" on:click={() => scrollToSection('contact')}>
+        <button
+          class="cta-primary flex items-center gap-4 px-8 py-4 border-none font-bold transition-all duration-300 shadow-sm pointer text-white rounded-lg hover:shadow-lg hover:scale-105 hover:shadow-sky-700"
+          style="background: linear-gradient(to right, #06b6d4, #3b82f6);"
+          on:click={() => scrollToSection('contact')}
+        >
           {$_('hero.cta_primary', { default: 'Work with me' })}
           <svg
             width="16"
@@ -117,7 +144,7 @@
           </svg>
         </button>
         <button
-          class="cta-secondary"
+          class="cta-primary flex items-center gap-4 px-8 py-4 border-2 border-sky-300 font-bold transition-all duration-300 shadow-sm pointer text-sky-300 rounded-lg hover:shadow-lg hover:scale-105 hover:shadow-sky-700"
           on:click={() => scrollToSection('portfolio')}
         >
           {$_('hero.cta_secondary', { default: 'View my projects' })}
@@ -146,18 +173,20 @@
   <!-- Services Section -->
   <section
     id="services"
-    class="services"
+    class="bg-slate-900"
     class:visible={visibleSections.has('services')}
   >
-    <div class="container">
+    <div class="flex items-center flex-col">
       <div class="section-header">
         <h2>{$_('services.title', { default: 'Services' })}</h2>
         <div class="section-divider"></div>
       </div>
 
-      <div class="services-grid">
+      <div
+        class="flex items-between justify-center flex-wrap flex-col md:flex-nowrap md:flex-row gap-12 lg:gap-8 px-4"
+      >
         <!-- Service Block 1 -->
-        <div class="service-card text-cyan-400">
+        <div class="service-card basis-1/2 md:basis-4/12 text-cyan-400">
           <div class="service-icon icon-cyan">
             <svg
               width="28"
@@ -204,7 +233,7 @@
         </div>
 
         <!-- Service Block 2 -->
-        <div class="service-card text-blue-400">
+        <div class="service-card basis-1/2 md:basis-4/12 text-blue-400">
           <div class="service-icon icon-blue">
             <svg
               width="28"
@@ -251,7 +280,7 @@
         </div>
 
         <!-- Service Block 3 -->
-        <div class="service-card text-purple-400">
+        <div class="service-card basis-1/2 md:basis-4/12 text-purple-400">
           <div class="service-icon icon-purple">
             <svg
               width="28"
@@ -387,7 +416,7 @@
         </div>
 
         <!-- Project 3 -->
-        <!-- <div class="project-card">
+        <!-- <div class="project-card>
           <div class="project-image">
             <div class="project-placeholder">
               <svg
@@ -615,51 +644,6 @@
       </div>
 
       <div class="contact-form-wrapper">
-        <!-- <div class="contact-form">
-          <div class="form-group">
-            <label for="name"
-              >{$_('contact.form.name', { default: 'Name' })}</label
-            >
-            <input
-              type="text"
-              id="name"
-              placeholder={$_('contact.form.name_placeholder', {
-                default: 'Your name',
-              })}
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="email"
-              >{$_('contact.form.email', { default: 'Email' })}</label
-            >
-            <input
-              type="email"
-              id="email"
-              placeholder={$_('contact.form.email_placeholder', {
-                default: 'alan.kersaudy@gmail.com',
-              })}
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="message"
-              >{$_('contact.form.message', { default: 'Message' })}</label
-            >
-            <textarea
-              id="message"
-              rows="6"
-              placeholder={$_('contact.form.message_placeholder', {
-                default: 'Tell me about your project...',
-              })}
-            ></textarea>
-          </div>
-
-          <button class="submit-button">
-            {$_('contact.form.submit', { default: 'Send Message' })}
-          </button>
-        </div> -->
-
         <div class="contact-info">
           <a href="mailto:alan.kersaudy@gmail.com" class="contact-link">
             <svg
@@ -748,68 +732,11 @@
       'Helvetica Neue', Arial, sans-serif;
   }
 
-  /* Navigation */
-  .nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 50;
-    transition: all 0.3s ease;
-  }
-
-  .nav.scrolled {
-    background: rgba(2, 6, 23, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid #1e293b;
-  }
-
-  .nav-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-logo {
-    font-size: 1.25rem;
-    font-weight: 700;
-    background: linear-gradient(to right, #22d3ee, #06b6d4);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .nav-links {
-    display: none;
-    gap: 2rem;
-  }
-
-  .nav-links button {
-    background: none;
-    border: none;
-    color: #cbd5e1;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: color 0.3s;
-    text-transform: capitalize;
-  }
-
-  .nav-links button:hover {
-    color: #22d3ee;
-  }
-
-  @media (min-width: 768px) {
-    .nav-links {
-      display: flex;
-    }
-  }
-
   /* Hero Section */
   .hero {
     position: relative;
-    min-height: 100vh;
+    max-height: 75vw;
+    min-height: 45vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -870,7 +797,7 @@
     }
   }
 
-  .hero-content {
+  .hero-content relative z-10 {
     position: relative;
     z-index: 10;
     max-width: 1200px;
@@ -878,61 +805,6 @@
     padding: 0 1.5rem;
     text-align: center;
   }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(-10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-  }
-
-  .title-line-1 {
-    background: linear-gradient(to right, #ffffff, #ccfbf1, #bfdbfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  .title-line-2 {
-    background: linear-gradient(to right, #bfdbfe, #67e8f9, #22d3ee);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  @media (min-width: 768px) {
-    .hero-title {
-      font-size: 4.5rem;
-    }
-  }
-
-  .hero-subtitle {
-    font-size: 1.25rem;
-    color: #cbd5e1;
-    margin-bottom: 3rem;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-    line-height: 1.6;
-  }
-
-  @media (min-width: 768px) {
-    .hero-subtitle {
-      font-size: 1.5rem;
-    }
-  }
-
   .hero-cta {
     display: flex;
     flex-direction: column;
@@ -945,34 +817,6 @@
     .hero-cta {
       flex-direction: row;
     }
-  }
-
-  .cta-primary {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem 2rem;
-    background: linear-gradient(to right, #06b6d4, #3b82f6);
-    border: none;
-    border-radius: 0.5rem;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-    box-shadow: 0 10px 25px rgba(34, 211, 238, 0.25);
-    transition: all 0.3s;
-  }
-
-  .cta-primary:hover {
-    box-shadow: 0 15px 35px rgba(34, 211, 238, 0.4);
-    transform: scale(1.05);
-  }
-
-  .cta-primary svg {
-    transition: transform 0.3s;
-  }
-
-  .cta-primary:hover svg {
-    transform: translateX(4px);
   }
 
   .cta-secondary {
@@ -989,56 +833,38 @@
   .cta-secondary:hover {
     border-color: #22d3ee;
     color: #22d3ee;
+    transform: scale(1.05);
   }
 
   .scroll-indicator {
-    position: absolute;
-    bottom: -5rem;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 4rem;
     background: none;
     border: none;
     color: #22d3ee;
     cursor: pointer;
     animation: bounce 2s infinite;
   }
-
-  @keyframes bounce {
-    0%,
-    100% {
-      transform: translateX(-50%) translateY(0);
-    }
-    50% {
-      transform: translateX(-50%) translateY(-10px);
-    }
-  }
-
-  /* Common Section Styles */
+  /* Common Section Styles
+   */
   section {
-    padding: 6rem 0;
-    opacity: 0;
-    transition: opacity 1s;
-  }
-
-  section.visible {
-    opacity: 1;
+    padding: 3rem 0;
   }
 
   .container {
-    max-width: 1280px;
+    max-width: min(100vw, 1280px);
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
   .container-small {
-    max-width: 1024px;
+    max-width: min(100vw, 1280px);
     margin: 0 auto;
     padding: 0 1.5rem;
   }
 
   .section-header {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
   }
 
   .section-header h2 {
@@ -1072,22 +898,6 @@
 
   .divider-purple {
     background: linear-gradient(to right, #a855f7, #ec4899);
-  }
-
-  /* Services Section */
-  .services {
-    background: #0f172a;
-  }
-
-  .services-grid {
-    display: grid;
-    gap: 2rem;
-  }
-
-  @media (min-width: 768px) {
-    .services-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
   }
 
   .service-card {
