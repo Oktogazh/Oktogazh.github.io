@@ -54,17 +54,17 @@
   <!-- Navigation -->
   <nav
     style="height: 64px;"
-    class="fixed top-0 w-full z-50 px-4 transition-all duration-500 flex justify-around items-center
+    class="fixed top-0 w-full z-50 px-4 transition-all duration-500 flex justify-between items-start
     {scrollY > 50
       ? 'bg-slate-900/95 backdrop-blur-xl border-b border-slate-700'
       : ''}"
   >
     <div
-      class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent"
+      class="self-center text-2xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent"
     >
       Alan Kersaudy
     </div>
-    <div class="hidden sm:flex gap-4 md:gap-6 lg:gap-8">
+    <div class="hidden md:flex gap-4 md:gap-6 lg:gap-8">
       {#each navItems as { id, label }}
         <button
           on:click={() => scrollToSection(id)}
@@ -98,8 +98,12 @@
       {/each}
     </div>
 
-    <div class="relative z-10 max-w-[1200px] mx-auto text-center px-6 my-12">
-      <h1 class="text-5xl md:text-7xl font-bold my-6 leading-tight">
+    <div
+      class="relative z-10 max-w-[1200px] mx-auto text-left my-12 px-8 flex flex-col items-center"
+    >
+      <h1
+        class="text-2xl self-stretch md:text-center md:text-4xl font-bold my-8 pt-8 leading-tight"
+      >
         <span
           class="bg-gradient-to-r from-white via-cyan-100 to-blue-200 bg-clip-text text-transparent"
         >
@@ -114,7 +118,7 @@
       </h1>
 
       <p
-        class="text-xl md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed"
+        class="text-xl text-right md:text-2xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed"
       >
         {$_('hero.subtitle', {
           default:
@@ -183,10 +187,10 @@
       </div>
 
       <div
-        class="flex items-between justify-center flex-wrap flex-col md:flex-nowrap md:flex-row gap-12 lg:gap-8 px-4"
+        class="px-4 flex flex-col items-stretch content-stretch justify-around flex-wrap lg:flex-nowrap gap-12 lg:flex-row"
       >
         <!-- Service Block 1 -->
-        <div class="service-card basis-1/2 md:basis-4/12 text-cyan-400">
+        <div class="service-card flex-1 text-cyan-400">
           <div class="service-icon icon-cyan">
             <svg
               width="28"
@@ -233,7 +237,7 @@
         </div>
 
         <!-- Service Block 2 -->
-        <div class="service-card basis-1/2 md:basis-4/12 text-blue-400">
+        <div class="service-card flex-1 text-blue-400">
           <div class="service-icon icon-blue">
             <svg
               width="28"
@@ -280,7 +284,7 @@
         </div>
 
         <!-- Service Block 3 -->
-        <div class="service-card basis-1/2 md:basis-4/12 text-purple-400">
+        <div class="service-card flex-1 text-purple-400">
           <div class="service-icon icon-purple">
             <svg
               width="28"
@@ -350,9 +354,12 @@
 
       <div class="portfolio-list">
         <!-- Project 1 -->
-        <div class="project-card">
-          <div class="project-image">
+        <div
+          class="flex flex-col lg:flex-row bg-slate-900/50 rounded-lg p-8 border border-solid border-slate-800 transition-all duration-300 gap-6 hover:bg-slate-900/90 hover:border-sky-900"
+        >
+          <div class="project-image m-auto">
             <img
+              class="max-h-32"
               src="assets/fluens.png"
               alt="AI-driven Language Acquisition Platform"
             />
@@ -382,11 +389,13 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card">
-          <div class="project-image">
+        <div
+          class="flex flex-col lg:flex-row bg-slate-900/50 rounded-lg p-8 border border-solid border-slate-800 transition-all duration-300 gap-6 hover:bg-slate-900/90 hover:border-sky-900"
+        >
+          <div class="project-image m-auto">
             <img
               src="assets/leksis.png"
-              style="height: fit-content;"
+              class="max-h-32"
               alt="AI-driven Language Acquisition Platform"
             />
           </div>
@@ -568,14 +577,12 @@
         <div class="section-divider"></div>
       </div>
 
-      <div class="about-content">
-        <div class="about-image">
-          <div class="portrait-placeholder">
-            <img
-              src="assets/gibli-lanig.png"
-              alt="AI generated Alan Kersaudy Portrait with Gibli style"
-            />
-          </div>
+      <div class="flex flex-col lg:flex-row lg:flex-wrap gap-8">
+        <div class="portrait-placeholder max-h-80">
+          <img
+            src="assets/gibli-lanig.png"
+            alt="AI generated Alan Kersaudy Portrait with Gibli style"
+          />
         </div>
 
         <div class="about-text">
@@ -735,8 +742,8 @@
   /* Hero Section */
   .hero {
     position: relative;
-    max-height: 75vw;
-    min-height: 45vw;
+    max-height: 75vh;
+    min-height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -987,15 +994,7 @@
     padding: 2rem;
     border: 1px solid #334155;
     transition: all 0.3s;
-    display: flex;
-    flex-direction: column;
     gap: 1.5rem;
-  }
-
-  @media (min-width: 768px) {
-    .project-card {
-      flex-direction: row;
-    }
   }
 
   .project-card:hover {
@@ -1012,30 +1011,11 @@
     }
   }
 
-  .project-placeholder {
-    aspect-ratio: 16 / 9;
-    background: #1e293b;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-      to bottom right,
-      rgba(6, 182, 212, 0.2),
-      rgba(59, 130, 246, 0.2)
-    );
-  }
-
-  .project-placeholder svg {
-    color: rgba(34, 211, 238, 0.5);
-  }
-
   .project-content {
     flex: 1;
   }
 
-  .project-card h3 {
+  .project-content h3 {
     font-size: 1.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -1043,7 +1023,7 @@
     transition: color 0.3s;
   }
 
-  .project-card:hover h3 {
+  .project-content:hover h3 {
     color: #67e8f9;
   }
 
@@ -1118,12 +1098,6 @@
     margin-bottom: 2rem;
   }
 
-  @media (min-width: 768px) {
-    .labs-grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-
   .labs-item {
     text-align: center;
     padding: 1.5rem;
@@ -1179,12 +1153,6 @@
     flex-direction: column;
     gap: 3rem;
     align-items: center;
-  }
-
-  @media (min-width: 768px) {
-    .about-content {
-      flex-direction: row;
-    }
   }
 
   .about-image {
