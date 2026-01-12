@@ -35,6 +35,9 @@ cssclasses:
 - 📝 Traethodau
 	- [Anodd yw creu geiriau Cymraeg](posts/creu-geiriau-cymraeg)
 	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)
+# 🤖 AI
+
+- 📊 [Evaluating a Customer Support Agent](posts/customer-support)
 # 🎓 M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
 
 - 🎓📝 Dissertation 

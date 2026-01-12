@@ -18,10 +18,14 @@ cssclasses:
 - NLP
 	- [Stanford 224N (2021)](https://www.youtube.com/watch?v=rmVRLeJRkl4&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=1)
 
+# Berradenn
+- [[Pellgomz pe bellgomzer]]
+- 
 # Evit ur politikerezh yezh european
 Arguzennoù: Penaos e rank emdreiñ ar politikerezhioù yezh e koulz an IA?
 - Teknologiezhioù embann nevez a zegas cheñchamantoù politikel.
 Pouez an gomz e stummadur ar bed modern.
+- Dañjer hag efedusder ar propaganda: Kavout skouerioù
 - Ar politikerezh a zo kreñfoc'h evit biskoazh
 - An Efed Pygmalion
 Perak derc'hel Europa digreizennet?
@@ -37,8 +41,9 @@ Ur standard liesyezhegezh nevez evit ensavadurioù Unaniezh Europa
  - Liesyezhegezh, sibersurrentezh ha dizalc'hiezh ar poelladoù implijet en unaniezh
  - Difenn implij ofisiel ar Saozneg e liveoù uhel ar c'hrouiñ lezennoù (treiñ pep tra e pep yezh gant IA)
 **Azgivinelezh ha sevenadur treiñ**
-- Ezhomm doubl: teknikoù embann (moullerezh) ha youl bolitikel (stumm embann Viller Cotterêts)
+- Ezhomm doubl: teknikoù embann (moullerezh) ha youl bolitikel (stumm embann Viller-Cotterêts)
 - Hiziv: IA & Youl (Marteze?)
+	- Riskloù chom hep strategiezh (enebourien o deus strategiezh)
 	- Micher troer a varv (gallout a reer treiñ )
 	- Estren da gentañ (Souten an treiñ evit ar yezhoù bihan)
 	- Krouiñ ur c'hanol "digor d'an droidigezh", ur standard lezennel evit aotren an treiñ davet ar yezhoù bihan
