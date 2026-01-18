@@ -37,7 +37,9 @@ cssclasses:
 	- [Osgoi methu cyfle mwyaf hannes ein hieithoedd](posts/cyfle-mawr)
 # 🤖 AI
 
-- 📊 [Evaluating a Customer Support Agent](posts/customer-support)
+- 📊 Evaulation
+	- Part 1: [Evaluating a Customer Support Agent](posts/customer-support)
+	- Part 2: [Sentiment analysis](posts/sentiment-analysis)
 # 🎓 M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
 
 - 🎓📝 Dissertation 
