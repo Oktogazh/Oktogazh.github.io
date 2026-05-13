@@ -26,3 +26,5 @@ pnpm-debug.log*
 # Content Obsidian - ignore direct children but keep snippets
 src/content/.obsidian/*.json
 !src/content/.obsidian/snippets/
+
+prevez*
