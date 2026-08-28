@@ -17,8 +17,16 @@ cssclasses:
 	- [Opiom an Intellektualed](posts/opiom)
 - Liammoù
 	- [data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
+# Blogging
+- [LinkedIn Posts](posts/linkedIn-posts)
+	- [NLP](posts/world-models-vs-nlp)
+- Ar reuz
+	- [Zettelkasten](posts/zettelkasten)
+- Cool Links
+	- [Draw Neural Nets](https://alexlenail.me/NN-SVG/index.html)
 
 # Misc.
+- 🎹 [Jankó Piano](/janko-piano) — an isomorphic piano you can play on your computer keyboard
 - 🛠️ How this website is build
 	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
 - Ar reuz

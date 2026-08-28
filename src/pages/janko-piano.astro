@@ -1,0 +1,121 @@
+---
+// Standalone page (no BaseLayout): the piano owns the whole viewport, the
+// whole keyboard, and its own dark theme, so it deliberately skips the
+// article/prose chrome (h1/h2/p sizing, KaTeX, nav-back-arrow) that
+// BaseLayout applies to blog posts. Same pattern as src/pages/index.astro.
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A Jankó piano you can play on your computer keyboard. Isomorphic layout, seven instruments — piano, harpsichord, clavichord, organ and more." />
+    <meta name="theme-color" content="#14161a" />
+    <meta property="og:title" content="Jankó Piano" />
+    <meta property="og:description" content="Play an isomorphic Jankó keyboard on QWERTY/AZERTY — same fingering in every key." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Jankó Piano — Alan Kersaudy</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <div class="brand">
+          <a href="/blog" class="back-link" title="Back to the blog" aria-label="Back to the blog">←</a>
+          <h1>Jankó<span>piano</span></h1>
+        </div>
+        <div class="controls">
+          <div class="seg" id="instruments" role="radiogroup" aria-label="Instrument"></div>
+          <div class="chip-group" aria-label="Octave shift">
+            <button id="octDown" title="Octave down (←)">−</button>
+            <span class="chip-value" id="octValue">Oct 0</span>
+            <button id="octUp" title="Octave up (→)">+</button>
+          </div>
+          <div class="chip-group" aria-label="Transpose">
+            <button id="trDown" title="Transpose down a semitone">−</button>
+            <span class="chip-value" id="trValue">±0 st</span>
+            <button id="trUp" title="Transpose up a semitone">+</button>
+          </div>
+          <button class="toggle" id="modeToggle" title="Extended: two manuals an octave apart. Classic: upper rows duplicate lower rows, like a real Jankó."></button>
+          <button class="toggle" id="labelsToggle" title="Cycle key labels"></button>
+          <button class="toggle" id="namesToggle" title="Note naming"></button>
+          <label class="volume" title="Volume">
+            <span aria-hidden="true">🔊</span>
+            <input type="range" id="volume" min="0" max="1" step="0.01" aria-label="Volume" />
+          </label>
+          <button class="toggle help-btn" id="helpBtn" title="About &amp; shortcuts">?</button>
+        </div>
+      </header>
+
+      <div class="status">
+        <span id="chordDisplay" class="chord" aria-live="polite"></span>
+        <span id="sustainLamp" class="lamp">sustain</span>
+      </div>
+
+      <main>
+        <div id="kb"></div>
+        <div id="wake" class="wake"><span>Press any key or tap the board to wake the piano ♪</span></div>
+      </main>
+
+      <footer>
+        <div class="hints">
+          <b>Space</b> sustain · <b>← →</b> octave · <b>↑ ↓</b> instrument · <b>Shift</b> accent · <b>Esc</b> silence
+        </div>
+        <div class="credits" id="credits">Sound: Web Audio synthesis &amp; sampled instruments</div>
+      </footer>
+
+      <dialog id="help">
+        <article>
+          <h2>What is a Jankó keyboard?</h2>
+          <p>
+            In 1882 the Hungarian engineer <b>Paul von Jankó</b> redesigned the piano keyboard as a
+            grid: each row is a whole-tone scale, and neighbouring rows are offset by a semitone.
+            The result is <b>isomorphic</b> — a chord or scale has <i>the same finger shape in every
+            key</i>. Transposing means sliding your hand, nothing more. Octaves span only five
+            finger-widths, so tenths and even twelfths fall under one hand. Liszt reportedly
+            predicted it would replace the traditional keyboard within fifty years. It didn't —
+            but your computer keyboard happens to be a perfect little Jankó.
+          </p>
+          <h2>How your keyboard is mapped</h2>
+          <p>
+            The four staggered rows form <b>two Jankó row-pairs</b>. Within a pair: one key right =
+            whole tone, diagonal = semitone. In <b>Extended</b> mode the top pair (Q + number rows)
+            is a second manual one octave above the bottom pair (Z + home rows) — <b>M and Q are both
+            middle&nbsp;C</b>, so the left hand takes the bottom pair and the right hand the top.
+            In <b>Classic</b> mode the top pair duplicates the bottom one exactly, like the repeated
+            rows of a real Jankó — the same note appears in two places and either finger works.
+          </p>
+          <p>
+            Try C major: <b>Z&nbsp;X&nbsp;C&nbsp;F&nbsp;G&nbsp;H&nbsp;J&nbsp;M</b>. Now start one key
+            to the right (<b>X&nbsp;C&nbsp;V&nbsp;G&nbsp;H&nbsp;J&nbsp;K&nbsp;,</b>) — that's D major,
+            identical shape. That is the whole idea.
+          </p>
+          <p>
+            Keys are mapped by <i>physical position</i>, so AZERTY, QWERTZ and other layouts work
+            identically. Two extra keys (<code>`</code> and the key right of the left Shift on
+            European keyboards) extend the range downward.
+          </p>
+          <h2>Shortcuts</h2>
+          <ul>
+            <li><b>Space</b> — sustain pedal (hold)</li>
+            <li><b>← / →</b> — octave down / up</li>
+            <li><b>↑ / ↓</b> — previous / next instrument</li>
+            <li><b>Shift</b> — accent (play louder; a keyboard has no touch sensitivity, so dynamics are yours two ways: accents and instruments)</li>
+            <li><b>Esc</b> — all notes off</li>
+          </ul>
+          <h2>Sounds</h2>
+          <p>
+            The harpsichord, clavichord, organ, e-piano, strings and music box are synthesized live
+            with the Web Audio API (the plucked ones by Karplus–Strong string synthesis). The grand
+            piano upgrades to real recordings — see the credits below.
+          </p>
+          <p id="helpCredits" class="dim"></p>
+          <form method="dialog"><button class="toggle">Close</button></form>
+        </article>
+      </dialog>
+    </div>
+    <script>
+      import '../lib/janko/boot';
+    </script>
+  </body>
+</html>

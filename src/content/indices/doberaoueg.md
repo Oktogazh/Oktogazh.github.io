@@ -3,14 +3,17 @@ title: Doberaoueg
 cssclasses:
   - dashboard
 ---
+Beajoù:
+- [[Galway 2026]]
 
 Vlog:
 - [[geriadur]]
 
-Blog:
+Raktresoù:
+- [[glosbe]]
+- [[Index]]
 
-Skol-Veur:
-- 
+Blog:
 
 About:
 - Patreon

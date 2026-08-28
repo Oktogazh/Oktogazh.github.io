@@ -1,7 +1,7 @@
 {
   "serverUrl": "https://api.languagetool.org",
   "autoCheckDelay": 3000,
-  "shouldAutoCheck": false,
+  "shouldAutoCheck": true,
   "languageVariety": {
     "en": "en-US",
     "de": "de-DE",
@@ -10,16 +10,26 @@
   },
   "dictionary": [
     "bigrams",
+    "combinatorics",
+    "detokenized",
+    "Doberaoueg",
     "gichenik",
+    "he",
+    "Henrich",
+    "homolingual",
+    "Jouiteau",
     "modelization",
     "recomender",
-    "detokenized",
+    "solutionism",
     "unigram",
     "Unigram",
-    "combinatorics"
+    "Vertices",
+    "middlewares"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],
   "pickyMode": false,
+  "longCheckNotification": true,
+  "injectProperties": true,
   "disabledRules": "EN_UPPER_CASE_NGRAM"
 }
