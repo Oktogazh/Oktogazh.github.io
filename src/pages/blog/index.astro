@@ -1,22 +1,174 @@
 ---
+/**
+ * The notebook hub.
+ *
+ * Three things stacked: a short statement of what this is, a generated strip
+ * of what changed recently, and the hand-curated dashboard from
+ * indices/main.md. The dashboard stays a human judgement about what matters —
+ * /notes is the exhaustive index.
+ */
 import BaseLayout from '@/layouts/BaseLayout.astro';
+import { DEFAULT_LOCALE, t } from '@/i18n';
+import { getCollection, getEntry } from 'astro:content';
 
-import { getEntry } from 'astro:content';
+const m = t(DEFAULT_LOCALE);
 
-const index = await getEntry('indices', 'main')!;
-const { Content } = await index?.render()!;
+const index = await getEntry('indices', 'main');
+if (!index) throw new Error('src/content/indices/main.md is missing');
+const { Content } = await index.render();
+
+const recent = (await getCollection('posts'))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, 6);
+
+const total = (await getCollection('posts')).length;
+
+const fmt = (d: Date) =>
+	new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' }).format(d);
 ---
 
-<BaseLayout title="Alan Kersaudy">
-	<h1>Demat deoc'h, I'm Alan</h1>
-	<p class="mb-8 text basis-1/2 max-w-[600px]">
-		I am currently doing a MSc in Language Technology at Bangor University,
-		North Wales. This web site is primarily intended to keep track my different
-		univesity projects.
-	</p>
-	<div class={`${index.data?.cssclasses}`}>
-		<Content />
-	</div>
+<BaseLayout
+	title="Notebook — Alan Kersaudy"
+	description="A Zettelkasten kept in the open, in four languages: Breton translations and poetry, Welsh essays, and working notes on language technology."
+	lang="en"
+	cssclasses={['dashboard']}
+	wide
+	showTitle={false}
+	type="website"
+>
+	<header class="hub__head">
+		<h1>{m.notebook.title}</h1>
+		<p class="hub__intro">{m.notebook.intro}</p>
+	</header>
+
+	<section class="recent">
+		<h2 class="recent__title">
+			{m.notebook.recent}
+			<a class="recent__all" href="/notes">{m.notebook.allNotes} ({total}) →</a>
+		</h2>
+		<ol class="recent__list">
+			{
+				recent.map((post) => (
+					<li>
+						<a href={`/posts/${post.slug}`}>
+							<time datetime={post.data.date.toISOString().slice(0, 10)}>
+								{fmt(post.data.date)}
+							</time>
+							<span class="recent__lang">{post.data.lang}</span>
+							<span class="recent__t" lang={post.data.lang}>
+								{post.data.title}
+							</span>
+						</a>
+					</li>
+				))
+			}
+		</ol>
+	</section>
+
+	<Content />
 </BaseLayout>
 
-<style></style>
+<style is:global>
+	.hub__head {
+		margin-bottom: 2.5rem;
+	}
+	.hub__head h1 {
+		font-family: var(--font-display);
+		font-size: clamp(1.9rem, 5vw, 2.6rem);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		line-height: 1.1;
+		margin: 0 0 0.75rem;
+		border: 0;
+		padding: 0;
+	}
+	.hub__intro {
+		max-width: var(--measure);
+		margin: 0;
+		font-family: var(--font-display);
+		font-size: 1.06rem;
+		line-height: 1.6;
+		color: var(--ink-soft);
+	}
+
+	.recent {
+		margin-bottom: 1rem;
+		padding: 1.1rem 0 1.35rem;
+		border-top: 1px solid var(--rule);
+		border-bottom: 1px solid var(--rule);
+	}
+	.recent__title {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.5rem 1rem;
+		margin: 0 0 0.9rem;
+		padding: 0;
+		border: 0;
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+	.recent__all {
+		margin-left: auto;
+		color: var(--accent);
+		text-decoration: none;
+	}
+	.recent__all:hover {
+		text-decoration: underline;
+	}
+
+	.recent__list {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+		gap: 0.15rem 2rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.recent__list li {
+		margin: 0;
+	}
+	.recent__list a {
+		display: grid;
+		grid-template-columns: 6.5rem 1.9rem 1fr;
+		align-items: baseline;
+		gap: 0.5rem;
+		padding: 0.3rem 0.25rem;
+		border-radius: 2px;
+		text-decoration: none;
+		color: var(--ink);
+		border-bottom: 0;
+	}
+	.recent__list a:hover {
+		background: var(--accent-wash);
+		color: var(--accent);
+	}
+	.recent__list time {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--ink-faint);
+		font-variant-numeric: tabular-nums;
+	}
+	.recent__lang {
+		font-family: var(--font-mono);
+		font-size: 0.66rem;
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+		color: var(--accent);
+	}
+	.recent__t {
+		font-family: var(--font-display);
+		font-size: 0.97rem;
+		line-height: 1.35;
+	}
+
+	@media (max-width: 34rem) {
+		.recent__list a {
+			grid-template-columns: 5.2rem 1.8rem 1fr;
+		}
+	}
+</style>

@@ -1,6 +1,7 @@
 ---
 title: Ieithoedd Lleiafrif yn Oes Data Science a Dysgu Peirianyddol
 date: 2025-02-06
+lang: cy
 ---
 # Paratoi am Fyd Heb Gyfieithwyr: Plymio Dwfn Yng Nghyfle Hanesyddol yr Ieithoedd Lleiafrifol Yn Oes y Deallusrwydd Artiffisial
 

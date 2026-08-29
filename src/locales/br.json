@@ -1,1 +1,168 @@
-{}
+{
+  "meta": {
+    "title": "Alan Kersaudy — Naouegezh artifisiel ha teknologiezh ar yezhoù",
+    "description": "Teknologiezh ar yezhoù evit ar brezhoneg, ar c'hembraeg ha yezhoù all hep roadennoù a-walc'h — korpusoù, troidigezh dre ardivink, komz, geriadurouriezh — ha naouegezh artifisiel arloet a erru e servij.",
+    "localeName": "Brezhoneg",
+    "skipToContent": "Mont d'an endalc'had"
+  },
+  "nav": {
+    "services": "Servijoù",
+    "work": "Labourioù",
+    "labs": "Labourvaoù",
+    "about": "Diwar ma fenn",
+    "contact": "Darempred",
+    "notebook": "Kaier",
+    "menu": "Meuziad",
+    "close": "Serriñ",
+    "theme": "Cheñch neuz",
+    "language": "Yezh"
+  },
+  "entry": {
+    "headword": "Kersaudy, Alan",
+    "pronunciation": "/kɛʁ.so.di/",
+    "posShort": "ak.",
+    "posLong": "anv-kadarn",
+    "senses": [
+      {
+        "labelShort": "yezh.",
+        "labelLong": "yezhoniezh",
+        "text": "Teknologiezh ar yezhoù evit ar yezhoù a vez disoñjet gant ar patromoù bras — ar brezhoneg, ar c'hembraeg, ha kement hini all n'he deus korpus ebet."
+      },
+      {
+        "labelShort": "N.A.",
+        "labelLong": "naouegezh artifisiel",
+        "text": "Naouegezh artifisiel arloet a erru e servij: adkavout titouroù, redoù labour LLM, priziañ, hag ar gouarnerezh en-dro dezho."
+      },
+      {
+        "labelShort": "web",
+        "labelLong": "web hag ijinerezh meziantoù",
+        "text": "Meziantoù savet evit mont er-maez — savennoù SaaS, APIoù, patromoù roadennoù, lakaat e servij."
+      },
+      {
+        "labelShort": "desk.",
+        "labelLong": "deskadurezh",
+        "text": "Kelenn hag ijinañ stummadurioù, adalek un devezh stummañ betek ur reizhiad deskiñ azasaus."
+      }
+    ],
+    "ctaPrimary": "Labourat ganin",
+    "ctaSecondary": "Lenn ar c'haier"
+  },
+  "services": {
+    "title": "Servijoù",
+    "subtitle": "Ar pezh a dalv ar pevar ster-se war an dachenn.",
+    "blocks": [
+      {
+        "title": "Teknologiezh ar yezhoù",
+        "items": [
+          "Korpusoù evit ar yezhoù paour a loazioù: dastum, OCR, naetaat, notennaouiñ.",
+          "Troidigezh dre ardivink, sintezañ hag anaoudegezh ar gomz — arbennikaat ar patromoù, ha priziañ eeun ar pezh a zeu er-maez.",
+          "Difazieroù reizhskrivañ, difazieroù yezhadur, hag ar framm geriadurouriezh dindano."
+        ]
+      },
+      {
+        "title": "Naouegezh artifisiel arloet",
+        "items": [
+          "Chadennoù adkavout titouroù, redoù labour LLM, ajanted, hag ostilhoù priziañ a dap an argiladurioù a-raok hoc'h implijerien.",
+          "Strategiezh an NA evit ar renerezh: kartennoù-hent degemer, priziañ ar barregezhioù, sevel pe brenañ.",
+          "Gouarnerezh, politikerezh ha riskloù — hag ar pezh a c'houlenn Lezenn europat war an NA diganeoc'h e gwirionez."
+        ]
+      },
+      {
+        "title": "Ijinerezh meziantoù",
+        "items": [
+          "Savennoù SaaS eus ar penn d'ar penn: patrom ar roadennoù, API, etrefas, paeamantoù.",
+          "Enframmañ er reizhiadoù a implijit dija, kentoc'h eget en o c'hichen.",
+          "CI/CD, lakaat e servij, hag al labour dic'hloar a zalc'h an traoù bev."
+        ]
+      },
+      {
+        "title": "Kelenn hag ijinañ stummadurioù",
+        "items": [
+          "Stummadurioù evit skipailhoù ha kelennerien, e galleg, e saozneg pe e brezhoneg.",
+          "Ijinañ programmoù-kelenn ha patromiñ an anaoudegezhioù.",
+          "Reizhiadoù deskiñ azasaus — ha muzuliañ hag-eñ o deus desket un dra bennak da unan bennak."
+        ]
+      }
+    ]
+  },
+  "work": {
+    "title": "Labourioù dibabet",
+    "subtitle": "Div dra am eus savet hag a zalc'han war-sav c'hoazh.",
+    "sourceLabel": "mammenn",
+    "projects": [
+      {
+        "name": "Fluens",
+        "kind": "Savenn kentelioù evit skolioù-yezh",
+        "body": "Goude Eienn.bzh, ma c'hentañ taol-esae a savenn deskiñ brezhoneg, en deus Fluens hollekaet an dra-se: ur CMS ma skriv ar skolioù hag an embannerien o c'hentelioù o-unan, un arload evit an deskarded, dielfennerezh roadennoù, ha koumanantoù dre Stripe. Savet eus ar penn d'ar penn — Vue 3 gant Radix, Firebase, arc'hwelioù Node.",
+        "tags": ["B2B2C", "SaaS", "CMS", "Paeamantoù", "Eus ar penn d'ar penn"]
+      },
+      {
+        "name": "Leksis",
+        "kind": "Geriadur holl-yezhek savet a-stroll",
+        "body": "Ur geriadur evit pep yezh eo Leksis, savet war ar menoz-mañ: gwelloc'h eo servijet ar yezhoù paour a loazioù gant roadennoù notennaouet stank eget gant muioc'h a destennoù hep framm. Ar genlabourerien a embann penngerioù, sterioù, troidigezhioù, gerioù-kar, mammennoù ha paradigmoù displegañ evel enrolladennoù sinet en o mirlec'h AT Protocol o-unan; un AppView a renk anezho en ur graf a c'haller treuziñ evit troidigezhioù dre-dreuz hag ezporzhiañ evel geriadurioù difazier, memor troidigezh pe roadennoù stummañ. Den ne biaou ur pennger — un enrolladenn a brou an aozerezh, ket ar berc'hentiezh, hag e vez miret pep stumm.",
+        "tags": [
+          "AT Protocol",
+          "Bankoù roadennoù graf",
+          "Geriadurouriezh dre urzhiataer",
+          "NLP yezhoù paour a loazioù",
+          "Mammenn digor"
+        ]
+      }
+    ]
+  },
+  "labs": {
+    "title": "Labourvaoù teknologiezh ar yezhoù",
+    "subtitle": "Arnodoù digor war yezhoù n'o deus ket roadennoù a-walc'h. Meur a hini en deus c'hwitet; skrivet eo bet ar c'hwitadennoù ivez.",
+    "items": [
+      {
+        "name": "Miniclone",
+        "body": "Ur chadenn adkavout titouroù vihan, stummet war ma skridoù-me. Goulennit outañ diwar ma fenn ha gwelit betek pelec'h ez a."
+      },
+      {
+        "name": "LanguageTool (kembraeg)",
+        "body": "Ma forc'h eus an difazier yezhadur mammenn-digor, o ouzhpennañ reolennoù ha geriadurioù kembraeg."
+      },
+      {
+        "name": "Troidigezh brezhoneg–galleg",
+        "body": "Arbennikaat ha priziañ ur patrom troidigezh war ur c'horpus kenstur savet ganin o skanniñ romantoù."
+      }
+    ],
+    "link": "Lenn an notennoù"
+  },
+  "about": {
+    "title": "Diwar ma fenn",
+    "portraitAlt": "Poltred Alan Kersaudy, treset e stil Ghibli",
+    "bio": "Labourat a ran e kroaz-hent ar yezhoniezh, ar bedagogiezh hag ar meziantoù. An darn vrasañ eus ma amzer a ya d'ar yezhoù n'eo ket bet savet an urzhiataerioù evito biskoazh — ar brezhoneg, ar c'hembraeg — rak diaesoc'h eo ar c'hudennoù eno, hag ar binvioù a zeu diouto a vez gwelloc'h. Ar peurrest a ya da sikour aozadurioù da implijout an NA hep prenañ un dra na c'hellont ket derc'hel war-sav.",
+    "points": [
+      "Kuzulier dizalc'h, o labourat e brezhoneg, e kembraeg, e galleg hag e saozneg",
+      "Mestroniezh (MSc) e teknologiezh ar yezhoù, Skol-veur Bangor",
+      "O sevel Leksis, ur geriadur holl-yezhek war AT Protocol",
+      "O kelenn an NA ha teknologiezh ar yezhoù da skipailhoù ha da gelennerien"
+    ]
+  },
+  "contact": {
+    "title": "Mont e darempred",
+    "subtitle": "Kuzuliañ, kenlabour, pe ur brezegenn — buanañ eo dre bostel.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "malt": "Malt",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "Gwirioù miret holl.",
+    "colophon": "Skrivet gant Obsidian, embannet gant Astro."
+  },
+  "notebook": {
+    "title": "Kaier notennoù",
+    "intro": "Ur Zettelkasten dalc'het digor d'an holl, e peder yezh. Troidigezhioù ha barzhonegoù e brezhoneg, prederiadennoù e kembraeg, ha notennoù labour war deknologiezh ar yezhoù — korpusoù, troidigezh dre ardivink, komz, geriadurouriezh — an darn vrasañ anezho skrivet e-pad ma'z ae al labour a-dreuz c'hoazh.",
+    "recent": "Nevez zo",
+    "allNotes": "An holl notennoù",
+    "index": "Meneger",
+    "backToNotebook": "Distreiñ d'ar c'haier",
+    "noteCount": "notenn",
+    "filterLanguage": "Yezh",
+    "filterAll": "An holl",
+    "filterYear": "Bloavezh",
+    "empty": "N'eus notenn ebet a glot gant ar siloù-se."
+  }
+}

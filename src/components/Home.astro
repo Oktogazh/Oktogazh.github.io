@@ -1,0 +1,954 @@
+---
+/**
+ * The landing page.
+ *
+ * The hero is a dictionary entry, because that is the most characteristic
+ * artifact in this subject's world: Alan builds lexicographic infrastructure,
+ * and Leksis is literally a dictionary. The headword is his name, the four
+ * senses are the four kinds of work, each carrying the abbreviated domain
+ * label a printed dictionary prints — with the long form on hover, the same
+ * {short, long} model the Leksis lexicon uses.
+ *
+ * Everything below the entry is deliberately quiet: no gradients, no icon
+ * chips, hairline rules, one accent. The entry is the only bold move.
+ */
+import LangSwitch from './LangSwitch.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { SENSE_NUMERALS, homeHref, t, type Locale } from '@/i18n';
+
+interface Props {
+	locale: Locale;
+}
+const { locale } = Astro.props;
+const m = t(locale);
+const home = homeHref(locale);
+const year = new Date().getFullYear();
+
+const LINKS = {
+	fluens: 'https://fluens.co',
+	leksis: 'https://leksis.eu',
+	leksisSource: 'https://github.com/Oktogazh/leksis.eu',
+	miniclone: 'https://huggingface.co/spaces/Oktogazh/miniclone',
+	languagetool: 'https://github.com/Oktogazh/languagetool',
+	translation: '/posts/techiaith-2',
+	email: 'mailto:alan.kersaudy@gmail.com',
+	linkedin: 'https://www.linkedin.com/in/alan-kersaudy-3892b514b/',
+	malt: 'https://www.malt.fr/profile/alankersaudy',
+	github: 'https://github.com/Oktogazh',
+	colophon: '/posts/astro-obsidian-and-github',
+};
+
+const NAV = [
+	{ id: 'services', label: m.nav.services },
+	{ id: 'work', label: m.nav.work },
+	{ id: 'labs', label: m.nav.labs },
+	{ id: 'about', label: m.nav.about },
+	{ id: 'contact', label: m.nav.contact },
+];
+
+const projectLinks = [
+	{ href: LINKS.fluens, host: 'fluens.co', source: null, logo: '/assets/fluens.png' },
+	{ href: LINKS.leksis, host: 'leksis.eu', source: LINKS.leksisSource, logo: '/assets/leksis.png' },
+];
+
+const labLinks = [LINKS.miniclone, LINKS.languagetool, LINKS.translation];
+const labLogos = ['🤗', null, '🔬'];
+---
+
+<a class="skip" href="#entry">{m.meta.skipToContent}</a>
+
+<header class="topbar">
+	<a class="brand" href={home}>Alan Kersaudy</a>
+
+	<nav class="topnav" aria-label={m.nav.menu}>
+		{NAV.map((n) => <a href={`#${n.id}`}>{n.label}</a>)}
+		<a href="/blog" class="topnav__notebook">{m.nav.notebook}</a>
+	</nav>
+
+	<div class="topbar__tools">
+		<ThemeToggle label={m.nav.theme} />
+		<details class="drawer">
+			<summary aria-label={m.nav.menu}>
+				<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+					<g stroke="currentColor" stroke-width="1.7" stroke-linecap="round">
+						<line x1="3" y1="7" x2="21" y2="7"></line>
+						<line x1="3" y1="12" x2="21" y2="12"></line>
+						<line x1="3" y1="17" x2="21" y2="17"></line>
+					</g>
+				</svg>
+			</summary>
+			<div class="drawer__panel">
+				{NAV.map((n) => <a href={`#${n.id}`}>{n.label}</a>)}
+				<a href="/blog">{m.nav.notebook}</a>
+				<div class="drawer__langs">
+					<LangSwitch current={locale} label={m.nav.language} />
+				</div>
+			</div>
+		</details>
+	</div>
+</header>
+
+<main id="main">
+	<!-- ------------------------------------------------------ the entry -->
+	<section class="hero" id="entry">
+		<article class="entry">
+			<div class="entry__langs">
+				<LangSwitch current={locale} label={m.nav.language} />
+			</div>
+
+			<div class="entry__head">
+				<h1 class="entry__headword">{m.entry.headword}</h1>
+				<span class="entry__pron">{m.entry.pronunciation}</span>
+				<abbr class="entry__pos" title={m.entry.posLong}>{m.entry.posShort}</abbr>
+			</div>
+
+			<ol class="senses">
+				{
+					m.entry.senses.map((s, i) => (
+						<li class="sense" style={`--i:${i}`}>
+							<span class="sense__n" aria-hidden="true">
+								{SENSE_NUMERALS[i]}.
+							</span>
+							<abbr class="sense__label" title={s.labelLong}>
+								{s.labelShort}
+							</abbr>
+							<p class="sense__text">{s.text}</p>
+						</li>
+					))
+				}
+			</ol>
+
+			<div class="entry__cta">
+				<a class="btn btn--solid" href="#contact">{m.entry.ctaPrimary}</a>
+				<a class="btn" href="/blog">{m.entry.ctaSecondary}</a>
+			</div>
+		</article>
+	</section>
+
+	<!-- ---------------------------------------------------- the senses, expanded -->
+	<section class="section section--alt" id="services">
+		<div class="wrap">
+			<header class="sechead">
+				<h2>{m.services.title}</h2>
+				<p>{m.services.subtitle}</p>
+			</header>
+
+			<div class="blocks">
+				{
+					m.services.blocks.map((b, i) => (
+						<article class="block">
+							<div class="block__head">
+								<span class="block__n" aria-hidden="true">
+									{SENSE_NUMERALS[i]}.
+								</span>
+								<abbr class="block__label" title={m.entry.senses[i].labelLong}>
+									{m.entry.senses[i].labelShort}
+								</abbr>
+								<h3>{b.title}</h3>
+							</div>
+							<ol class="subsenses">
+								{b.items.map((item, j) => (
+									<li>
+										<span class="subsenses__n" aria-hidden="true">
+											{String.fromCharCode(97 + j)}.
+										</span>
+										<span>{item}</span>
+									</li>
+								))}
+							</ol>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- ------------------------------------------------------------ work -->
+	<section class="section" id="work">
+		<div class="wrap">
+			<header class="sechead">
+				<h2>{m.work.title}</h2>
+				<p>{m.work.subtitle}</p>
+			</header>
+
+			<div class="projects">
+				{
+					m.work.projects.map((p, i) => (
+						<article class="project">
+							<div class="project__mark">
+								<img src={projectLinks[i].logo} alt={p.name} loading="lazy" />
+							</div>
+							<div class="project__body">
+								<h3>{p.name}</h3>
+								<p class="project__kind">
+									{p.kind}
+									<span class="project__links">
+										<a href={projectLinks[i].href} target="_blank" rel="noopener">
+											{projectLinks[i].host}
+										</a>
+										{projectLinks[i].source && (
+											<>
+												<span aria-hidden="true"> · </span>
+												<a href={projectLinks[i].source} target="_blank" rel="noopener">
+													{m.work.sourceLabel}
+												</a>
+											</>
+										)}
+									</span>
+								</p>
+								<p class="project__text">{p.body}</p>
+								<ul class="tags">
+									{p.tags.map((tag) => (
+										<li>{tag}</li>
+									))}
+								</ul>
+							</div>
+						</article>
+					))
+				}
+			</div>
+		</div>
+	</section>
+
+	<!-- ------------------------------------------------------------ labs -->
+	<section class="section section--alt" id="labs">
+		<div class="wrap">
+			<header class="sechead">
+				<h2>{m.labs.title}</h2>
+				<p>{m.labs.subtitle}</p>
+			</header>
+
+			<div class="labs">
+				{
+					m.labs.items.map((l, i) => (
+						<a class="lab" href={labLinks[i]} target={i === 2 ? undefined : '_blank'} rel="noopener">
+							<span class="lab__mark" aria-hidden="true">
+								{labLogos[i] ?? <img src="/assets/languagetool-logo.png" alt="" width="28" height="28" loading="lazy" />}
+							</span>
+							<h3>{l.name}</h3>
+							<p>{l.body}</p>
+						</a>
+					))
+				}
+			</div>
+
+			<p class="labs__more">
+				<a href="/blog">{m.labs.link} →</a>
+			</p>
+		</div>
+	</section>
+
+	<!-- ----------------------------------------------------------- about -->
+	<section class="section" id="about">
+		<div class="wrap">
+			<header class="sechead">
+				<h2>{m.about.title}</h2>
+			</header>
+
+			<div class="about">
+				<img
+					class="about__portrait"
+					src="/assets/gibli-lanig.png"
+					alt={m.about.portraitAlt}
+					loading="lazy"
+				/>
+				<div class="about__body">
+					<p class="about__bio">{m.about.bio}</p>
+					<ul class="about__points">
+						{m.about.points.map((p) => <li>{p}</li>)}
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- --------------------------------------------------------- contact -->
+	<section class="section section--alt" id="contact">
+		<div class="wrap wrap--narrow">
+			<header class="sechead">
+				<h2>{m.contact.title}</h2>
+				<p>{m.contact.subtitle}</p>
+			</header>
+
+			<ul class="contact">
+				<li>
+					<a href={LINKS.email}>
+						<span class="contact__key">{m.contact.email}</span>
+						<span class="contact__val">alan.kersaudy@gmail.com</span>
+					</a>
+				</li>
+				<li>
+					<a href={LINKS.linkedin} target="_blank" rel="noopener">
+						<span class="contact__key">{m.contact.linkedin}</span>
+						<span class="contact__val">alan-kersaudy</span>
+					</a>
+				</li>
+				<li>
+					<a href={LINKS.github} target="_blank" rel="noopener">
+						<span class="contact__key">{m.contact.github}</span>
+						<span class="contact__val">Oktogazh</span>
+					</a>
+				</li>
+				<li>
+					<a href={LINKS.malt} target="_blank" rel="noopener">
+						<span class="contact__key">{m.contact.malt}</span>
+						<span class="contact__val">alankersaudy</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</section>
+</main>
+
+<footer class="footer">
+	<div class="wrap footer__inner">
+		<p>© {year} Alan Kersaudy. {m.footer.rights}</p>
+		<p class="footer__colophon">
+			<a href={LINKS.colophon}>{m.footer.colophon}</a>
+		</p>
+		<LangSwitch current={locale} label={m.nav.language} />
+	</div>
+</footer>
+
+<style>
+	/* ------------------------------------------------------------ chrome */
+
+	.skip {
+		position: absolute;
+		left: -9999px;
+		top: 0;
+		z-index: 100;
+		padding: 0.6rem 1rem;
+		background: var(--ink);
+		color: var(--ground);
+	}
+	.skip:focus {
+		left: 0.5rem;
+		top: 0.5rem;
+	}
+
+	.topbar {
+		position: sticky;
+		top: 0;
+		z-index: 50;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.7rem var(--gutter);
+		background: color-mix(in srgb, var(--ground) 88%, transparent);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid var(--rule-soft);
+	}
+
+	.brand {
+		font-family: var(--font-display);
+		font-size: 1.05rem;
+		font-weight: 600;
+		letter-spacing: -0.01em;
+		color: var(--ink);
+		text-decoration: none;
+		margin-right: auto;
+	}
+
+	.topnav {
+		display: flex;
+		gap: 0.25rem;
+	}
+	.topnav a {
+		padding: 0.35rem 0.6rem;
+		font-size: 0.9rem;
+		color: var(--ink-soft);
+		text-decoration: none;
+		border-radius: 2px;
+	}
+	.topnav a:hover {
+		color: var(--accent);
+		background: var(--accent-wash);
+	}
+	.topnav__notebook {
+		font-weight: 600;
+	}
+
+	.topbar__tools {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	/* Mobile drawer, built on <details> so it works with no JavaScript at all —
+	   the old page simply hid its navigation below 768px. */
+	.drawer {
+		display: none;
+		position: relative;
+	}
+	.drawer > summary {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 2rem;
+		height: 2rem;
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		color: var(--ink-soft);
+		cursor: pointer;
+		list-style: none;
+	}
+	.drawer > summary::-webkit-details-marker {
+		display: none;
+	}
+	.drawer__panel {
+		position: absolute;
+		right: 0;
+		top: calc(100% + 0.5rem);
+		display: flex;
+		flex-direction: column;
+		gap: 0.15rem;
+		min-width: 12rem;
+		padding: 0.6rem;
+		background: var(--surface);
+		border: 1px solid var(--rule);
+		border-radius: 3px;
+		box-shadow: 0 12px 32px -18px rgb(0 0 0 / 0.5);
+	}
+	.drawer__panel a {
+		padding: 0.45rem 0.55rem;
+		color: var(--ink-soft);
+		text-decoration: none;
+		border-radius: 2px;
+	}
+	.drawer__panel a:hover {
+		color: var(--accent);
+		background: var(--accent-wash);
+	}
+	.drawer__langs {
+		margin-top: 0.5rem;
+		padding-top: 0.6rem;
+		border-top: 1px solid var(--rule-soft);
+	}
+
+	@media (max-width: 52rem) {
+		.topnav {
+			display: none;
+		}
+		.drawer {
+			display: block;
+		}
+	}
+
+	/* -------------------------------------------------------- the entry */
+
+	.hero {
+		padding: clamp(3rem, 11vh, 6.5rem) var(--gutter) clamp(3.5rem, 9vw, 6rem);
+	}
+
+	.entry {
+		max-width: 46rem;
+		margin: 0 auto;
+	}
+
+	.entry__langs {
+		margin-bottom: 2rem;
+	}
+
+	.entry__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.4rem 0.9rem;
+		padding-bottom: 1.1rem;
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.entry__headword {
+		font-family: var(--font-display);
+		font-size: clamp(2.4rem, 8vw, 4.25rem);
+		font-weight: 600;
+		line-height: 0.98;
+		letter-spacing: -0.025em;
+		margin: 0;
+		text-wrap: balance;
+	}
+
+	.entry__pron {
+		font-family: var(--font-mono);
+		font-size: clamp(0.8rem, 2vw, 0.95rem);
+		color: var(--ink-faint);
+	}
+
+	.entry__pos {
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 1.1rem;
+		color: var(--hot);
+		border-bottom-color: color-mix(in srgb, var(--hot) 50%, transparent);
+	}
+
+	.senses {
+		list-style: none;
+		margin: 1.75rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 1.05rem;
+	}
+
+	.sense {
+		display: grid;
+		grid-template-columns: 1.9rem 4.2rem 1fr;
+		align-items: baseline;
+		gap: 0.2rem 0.5rem;
+	}
+
+	.sense__n {
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		color: var(--accent);
+		text-align: right;
+		font-variant-numeric: tabular-nums;
+	}
+
+	.sense__label {
+		justify-self: start;
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 0.95rem;
+		color: var(--ink-faint);
+		border-bottom-color: color-mix(in srgb, var(--ink-faint) 45%, transparent);
+		white-space: nowrap;
+	}
+
+	.sense__text {
+		margin: 0;
+		font-size: clamp(1.02rem, 2.1vw, 1.15rem);
+		line-height: 1.5;
+		color: var(--ink-soft);
+	}
+
+	@media (max-width: 34rem) {
+		.sense {
+			grid-template-columns: 1.6rem 1fr;
+		}
+		.sense__label {
+			grid-column: 2;
+		}
+		.sense__text {
+			grid-column: 2;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.sense {
+			animation: settle 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+			animation-delay: calc(0.1s + var(--i) * 0.07s);
+		}
+		.entry__cta {
+			animation: settle 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) backwards;
+			animation-delay: 0.4s;
+		}
+	}
+
+	@keyframes settle {
+		from {
+			opacity: 0;
+			transform: translateY(0.5rem);
+		}
+	}
+
+	.entry__cta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.7rem;
+		margin-top: 2.25rem;
+	}
+
+	.btn {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.6rem 1.15rem;
+		font-size: 0.95rem;
+		font-weight: 500;
+		color: var(--ink);
+		text-decoration: none;
+		border: 1px solid var(--ink);
+		border-radius: 2px;
+		transition:
+			background-color 0.18s ease,
+			color 0.18s ease;
+	}
+	.btn:hover {
+		color: var(--ground);
+		background: var(--ink);
+	}
+	.btn--solid {
+		color: var(--ground);
+		background: var(--ink);
+	}
+	.btn--solid:hover {
+		color: var(--ground);
+		background: var(--accent);
+		border-color: var(--accent);
+	}
+
+	/* ------------------------------------------------------- sections */
+
+	.section {
+		padding: clamp(3.5rem, 8vw, 6rem) var(--gutter);
+		border-top: 1px solid var(--rule-soft);
+		scroll-margin-top: 4rem;
+	}
+	.section--alt {
+		background: var(--surface);
+	}
+
+	.wrap {
+		max-width: var(--page);
+		margin: 0 auto;
+	}
+	.wrap--narrow {
+		max-width: 40rem;
+	}
+
+	.sechead {
+		max-width: var(--measure);
+		margin-bottom: clamp(2rem, 4vw, 3rem);
+	}
+	.sechead h2 {
+		font-family: var(--font-display);
+		font-size: clamp(1.6rem, 4vw, 2.25rem);
+		font-weight: 600;
+		line-height: 1.15;
+		letter-spacing: -0.02em;
+		margin: 0;
+		text-wrap: balance;
+	}
+	.sechead p {
+		margin: 0.6rem 0 0;
+		color: var(--ink-soft);
+		font-size: 1.02rem;
+	}
+
+	/* ---------------------------------------------- senses, expanded */
+
+	.blocks {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		gap: clamp(1.75rem, 4vw, 3rem);
+	}
+
+	.block__head {
+		display: grid;
+		grid-template-columns: 1.9rem 4.2rem 1fr;
+		align-items: baseline;
+		gap: 0.5rem;
+		padding-bottom: 0.7rem;
+		border-bottom: 1px solid var(--rule);
+	}
+	.block__n {
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		color: var(--accent);
+		text-align: right;
+	}
+	.block__label {
+		justify-self: start;
+		font-family: var(--font-display);
+		font-style: italic;
+		font-size: 0.95rem;
+		color: var(--ink-faint);
+		border-bottom-color: color-mix(in srgb, var(--ink-faint) 45%, transparent);
+		white-space: nowrap;
+	}
+	.block__head h3 {
+		font-family: var(--font-display);
+		font-size: 1.25rem;
+		font-weight: 600;
+		margin: 0;
+		letter-spacing: -0.01em;
+	}
+
+	.subsenses {
+		list-style: none;
+		margin: 0.9rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+	.subsenses li {
+		display: grid;
+		grid-template-columns: 1.4rem 1fr;
+		gap: 0.4rem;
+		color: var(--ink-soft);
+		font-size: 0.97rem;
+		line-height: 1.5;
+	}
+	.subsenses__n {
+		font-family: var(--font-mono);
+		font-size: 0.76rem;
+		color: var(--ink-faint);
+		padding-top: 0.24rem;
+	}
+
+	@media (max-width: 34rem) {
+		.block__head {
+			grid-template-columns: 1.6rem 1fr;
+		}
+		.block__head h3 {
+			grid-column: 2;
+		}
+	}
+
+	/* ------------------------------------------------------------ work */
+
+	.projects {
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.project {
+		display: grid;
+		grid-template-columns: 9rem 1fr;
+		gap: clamp(1.25rem, 3vw, 2.5rem);
+		align-items: start;
+		padding: clamp(1.4rem, 3vw, 2rem);
+		background: var(--ground);
+		border: 1px solid var(--rule);
+		border-radius: 3px;
+	}
+	.section--alt .project {
+		background: var(--surface);
+	}
+
+	.project__mark {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0.5rem;
+	}
+	.project__mark img {
+		max-height: 5.5rem;
+		width: auto;
+	}
+
+	.project__body h3 {
+		font-family: var(--font-display);
+		font-size: 1.45rem;
+		font-weight: 600;
+		letter-spacing: -0.015em;
+		margin: 0;
+	}
+
+	.project__kind {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.25rem 0.75rem;
+		margin: 0.2rem 0 0.85rem;
+		font-size: 0.92rem;
+		color: var(--ink-faint);
+	}
+	.project__links {
+		font-family: var(--font-mono);
+		font-size: 0.82rem;
+	}
+
+	.project__text {
+		margin: 0;
+		max-width: var(--measure);
+		color: var(--ink-soft);
+		line-height: 1.62;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.35rem;
+		list-style: none;
+		margin: 1.1rem 0 0;
+		padding: 0;
+	}
+	.tags li {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		letter-spacing: 0.02em;
+		padding: 0.2em 0.5em 0.25em;
+		color: var(--ink-faint);
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+	}
+
+	@media (max-width: 44rem) {
+		.project {
+			grid-template-columns: 1fr;
+		}
+		.project__mark {
+			justify-content: flex-start;
+			padding: 0;
+		}
+		.project__mark img {
+			max-height: 3.5rem;
+		}
+	}
+
+	/* ------------------------------------------------------------ labs */
+
+	.labs {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+		gap: 1rem;
+	}
+
+	.lab {
+		display: block;
+		padding: 1.35rem;
+		background: var(--ground);
+		border: 1px solid var(--rule);
+		border-radius: 3px;
+		text-decoration: none;
+		color: inherit;
+		transition:
+			border-color 0.18s ease,
+			transform 0.18s ease;
+	}
+	.lab:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+	.lab__mark {
+		display: block;
+		font-size: 1.6rem;
+		line-height: 1;
+		margin-bottom: 0.75rem;
+	}
+	.lab__mark img {
+		border-radius: 3px;
+		background: #fff;
+	}
+	.lab h3 {
+		font-family: var(--font-display);
+		font-size: 1.1rem;
+		font-weight: 600;
+		margin: 0 0 0.4rem;
+		color: var(--ink);
+	}
+	.lab p {
+		margin: 0;
+		font-size: 0.93rem;
+		line-height: 1.5;
+		color: var(--ink-soft);
+	}
+
+	.labs__more {
+		margin: 1.5rem 0 0;
+		font-size: 0.95rem;
+	}
+
+	/* ----------------------------------------------------------- about */
+
+	.about {
+		display: grid;
+		grid-template-columns: 15rem 1fr;
+		gap: clamp(1.5rem, 4vw, 3rem);
+		align-items: start;
+	}
+	.about__portrait {
+		width: 100%;
+		border-radius: 3px;
+		border: 1px solid var(--rule);
+	}
+	.about__bio {
+		margin: 0;
+		max-width: var(--measure);
+		font-family: var(--font-display);
+		font-size: clamp(1.08rem, 2.2vw, 1.22rem);
+		line-height: 1.6;
+		color: var(--ink);
+	}
+	.about__points {
+		list-style: none;
+		margin: 1.5rem 0 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 0.45rem;
+	}
+	.about__points li {
+		position: relative;
+		padding-left: 1.3rem;
+		color: var(--ink-soft);
+		font-size: 0.97rem;
+	}
+	.about__points li::before {
+		content: '—';
+		position: absolute;
+		left: 0;
+		color: var(--accent);
+	}
+
+	@media (max-width: 44rem) {
+		.about {
+			grid-template-columns: 1fr;
+		}
+		.about__portrait {
+			max-width: 11rem;
+		}
+	}
+
+	/* --------------------------------------------------------- contact */
+
+	.contact {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		border-top: 1px solid var(--rule);
+	}
+	.contact li {
+		border-bottom: 1px solid var(--rule);
+	}
+	.contact a {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.5rem 1.5rem;
+		padding: 0.85rem 0.25rem;
+		text-decoration: none;
+		color: var(--ink);
+	}
+	.contact a:hover {
+		background: var(--accent-wash);
+		color: var(--accent);
+	}
+	.contact__key {
+		flex: 0 0 6rem;
+		font-family: var(--font-mono);
+		font-size: 0.74rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--ink-faint);
+	}
+	.contact__val {
+		font-size: 1rem;
+	}
+
+	/* ---------------------------------------------------------- footer */
+
+	.footer {
+		padding: 2.5rem var(--gutter) 3rem;
+		border-top: 1px solid var(--rule);
+		font-size: 0.88rem;
+		color: var(--ink-faint);
+	}
+	.footer__inner {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.6rem 1.5rem;
+	}
+	.footer p {
+		margin: 0;
+	}
+	.footer__colophon {
+		margin-right: auto !important;
+	}
+</style>

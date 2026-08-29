@@ -1,6 +1,7 @@
 ---
 title: Dialektik ar renadoù
 date: 2025-06-02
+lang: br
 ---
 # Dialektik ar renadoù
 E-kerzh an daou bennad tremenet, a lavaro un homo sinistrae, e voe tamalet fedoù politikel hag istorel a c'hallfed bec'hiañ war an tu-dehoù kement-all. Ha ar gwir a vo gant an den-se.  

@@ -1,6 +1,7 @@
 ---
 title: Penaos saveteiñ ar yezh
 date: 2026-01-20
+lang: br
 ---
 # Ur yezh rouedad
 Petra eo ur yezh rouedad.

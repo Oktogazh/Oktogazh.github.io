@@ -1,114 +1,385 @@
 ---
-const props = Astro.props;
+/**
+ * Article chrome for everything that comes out of the vault: notes, the
+ * dashboard, the index.
+ *
+ * The prose styles here are the ones 98 published notes are read through, so
+ * they matter more than the landing page does. Newsreader at a 68ch measure,
+ * paragraphs that separate, headings that do not crowd their own text.
+ */
+import ThemeToggle from '@/components/ThemeToggle.astro';
+import Shell from '@/layouts/Shell.astro';
+import { DEFAULT_LOCALE, t } from '@/i18n';
 
+import 'katex/dist/katex.min.css';
 import '@/style/snippets/latex.css';
 import '@/style/snippets/dashboard.css';
+
+interface Props {
+	title: string;
+	description?: string;
+	/** The note's own language, for <html lang> — hyphenation, quotes, screen readers. */
+	lang?: string;
+	date?: Date;
+	cssclasses?: string[];
+	/** Dashboards and indexes want the full width; prose does not. */
+	wide?: boolean;
+	type?: 'website' | 'article';
+	showTitle?: boolean;
+}
+
+const {
+	title,
+	description,
+	lang = 'br',
+	date,
+	cssclasses = [],
+	wide = false,
+	type = 'article',
+	showTitle = true,
+} = Astro.props;
+
+const m = t(DEFAULT_LOCALE);
+
+// Do not offer "back to the notebook" while standing in it.
+const here = Astro.url.pathname.replace(/\.html$/, '');
+const onHub = here === '/blog';
+
+const dateLabel = date
+	? new Intl.DateTimeFormat(lang === 'br' || lang === 'cy' ? 'en-GB' : lang, {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric',
+		}).format(date)
+	: null;
 ---
 
-<!doctype html>
-<html lang="en, cy, br" data-theme="dark">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>{props.title}</title>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css"
-			integrity="sha384-MlJdn/WNKDGXveldHDdyRP1R4CTHr3FeuDNfhsLPYrq2t0UBkUdK2jyTnXPEK1NQ"
-			crossorigin="anonymous"
-		/>
-	</head>
-	<body>
-		<main>
-			<nav class="p-4">
-				<a href="/blog" class="flex align-center text-stone-600">
-					<svg
-						xmlns="http://www.w3.org/2000/svg"
-						viewBox="0 0 24 24"
-						width="24"
-						height="24"
-					>
-						<path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
-					</svg>
-				</a>
-			</nav>
-			<div class="container mx-auto p-4 flex flex-col items-stretch">
-				<slot />
-			</div>
-		</main>
-	</body>
-</html>
+<Shell title={title} description={description} lang={lang} type={type} bodyClass="notepage">
+	<a class="skip" href="#note">{m.meta.skipToContent}</a>
+
+	<header class="notebar">
+		<a class="notebar__back" href={onHub ? '/' : '/blog'}>
+			<span aria-hidden="true">←</span>
+			{onHub ? 'Alan Kersaudy' : m.notebook.backToNotebook}
+		</a>
+		<div class="notebar__tools">
+			{!onHub && <a class="notebar__link" href="/blog">{m.notebook.title}</a>}
+			<a class="notebar__link" href="/notes">{m.notebook.allNotes}</a>
+			<ThemeToggle label={m.nav.theme} />
+		</div>
+	</header>
+
+	<main id="note" class:list={['note', wide && 'note--wide']}>
+		{
+			showTitle && (
+				<header class="note__head">
+					<p class="note__eyebrow">
+						<span class="note__lang">{lang}</span>
+						{dateLabel && <time datetime={date?.toISOString().slice(0, 10)}>{dateLabel}</time>}
+					</p>
+					<h1 class="note__title">{title}</h1>
+				</header>
+			)
+		}
+		{/* The dashboard brings its own typography and would otherwise fight
+		    .prose over list padding at equal specificity. */}
+		<div class:list={[!cssclasses.includes('dashboard') && 'prose', ...cssclasses]}>
+			<slot />
+		</div>
+	</main>
+
+	{
+		!onHub && (
+			<footer class="notefoot">
+				<a href="/blog">← {m.notebook.backToNotebook}</a>
+			</footer>
+		)
+	}
+</Shell>
+
 <style is:global>
-	:root[data-theme='light'] {
-		--text: #202122;
-		--background: #cccfd7;
-		--primary: #08447d;
-		--secondary: #4d78a3;
-		--accent: #e4e4e4;
-	}
-	:root[data-theme='dark'] {
-		--text: #dddedf;
-		--background: #282b33;
-		--primary: #82bff7;
-		--secondary: #5c87b2;
-		--accent: #171717;
-	}
-	body {
-		min-height: 100vh;
-		background-color: var(--background);
-		color: var(--text);
-	}
-	h1 {
-		font-size: 2rem;
-		font-weight: 600;
-		line-height: 1;
-		margin-bottom: 1.5rem 0 0.75rem 0;
-	}
-	h2 {
-		font-size: 1.7rem;
-		font-weight: 500;
-		line-height: 1;
-		margin: 1.5rem 0 0.75rem 0;
-	}
-	h3 {
-		font-size: 1.5rem;
-		font-weight: 500;
-		line-height: 1;
-		margin: 1.5rem 0 0.75rem 0;
-	}
-	p {
-		font-size: 1rem;
-		line-height: 1.5;
-		margin-bottom: 0.75em;
-	}
-	a {
-		color: var(--primary);
-	}
-	a:hover {
-		color: var(--secondary);
-	}
-	img {
-		max-width: 100vw;
-		width: 100%;
-		padding: 1em;
-		height: auto;
+	body.notepage {
+		font-family: var(--font-display);
+		font-size: 1.02rem;
+		line-height: 1.7;
 	}
 
-	pre {
-		max-width: 100vw;
+	.skip {
+		position: absolute;
+		left: -9999px;
+		top: 0;
+		z-index: 100;
+		padding: 0.6rem 1rem;
+		background: var(--ink);
+		color: var(--ground);
+	}
+	.skip:focus {
+		left: 0.5rem;
+		top: 0.5rem;
+	}
+
+	/* ------------------------------------------------------------- chrome */
+
+	.notebar {
+		position: sticky;
+		top: 0;
+		z-index: 50;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0.6rem var(--gutter);
+		background: color-mix(in srgb, var(--ground) 88%, transparent);
+		backdrop-filter: blur(10px);
+		border-bottom: 1px solid var(--rule-soft);
+		font-family: var(--font-ui);
+		font-size: 0.88rem;
+	}
+
+	.notebar__back {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.45rem;
+		margin-right: auto;
+		color: var(--ink-soft);
+		text-decoration: none;
+	}
+	.notebar__back:hover {
+		color: var(--accent);
+	}
+
+	.notebar__tools {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+	}
+	.notebar__link {
+		color: var(--ink-faint);
+		text-decoration: none;
+	}
+	.notebar__link:hover {
+		color: var(--accent);
+	}
+
+	@media (max-width: 34rem) {
+		.notebar__link {
+			display: none;
+		}
+	}
+
+	/* --------------------------------------------------------------- note */
+
+	.note {
+		max-width: var(--measure);
+		margin: 0 auto;
+		padding: clamp(2rem, 6vw, 3.75rem) var(--gutter) 3rem;
+	}
+	/* Dashboards and the index need the whole page, not a reading measure. */
+	.note--wide {
+		max-width: 72rem;
+	}
+
+	.note__head {
+		margin-bottom: 2.25rem;
+	}
+
+	.note__eyebrow {
+		display: flex;
+		align-items: baseline;
+		gap: 0.7rem;
+		margin: 0 0 0.6rem;
+		font-family: var(--font-mono);
+		font-size: 0.73rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+	.note__lang {
+		padding: 0.15em 0.42em 0.2em;
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		color: var(--accent);
+	}
+
+	.note__title {
+		font-family: var(--font-display);
+		font-size: clamp(1.9rem, 5.5vw, 2.9rem);
+		font-weight: 600;
+		line-height: 1.1;
+		letter-spacing: -0.02em;
+		margin: 0;
+		text-wrap: balance;
+	}
+
+	.notefoot {
+		padding: 0 var(--gutter) 4rem;
+		max-width: var(--measure);
+		margin: 0 auto;
+		font-family: var(--font-ui);
+		font-size: 0.9rem;
+	}
+	.notefoot a {
+		text-decoration: none;
+	}
+	.notefoot a:hover {
+		text-decoration: underline;
+	}
+
+	/* -------------------------------------------------------------- prose */
+
+	.prose > * + * {
+		margin-top: 1.05em;
+	}
+
+	.prose h1,
+	.prose h2,
+	.prose h3,
+	.prose h4,
+	.prose h5,
+	.prose h6 {
+		font-family: var(--font-display);
+		font-weight: 600;
+		line-height: 1.22;
+		letter-spacing: -0.015em;
+		text-wrap: balance;
+		margin-top: 2.1em;
+		margin-bottom: 0.5em;
+	}
+	.prose h1 {
+		font-size: 1.85rem;
+	}
+	.prose h2 {
+		font-size: 1.5rem;
+	}
+	.prose h3 {
+		font-size: 1.25rem;
+	}
+	.prose h4 {
+		font-size: 1.08rem;
+	}
+	.prose > :first-child {
+		margin-top: 0;
+	}
+
+	.prose p {
+		margin: 0;
+	}
+
+	.prose ul,
+	.prose ol {
+		margin: 0;
+		padding-left: 1.5em;
+	}
+	.prose ul {
+		list-style: disc;
+	}
+	.prose ol {
+		list-style: decimal;
+	}
+	.prose li + li {
+		margin-top: 0.3em;
+	}
+	.prose li::marker {
+		color: var(--ink-faint);
+	}
+	.prose li > ul,
+	.prose li > ol {
+		margin-top: 0.3em;
+	}
+
+	.prose blockquote {
+		margin: 1.4em 0;
+		padding: 0.2em 0 0.2em 1.2em;
+		border-left: 2px solid var(--accent);
+		color: var(--ink-soft);
+		font-style: italic;
+	}
+
+	.prose hr {
+		margin: 2.5em 0;
+		border: 0;
+		border-top: 1px solid var(--rule);
+	}
+
+	.prose img {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 1.75em auto;
+		border-radius: 3px;
+	}
+
+	.prose figure {
+		margin: 1.75em 0;
+	}
+	.prose figcaption {
+		font-family: var(--font-ui);
+		font-size: 0.85rem;
+		color: var(--ink-faint);
+		text-align: center;
+	}
+
+	.prose :not(pre) > code {
+		font-family: var(--font-mono);
+		font-size: 0.86em;
+		padding: 0.1em 0.34em;
+		background: var(--sunken);
+		border-radius: 2px;
+	}
+
+	.prose pre {
+		max-width: 100%;
+		overflow-x: auto;
+		border-radius: 3px;
+	}
+
+	/* Tables come out of Obsidian constantly — the parallel-text translations
+	   are all tables — so they get real styling rather than browser defaults. */
+	.prose .table-wrap,
+	.prose table {
+		display: block;
 		width: 100%;
 		overflow-x: auto;
 	}
-
-	ul {
-		list-style-type: disc;
-		padding-left: 2em !important;
-		margin-bottom: 2em;
+	.prose table {
+		border-collapse: collapse;
+		font-size: 0.95em;
+	}
+	.prose th,
+	.prose td {
+		padding: 0.5em 0.8em;
+		border: 1px solid var(--rule);
+		text-align: left;
+		vertical-align: top;
+	}
+	.prose th {
+		background: var(--sunken);
+		font-family: var(--font-ui);
+		font-size: 0.82em;
+		font-weight: 600;
+		letter-spacing: 0.02em;
 	}
 
-	ol {
-		list-style-type: decimal;
-		padding-left: 2em !important;
-		margin-bottom: 2em;
+	.prose a {
+		color: var(--accent);
+	}
+
+	.prose sup a {
+		text-decoration: none;
+	}
+
+	/* KaTeX blocks scroll rather than pushing the page sideways. */
+	.prose .katex-display {
+		overflow-x: auto;
+		overflow-y: hidden;
+		padding: 0.4em 0;
+	}
+
+	/* Mermaid diagrams are emitted as inline SVG; centre and bound them. */
+	.prose svg[id^='mermaid'],
+	.prose .mermaid svg {
+		display: block;
+		max-width: 100%;
+		height: auto;
+		margin: 1.75em auto;
 	}
 </style>

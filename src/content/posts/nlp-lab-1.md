@@ -1,6 +1,7 @@
 ---
 title: NLP Lab 1
 date: 2025-01-29
+lang: en
 ---
 
 ![](../assets/nlp-lab-1.pdf)

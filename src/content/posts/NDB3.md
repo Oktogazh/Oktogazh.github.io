@@ -1,6 +1,7 @@
 ---
 title: Notre-Dame Bigoudenn C2
 date: 2025-05-01
+lang: fr
 ---
 Ce jeudi donc, vers 14 heures, Naïg au Dos d'or, en
 chaussons et bonnet sans coiffe, descendait, en longeant

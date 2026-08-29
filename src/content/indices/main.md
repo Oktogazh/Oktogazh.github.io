@@ -1,87 +1,115 @@
 ---
 title: main
+lang: br
 cssclasses:
   - dashboard
 ---
-# <img src="https://em-content.zobj.net/source/openmoji/413/flag-for-bretagne-frbre_1f3f4-e0066-e0072-e0062-e0072-e0065-e007f.png" style="max-width: 28px; padding:0;margin: 0 6px;display: block; float:left;"/> Brezhoneg 
-- 🌐 Troidigezhioù
-	- [Tonkad ar yezh (Tynged yr Iaith gan Saunders Lewis)](posts/tonkad-ar-yezh)
-	- [Ar Bisklavret](posts/bisklavret) 🐺
-	- [Suzanne](posts/suzanne-cohen)
-- 🪶 Barzhoniezh
-	- [Trid an tridi](posts/tridi) 🐦‍⬛
-	- [Ar Bisklavret](posts/bisklavret) 🐺
-	- [Kreac'h](posts/kreac'h) 
-- Politikerezh
-	- [Penaos saveteiñ ar brezhoneg](posts/savetein-ar-brezhoneg)
-	- [Opiom an Intellektualed](posts/opiom)
+
+# Brezhoneg
+
+- Troidigezhioù
+	- [Tonkad ar Yezh — Saunders Lewis](/posts/tonkad-ar-yezh)
+	- [Notennoù diwar-benn an droidigezh](/posts/notennou-tonkad)
+	- [Ar Bisklavret — Marie de France](/posts/bisklavret)
+	- [Suzanne — Leonard Cohen](/posts/suzanne-cohen)
+- Barzhoniezh
+	- [Trid an tridi](/posts/tridi)
+	- [Kreac'h](/posts/kreach)
+- Yezh ha politikerezh
+	- [Penaos saveteiñ ar brezhoneg](/posts/savetein-ar-brezhoneg)
+	- [Opiom an intellektualed](/posts/opiom)
+	- [Mojenn war-giz](/posts/mojenn-war-giz)
+	- [Dialektik ar renadoù](/posts/dialektik-ar-renadou)
+	- [Teiryezhegezh evit kargidi Europa](/posts/teiryezhegezh-ret-evit-an-holl-gargidi-titlet)
+- Yezhoniezh
+	- [Pellgomz pe bellgomzer](/posts/pellgomz-pe-bellgomzer)
+	- [Gerioù keltiek er yezhoù slavek](/posts/kelto-slavek)
+	- [Notennoù war Meurgorf](/posts/notennou-war-meurgorf)
+
+# Cymraeg
+
+- Ysgrifau
+	- [Ieithoedd Lleiafrif yn Oes Data Science a Dysgu Peirianyddol](/posts/cyfle-mawr)
+	- [Anodd yw creu geiriau Cymraeg](/posts/creu-geiriau-cymraeg)
+	- [Deallwydd Sgyrsiol](/posts/techiaith-5)
+- Tystysgrif Sgiliau Iaith
+	- [Sesiwn paratoi 1](/posts/tsi-1)
+	- [Sesiwn paratoi 2](/posts/tsi-2)
+	- [Sesiwn paratoi 3](/posts/tsi-3)
+	- [Sesiwn paratoi 4](/posts/tsi-4)
+
+# Teknologiezh ar yezh
+
+- Corpora and data
+	- [A Breton–French parallel corpus from scanned novels](/posts/nlp-corpus-report)
+	- [Coqui TTS + XTTS](/posts/coqui_tts_xtts)
+	- [Language technology portfolio](/posts/tech-iaith-portfolio)
+- Models and methods
+	- [The evolution of transformers](/posts/understand-transformers)
+	- [Ar matrisoù evel rouedad](/posts/matris-evel-rouedad)
+	- [Kelenn an AI](/posts/kelenn-ai)
+	- [Hayes & Wilson on maximum-entropy phonotactics](/posts/hayes-2008)
+- Evaluation
+	- [Evaluating a customer support agent](/posts/customer-support)
+	- [Sentiment analysis](/posts/sentiment-analysis)
 - Liammoù
-	- [data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
-# Blogging
-- [LinkedIn Posts](posts/linkedIn-posts)
-	- [NLP](posts/world-models-vs-nlp)
-- Ar reuz
-	- [Zettelkasten](posts/zettelkasten)
-- Cool Links
-	- [Draw Neural Nets](https://alexlenail.me/NN-SVG/index.html)
+	- [LinkedIn posts](/posts/linkedin-posts)
+	- [Leksis — the omnilingual dictionary](https://leksis.eu)
+	- [Data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
 
-# Misc.
-- 🎹 [Jankó Piano](/janko-piano) — an isomorphic piano you can play on your computer keyboard
-- 🛠️ How this website is build
-	- [Publishing a Zettelkasten with Astro](posts/astro-obsidian-and-github)
-- Ar reuz
-	- [Zettelkasten](posts/zettelkasten)
-- Cool Links
-	- [Draw Neural Nets](https://alexlenail.me/NN-SVG/index.html)
+# Prederiañ
 
-# 🏴󠁧󠁢󠁷󠁬󠁳󠁿 Cymraeg
+- Testing and psychometrics
+	- [Why we need yet another testing framework](/posts/justifying-yet-another-language-test)
+	- [Psychometrics for dummies](/posts/psycho-dummies)
+	- [Elo rating and the Rasch model](/posts/elo-rating-and-rasch-model)
+	- [Reviewing Pelánek 2016](/posts/pelanek-2016)
+	- [Notes on optimization](/posts/notes-on-optimization)
+- Teaching and learning
+	- [How should we teach languages](/posts/how-should-we-teach-languages)
+	- [Code-switching and language level](/posts/code-switching-and-language-level)
+- Atomoù
+	- [Zettelkasten](/posts/zettelkasten)
+	- [Aesthetic is the elegant solution of a problem](/posts/elegant-solution-to-a-problem)
+	- [Conflicting constraints](/posts/conflicting-constraints)
+	- [Long distance dependencies as direct relationships](/posts/words-markov)
 
+# Ober
 
+- This site
+	- [Publishing an Obsidian Zettelkasten with Astro](/posts/astro-obsidian-and-github)
+	- [Every note, by language and year](/notes)
+- C'hoariellyoù
+	- [Jankó Piano](/janko-piano) — an isomorphic piano you can play on your computer keyboard
+- Cool links
+	- [Draw neural nets](https://alexlenail.me/NN-SVG/index.html)
 
-# 🎓 M.Sc. Technologiaeth Iaith ym Mhrifysgol Bangor 2024-25
+# Diellaoueg — M.Sc. Technolegiaeth Iaith, Bangor 2024-25
 
-- 🎓📝 Dissertation 
-	- [Dissertation Dashboard](posts/dissertation-dashboard)
-	- [Experimental Design (Psycholinguistic asignment)](posts/experimental-design)
-- 🛠️ ICE-4005-0 Generalist Mini-project
-	- [Mini-project Dashboard](posts/ice-4005-dashboard)
-	- [Report](posts/report-mini-project)
+- Dissertation
+	- [Dashboard](/posts/dissertation-dashboard)
+	- [Research proposal](/posts/research-proposal)
+	- [Experimental design](/posts/experimental-design)
+	- [Dissertation ideas](/posts/dissertation-ideas)
+	- [Acknowledgements](/posts/acknowledgement)
+- ICE-4005 mini-project
+	- [Dashboard](/posts/ice-4005-dashboard)
+	- [Report](/posts/report-mini-project)
 	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Last Week Log](ice-4005-meeting-21.md)
-- 🧐 Research Methodology
-	- [Research Proposal](posts/research-proposal)
-	- [Review of an Outstanding Dissertation](posts/dissertation-review)
-	- [Reviewing Lehöfer and Broersma (LexTALE)](posts/lextale)
--  💼 NLP labs
-	- [Report 1](posts/nlp-lab-1)
-	- [Report 2](posts/nlp-lab-2)
-	- [Report 3](posts/nlp-lab-3)
-	- [Report 4](posts/nlp-lab-4)
-	- [Corpus Report](nlp-corpus-report.md)
-	- [Final Exam](posts/nlp-exam)
--  💻 Technoleg Iaith
-	- [0. Cyflwyniad](posts/techiaith-1) (4/4)
-	- [1. Dysgu Perianyddol & Chyfieithu Peiranyddol](posts/techiaith-2) (3/3)
-	- [2. Testun i Leferydd](posts/techiaith-3) (2/2)
-	- [3. Adnabod Lleferydd](posts/techiaith-4) (2/2)
-	- [4. Dealluswydd Artiffisial Sgyrsiol](posts/techiaeth-5) (2/2)
-	- [Understand Transformers](posts/understand-transformers)
--  🗣️ Tystysgrif Sgiliau Iaith
-	- [Sesiwn paratoi TSI 1](posts/tsi-1)
-	- [Sesiwn paratoi TSI 2](posts/tsi-2)
-	- [Sesiwn paratoi TSI 3](posts/tsi-3)
-	- [Sesiwn paratoi TSI 4](posts/tsi-4)
-
-<!--
-- 🗣️ Languages
-	- [Experimental Design](posts/experimental-design)
-
-
-# Testing
-- 🛠️ ICE-4005-0 Generalist Mini-project
-	- [Mini-project Dashboard](<posts/ice-4005-dashboard>)
-	- [Report](<posts/report-mini-project>)
-	- [Repository](https://github.com/Oktogazh/prwaf_geirfa)
-	- [Last Week Log](<posts/ice-4005-week-8>)
-
-
+	- [Last meeting log](/posts/ice-4005-meeting-21)
+- Research methodology
+	- [Review of an outstanding dissertation](/posts/dissertation-review)
+	- [Reviewing Lemhöfer and Broersma (LexTALE)](/posts/lextale)
+- NLP labs
+	- [Lab 1](/posts/nlp-lab-1)
+	- [Lab 2](/posts/nlp-lab-2)
+	- [Lab 3](/posts/nlp-lab-3)
+	- [Lab 4](/posts/nlp-lab-4)
+	- [Corpus report](/posts/nlp-corpus-report)
+	- [Final exam](/posts/nlp-exam)
+- Technoleg Iaith
+	- [0. Cyflwyniad](/posts/techiaith-1)
+	- [1. Dysgu Peirianyddol a Chyfieithu Peirianyddol](/posts/techiaith-2)
+	- [2. Testun i Leferydd](/posts/techiaith-3)
+	- [3. Adnabod Lleferydd](/posts/techiaith-4)
+	- [4. Deallwydd Artiffisial Sgyrsiol](/posts/techiaith-5)

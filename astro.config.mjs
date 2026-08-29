@@ -1,33 +1,32 @@
-// @ts-nocheck
+// @ts-check
 import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import expressiveCode from 'astro-expressive-code';
+import sitemap from '@astrojs/sitemap';
+
 import rehypeKatex from 'rehype-katex';
 import remarkMath from 'remark-math';
-import mdx from "@astrojs/mdx";
-import wikiLinkPlugin from "@portaljs/remark-wiki-link";
-
-import tailwind from "@astrojs/tailwind";
-
-import expressiveCode from "astro-expressive-code";
-import remarkMermaid from 'remark-mermaidjs'
-
-import svelte from "@astrojs/svelte";
+import remarkMermaid from 'remark-mermaidjs';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://oktogazh.github.io",
-  base: "/",
-  build: {
-    format: 'file'
-  },
-  trailingSlash: "never",
-  integrations: [expressiveCode(), mdx({
-    syntaxHighlight: "prism",
-    remarkPlugins: [remarkMath],
-    rehypePlugins: [rehypeKatex],
-  }), tailwind(), svelte()],
+  site: 'https://oktogazh.github.io',
+  base: '/',
+  build: { format: 'file' },
+  trailingSlash: 'never',
+
+  integrations: [
+    expressiveCode(),
+    mdx({
+      syntaxHighlight: 'prism',
+      remarkPlugins: [remarkMath],
+      rehypePlugins: [rehypeKatex],
+    }),
+    sitemap(),
+  ],
+
   markdown: {
-    remarkPlugins: [
-      remarkMermaid
-    ]
-  }
+    remarkPlugins: [remarkMath, remarkMermaid],
+    rehypePlugins: [rehypeKatex],
+  },
 });

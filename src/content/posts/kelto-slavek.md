@@ -1,6 +1,7 @@
 ---
 title: Kelto-slavek
 date: 2024-12-30
+lang: br
 ---
 дати = dodi (cy)
 дерево, деревина = Derv, dervenn / derw, derwen / doire

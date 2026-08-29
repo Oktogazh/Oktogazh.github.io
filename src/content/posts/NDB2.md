@@ -1,6 +1,7 @@
 ---
 title: Notre-Dame Bigoudenn C2
 date: 2025-04-26
+lang: fr
 ---
 Une des cent petites rivières du pays, un ruisseau
 plus exactement venu sans se presser par les prairies

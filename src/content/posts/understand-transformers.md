@@ -1,6 +1,7 @@
 ---
 title: The evolution of transformers
 date: 2025-05-25
+lang: en
 ---
 # Evolution and Future of Language Modeling
 In this short review, we come back on the history of sequence learning for language modeling, with the aim of foreseeing the evolution of the field.

@@ -1,6 +1,7 @@
 ---
 title: Kreac'h
 date: 2025-05-23
+lang: br
 ---
 eizh askell diogellus
 gant hud o gouloù burzhudus

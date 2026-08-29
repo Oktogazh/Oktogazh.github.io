@@ -1,5 +1,6 @@
 ---
 date: 2024-12-10
+lang: en
 title: Publishing an Obsidian Zettelkasten with Astro
 ---
 # Context

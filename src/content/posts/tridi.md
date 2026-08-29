@@ -1,6 +1,7 @@
 ---
 title: Trid an tridi
 date: 2020-02-01
+lang: br
 ---
 An estlamm zo bamus, ha diluz e ruzin, <br/>
 Ouzh tridi kevrinus a guzh, evel huzil <br/>

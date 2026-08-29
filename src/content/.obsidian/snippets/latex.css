@@ -1,8 +1,26 @@
-@import url('https://cdn.jsdelivr.net/npm/latin-modern-web/style/latinmodern-roman.css');
+/*
+ * latex.css — shared by Obsidian and by the website (symlinked as
+ * src/style/snippets/latex.css). Applied to notes carrying `cssclasses:
+ * [academic]` — the dissertation, the reviews, the reports.
+ *
+ * It used to open with
+ *   @import url('https://cdn.jsdelivr.net/npm/latin-modern-web/...')
+ * which has not resolved for some time: the package is gone from npm, so
+ * jsdelivr answers "Failed to fetch version info" and the font never loaded —
+ * in the browser or in Obsidian. Every .academic note has silently been
+ * rendering in the default body face.
+ *
+ * KaTeX_Main is Computer Modern, and both Obsidian and this site already ship
+ * it for the maths. So the LaTeX look now comes from the font that is already
+ * there, with a real text serif behind it for the characters Computer Modern
+ * is thin on — ŵ, ŷ, ñ among them.
+ */
 
 .academic {
-	font-family: 'Latin Modern Roman', serif;
-	line-height: 1.6;
+	font-family: 'KaTeX_Main', 'Newsreader', 'Latin Modern Roman', Georgia, serif;
+	line-height: 1.66;
+	text-align: justify;
+	hyphens: auto;
 }
 
 .academic h1,
@@ -11,43 +29,57 @@
 .academic h4,
 .academic h5,
 .academic h6 {
-	font-weight: 600;
-	font-size: 1.5em;
-	margin: 0.3em 0;
+	font-family: inherit;
+	font-weight: 700;
+	text-align: left;
+	hyphens: none;
+	letter-spacing: 0;
 }
 
-.academic p,
-.academic {
-	text-align: justify;
+.academic h1 {
+	font-size: 1.6em;
+}
+.academic h2 {
+	font-size: 1.35em;
+}
+.academic h3 {
+	font-size: 1.15em;
+}
+.academic h4,
+.academic h5,
+.academic h6 {
+	font-size: 1em;
 }
 
+/* Hanging indent for unnumbered lists — the LaTeX itemize look. Obsidian draws
+   its own bullet element, the web draws a marker, so both are suppressed and
+   the indent does the work. */
+.academic ul {
+	list-style: none !important;
+	padding-left: 2em;
+}
+.academic ul > li {
+	text-indent: -1em;
+}
+.academic ul .list-bullet::after {
+	background-color: transparent;
+	content: '';
+}
+
+.academic ol {
+	list-style: decimal !important;
+	padding-left: 2em;
+	text-indent: 0;
+}
+.academic ol .list-bullet::after {
+	background-color: transparent;
+	content: '';
+}
+
+/* Square corners and mitred joins, so diagrams match the typesetting. */
 .academic svg * {
 	stroke-linecap: square;
 	stroke-linejoin: miter;
 	rx: 0;
 	ry: 0;
-}
-
-.academic ul {
-	list-style: none !important;
-	text-indent: -2em;
-	/* Negative indent for first line */
-	margin-bottom: 1em;
-}
-
-.academic ul .list-bullet::after {
-	background-color: transparent;
-	content: "";
-}
-
-.academic ol {
-	/* normal style for ordered list */
-	list-style: decimal !important;
-	text-indent: 0em;
-	margin: 0 2em;
-}
-
-.academic ol .list-bullet::after {
-	background-color: transparent;
-	content: "";
 }

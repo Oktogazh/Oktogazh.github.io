@@ -1,0 +1,57 @@
+---
+/**
+ * The bare document shell: <html>, <head>, <body>. Everything that varies
+ * between pages goes through SiteHead. Used by the landing page and the
+ * note pages alike, so both get a title, a description and a share card.
+ */
+import SiteHead from '@/components/SiteHead.astro';
+import { DEFAULT_LOCALE, type Locale } from '@/i18n';
+
+interface Props {
+	title: string;
+	description?: string;
+	locale?: Locale;
+	/** BCP 47 tag for <html lang>. Note pages pass the note's own language. */
+	lang?: string;
+	translated?: boolean;
+	type?: 'website' | 'article';
+	bodyClass?: string;
+}
+
+const {
+	title,
+	description,
+	locale = DEFAULT_LOCALE,
+	lang,
+	translated = false,
+	type = 'website',
+	bodyClass,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang ?? locale}>
+	<head>
+		<SiteHead
+			title={title}
+			description={description}
+			locale={locale}
+			translated={translated}
+			type={type}
+		/>
+	</head>
+	<body class={bodyClass}>
+		<slot />
+	</body>
+</html>
+
+<style is:global>
+	html {
+		scroll-behavior: smooth;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+</style>

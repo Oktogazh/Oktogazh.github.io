@@ -1,6 +1,7 @@
 ---
 title: Itron Varia Garmez P1
 date: 2025-04-21
+lang: br
 ---
 Paol, emañ ho koan war an daol. Deuit da
 zebriñ ho koan !"

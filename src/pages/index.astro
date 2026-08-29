@@ -1,13 +1,16 @@
 ---
-import MySvelteComponent from '../components/HomePage.svelte';
+import Home from '@/components/Home.astro';
+import Shell from '@/layouts/Shell.astro';
+import { DEFAULT_LOCALE, t } from '@/i18n';
+
+const m = t(DEFAULT_LOCALE);
 ---
 
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <MySvelteComponent client:load />
-  </body>
-</html>
+<Shell
+	title={m.meta.title}
+	description={m.meta.description}
+	locale={DEFAULT_LOCALE}
+	translated
+>
+	<Home locale={DEFAULT_LOCALE} />
+</Shell>

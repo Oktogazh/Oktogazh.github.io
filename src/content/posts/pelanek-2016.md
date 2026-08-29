@@ -1,6 +1,7 @@
 ---
 title: Reviewing Pelánek 2016
 date: 2024-12-23
+lang: en
 ---
 The good folk of Masaryk University Brno's Computer Science department in the Czech Republic has been using modified versions of the Elo rating system for adaptive learning softwares for more than a decade now. One cool example of these is the website [practiceanatomy.com](https://practiceanatomy.com), which does not show directly the rating to the users, but uses it to ensure that the questions presented to them keeps a 75-80% chances of being answered correctly. They created other applications, but most of them in Czech, or destined to a Czech public (e.g. to learn English vocabulary from Czech) and others have already been shut down because they were simple B.Sc. or alike short-lived experiments.
 

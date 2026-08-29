@@ -1,6 +1,7 @@
 ---
 title: Itron Varia Garmez P3
 date: 2025-04-21
+lang: br
 ---
 Kentañ hini a voe lazhet gant ar
 warded a voe ur vigoudenn gozh,

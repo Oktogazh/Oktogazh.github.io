@@ -1,6 +1,7 @@
 ---
 title: Zettelkasten index
 date: 2025-01-22
+lang: br
 cssclasses:
   - dashboard
 ---
@@ -19,7 +20,7 @@ cssclasses:
 	- [Stanford 224N (2021)](https://www.youtube.com/watch?v=rmVRLeJRkl4&list=PLoROMvodv4rMFqRtEuo6SGjY4XbRIVRd4&index=1)
 
 # Berradenn
-- [[Pellgomz pe bellgomzer]]
+- [Pellgomz pe bellgomzer](/posts/pellgomz-pe-bellgomzer)
 - 
 # Evit ur politikerezh yezh european
 Arguzennoù: Penaos e rank emdreiñ ar politikerezhioù yezh e koulz an IA?
@@ -37,7 +38,7 @@ Stad yezhel Europa
 - Gistierezh Europa d'ar bed saozneg
 - Dispriz an Europeiz warno o-unan (hollc'halloud ar c'hornôg)
 Ur standard liesyezhegezh nevez evit ensavadurioù Unaniezh Europa
- - [[Teiryezhegezh ret evit an holl gargidi titlet]]
+ - [Teiryezhegezh ret evit an holl gargidi titlet](/posts/teiryezhegezh-ret-evit-an-holl-gargidi-titlet)
  - Liesyezhegezh, sibersurrentezh ha dizalc'hiezh ar poelladoù implijet en unaniezh
  - Difenn implij ofisiel ar Saozneg e liveoù uhel ar c'hrouiñ lezennoù (treiñ pep tra e pep yezh gant IA)
 **Azgivinelezh ha sevenadur treiñ**

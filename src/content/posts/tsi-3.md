@@ -1,6 +1,7 @@
 ---
 title: Paratoi TSI 3
 date: 2025-05-05
+lang: cy
 ---
 ![](../assets/papur-3.pdf)
 

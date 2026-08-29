@@ -1,0 +1,92 @@
+---
+/**
+ * The language switcher, styled as the language labels of a dictionary entry.
+ * Real links to real URLs, so a Breton page can be shared as a Breton page —
+ * which the old navigator-sniffing version could not do.
+ */
+import { ENDONYM, LOCALES, homeHref, type Locale } from '@/i18n';
+
+interface Props {
+	current: Locale;
+	label: string;
+	class?: string;
+}
+
+const { current, label, class: className = '' } = Astro.props;
+---
+
+<nav class:list={['langswitch', className]} aria-label={label}>
+	{
+		LOCALES.map((l) => (
+			<a
+				href={homeHref(l)}
+				hreflang={l}
+				lang={l}
+				class="langswitch__item"
+				aria-current={l === current ? 'true' : undefined}
+			>
+				{l}
+				<span class="langswitch__full">{ENDONYM[l]}</span>
+			</a>
+		))
+	}
+</nav>
+
+<style>
+	.langswitch {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.3rem;
+		font-family: var(--font-mono);
+		font-size: 0.75rem;
+	}
+
+	.langswitch__item {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.4em;
+		padding: 0.2em 0.5em 0.25em;
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		color: var(--ink-faint);
+		text-decoration: none;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		background: transparent;
+		transition:
+			color 0.18s ease,
+			border-color 0.18s ease,
+			background-color 0.18s ease;
+	}
+
+	.langswitch__item:hover {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+
+	.langswitch__item[aria-current='true'] {
+		color: var(--ground);
+		background: var(--ink);
+		border-color: var(--ink);
+	}
+
+	/* The endonym rides along for screen readers and for wide viewports, where
+	   there is room to say the language's name in its own language. */
+	.langswitch__full {
+		font-size: 0.92em;
+		letter-spacing: 0;
+		text-transform: none;
+		opacity: 0.75;
+	}
+
+	@media (max-width: 40rem) {
+		.langswitch__full {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip-path: inset(50%);
+			white-space: nowrap;
+		}
+	}
+</style>

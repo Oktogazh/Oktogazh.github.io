@@ -1,6 +1,7 @@
 ---
 title: Kelenn an AI
 date: 2025-02-09
+lang: br
 ---
 # Steuñv
 1. IA

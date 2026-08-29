@@ -1,6 +1,7 @@
 ---
 title: Pellgomz pe bellgomzer
 date: 2025-12-23
+lang: br
 ---
 https://www.youtube.com/shorts/A_QPP577tyU
 

@@ -1,106 +1,197 @@
-/* 
-Last updated 2024-11-18
-This solution is provided by TfT Hacker. Learn more at https://tfthacker.com
-*/
+/*
+ * dashboard.css — shared by Obsidian and by the website.
+ *
+ * This file is symlinked as src/style/snippets/dashboard.css, so the vault and
+ * the published site read from one source. That means it has to speak two DOMs:
+ *
+ *   Obsidian  .dashboard .markdown-preview-section > div > ul > li > .list-bullet …
+ *   the web   .dashboard > ul > li > ul > li > a …
+ *
+ * The previous version was written for Obsidian only. On the web almost none of
+ * it matched, and the two rules that did (`display:flex; flex-wrap:wrap` on
+ * every ul, `flex: 1 0` on every li) were what produced the ragged, unequal
+ * columns — including on the nested link lists, which were never meant to be
+ * columns at all.
+ *
+ * Original Obsidian layout by TfT Hacker — https://tfthacker.com
+ */
+
+/* =========================================================== both DOMs === */
 
 .dashboard {
-    font-family: inherit;
-    padding-left: 25px !important;
-    padding-right: 25px !important;
-    padding-top: 20px !important;
-    max-width: 100%;
+	font-family: var(--font-ui, inherit);
+	max-width: 100%;
 }
 
-/* .dashboard */
+/* ---- section headings: one rule per subject area ---- */
+
+.dashboard h1,
+.dashboard h2 {
+	font-family: var(--font-display, inherit);
+	font-weight: 600;
+	letter-spacing: -0.015em;
+	line-height: 1.2;
+	padding-bottom: 0.45rem;
+	border-bottom: 1px solid var(--rule, #d7d3c5);
+}
+
 .dashboard h1 {
-    border-bottom-style: dotted !important;
-    border-bottom-width: 1px !important;
-    padding-bottom: 14px !important;
+	font-size: 1.55rem;
+	margin: 3rem 0 0;
+}
+
+.dashboard h2 {
+	font-size: 1.2rem;
+	margin: 2.25rem 0 0;
+}
+
+.dashboard > h1:first-child,
+.dashboard > h2:first-child {
+	margin-top: 0;
+}
+
+/* Emoji and flag images sitting inside a heading should ride the baseline,
+   not float out of it. */
+.dashboard h1 img,
+.dashboard h2 img {
+	display: inline-block !important;
+	float: none !important;
+	width: 1.05em !important;
+	max-width: 1.05em !important;
+	height: auto;
+	margin: 0 0.4em 0 0 !important;
+	padding: 0 !important;
+	vertical-align: -0.12em;
+}
+
+/* ---- the column grid ---- */
+
+/*
+ * A top-level list item is a category (a column). Its nested list holds the
+ * links. Grid rather than flex-wrap, so columns are equal width and start on a
+ * shared baseline instead of raggedly filling.
+ */
+.dashboard > ul,
+.dashboard .markdown-preview-section > div > ul {
+	display: grid !important;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 1.75rem 2rem;
+	align-items: start;
+	margin: 1.5rem 0 0;
+	padding-left: 0 !important;
+	list-style: none !important;
+}
+
+.dashboard > ul > li,
+.dashboard .markdown-preview-section > div > ul > li {
+	break-inside: avoid;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+
+	/* the category label */
+	font-family: var(--font-ui, inherit);
+	font-size: 0.74rem;
+	font-weight: 600;
+	letter-spacing: 0.09em;
+	text-transform: uppercase;
+	color: var(--ink-faint, #6a6c62);
+}
+
+/* Nested lists are link lists, not columns — reset everything the parent set. */
+.dashboard > ul > li ul,
+.dashboard .markdown-preview-section > div > ul > li ul {
+	display: block !important;
+	margin: 0.6rem 0 0;
+	padding-left: 0 !important;
+	list-style: none !important;
+
+	font-family: var(--font-display, inherit);
+	font-size: 0.98rem;
+	font-weight: 400;
+	letter-spacing: 0;
+	text-transform: none;
+	line-height: 1.45;
+	color: var(--ink-soft, #4c4e47);
+}
+
+.dashboard > ul > li ul li,
+.dashboard .markdown-preview-section > div > ul > li ul li {
+	margin: 0 0 0.42rem;
+	padding-left: 0;
+	list-style: none;
+}
+
+/* A third level indents rather than starting a new column. */
+.dashboard > ul > li ul ul {
+	margin-top: 0.35rem;
+	padding-left: 0.9rem !important;
+	border-left: 1px solid var(--rule-soft, #e6e2d6);
+	font-size: 0.93rem;
+}
+
+.dashboard a {
+	color: var(--ink, inherit);
+	text-decoration: none;
+	border-bottom: 1px solid transparent;
+}
+.dashboard a:hover {
+	color: var(--accent, #1f5c6b);
+	border-bottom-color: currentColor;
+}
+
+/* An external link is worth marking as one in an index of internal notes. */
+.dashboard a[href^='http']::after {
+	content: ' ↗';
+	font-size: 0.8em;
+	color: var(--ink-faint, #6a6c62);
+}
+
+.dashboard table {
+	width: 100%;
+	table-layout: fixed;
+	margin-top: 1em;
+	border-collapse: collapse;
+}
+.dashboard td {
+	padding: 0.7em 0.5em 0 0;
+	vertical-align: baseline;
+}
+
+/* ============================================== Obsidian reading view === */
+/* Selectors below exist only in Obsidian's DOM and are inert in a browser.  */
+
+.dashboard {
+	padding-left: 25px;
+	padding-right: 25px;
+	padding-top: 20px;
 }
 
 .dashboard .markdown-preview-section {
-    max-width: 100%;
+	max-width: 100%;
 }
 
-/* Title at top of the document */
+/* Document title floated at the top of the note */
 .dashboard .markdown-preview-section .title {
-    top: 60px;
-    position: absolute;
-    font-size: 26pt !important;
-    font-weight: bolder;
-    letter-spacing: 8px;
+	top: 60px;
+	position: absolute;
+	font-size: 26pt !important;
+	font-weight: bolder;
+	letter-spacing: 8px;
 }
 
-
-/* Get rid of the parent bullet */
-.dashboard div.markdown-preview-section>div>ul>li>.list-bullet {
-    display: none !important;
+/* Kill the parent bullet and the indentation guides */
+.dashboard div.markdown-preview-section > div > ul > li > .list-bullet {
+	display: none !important;
 }
 
-/* Remove the indentation guide lines */
-.dashboard.markdown-rendered.show-indentation-guide li>ul::before,
-.dashboard.markdown-rendered.show-indentation-guide li>ol::before {
-    display: none;
+.dashboard.markdown-rendered.show-indentation-guide li > ul::before,
+.dashboard.markdown-rendered.show-indentation-guide li > ol::before {
+	display: none;
 }
-
-div.markdown-preview-section>div>ul.has-list-bullet>li {
-    padding-left: 0p !important;
-    margin-left: 0 1em;
-}
-
-
 
 /* Dataview support */
 .dashboard ul.dataview {
-    row-gap: 0px !important;
-    list-style-type: disc !important;
-}
-
-.dashboard table {
-    margin-top: 1em;
-    width: 100% !important;
-    table-layout: fixed !important;
-}
-
-.dashboard>ul {
-    list-style-type: none;
-    padding-left: 0px !important;
-}
-
-.dashboard ul {
-    font-weight: 600;
-    width: 100%;
-    padding-top: 1em;
-    display: flex !important;
-    flex-wrap: wrap !important;
-}
-
-
-.dashboard ul li {
-    flex: 1 0;
-    min-width: 250px;
-    max-width: 350px;
-    margin-bottom: 0;
-}
-
-.dashboard>ul>li>ul {
-    font-weight: 400;
-    padding-right: 2em;
-    width: auto;
-}
-
-
-.dashboard li::marker {
-    color: gray;
-}
-
-.dashboard table {
-    width: 100%;
-    table-layout: fixed;
-}
-
-.dashboard td {
-    padding-right: 8px;
-    padding-top: 0.7em;
-    vertical-align: baseline;
+	row-gap: 0 !important;
+	list-style-type: disc !important;
 }

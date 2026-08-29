@@ -1,6 +1,7 @@
 ---
 title: Itron Varia Garmez P2
 date: 2025-04-21
+lang: br
 ---
 Unan eus kant stêrig ar vro, ur wazh-
 dour kentoc'h, deut war he fouez, dre

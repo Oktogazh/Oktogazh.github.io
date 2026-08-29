@@ -1,5 +1,6 @@
 ---
 date: 2024-12-26
+lang: en
 title: Report mini-project
 cssclasses:
   - academic

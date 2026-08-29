@@ -1,0 +1,304 @@
+---
+/**
+ * Every note, generated from the collection.
+ *
+ * This exists so that the dashboard does not have to be exhaustive. Before it,
+ * 67 of the 98 published notes were reachable only by typing their URL: the
+ * hand-curated hub was the only index, and it was never going to list
+ * everything. Now the hub stays a human judgement about what matters, and
+ * nothing is orphaned.
+ */
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import { DEFAULT_LOCALE, ENDONYM, t } from '@/i18n';
+import { getCollection } from 'astro:content';
+
+const m = t(DEFAULT_LOCALE);
+
+const posts = (await getCollection('posts')).sort(
+	(a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+
+type Year = { year: number; notes: typeof posts };
+const byYear: Year[] = [];
+for (const post of posts) {
+	const year = post.data.date.getFullYear();
+	const bucket = byYear.find((b) => b.year === year);
+	if (bucket) bucket.notes.push(post);
+	else byYear.push({ year, notes: [post] });
+}
+
+const langCounts = posts.reduce<Record<string, number>>((acc, p) => {
+	acc[p.data.lang] = (acc[p.data.lang] ?? 0) + 1;
+	return acc;
+}, {});
+const langs = Object.keys(langCounts).sort((a, b) => langCounts[b]! - langCounts[a]!);
+
+const fmt = (d: Date) =>
+	new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short' }).format(d);
+---
+
+<BaseLayout
+	title={`${m.notebook.allNotes} — Alan Kersaudy`}
+	description="Every note in the notebook: translations and poetry in Breton, essays in Welsh, and working notes on language technology."
+	lang="en"
+	wide
+	showTitle={false}
+	type="website"
+>
+	<header class="idx__head">
+		<h1>{m.notebook.allNotes}</h1>
+		<p class="idx__count">
+			<span data-visible-count>{posts.length}</span>
+			{m.notebook.noteCount}
+		</p>
+	</header>
+
+	<div class="filters">
+		<div class="filters__row">
+			<span class="filters__key">{m.notebook.filterLanguage}</span>
+			<button type="button" class="chip" data-filter="lang" data-value="" aria-pressed="true">
+				{m.notebook.filterAll}
+			</button>
+			{
+				langs.map((l) => (
+					<button type="button" class="chip" data-filter="lang" data-value={l} aria-pressed="false">
+						<span lang={l}>{ENDONYM[l as keyof typeof ENDONYM] ?? l}</span>
+						<span class="chip__n">{langCounts[l]}</span>
+					</button>
+				))
+			}
+		</div>
+		<div class="filters__row">
+			<span class="filters__key">{m.notebook.filterYear}</span>
+			<button type="button" class="chip" data-filter="year" data-value="" aria-pressed="true">
+				{m.notebook.filterAll}
+			</button>
+			{
+				byYear.map((b) => (
+					<button
+						type="button"
+						class="chip"
+						data-filter="year"
+						data-value={String(b.year)}
+						aria-pressed="false"
+					>
+						{b.year}
+						<span class="chip__n">{b.notes.length}</span>
+					</button>
+				))
+			}
+		</div>
+	</div>
+
+	<div class="idx">
+		{
+			byYear.map((bucket) => (
+				<section class="idx__year" data-year={bucket.year}>
+					<h2>{bucket.year}</h2>
+					<ul>
+						{bucket.notes.map((post) => (
+							<li data-lang={post.data.lang} data-year={bucket.year}>
+								<a href={`/posts/${post.slug}`}>
+									<time class="idx__date" datetime={post.data.date.toISOString().slice(0, 10)}>
+										{fmt(post.data.date)}
+									</time>
+									<span class="idx__lang">{post.data.lang}</span>
+									<span class="idx__title" lang={post.data.lang}>
+										{post.data.title}
+									</span>
+								</a>
+							</li>
+						))}
+					</ul>
+				</section>
+			))
+		}
+		<p class="idx__empty" hidden>{m.notebook.empty}</p>
+	</div>
+</BaseLayout>
+
+<style>
+	.idx__head {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: baseline;
+		gap: 0.5rem 1rem;
+		margin-bottom: 1.5rem;
+	}
+	.idx__head h1 {
+		font-family: var(--font-display);
+		font-size: clamp(1.9rem, 5vw, 2.6rem);
+		font-weight: 600;
+		letter-spacing: -0.02em;
+		margin: 0;
+	}
+	.idx__count {
+		margin: 0;
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		letter-spacing: 0.07em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+
+	.filters {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+		padding: 1rem 0 1.25rem;
+		border-top: 1px solid var(--rule);
+		border-bottom: 1px solid var(--rule);
+	}
+	.filters__row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 0.35rem;
+	}
+	.filters__key {
+		flex: 0 0 4.5rem;
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		letter-spacing: 0.09em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+	}
+
+	.chip {
+		display: inline-flex;
+		align-items: baseline;
+		gap: 0.4em;
+		padding: 0.25em 0.6em 0.3em;
+		font-family: var(--font-ui);
+		font-size: 0.83rem;
+		color: var(--ink-soft);
+		background: transparent;
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		cursor: pointer;
+	}
+	.chip:hover {
+		border-color: var(--accent);
+		color: var(--accent);
+	}
+	.chip[aria-pressed='true'] {
+		color: var(--ground);
+		background: var(--ink);
+		border-color: var(--ink);
+	}
+	.chip__n {
+		font-family: var(--font-mono);
+		font-size: 0.7rem;
+		opacity: 0.65;
+	}
+
+	.idx__year {
+		margin-top: 2.25rem;
+	}
+	.idx__year h2 {
+		font-family: var(--font-mono);
+		font-size: 0.78rem;
+		font-weight: 500;
+		letter-spacing: 0.12em;
+		color: var(--ink-faint);
+		margin: 0 0 0.5rem;
+		padding-bottom: 0.4rem;
+		border-bottom: 1px solid var(--rule-soft);
+	}
+	.idx__year ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	.idx__year li {
+		border-bottom: 1px solid var(--rule-soft);
+	}
+	.idx__year a {
+		display: grid;
+		grid-template-columns: 4.5rem 2.2rem 1fr;
+		align-items: baseline;
+		gap: 0.75rem;
+		padding: 0.55rem 0.3rem;
+		text-decoration: none;
+		color: var(--ink);
+	}
+	.idx__year a:hover {
+		background: var(--accent-wash);
+	}
+	.idx__year a:hover .idx__title {
+		color: var(--accent);
+	}
+
+	.idx__date {
+		font-family: var(--font-mono);
+		font-size: 0.76rem;
+		color: var(--ink-faint);
+		font-variant-numeric: tabular-nums;
+	}
+	.idx__lang {
+		font-family: var(--font-mono);
+		font-size: 0.68rem;
+		text-transform: uppercase;
+		letter-spacing: 0.06em;
+		color: var(--accent);
+	}
+	.idx__title {
+		font-family: var(--font-display);
+		font-size: 1.02rem;
+		line-height: 1.35;
+	}
+
+	.idx__empty {
+		margin-top: 2rem;
+		color: var(--ink-faint);
+	}
+
+	@media (max-width: 34rem) {
+		.idx__year a {
+			grid-template-columns: 3.6rem 2rem 1fr;
+			gap: 0.5rem;
+		}
+		.filters__key {
+			flex-basis: 100%;
+		}
+	}
+</style>
+
+<script>
+	const state: Record<string, string> = { lang: '', year: '' };
+
+	const rows = Array.from(document.querySelectorAll<HTMLLIElement>('.idx__year li'));
+	const sections = Array.from(document.querySelectorAll<HTMLElement>('.idx__year'));
+	const empty = document.querySelector<HTMLElement>('.idx__empty');
+	const counter = document.querySelector<HTMLElement>('[data-visible-count]');
+
+	function apply() {
+		let visible = 0;
+		for (const row of rows) {
+			const ok =
+				(!state.lang || row.dataset.lang === state.lang) &&
+				(!state.year || row.dataset.year === state.year);
+			row.hidden = !ok;
+			if (ok) visible++;
+		}
+		for (const section of sections) {
+			const any = Array.from(section.querySelectorAll('li')).some((li) => !li.hidden);
+			section.hidden = !any;
+		}
+		if (empty) empty.hidden = visible > 0;
+		if (counter) counter.textContent = String(visible);
+	}
+
+	for (const button of document.querySelectorAll<HTMLButtonElement>('[data-filter]')) {
+		button.addEventListener('click', () => {
+			const group = button.dataset.filter!;
+			state[group] = button.dataset.value ?? '';
+			for (const sibling of document.querySelectorAll<HTMLButtonElement>(
+				`[data-filter="${group}"]`,
+			)) {
+				sibling.setAttribute('aria-pressed', String(sibling === button));
+			}
+			apply();
+		});
+	}
+</script>

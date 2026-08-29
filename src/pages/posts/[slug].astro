@@ -3,43 +3,53 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection('posts')).map((p) => ({
-    params: { slug: p.slug },
-    props: {
-      ...p,
-      data: { ...p.data, date: new Date(p.data.date).getTime() },
-      render: p.render,
-    },
-  }));
-
-  return posts;
+	const posts = await getCollection('posts');
+	return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
 }
-const { props: post, params } = Astro;
+
+const { post } = Astro.props;
 const { Content } = await post.render();
+const isDashboard = post.data.cssclasses?.includes('dashboard') ?? false;
+
+/**
+ * A meta description taken from the note's own opening prose. Not perfect for
+ * every note — some open on a table — but it beats no description at all,
+ * which is what every one of these pages shipped with before.
+ */
+function summarise(body: string | undefined): string | undefined {
+	// Some notes are deliberately empty stubs; there is nothing to summarise.
+	if (!body) return undefined;
+	const line = body
+		.split(/\n/)
+		.map((l) => l.trim())
+		.find(
+			(l) =>
+				l.length > 40 &&
+				!l.startsWith('#') &&
+				!l.startsWith('|') &&
+				!l.startsWith('<') &&
+				!l.startsWith('!') &&
+				!l.startsWith('```'),
+		);
+	if (!line) return undefined;
+	const plain = line
+		.replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
+		.replace(/[*_`>]/g, '')
+		.replace(/<br\s*\/?>/gi, ' ')
+		.replace(/\s+/g, ' ')
+		.trim();
+	return plain.length > 180 ? `${plain.slice(0, 177).trimEnd()}…` : plain;
+}
 ---
 
-<BaseLayout title={post.data.title}>
-  {!post.data?.cssclasses && <h1>{post.data.title}</h1>}
-  <div
-    class={`flex flex-col self-center w-full max-w-[700px] ${post.data?.cssclasses?.join(' ')}`}
-  >
-    {
-      !post.data?.cssclasses && (
-        <span class="date-placeholder my-3 self-end">{post.data.date}</span>
-      )
-    }
-    <Content />
-  </div>
+<BaseLayout
+	title={post.data.title}
+	description={summarise(post.body)}
+	lang={post.data.lang}
+	date={post.data.date}
+	cssclasses={post.data.cssclasses ?? []}
+	wide={isDashboard}
+	showTitle={!isDashboard}
+>
+	<Content />
 </BaseLayout>
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const datePlaceholders = document.querySelectorAll('.date-placeholder');
-    [...datePlaceholders].forEach((placeholder: Element) => {
-      placeholder.textContent = new Intl.DateTimeFormat(
-        navigator.languages[0],
-        { dateStyle: 'full' },
-      ).format(new Date(Number(placeholder.textContent)));
-    });
-  });
-</script>

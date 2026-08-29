@@ -1,6 +1,7 @@
 ---
 title: Mojenn war-giz
 date: 2025-06-02
+lang: br
 ---
 # Ur vojenn war-giz: ganidigezh an homo sinister
 

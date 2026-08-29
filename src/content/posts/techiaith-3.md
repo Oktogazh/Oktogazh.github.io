@@ -1,6 +1,7 @@
 ---
 title: "Ymarferol 3: Text to Speech"
 date: 2025-04-05
+lang: en
 ---
 # 1 Try different models
 I tried different language with different vocoder. All vocoders  tried worsen the quality of the output, but many yielded the following mistake:

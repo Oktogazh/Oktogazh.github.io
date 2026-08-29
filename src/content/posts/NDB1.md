@@ -1,6 +1,7 @@
 ---
 title: Notre-Dame Bigoudenn C1
 date: 2025-04-26
+lang: fr
 ---
 - Paol, votre dîner est sur la table.
 Les cloches des Carmes avaient sonné l'angélus. La

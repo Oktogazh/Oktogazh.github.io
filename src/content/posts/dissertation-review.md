@@ -1,11 +1,12 @@
 ---
 title: Outstanding Dissertation Review
 date: 2025-01-01
+lang: en
 cssclasses:
   - academic
 ---
 This review focuses on [this M.Sc. dissertation](../assets/outstanding-dissertation.pdf). (876 words)
-<!-- [export version](dis-rev-exp.md) -->
+<!-- [export version](/posts/dis-rev-exp) -->
 
 # Introduction
 The dissertation stated goal is to confirm or disprove the hypothesis that the base language used to make speech-to-text models through transfer learning influences the performance of the models. This hypothesis means that phonetic similarities between the base and target languages influence the models' performance. If this proves to be true, the metrics correlating with accuracy improvements could help to optimize the base languages choice for different target languages in transfer learning for speech-to-text.  

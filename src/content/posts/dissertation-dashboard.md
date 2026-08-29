@@ -1,6 +1,7 @@
 ---
 title: Dissertation Dashboard
 date: 2025-06-20
+lang: en
 cssclasses:
   - dashboard
 ---

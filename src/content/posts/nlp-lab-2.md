@@ -1,6 +1,7 @@
 ---
 title: NLP Lab 2
 date: 2025-02-19
+lang: en
 ---
 
 ![](../assets/nlp-lab-2.pdf)
@@ -332,9 +333,9 @@ Pierre/NNP Vinken/NNP ,/, 61/CD years/NNS old/JJ ,/, will/MD join/VB as/IN Nov./
 """
 
 ```
-![[../assets/nlp-synt-tree1.png]]
-![[../assets/nlp-synt-tree2.png]]
-![[nlp-synt-tree3.png]]
+![nlp synt tree1](../assets/nlp-synt-tree1.png)
+![nlp synt tree2](../assets/nlp-synt-tree2.png)
+![nlp synt tree3](../assets/nlp-synt-tree3.png)
 As I initially struggled to get tkinter working, I added a `pretty_print` of the tree to render them in the terminal. Those pretty print are not ideal because they show the noun phrase at the end of the tree. One important thing to notice about the chunks made by the simple grammar `"NP: {<DT>?<JJ>*<NN>+}"` is that they will not take into a plurial nouns (NNS) nor proper nouns (NNP) like "God" in the second sentence above. This underscore the importance of intensive testing in the field of NLP, as rules are not always so straightforward as one might think.  
 # 2.5 Bluild an advanced chunker
 

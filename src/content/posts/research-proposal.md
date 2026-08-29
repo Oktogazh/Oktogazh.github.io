@@ -1,6 +1,7 @@
 ---
 title: Fast and Versatile Vocabulary Test
 date: 2025-01-14
+lang: en
 cssclasses:
   - academic
 ---

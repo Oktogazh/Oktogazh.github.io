@@ -1,6 +1,7 @@
 ---
 date: 2026-08-24
-title: meurgorf
+lang: br
+title: Notennoù war Meurgorf
 ---
 # Ger pouezañ toniet/didon
 Hag-eñ eo ur rummad ger gwirion hennezh? Laosket eo bet a-gostez.

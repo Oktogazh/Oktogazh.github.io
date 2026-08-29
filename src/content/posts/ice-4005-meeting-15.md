@@ -1,6 +1,7 @@
 ---
 title: ICE-4005 - Meeting 15 Understanding the prototype
 date: 2025-02-20
+lang: en
 ---
 # Work achieved
 The beginning of the week was marked by a focus on trying to better understand LSTM achitecture, its inputs and outputs shapes. I started to use the [library spylls](https://pypi.org/project/spylls/) to extract the lemmas from hunspell dictionary. Although I now think that Hunspell is better used as a spellchecker (to remove the real words from the pseudowords produced) rather than to obtain a clear lemma list for a given language.

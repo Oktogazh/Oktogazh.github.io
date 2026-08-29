@@ -1,6 +1,7 @@
 ---
 title: NLP Lab 3
 date: 2025-03-19
+lang: en
 ---
 > The repository for this class can be found [here on GitHub](https://github.com/Oktogazh/NLP/tree/master/Lab_03).
 # Exercise 3.1 Comparing Spacy and NLTK

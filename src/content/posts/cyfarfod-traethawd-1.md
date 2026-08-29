@@ -1,6 +1,7 @@
 ---
 title: "Meeting 1: Research Proposal Feedback"
 date: 2025-06-10
+lang: en
 ---
 # 1. Demo of the testing interface
 1. I made a small demo of the front end test to show the general behavior of the model.  

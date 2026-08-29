@@ -1,6 +1,7 @@
 ---
 title: "Ymarferol 4: Speech Recognition"
 date: 2025-03-25
+lang: en
 ---
 # 1 Start Using transcription Models
 ## 1.1 Youtube video transcription
@@ -21,7 +22,7 @@ As I happened to have a harp under my hand when doing this practical, made my ow
 
 ![](../assets/spectrogramm.png)
 And here is the mel spectrogram generated with python. 
-![[../assets/mel-arpeggio.png]]
+![mel arpeggio](../assets/mel-arpeggio.png)
 I don't see any striking difference between the two. The only difference seems to be the absence of frequencies higher than 4096Hz, which is commonly called a low-pass filter in acoustic this may be related to the lower sampling rate of 16 000 which erases higher pitches.
 
 # 2 Fine-tuning a model

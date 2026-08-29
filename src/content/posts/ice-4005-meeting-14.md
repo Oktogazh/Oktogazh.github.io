@@ -1,6 +1,7 @@
 ---
 title: ICE-4005 - Meeting 14 Prototyping
 date: 2025-02-10
+lang: en
 ---
 # Work achieved
 After starting to read the book previously mentioned, I understood that I could use [Keris](https://keras.io/) as wrapper for torch (because of its straightforward API) to chain an embedding layer with  LSTM layers to train a models to predict the next characters for my sequences of characters.

@@ -1,5 +1,6 @@
 ---
 date: 2025-01-06
+lang: en
 title: ICE-4005 - Meeting 10
 ---
 ## Work Report

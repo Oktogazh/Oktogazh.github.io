@@ -1,5 +1,6 @@
 ---
 date: 2024-12-02
+lang: en
 title: ICE-4005 - Meeting 6
 ---
 ## Meeting

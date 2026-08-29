@@ -1,6 +1,7 @@
 ---
 title: Dissertation Ideas
 date: 2025-06-12
+lang: en
 ---
 # Key concepts
 

@@ -1,6 +1,7 @@
 ---
 title: Suzanne (Leonard Cohen)
 date: 2025-05-04
+lang: br
 ---
 
 | Saozneg                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Brezhoneg                                                                                                                                                                                                                                                                                                                                                                                               |

@@ -3,6 +3,7 @@ cssclasses:
   - dashboard
 title: ICE-4005 Generalist Mini-project Dashboard
 date: 2024-12-27
+lang: en
 ---
 # ICE-4005 Generalist Mini-project Dashboard
 
@@ -25,7 +26,7 @@ date: 2024-12-27
 	- [meeting 10](ice-4005-meeting-10)
 	- [meeting 9](ice-4005-meeting-9)
 	- (Xmas break)
-	- [meeting 8](ice-4005-meeting-8.md)
+	- [meeting 8](/posts/ice-4005-meeting-8)
 	- [meeting 7](ice-4005-meeting-7)
 	- [meeting 6](ice-4005-meeting-6)
 	- [meeting 5](ice-4005-meeting-5)

@@ -1,6 +1,7 @@
 ---
 title: NLP Lab 4
 date: 2025-04-09
+lang: en
 ---
 > The repository for this class can be found [here on GitHub](https://github.com/Oktogazh/NLP/tree/master/Lab_04).
 # Exercise 4.1: load the dataset

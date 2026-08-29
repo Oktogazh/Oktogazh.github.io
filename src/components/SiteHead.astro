@@ -1,0 +1,80 @@
+---
+/**
+ * Every <head> on the site, in one place. Before this existed the landing page
+ * shipped with no <title> at all, so a share on LinkedIn rendered a bare URL.
+ */
+import { ALT_LOCALES, DEFAULT_LOCALE, homeHref, type Locale } from '@/i18n';
+
+import '@/style/fonts.css';
+import '@/style/tokens.css';
+
+interface Props {
+	title: string;
+	description?: string;
+	locale?: Locale;
+	/** Emit hreflang alternates. Only the landing page is actually translated. */
+	translated?: boolean;
+	image?: string;
+	type?: 'website' | 'article';
+}
+
+const {
+	title,
+	description = '',
+	locale = DEFAULT_LOCALE,
+	translated = false,
+	image = '/assets/og-card.png',
+	type = 'website',
+} = Astro.props;
+
+const site = Astro.site ?? new URL('https://oktogazh.github.io');
+const canonical = new URL(Astro.url.pathname, site);
+const imageUrl = new URL(image, site);
+---
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>{title}</title>
+{description && <meta name="description" content={description} />}
+<link rel="canonical" href={canonical.href} />
+
+<meta property="og:type" content={type} />
+<meta property="og:title" content={title} />
+{description && <meta property="og:description" content={description} />}
+<meta property="og:url" content={canonical.href} />
+<meta property="og:image" content={imageUrl.href} />
+<meta property="og:site_name" content="Alan Kersaudy" />
+<meta property="og:locale" content={locale} />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+{description && <meta name="twitter:description" content={description} />}
+<meta name="twitter:image" content={imageUrl.href} />
+
+{
+	translated && (
+		<>
+			<link rel="alternate" hreflang={DEFAULT_LOCALE} href={new URL(homeHref(DEFAULT_LOCALE), site).href} />
+			{ALT_LOCALES.map((l) => (
+				<link rel="alternate" hreflang={l} href={new URL(homeHref(l), site).href} />
+			))}
+			<link rel="alternate" hreflang="x-default" href={new URL(homeHref(DEFAULT_LOCALE), site).href} />
+		</>
+	)
+}
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#f4f2ec" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#0e1210" />
+
+{/* Applies a saved theme before first paint, so the page never flashes the wrong one. */}
+<script is:inline>
+	(function () {
+		try {
+			var t = localStorage.getItem('theme');
+			if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t;
+		} catch (e) {
+			/* private mode, blocked storage — the media query still decides */
+		}
+	})();
+</script>

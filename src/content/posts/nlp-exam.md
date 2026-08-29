@@ -1,6 +1,7 @@
 ---
 title: NLP final exam
 date: 2025-05-20
+lang: en
 ---
 **1. Discuss the characteristics of Natural Language that makes it difficult to process, especially considering the material that has been covered in lectures and labs for this module. Also explain the ramifications for each characteristic when it comes to implementing Natural Language Processing systems.**
 Several features of natural languages (NL) can make them both a fascinating field of research and challenging problems at the same time

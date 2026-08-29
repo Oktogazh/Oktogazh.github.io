@@ -1,0 +1,156 @@
+/*
+ * The site's one design system. Shared by the landing page, the note pages and
+ * the dashboard, so the shopfront and the notebook read as one thing.
+ *
+ * Two palettes, chosen deliberately:
+ *   light — "gwenn-ha-du": unbleached paper, true black type, an Iroise teal
+ *           for links and structure, and madder red spent exactly once.
+ *   dark  — "terminal celtic": green-black rather than navy, warm off-white
+ *           type, ochre in place of the madder (red does not hold on that ground).
+ *
+ * Three theme states, not two. A viewer who has chosen stamps data-theme on
+ * <html>; the default "system" setting stamps nothing, so prefers-color-scheme
+ * is the only signal. Every colour is defined on bare :root first and only
+ * REdefined in the two dark blocks — never defined for the first time inside
+ * one, which is the bug that renders one theme's text on the other's ground.
+ */
+
+:root {
+	/* ---- gwenn-ha-du (light) ---- */
+	--ground: #f4f2ec;
+	--surface: #fbfaf7;
+	--sunken: #eae6da;
+	--ink: #14140f;
+	--ink-soft: #4c4e47;
+	--ink-faint: #6a6c62;
+	--rule: #d7d3c5;
+	--rule-soft: #e6e2d6;
+	--accent: #1f5c6b;
+	--accent-hover: #123c47;
+	--accent-wash: #e2ebec;
+	--hot: #b5232c;
+	--selection: #d5e4e5;
+
+	/* ---- type ---- */
+	--font-display: 'Newsreader', 'Iowan Old Style', Georgia, 'Times New Roman',
+		serif;
+	--font-ui: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, sans-serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, Consolas,
+		monospace;
+
+	/* ---- measure & rhythm ---- */
+	--measure: 68ch;
+	--page: 68rem;
+	--gutter: clamp(1.25rem, 4vw, 3rem);
+
+	color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme='light']) {
+		/* ---- terminal celtic (dark) ---- */
+		--ground: #0e1210;
+		--surface: #161b18;
+		--sunken: #1c221e;
+		--ink: #e9e7de;
+		--ink-soft: #a4ab9e;
+		--ink-faint: #868e80;
+		--rule: #2a302b;
+		--rule-soft: #1f251f;
+		--accent: #6fbfb2;
+		--accent-hover: #8fd4c8;
+		--accent-wash: #17231f;
+		--hot: #d9a441;
+		--selection: #1f3a35;
+
+		color-scheme: dark;
+	}
+}
+
+:root[data-theme='dark'] {
+	--ground: #0e1210;
+	--surface: #161b18;
+	--sunken: #1c221e;
+	--ink: #e9e7de;
+	--ink-soft: #a4ab9e;
+	--ink-faint: #868e80;
+	--rule: #2a302b;
+	--rule-soft: #1f251f;
+	--accent: #6fbfb2;
+	--accent-hover: #8fd4c8;
+	--accent-wash: #17231f;
+	--hot: #d9a441;
+	--selection: #1f3a35;
+
+	color-scheme: dark;
+}
+
+/* ------------------------------------------------------------------ base */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--ground);
+	color: var(--ink);
+	font-family: var(--font-ui);
+	font-size: 1rem;
+	line-height: 1.6;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+	background: var(--selection);
+}
+
+a {
+	color: var(--accent);
+	text-decoration-thickness: 1px;
+	text-underline-offset: 2px;
+}
+a:hover {
+	color: var(--accent-hover);
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent);
+	outline-offset: 2px;
+	border-radius: 2px;
+}
+
+img,
+svg,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Dictionary-style abbreviation: the short form is printed, the long form is
+   revealed on hover and read out by screen readers. Same {short, long} model
+   the Leksis lexicon uses for its labels. */
+abbr[title] {
+	text-decoration: none;
+	border-bottom: 1px dotted currentColor;
+	cursor: help;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.001ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.001ms !important;
+		scroll-behavior: auto !important;
+	}
+}

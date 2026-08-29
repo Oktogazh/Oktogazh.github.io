@@ -1,6 +1,7 @@
 ---
 title: "Meeting 2: Ethical Approval"
 date: 2025-06-20
+lang: en
 ---
 [Previous Meeting](cyfarfod-traethawd-1) (Research Proposal Feedback)
 

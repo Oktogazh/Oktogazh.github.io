@@ -1,5 +1,6 @@
 ---
 date: 2025-01-20
+lang: en
 title: ICE-4005 - Meeting 12 (learning MAXENT)
 ---
 ## Work Report

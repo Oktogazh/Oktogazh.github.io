@@ -1,6 +1,7 @@
 ---
 title: Deallwydd Sgyrsiol
 date: 2025-05-29
+lang: cy
 ---
 ## 1.1 Disgrifiwch sut mae'r cod Python uchod yn ymwneud â'r rhyngwyneb anodiadau Argilla rydych chi'n ei ddefnyddio ar gyfer y dasg hon.
 

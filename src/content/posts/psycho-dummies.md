@@ -1,6 +1,7 @@
 ---
 title: Psychometrics for Dummies
 date: 2025-07-21
+lang: en
 ---
 This is the fruit of a conversation with anthropic's Claude Sonnet 4 about my understanding of construct validity theory, the full conversation can be found here: https://claude.ai/share/9431da90-8f03-4411-b9fb-fd91fb5e0280
 # Rethinking Psychometric Science: From Fragmentation to Theoretical Integration

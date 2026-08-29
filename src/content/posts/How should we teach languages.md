@@ -1,5 +1,6 @@
 ---
 date: 2024-12-13
+lang: en
 title: How should we teach languages
 ---
 - acquiring vocabulary and grammar is key, the medium does not realy matter

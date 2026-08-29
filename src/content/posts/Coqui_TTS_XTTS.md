@@ -1,5 +1,6 @@
 ---
 date: 2026-03-29
+lang: br
 title: Coqui TTS + XTTS
 ---
 # Kenarroud

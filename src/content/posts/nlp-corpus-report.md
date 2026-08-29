@@ -1,6 +1,7 @@
 ---
 title: NLP Corpus Report
 date: 2025-05-02
+lang: en
 ---
 # Introduction
 This corpus is a pair of books, the first in Breton "Itron Varia Garmez" (IVG), and its French autotranslation made by the author "Notre-Dame Bigoudène" (NDB). The books were originally published in the 1930-40s and are still protected by copyrights, so there is no legal digitalized version available online. Being in possession of the two books, I thought of scanning, cleaning and alinging the sentences of the books to create a parallel corpus (with the sentences order shuffled to ensure copyright compliance) that could be used to train and test machine translation models. Breton language being a language classed by the UNESCO as endangered, this kind of corpora bring a great value to the speaking community through the improvement they bring to these NLP tools and support the develpment and visibility of the language. Note that, unlike English and French, Breton language does not have dedicated modules in NLTK, spacy or other libraries, including the OCR libraries that I could otherwise have use below. Essentially, working with low resources languages forces use to be imaginative, but at least with the reward of knowing that no one else would have done the same thing elsewhere. But as we'll see, everything did not go as smoothly as expected. As usual, the whole code for this project is available on [Github](https://github.com/Oktogazh/NLP/tree/master/Corpus).

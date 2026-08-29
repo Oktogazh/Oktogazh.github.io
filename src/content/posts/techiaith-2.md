@@ -1,6 +1,7 @@
 ---
 title: "Ymarferol 2: Machine Translation"
 date: 2025-03-11
+lang: en
 ---
 # 1 Using Machine Translation Models
 ## 1.1 The transformer architecture

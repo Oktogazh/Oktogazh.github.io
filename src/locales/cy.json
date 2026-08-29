@@ -1,0 +1,168 @@
+{
+  "meta": {
+    "title": "Alan Kersaudy — Deallusrwydd artiffisial a thechnoleg iaith",
+    "description": "Technoleg iaith ar gyfer y Llydaweg, y Gymraeg ac ieithoedd eraill sydd heb ddigon o ddata — corpora, cyfieithu peirianyddol, lleferydd, geiriaduraeth — a deallusrwydd artiffisial cymhwysol sy'n cyrraedd y cam cynhyrchu.",
+    "localeName": "Cymraeg",
+    "skipToContent": "Neidio i'r cynnwys"
+  },
+  "nav": {
+    "services": "Gwasanaethau",
+    "work": "Gwaith",
+    "labs": "Labordai",
+    "about": "Amdanaf i",
+    "contact": "Cysylltu",
+    "notebook": "Llyfr nodiadau",
+    "menu": "Dewislen",
+    "close": "Cau",
+    "theme": "Newid y thema",
+    "language": "Iaith"
+  },
+  "entry": {
+    "headword": "Kersaudy, Alan",
+    "pronunciation": "/kɛʁ.so.di/",
+    "posShort": "e.pr.",
+    "posLong": "enw priod",
+    "senses": [
+      {
+        "labelShort": "ieith.",
+        "labelLong": "ieithyddiaeth",
+        "text": "Technoleg iaith ar gyfer yr ieithoedd y mae'r modelau mawr yn eu hanghofio — Llydaweg, Cymraeg, a phopeth arall sydd heb gorpws."
+      },
+      {
+        "labelShort": "D.A.",
+        "labelLong": "deallusrwydd artiffisial",
+        "text": "Deallusrwydd artiffisial cymhwysol sy'n cyrraedd y cam cynhyrchu: adalw, llifoedd gwaith modelau iaith mawr, gwerthuso, a'r llywodraethu o'u cwmpas."
+      },
+      {
+        "labelShort": "gwe",
+        "labelLong": "gwe a pheirianneg meddalwedd",
+        "text": "Meddalwedd wedi'i hadeiladu i'w rhyddhau — platfformau SaaS, APIs, modelau data, rhoi ar waith."
+      },
+      {
+        "labelShort": "addys.",
+        "labelLong": "addysgeg",
+        "text": "Addysgu a chynllunio addysgol, o ddiwrnod hyfforddi hyd at system ddysgu addasol."
+      }
+    ],
+    "ctaPrimary": "Gweithio gyda mi",
+    "ctaSecondary": "Darllen y llyfr nodiadau"
+  },
+  "services": {
+    "title": "Gwasanaethau",
+    "subtitle": "Beth mae'r pedair ystyr hynny'n ei olygu yn ymarferol.",
+    "blocks": [
+      {
+        "title": "Technoleg iaith",
+        "items": [
+          "Corpora ar gyfer ieithoedd llai eu hadnoddau: casglu, OCR, glanhau, anodi.",
+          "Cyfieithu peirianyddol, syntheseiddio ac adnabod lleferydd — mireinio modelau, a gwerthuso'n onest beth ddaeth allan.",
+          "Gwiryddion sillafu, gwiryddion gramadeg, a'r seilwaith geiriadurol oddi tanynt."
+        ]
+      },
+      {
+        "title": "Deallusrwydd artiffisial cymhwysol",
+        "items": [
+          "Piblinellau adalw, llifoedd gwaith modelau iaith mawr, asiantau, a fframweithiau gwerthuso sy'n dal atchweliadau cyn i'ch defnyddwyr eu dal.",
+          "Strategaeth deallusrwydd artiffisial i arweinwyr: cynlluniau mabwysiadu, asesu gallu, adeiladu neu brynu.",
+          "Llywodraethu, polisi a risg — gan gynnwys beth mae Deddf Deallusrwydd Artiffisial yr UE yn ei ofyn gennych chi mewn gwirionedd."
+        ]
+      },
+      {
+        "title": "Peirianneg meddalwedd",
+        "items": [
+          "Platfformau SaaS o'r dechrau i'r diwedd: model data, API, rhyngwyneb, taliadau.",
+          "Integreiddio â'r systemau rydych chi'n eu rhedeg yn barod, yn hytrach nag wrth eu hymyl.",
+          "CI/CD, rhoi ar waith, a'r gwaith di-sglein sy'n cadw peth yn fyw."
+        ]
+      },
+      {
+        "title": "Addysgu a chynllunio addysgol",
+        "items": [
+          "Hyfforddiant i dimau ac addysgwyr, yn Ffrangeg, Saesneg neu Lydaweg.",
+          "Cynllunio cwricwlwm a modelu gwybodaeth.",
+          "Systemau dysgu addasol — a mesur a ddysgon nhw unrhyw beth i unrhyw un."
+        ]
+      }
+    ]
+  },
+  "work": {
+    "title": "Detholiad o waith",
+    "subtitle": "Dau beth rydw i wedi'u hadeiladu ac yn dal i'w cynnal.",
+    "sourceLabel": "ffynhonnell",
+    "projects": [
+      {
+        "name": "Fluens",
+        "kind": "Platfform cyrsiau i ysgolion iaith",
+        "body": "Ar ôl Eienn.bzh, fy nghynnig cyntaf ar blatfform dysgu Llydaweg, fe wnaeth Fluens ei gyffredinoli: CMS lle mae ysgolion a chyhoeddwyr yn awduro eu cyrsiau eu hunain, ap i'r dysgwyr, dadansoddeg, a thanysgrifiadau Stripe. Wedi'i adeiladu o'r dechrau i'r diwedd — Vue 3 gyda Radix, Firebase, ffwythiannau Node.",
+        "tags": ["B2B2C", "SaaS", "CMS", "Taliadau", "O'r dechrau i'r diwedd"]
+      },
+      {
+        "name": "Leksis",
+        "kind": "Geiriadur hollieithog wedi'i dorfoli",
+        "body": "Geiriadur ar gyfer pob iaith yw Leksis, wedi'i adeiladu ar y rhagdybiaeth fod ieithoedd llai eu hadnoddau'n cael eu gwasanaethu'n well gan ddata wedi'i anodi'n ddwys na chan fwy o destun anstrwythuredig. Mae cyfranwyr yn cyhoeddi cofnodion, ystyron, cyfieithiadau, cytrasau, ffynonellau a pharadeimau ffurfdroi fel recordiau wedi'u llofnodi ar eu storfa AT Protocol eu hunain; mae AppView yn eu mynegeio mewn graff y gellir ei dramwyo ar gyfer cyfieithu anuniongyrchol, a'i allforio'n eiriaduron gwirio sillafu, yn gof cyfieithu neu'n ddata hyfforddi. Does neb yn berchen ar gofnod — mae record yn profi awduraeth, nid perchnogaeth, ac mae pob fersiwn yn cael ei gadw.",
+        "tags": [
+          "AT Protocol",
+          "Cronfeydd data graff",
+          "Geiriaduraeth gyfrifiadurol",
+          "NLP ieithoedd llai eu hadnoddau",
+          "Cod agored"
+        ]
+      }
+    ]
+  },
+  "labs": {
+    "title": "Labordai technoleg iaith",
+    "subtitle": "Arbrofion agored ar ieithoedd sydd heb ddigon o ddata. Methodd sawl un ohonyn nhw; mae'r methiannau wedi'u cofnodi hefyd.",
+    "items": [
+      {
+        "name": "Miniclone",
+        "body": "Piblinell adalw fach wedi'i hyfforddi ar fy ngwaith ysgrifennu fy hun. Gofynnwch iddi amdanaf i, a gwelwch pa mor bell mae'n cyrraedd."
+      },
+      {
+        "name": "LanguageTool (Cymraeg)",
+        "body": "Fy fforc i o'r gwirydd gramadeg cod agored, yn ychwanegu rheolau a geiriaduron Cymraeg."
+      },
+      {
+        "name": "Cyfieithu Llydaweg–Ffrangeg",
+        "body": "Mireinio a gwerthuso model cyfieithu ar gorpws cyfochrog a luniais i drwy sganio nofelau."
+      }
+    ],
+    "link": "Darllen y nodiadau"
+  },
+  "about": {
+    "title": "Amdanaf i",
+    "portraitAlt": "Portread o Alan Kersaudy, wedi'i ddarlunio mewn arddull Ghibli",
+    "bio": "Rwy'n gweithio lle mae ieithyddiaeth, addysgeg a meddalwedd yn cwrdd. Mae'r rhan fwyaf o'm hamser yn mynd i ieithoedd na chafodd cyfrifiaduron erioed eu hadeiladu ar eu cyfer — Llydaweg, Cymraeg — am fod y problemau yno'n anos, a bod yr offer sy'n dod ohonyn nhw'n well yn y diwedd. Mae'r gweddill yn mynd i helpu sefydliadau i ddefnyddio deallusrwydd artiffisial heb brynu rhywbeth nad ydyn nhw'n gallu ei gynnal.",
+    "points": [
+      "Ymgynghorydd annibynnol, yn gweithio yn Llydaweg, Cymraeg, Ffrangeg a Saesneg",
+      "MSc Technoleg Iaith, Prifysgol Bangor",
+      "Wrthi'n adeiladu Leksis, geiriadur hollieithog ar AT Protocol",
+      "Dysgu deallusrwydd artiffisial a thechnoleg iaith i dimau ac addysgwyr"
+    ]
+  },
+  "contact": {
+    "title": "Cysylltu",
+    "subtitle": "Ymgynghori, cydweithio, neu sgwrs — e-bost yw'r cyflymaf.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "malt": "Malt",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "Cedwir pob hawl.",
+    "colophon": "Wedi'i ysgrifennu yn Obsidian, wedi'i gyhoeddi gydag Astro."
+  },
+  "notebook": {
+    "title": "Llyfr nodiadau",
+    "intro": "Zettelkasten a gedwir yn agored, mewn pedair iaith. Cyfieithiadau a barddoniaeth yn Llydaweg, traethodau yn Gymraeg, a nodiadau gwaith ar dechnoleg iaith — corpora, cyfieithu peirianyddol, lleferydd, geiriaduraeth — a'r rhan fwyaf ohonyn nhw wedi'u hysgrifennu tra oedd y gwaith yn dal i fynd o chwith.",
+    "recent": "Yn ddiweddar",
+    "allNotes": "Pob nodiad",
+    "index": "Mynegai",
+    "backToNotebook": "Yn ôl i'r llyfr nodiadau",
+    "noteCount": "nodiadau",
+    "filterLanguage": "Iaith",
+    "filterAll": "Pob un",
+    "filterYear": "Blwyddyn",
+    "empty": "Does dim nodiadau'n cyfateb i'r hidlyddion hynny."
+  }
+}

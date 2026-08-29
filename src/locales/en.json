@@ -1,1 +1,168 @@
-{}
+{
+  "meta": {
+    "title": "Alan Kersaudy — AI & language technology",
+    "description": "Language technology for Breton, Welsh and other languages without enough data — corpora, machine translation, speech, lexicography — and applied AI that reaches production.",
+    "localeName": "English",
+    "skipToContent": "Skip to content"
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Work",
+    "labs": "Labs",
+    "about": "About",
+    "contact": "Contact",
+    "notebook": "Notebook",
+    "menu": "Menu",
+    "close": "Close",
+    "theme": "Switch theme",
+    "language": "Language"
+  },
+  "entry": {
+    "headword": "Kersaudy, Alan",
+    "pronunciation": "/kɛʁ.so.di/",
+    "posShort": "n. pr.",
+    "posLong": "proper noun",
+    "senses": [
+      {
+        "labelShort": "ling.",
+        "labelLong": "linguistics",
+        "text": "Language technology for the languages large models forget — Breton, Welsh, and everything else without a corpus."
+      },
+      {
+        "labelShort": "A.I.",
+        "labelLong": "artificial intelligence",
+        "text": "Applied AI that reaches production: retrieval, LLM workflows, evaluation, and the governance around them."
+      },
+      {
+        "labelShort": "web",
+        "labelLong": "web & software engineering",
+        "text": "Software built to ship — SaaS platforms, APIs, data models, deployment."
+      },
+      {
+        "labelShort": "pedag.",
+        "labelLong": "pedagogy",
+        "text": "Teaching and instructional design, from a training day to an adaptive learning system."
+      }
+    ],
+    "ctaPrimary": "Work with me",
+    "ctaSecondary": "Read the notebook"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "What those four senses mean in practice.",
+    "blocks": [
+      {
+        "title": "Language technology",
+        "items": [
+          "Corpora for low-resource languages: collection, OCR, cleaning, annotation.",
+          "Machine translation, speech synthesis and recognition — fine-tuning, and honest evaluation of what came out.",
+          "Spellcheckers, grammar checkers, and the lexicographic infrastructure underneath them."
+        ]
+      },
+      {
+        "title": "Applied AI",
+        "items": [
+          "Retrieval pipelines, LLM workflows, agents, and evaluation harnesses that catch regressions before your users do.",
+          "AI strategy for leadership: adoption roadmaps, capability assessment, build-or-buy.",
+          "Governance, policy and risk — including what the EU AI Act actually asks of you."
+        ]
+      },
+      {
+        "title": "Software engineering",
+        "items": [
+          "SaaS platforms end to end: data model, API, interface, payments.",
+          "Integration with the systems you already run, rather than beside them.",
+          "CI/CD, deployment, and the unglamorous work that keeps a thing alive."
+        ]
+      },
+      {
+        "title": "Teaching & instructional design",
+        "items": [
+          "Training for teams and educators, in French, English or Breton.",
+          "Curriculum design and knowledge modelling.",
+          "Adaptive learning systems — and measuring whether they taught anyone anything."
+        ]
+      }
+    ]
+  },
+  "work": {
+    "title": "Selected work",
+    "subtitle": "Two things I built and still maintain.",
+    "sourceLabel": "source",
+    "projects": [
+      {
+        "name": "Fluens",
+        "kind": "Course platform for language schools",
+        "body": "After Eienn.bzh, my first attempt at a Breton learning platform, Fluens generalised it: a CMS where schools and publishers author their own courses, a learner-facing app, analytics, and Stripe subscriptions. Built end to end — Vue 3 with Radix, Firebase, Node functions.",
+        "tags": ["B2B2C", "SaaS", "CMS", "Payments", "End-to-end"]
+      },
+      {
+        "name": "Leksis",
+        "kind": "Crowdsourced omnilingual dictionary",
+        "body": "Leksis is a dictionary for every language, built on the premise that low-resource languages are better served by densely annotated data than by more unstructured text. Contributors publish entries, senses, translations, cognates, sources and inflection paradigms as signed records on their own AT Protocol repository; an AppView indexes them into a graph that can be traversed for indirect translation and exported as spellchecker dictionaries, translation memory or training data. Nobody owns an entry — a record proves authorship, not ownership, and every version is kept.",
+        "tags": [
+          "AT Protocol",
+          "Graph databases",
+          "Computational lexicography",
+          "Low-resource NLP",
+          "Open source"
+        ]
+      }
+    ]
+  },
+  "labs": {
+    "title": "Language technology labs",
+    "subtitle": "Open experiments on languages that do not have enough data. Several of them failed; the failures are written up too.",
+    "items": [
+      {
+        "name": "Miniclone",
+        "body": "A small retrieval pipeline trained on my own writing. Ask it about me and see how far it gets."
+      },
+      {
+        "name": "LanguageTool (Welsh)",
+        "body": "My fork of the open-source grammar checker, adding Welsh rules and dictionaries."
+      },
+      {
+        "name": "Breton–French translation",
+        "body": "Fine-tuning and evaluating a translation model on a parallel corpus I built by scanning novels."
+      }
+    ],
+    "link": "Read the notes"
+  },
+  "about": {
+    "title": "About",
+    "portraitAlt": "Portrait of Alan Kersaudy, drawn in a Ghibli style",
+    "bio": "I work where linguistics, pedagogy and software meet. Most of my time goes to languages computers were never built for — Breton, Welsh — because the problems there are harder, and the tools that come out of them turn out to be better. The rest goes to helping organisations use AI without buying something they cannot maintain.",
+    "points": [
+      "Independent consultant, working in Breton, Welsh, French and English",
+      "MSc Language Technology, Bangor University",
+      "Building Leksis, an omnilingual dictionary on AT Protocol",
+      "Teaching AI and language technology to teams and educators"
+    ]
+  },
+  "contact": {
+    "title": "Get in touch",
+    "subtitle": "Consulting, collaboration, or a talk — email is fastest.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "malt": "Malt",
+    "github": "GitHub"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "colophon": "Written in Obsidian, published with Astro."
+  },
+  "notebook": {
+    "title": "Notebook",
+    "intro": "A Zettelkasten kept in the open, in four languages. Translations and poetry in Breton, essays in Welsh, and working notes on language technology — corpora, machine translation, speech, lexicography — most of them written while the work was still going wrong.",
+    "recent": "Recently",
+    "allNotes": "All notes",
+    "index": "Index",
+    "backToNotebook": "Back to the notebook",
+    "noteCount": "notes",
+    "filterLanguage": "Language",
+    "filterAll": "All",
+    "filterYear": "Year",
+    "empty": "No notes match those filters."
+  }
+}

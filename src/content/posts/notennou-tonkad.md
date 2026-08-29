@@ -1,6 +1,7 @@
 ---
 title: Notennoù diwar-benn troidigezh "Tonkad ar Yezh"
 date: 2024-12-29
+lang: br
 ---
 Staget am boa gant an droidigezh-se war-dro pemp bloaz zo. Soñj mat am eus en devezhioù hir am boa tremenet e karelloù levraoueg Skol-Veur Aberystwyth. Kreiz ar vakañsoù Nedeleg e oa, pa oan distroet e deroù miz Genver, kalz re abred evit deroù an eil c'hwec'hmiziad. Ne oa netra all d'ober. Sevel a raen da c'hwec'h eur mintin (dorioù al levraoueg a zigor da c'hwec'h eur hanter ma 'm eus soñj mat) evit chom betek unnek eur noz gant ar pal mont war-raok gant an destenn daonet-se. Soñj am eus ivez bezañ kavet ma blev gwenn kentañ d'ar prantad-se, hag evit doare en em santen kozhoc'h e dibenn pep devezh. Mar n'eo na peurvat na mat ma c'hembraeg hiziv an deiz, ho leuskel a ran ijinañ pegen fall e oa da neuze. Daoust d'an amzer tremenet war bep frazenn, da studial stêr hag etimologiezh pep ger nevez n'on ket chomet nes ober fazioù amañ hag a-hont. Gouzout a raen e c'hortoze ma zroidigezh un adlenn don ha didrugar a-raok bezañ embannet e nep stumm. Ha setu me ouzhpenn pevar bloaz war-lerc'h, e kreiz vakañsoù goañv ma mestroniezh e Skol-Veur Bangor, o adkavout soñj el labour peuzechu-mañ hag o tivizout reiñ dezhañ ar striv diwezhañ-se.
 

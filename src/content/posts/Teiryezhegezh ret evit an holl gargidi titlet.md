@@ -1,6 +1,7 @@
 ---
 title: Teiryezhegezh ret evit holl gargidi titlet Unaniezh Europa
 date: 2025-12-09
+lang: br
 ---
 Ofis European dibab ar gargidi (EPSO) a aoz ur genstrivadeg evit tuta kargidi titlet ensavadurioù an Unaniezh.
 Sellet: 

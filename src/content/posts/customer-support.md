@@ -1,6 +1,7 @@
 ---
 title: Evaluating a Customer Support Agent
 date: 2026-01-11
+lang: en
 ---
 # Introduction
 Drawing on the excellent [Ritvikmath's material on LLM evaluation](https://www.youtube.com/watch?v=8m_w3aHoSqE&t=187s), one can classify LLM evaluation in three categories, from more simplicity and determistic processes towards more complexity and stochastic processes. We'll call them the paradigms A, B and C, you can think of them loosely as the three billing plan of a SaaS: good, better and best. But as we'll see, each metric has its strength and paradigm C is far from being a one-size-fits-all solution.

@@ -1,6 +1,7 @@
 ---
 title: LinkedIn Posts
 date: 2026-05-11
+lang: br
 ---
 
 

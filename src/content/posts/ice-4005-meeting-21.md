@@ -1,6 +1,7 @@
 ---
 title: ICE-4005 - Meeting 21 Building the model
 date: 2025-03-24
+lang: en
 ---
 # Work done
 

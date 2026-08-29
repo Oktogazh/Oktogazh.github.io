@@ -1,5 +1,6 @@
 ---
 date: 2026-01-18
+lang: en
 title: Sentiment Analysis
 ---
 In the [previous article](customer-support), we saw how a judge LLM can be used to evaluate the behaviour of an LLM. By reasoning from first principles, we concluded that the delta in user satisfaction between the beginning and the end of a conversation is the best metric to evaluate the quality of our agent. But how to extract this metric in the first place? This is where sentiment analysis come into play.

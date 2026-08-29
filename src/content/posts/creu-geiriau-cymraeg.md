@@ -1,6 +1,7 @@
 ---
 title: Anodd yw creu geiriau Cymraeg
 date: 2025-04-03
+lang: cy
 ---
 Mi orfodaf ddylunio sustem i greu geiriau ffug ar gyfer un o'm modiwlau Meistr Technoleg Iaith yma ym Mhrifysgol Bangor. Gallir dod o hyd y ripo [yma](https://github.com/Oktogazh/sudogen). Erbyn hyn, mae fy sustem yn gallu creu geiriau ffug eithaf credadwy yn Saesneg ac yn Llydaweg. Mae o wedi dysgu beth yw hyd normal gair, beth yw sillafau, sef dodi grwpiau lleisiol a chytseiniol bob yn ail, ac mae hyn yn ddigon i greu geiriau Llydaweg neu Saesneg. Gan un gell LSTM o 32 dimensiwn cudd a 16 dimensiwn gwreiddio yn unig (7 723 o baramedrau, dim ond tua ugain eiliad i'w hyfforddi dros ugain cyfnod) y cafwyd geiriau braf fel y rhain (entropi croes o 2.0576 gan ei set cadarnhau):
 

@@ -1,5 +1,6 @@
 ---
 date: 2024-12-09
+lang: en
 title: Why do we need yet a new testing framework
 ---
 ## Context: automated teaching requires dynamic testing

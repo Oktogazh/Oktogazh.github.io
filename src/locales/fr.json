@@ -1,91 +1,174 @@
 {
-  "hero": {
-    "title1": "AI and Languages Specialist,",
-    "title2": "Educator and Consultant",
-    "subtitle": "AI strategy, applied language technologies, and production-grade systems for organizations and learners.",
-    "cta_primary": "Work with me",
-    "cta_secondary": "View my projects"
+  "meta": {
+    "title": "Alan Kersaudy — IA et technologies de la langue",
+    "description": "Technologies de la langue pour le breton, le gallois et les autres langues qui manquent de données — corpus, traduction automatique, parole, lexicographie — et de l’IA appliquée qui arrive jusqu’en production.",
+    "localeName": "Français",
+    "skipToContent": "Aller au contenu"
+  },
+  "nav": {
+    "services": "Services",
+    "work": "Réalisations",
+    "labs": "Labos",
+    "about": "À propos",
+    "contact": "Contact",
+    "notebook": "Carnet",
+    "menu": "Menu",
+    "close": "Fermer",
+    "theme": "Changer de thème",
+    "language": "Langue"
+  },
+  "entry": {
+    "headword": "Kersaudy, Alan",
+    "pronunciation": "/kɛʁ.so.di/",
+    "posShort": "n. pr.",
+    "posLong": "nom propre",
+    "senses": [
+      {
+        "labelShort": "ling.",
+        "labelLong": "linguistique",
+        "text": "Technologies de la langue pour les langues que les grands modèles oublient — le breton, le gallois, et tout le reste qui n’a pas de corpus."
+      },
+      {
+        "labelShort": "I.A.",
+        "labelLong": "intelligence artificielle",
+        "text": "De l’IA appliquée qui arrive jusqu’en production : recherche d’information, workflows LLM, évaluation, et la gouvernance qui va avec."
+      },
+      {
+        "labelShort": "web",
+        "labelLong": "développement web et logiciel",
+        "text": "Du logiciel fait pour être livré — plateformes SaaS, API, modèles de données, déploiement."
+      },
+      {
+        "labelShort": "pédag.",
+        "labelLong": "pédagogie",
+        "text": "Enseignement et ingénierie pédagogique, d’une journée de formation à un système d’apprentissage adaptatif."
+      }
+    ],
+    "ctaPrimary": "Travailler avec moi",
+    "ctaSecondary": "Lire le carnet"
   },
   "services": {
     "title": "Services",
-    "advisory": {
-      "title": "AI Advisory for Leadership",
-      "item1": "Strategic guidance for C-suite and managers",
-      "item2": "AI governance, policy, and risk management",
-      "item3": "AI adoption roadmaps and capability assessments"
-    },
-    "technical": {
-      "title": "Technical Implementation",
-      "item1": "RAG pipelines, LLM workflows, automation",
-      "item2": "AI-enabled web applications",
-      "item3": "Integration with existing systems"
-    },
-    "learning": {
-      "title": "Learning & Pedagogical Design",
-      "item1": "AI for training and upskilling",
-      "item2": "Adaptive learning systems",
-      "item3": "Applied linguistics expertise"
-    }
+    "subtitle": "Ce que ces quatre acceptions veulent dire en pratique.",
+    "blocks": [
+      {
+        "title": "Technologies de la langue",
+        "items": [
+          "Corpus pour les langues peu dotées : collecte, OCR, nettoyage, annotation.",
+          "Traduction automatique, synthèse et reconnaissance de la parole — fine-tuning, et évaluation honnête de ce qui en sort.",
+          "Correcteurs orthographiques, correcteurs grammaticaux, et l’infrastructure lexicographique qui les porte."
+        ]
+      },
+      {
+        "title": "IA appliquée",
+        "items": [
+          "Pipelines de recherche d’information, workflows LLM, agents, et bancs d’évaluation qui attrapent les régressions avant vos utilisateurs.",
+          "Stratégie IA pour les directions : feuilles de route d’adoption, évaluation des capacités, faire ou acheter.",
+          "Gouvernance, politiques internes et risque — y compris ce que le règlement européen sur l’IA vous demande vraiment."
+        ]
+      },
+      {
+        "title": "Développement logiciel",
+        "items": [
+          "Plateformes SaaS de bout en bout : modèle de données, API, interface, paiements.",
+          "Intégration avec les systèmes que vous faites déjà tourner, plutôt qu’à côté d’eux.",
+          "CI/CD, déploiement, et le travail ingrat qui garde une chose en vie."
+        ]
+      },
+      {
+        "title": "Enseignement et ingénierie pédagogique",
+        "items": [
+          "Formation pour les équipes et les enseignants, en français, en anglais ou en breton.",
+          "Conception de programmes et modélisation des connaissances.",
+          "Systèmes d’apprentissage adaptatif — et mesurer s’ils ont appris quoi que ce soit à qui que ce soit."
+        ]
+      }
+    ]
   },
-  "portfolio": {
-    "title": "Selected Work",
-    "subtitle": "AI, software engineering, and learning systems",
-    "project1": {
-      "title": "AI-driven Language Acquisition Platform",
-      "subtitle": "Fluens/eienn",
-      "description": "[Add technical achievements and key features here]"
-    },
-    "project2": {
-      "title": "Adaptive Vocabulary System",
-      "subtitle": "Leksis - Elo Modeling",
-      "description": "[Add technical achievements and key features here]"
-    },
-    "project3": {
-      "title": "AI Implementation Projects",
-      "subtitle": "Web Development + AI Integration",
-      "description": "[Add relevant projects here]"
-    }
+  "work": {
+    "title": "Réalisations choisies",
+    "subtitle": "Deux choses que j’ai construites et que je maintiens encore.",
+    "sourceLabel": "source",
+    "projects": [
+      {
+        "name": "Fluens",
+        "kind": "Plateforme de cours pour écoles de langues",
+        "body": "Après Eienn.bzh, ma première tentative de plateforme d’apprentissage du breton, Fluens l’a généralisée : un CMS où écoles et éditeurs rédigent leurs propres cours, une application pour les apprenants, des statistiques d’usage, et des abonnements Stripe. Construit de bout en bout — Vue 3 avec Radix, Firebase, fonctions Node.",
+        "tags": [
+          "B2B2C",
+          "SaaS",
+          "CMS",
+          "Paiements",
+          "De bout en bout"
+        ]
+      },
+      {
+        "name": "Leksis",
+        "kind": "Dictionnaire omnilingue contributif",
+        "body": "Leksis est un dictionnaire pour toutes les langues, bâti sur le postulat que les langues peu dotées sont mieux servies par des données densément annotées que par davantage de texte non structuré. Les contributeurs publient entrées, acceptions, traductions, cognats, sources et paradigmes flexionnels sous forme d’enregistrements signés sur leur propre dépôt AT Protocol ; une AppView les indexe dans un graphe que l’on peut parcourir pour de la traduction indirecte et exporter en dictionnaires de correcteurs orthographiques, en mémoires de traduction ou en données d’entraînement. Personne ne possède une entrée — un enregistrement prouve la paternité, pas la propriété, et toutes les versions sont conservées.",
+        "tags": [
+          "AT Protocol",
+          "Bases de données graphe",
+          "Lexicographie computationnelle",
+          "TAL des langues peu dotées",
+          "Open source"
+        ]
+      }
+    ]
   },
   "labs": {
-    "badge": "Research & Development",
-    "title": "Language Technology Labs",
-    "subtitle": "Research and experimentation with minority languages to explore complex NLP challenges",
-    "item1": {
-      "title": "LLM Evaluation",
-      "description": "Low-resource language contexts"
-    },
-    "item2": {
-      "title": "Learning Systems",
-      "description": "Experimentation and prototyping"
-    },
-    "item3": {
-      "title": "Speech & Text",
-      "description": "Processing prototypes"
-    },
-    "link": "Read technical notes and blog posts"
+    "title": "Labos de technologies de la langue",
+    "subtitle": "Expériences ouvertes sur des langues qui n’ont pas assez de données. Plusieurs ont échoué ; les échecs sont documentés aussi.",
+    "items": [
+      {
+        "name": "Miniclone",
+        "body": "Un petit pipeline de recherche entraîné sur mes propres écrits. Posez-lui des questions sur moi et voyez jusqu’où il va."
+      },
+      {
+        "name": "LanguageTool (gallois)",
+        "body": "Mon fork du correcteur grammatical open source, qui ajoute des règles et des dictionnaires gallois."
+      },
+      {
+        "name": "Traduction breton–français",
+        "body": "Fine-tuning et évaluation d’un modèle de traduction sur un corpus parallèle que j’ai constitué en scannant des romans."
+      }
+    ],
+    "link": "Lire les notes"
   },
   "about": {
-    "title": "About",
-    "bio": "I work at the intersection of AI, linguistics, pedagogy, and software engineering. My work spans executive AI advisory, applied LLM engineering, and the development of intelligent learning systems. I combine technical expertise with a deep understanding of human learning and language structure.",
-    "highlight1": "Independent AI consultant",
-    "highlight2": "NLP and small-language R&D",
-    "highlight3": "Creator of Fluens and Leksis",
-    "highlight4": "Web developer and educator"
+    "title": "À propos",
+    "portraitAlt": "Portrait d’Alan Kersaudy, dessiné dans un style Ghibli",
+    "bio": "Je travaille là où la linguistique, la pédagogie et le logiciel se rencontrent. L’essentiel de mon temps va aux langues pour lesquelles les ordinateurs n’ont jamais été conçus — le breton, le gallois — parce que les problèmes y sont plus difficiles, et que les outils qui en sortent se révèlent meilleurs. Le reste va à aider les organisations à utiliser l’IA sans acheter quelque chose qu’elles ne sauront pas maintenir.",
+    "points": [
+      "Consultant indépendant, travaillant en breton, gallois, français et anglais",
+      "MSc en technologies de la langue, université de Bangor",
+      "Construction de Leksis, un dictionnaire omnilingue sur AT Protocol",
+      "Enseignement de l’IA et des technologies de la langue aux équipes et aux enseignants"
+    ]
   },
   "contact": {
-    "title": "Get in Touch",
-    "subtitle": "For consulting, collaboration, or speaking engagements, reach out here.",
-    "form": {
-      "name": "Name",
-      "name_placeholder": "Your name",
-      "email": "Email",
-      "email_placeholder": "your.email@example.com",
-      "message": "Message",
-      "message_placeholder": "Tell me about your project...",
-      "submit": "Send Message"
-    }
+    "title": "Prendre contact",
+    "subtitle": "Conseil, collaboration, ou une conférence — l’e-mail est le plus rapide.",
+    "email": "Email",
+    "linkedin": "LinkedIn",
+    "malt": "Malt",
+    "github": "GitHub"
   },
   "footer": {
-    "copyright": "© 2024 Alan. All rights reserved."
+    "rights": "Tous droits réservés.",
+    "colophon": "Écrit dans Obsidian, publié avec Astro."
+  },
+  "notebook": {
+    "title": "Carnet",
+    "intro": "Un Zettelkasten tenu en public, en quatre langues. Traductions et poésie en breton, essais en gallois, et notes de travail sur les technologies de la langue — corpus, traduction automatique, parole, lexicographie — la plupart écrites pendant que le travail tournait encore mal.",
+    "recent": "Récemment",
+    "allNotes": "Toutes les notes",
+    "index": "Index",
+    "backToNotebook": "Retour au carnet",
+    "noteCount": "notes",
+    "filterLanguage": "Langue",
+    "filterAll": "Toutes",
+    "filterYear": "Année",
+    "empty": "Aucune note ne correspond à ces filtres."
   }
 }

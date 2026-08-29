@@ -1,6 +1,7 @@
 ---
 title: Notes on optimization of the system
 date: 2025-06-28
+lang: en
 ---
 This article focuses on the optimization of the Elo rating system features to improve the testing experience and information extraction during the calibration of the items difficulty ratings.
 # 1 Initial Ratings

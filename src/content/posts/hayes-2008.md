@@ -1,6 +1,7 @@
 ---
 title: A Maximum Entropy Model of Phonotactics and PhonotacticLearning, Bruce Hayes
 date: 2025-01-22
+lang: en
 ---
 [Link](https://brucehayes.org/papers/HayesAndWilsonPhonotactics2008.pdf)
 
