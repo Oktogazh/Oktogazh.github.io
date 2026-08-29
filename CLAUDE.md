@@ -145,6 +145,14 @@ Node 22, npm 10. The site config lives in `astro.config.mjs`: `build.format: 'fi
 
 - **Edit freely. Commit only when Alan asks. Never push on your own** — a push to
   `master` is a deployment.
+- **Claude's shell cannot push, and has no git identity.** It runs in an isolated Linux
+  VM with no GitHub credentials, no `gh`, no SSH key and no keychain access. Commit
+  with `git -c user.name="Alan Kersaudy" -c user.email="alan.kersaudy@gmail.com"`, then
+  ask Alan to run `git push` in his own terminal.
+- **Deletion is disabled in the mounted folder by default, and that breaks git**: it
+  cannot remove `.git/index.lock`, so the next git write fails with
+  `Unable to create '.git/index.lock': File exists`. Request delete permission for the
+  repo root, then `rm -f .git/index.lock`.
 - When asked to commit: run `npm run build` first, stage only the files relevant to the
   change, and write a message in the repo's existing style (`add:`, `fix:`, `update:`,
   `restore:`, sometimes scoped like `add(HomePage):`).
