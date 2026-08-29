@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Alan Kersaudy — Naouegezh artifisiel ha teknologiezh ar yezhoù",
-    "description": "Teknologiezh ar yezhoù evit ar brezhoneg, ar c'hembraeg ha yezhoù all hep roadennoù a-walc'h — korpusoù, troidigezh dre ardivink, komz, geriadurouriezh — ha naouegezh artifisiel arloet a erru e servij.",
+    "title": "Alan Kersaudy — Intent artifisiel ha teknologiezh ar yezhoù",
+    "description": "Teknologiezh ar yezhoù evit ar brezhoneg, ar c'hembraeg ha yezhoù all hep roadennoù a-walc'h — korpusoù, troidigezh dre ardivink, komz, geriadurouriezh — ha intent artifisiel arloet a erru e servij.",
     "localeName": "Brezhoneg",
     "skipToContent": "Mont d'an endalc'had"
   },
@@ -20,8 +20,8 @@
   "entry": {
     "headword": "Kersaudy, Alan",
     "pronunciation": "/kɛʁ.so.di/",
-    "posShort": "ak.",
-    "posLong": "anv-kadarn",
+    "posShort": "ad.",
+    "posLong": "anv divoutin",
     "senses": [
       {
         "labelShort": "yezh.",
@@ -30,8 +30,8 @@
       },
       {
         "labelShort": "N.A.",
-        "labelLong": "naouegezh artifisiel",
-        "text": "Naouegezh artifisiel arloet a erru e servij: adkavout titouroù, redoù labour LLM, priziañ, hag ar gouarnerezh en-dro dezho."
+        "labelLong": "intent artifisiel",
+        "text": "Intent artifisiel pleustrek a erru e servij: adkavout titouroù, redoù labour LLM, priziañ, hag ar gouarnerezh en-dro dezho."
       },
       {
         "labelShort": "web",
@@ -60,7 +60,7 @@
         ]
       },
       {
-        "title": "Naouegezh artifisiel arloet",
+        "title": "Intent artifisiel pleustrek",
         "items": [
           "Chadennoù adkavout titouroù, redoù labour LLM, ajanted, hag ostilhoù priziañ a dap an argiladurioù a-raok hoc'h implijerien.",
           "Strategiezh an NA evit ar renerezh: kartennoù-hent degemer, priziañ ar barregezhioù, sevel pe brenañ.",
