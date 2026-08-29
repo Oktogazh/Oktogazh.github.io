@@ -1,66 +1,71 @@
-# 📅 Meeting Minutes structure
+# oktogazh.github.io
 
-```md
-# Meeting Minutes - 2023-09-01
+The personal site, notebook and Zettelkasten of Alan Kersaudy — published at
+**https://oktogazh.github.io**.
 
-## Attendees
-The usual suspects.
+It is one directory doing three jobs at once:
 
-## Agenda
-1. Discuss progress on research question.
-2. Review code changes.
-3. Plan next steps.
+- **An Obsidian vault.** `src/content/` is opened directly in Obsidian and used as a
+  Zettelkasten: atomic notes, one dashboard note that links them together, and a
+  private area that never leaves the machine.
+- **An Astro site.** The same folder is an Astro content collection, so every public
+  note is also a page.
+- **A GitHub Pages deployment.** Pushing to `master` runs
+  `.github/workflows/deploy.yml` and publishes the built site.
 
-## Discussion
-- Research question refined to focus on XYZ.
-- Code review completed; minor adjustments suggested.
-- Next steps: Implement feature ABC and prepare for next meeting.
+Notes are written in English, French, Welsh and Breton, sometimes in the same page.
 
-## Action Items
-- [Alan]: Implement feature ABC by next meeting.
-- [Bill]: Review and provide feedback on feature ABC.
+## Layout
 
 ```
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── content/            # the vault
+│   ├── posts/          # notes → /posts/<slug>
+│   ├── indices/main.md # the hub, rendered at /blog
+│   ├── assets/         # images and PDFs used by notes
+│   └── prevez/         # private, gitignored, never published
+├── content.config.ts   # collection schemas (strict)
+├── pages/              # /, /blog, /posts/[slug], /janko-piano
+├── layouts/            # BaseLayout.astro — article chrome
+├── components/         # HomePage.svelte and friends
+├── lib/janko/          # the Jankó piano app
+└── style/snippets/     # CSS shared with Obsidian
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Writing a note
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```yaml
+---
+title: The title, in the note's own language
+date: 2026-08-29
+---
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+Those are the only frontmatter keys the schema accepts (plus an optional
+`cssclasses`); anything else fails the build. Filenames are kebab-case and become the
+URL slug. Link notes with markdown links — `[label](/posts/slug)` — and add new notes
+to `src/content/indices/main.md` so they can be found.
 
-## 🧞 Commands
+Math is KaTeX (`$…$`), diagrams are Mermaid fenced blocks, code blocks are rendered by
+Expressive Code.
 
-All commands are run from the root of the project, from a terminal:
+## Commands
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| Command | Action |
+| :--- | :--- |
+| `npm install` | install dependencies |
+| `npm run dev` | dev server on http://localhost:4321 |
+| `npm run build` | `astro check` then build to `./dist/` |
+| `npm run preview` | serve the built site locally |
 
-## 👀 Want to learn more?
+Requires Node 20+ (developed on Node 22).
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Working with Claude Code
 
+`CLAUDE.md` documents the conventions, the public/private boundary and the git policy.
+`.claude/commands/` holds `/new-post`, `/link` and `/publish`.
 
+## Stack
+
+Astro 5 · MDX · Svelte 5 · Tailwind · remark-math + rehype-katex · remark-mermaidjs ·
+astro-expressive-code
