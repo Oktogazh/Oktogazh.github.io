@@ -57,6 +57,12 @@ cssclasses:
 	- [Leksis — the omnilingual dictionary](https://leksis.eu)
 	- [Data is better together](https://data-is-better-together-fineweb-c.hf.space/dataset/3c9e5c86-bd24-4977-88a1-6c40033ff144/annotation-mode?page=1&status=pending)
 
+# Formation
+
+- Programmes
+	- [L'IA au service des développeurs](/posts/formation-ia-developpeurs)
+	- [RAG et fine-tuning](/posts/formation-rag-finetuning)
+
 # Prederiañ
 
 - Testing and psychometrics
