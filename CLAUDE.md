@@ -51,6 +51,78 @@ Practical consequences, which matter more than the principle:
   migrations, link fixes) should be reviewable as a diff, because reviewing it in
   Obsidian is how it gets corrected.
 
+## The vault as an LLM-maintained wiki
+
+This vault is one instantiation of the "LLM wiki" pattern described in Karpathy's
+[LLM Wiki gist](https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f):
+instead of re-deriving knowledge from raw documents at query time, the agent
+**incrementally builds and maintains a persistent, interlinked markdown wiki** that sits
+between Alan and his sources. The knowledge gets compiled once and then kept current.
+Obsidian is the IDE, the agent is the programmer, the vault is the codebase.
+
+Read that gist's three layers onto this repo:
+
+- **Sources** — immutable. Read them, never rewrite them. Here they are papers, meeting
+  audio/notes, clipped articles, `src/content/assets/`, and whatever sits in `prevez/`.
+  There is **no dedicated `raw/` directory yet**; if a batch of sources ever needs one,
+  agree on the location with Alan first — it must stay outside the `posts` collection,
+  or the strict schema will fail the build.
+- **The wiki** — `src/content/posts/` plus `indices/main.md`. Atomic notes, index notes,
+  and the curated dashboard.
+- **The schema** — this file. It is what makes the agent a disciplined vault maintainer
+  rather than a generic chatbot. When a convention proves itself in practice, write it
+  down here in the same change.
+
+### Where this vault deliberately diverges
+
+The gist says the human never writes the wiki. **That is not true here, and must not
+become true.** This vault is a thinking space and a public Zettelkasten, not a compiled
+digest of sources. The split is by *kind of work*, not by layer:
+
+- **Alan writes** the arguments, the translations, the poetry, the prose voice, and the
+  judgement about what a note is actually about and whether it belongs on the dashboard.
+- **The agent writes** the bookkeeping: summaries of sources, cross-references, link
+  audits, frontmatter, migrations, locale drafts, dashboard rebuilds, and first drafts
+  that Alan then rewrites in his own voice.
+
+So: compound the *structure* aggressively, and leave the *prose* alone. See "Working
+style" below — it is the same rule stated from the other end.
+
+The other divergence is that this wiki is **public**. Every ingest is a publication act,
+so an ingest that would quote a source at length, or leak anything from `prevez/`, is not
+an ingest — it is a mistake. Summarise and link out; do not mirror.
+
+### Operations
+
+**Ingest.** Alan hands over a source (a paper, an article, a meeting, a conversation).
+Discuss the takeaways first, then: write or extend the note, add the links *out* to
+related notes, add the links *in* from the notes that should now point at it, and add it
+to `indices/main.md` only if it belongs on the curated hub. One source may legitimately
+touch several notes — say which ones before touching them. Prefer one source at a time
+over batch ingestion; the value is in Alan reading the result.
+
+**Query.** Answer from the vault: read `indices/main.md` for the map, `/notes` (or
+`ls src/content/posts/`) for the whole inventory, then drill in. Cite notes by their
+route (`/posts/slug`) so the answer is checkable. **A good answer is a candidate note.**
+When a reply synthesises three notes into something that did not exist before, offer to
+file it — that is how exploration compounds instead of dying in chat history. Offer;
+do not file public notes unasked.
+
+**Lint.** On request, health-check the vault: broken or `.md`-suffixed links, surviving
+`[[wiki-links]]`, frontmatter that will fail `astro check`, notes referenced from
+`indices/main.md` that no longer exist, concepts mentioned repeatedly but with no note of
+their own, notes that have grown two subjects and should split, and claims that a newer
+note contradicts. Report findings; apply only the mechanical fixes.
+
+⚠️ Orphan notes are **not** a lint finding here. Some notes are deliberately unlinked and
+some are deliberately absent from the dashboard — see "Known rough edges".
+
+**Log.** There is no `log.md`, and git history serves that purpose for now
+(`git log --oneline`). If a chronological log is ever wanted, it needs a home outside
+`posts/` (or a schema entry) and a fixed entry prefix like
+`## [2026-08-30] ingest | Title` so `grep '^## \[' log.md | tail -5` works. Ask before
+creating it.
+
 ## Languages
 
 Alan works in **English, French, Welsh (cy) and Breton (br)**. Notes exist in all four;
