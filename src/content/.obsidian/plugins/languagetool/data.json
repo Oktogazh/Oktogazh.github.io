@@ -13,6 +13,8 @@
     "combinatorics",
     "detokenized",
     "Doberaoueg",
+    "embedding",
+    "embeddings",
     "gichenik",
     "he",
     "Henrich",
@@ -24,7 +26,10 @@
     "solutionism",
     "unigram",
     "Unigram",
-    "Vertices"
+    "Vertices",
+    "agentique",
+    "Harnais",
+    "agentiques"
   ],
   "syncDictionary": false,
   "remoteDictionary": [],

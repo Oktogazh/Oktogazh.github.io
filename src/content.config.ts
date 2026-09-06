@@ -7,7 +7,7 @@ import { defineCollection, z } from 'astro:content';
  * It has a default so that a note added from Obsidian without the key still
  * builds; every note in the vault carries it explicitly.
  */
-const noteLanguage = z.enum(['br', 'cy', 'fr', 'en']).default('br');
+const noteLanguage = z.enum(['br', 'cy', 'fr', 'en', 'uk']).default('br');
 
 export const collections = {
 	indices: defineCollection({

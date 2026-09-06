@@ -5,6 +5,8 @@ cssclasses:
   - dashboard
 ---
 
+- [Deizlevr](/posts/deizlevr) — er yezh a teu din
+- [Blog](/posts/deizlevr) — in whatever language comes to me
 # Brezhoneg
 
 - Troidigezhioù
@@ -62,6 +64,9 @@ cssclasses:
 - Programmes
 	- [L'IA au service des développeurs](/posts/formation-ia-developpeurs)
 	- [RAG et fine-tuning](/posts/formation-rag-finetuning)
+	- [M365 Copilot](posts/m365)
+- Libre
+	- [La corruption](posts/la-corruption)
 
 # Prederiañ
 

@@ -4,15 +4,24 @@ lang: br
 cssclasses:
   - dashboard
 ---
-Beajoù:
-- [[Galway 2026]]
+## Dilojadenn (traoù da zegas eus/da Dz)
+- **Burev** Follennaoueg Rhodia + Geriadurioù
+- **Levrioù**: Person fr&br, IVG, Palimpsest franco breton,
+- **Gwerzhañ** Karger iPhone kozh
+- **Kibell** Champou
+- **Sonerezh** Piano + Telenn + Bodhràn + Tapis
+- **Kegin** Spisoù + (degas pilligoù) + Kontell amann + gwaskell kafe + sil evit an te
+- Judogi + dilhadoù neuial + ?
 
-Vlog:
-- [[geriadur]]
+
+
 
 Raktresoù:
-- [[glosbe]]
-- [[Index]]
+- Kregiñ da skrivañ war ar breinadur
+- Kregiñ da gazetenniñ
+- Hyperwhisper: Fable
+- [[Leksis Dashboard|Leksis]] : 
+- [[Index]] : 
 
 Blog:
 

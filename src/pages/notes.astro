@@ -9,7 +9,7 @@
  * nothing is orphaned.
  */
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import { DEFAULT_LOCALE, ENDONYM, t } from '@/i18n';
+import { DEFAULT_LOCALE, NOTE_ENDONYM, t } from '@/i18n';
 import { getCollection } from 'astro:content';
 
 const m = t(DEFAULT_LOCALE);
@@ -62,7 +62,7 @@ const fmt = (d: Date) =>
 			{
 				langs.map((l) => (
 					<button type="button" class="chip" data-filter="lang" data-value={l} aria-pressed="false">
-						<span lang={l}>{ENDONYM[l as keyof typeof ENDONYM] ?? l}</span>
+						<span lang={l}>{NOTE_ENDONYM[l] ?? l}</span>
 						<span class="chip__n">{langCounts[l]}</span>
 					</button>
 				))

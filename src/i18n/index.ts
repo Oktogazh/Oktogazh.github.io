@@ -52,5 +52,15 @@ export const ENDONYM: Record<Locale, string> = {
 	cy: 'Cymraeg',
 };
 
+/**
+ * Endonyms for the languages a *note* can be written in — a superset of the
+ * interface locales, because the notebook holds notes in languages the site
+ * chrome is not translated into. Used by the filter on /notes.
+ */
+export const NOTE_ENDONYM: Record<string, string> = {
+	...ENDONYM,
+	uk: 'Українська',
+};
+
 /** Roman numerals for the entry's senses. Four is as far as this ever needs to go. */
 export const SENSE_NUMERALS = ['I', 'II', 'III', 'IV'] as const;

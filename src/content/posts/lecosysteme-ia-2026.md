@@ -1,0 +1,54 @@
+---
+title: 2022-2026, panorama de l'écosystème IA, couches technologiques et principaux acteurs
+date: 2026-09-03
+---
+
+- Panorama de l'écosystème LLM : couches technologiques et principaux acteurs
+	- Les meilleurs modèles par acteurs :
+		- OpenAI avec  GPT-5.6 Sol : de la révolution à la confiance brisé, mais toujours leader
+		- Claude avec Fable 5 : le partenaire privilégié des entreprises 
+		- Gemini avec 3.7 Flash : la force de frappe de Google, plus rapide, mais 
+		- Mistral avec Medium 3.5 : le seul acteur européen, petits modèles open-weight, pas de modèles lourds
+		- DeepSeek avec DeepSeek-V4-Pro : le tsunami open-weight de 2024, montrant que l'open-weight est 6 mois derrière les models frontières
+		- Alibaba avec Qwen3.8-Max : 
+		- Moonshot avec Kimi K3 Max : Premier model open-weight, trois mois derrière les models frontières.
+	- Mesurer la qualité d'un modèle dans le cadre d'une compétition extrême
+		- Benchmarking : artificialanalysis.ai
+		- LLM Arena : 
+		- "Vibe check"
+		- Tests agentiques
+	- Les architectures évoluent lentement :
+		- Différentes catégories de modèles par nombre de paramètres
+		- Mixture of Experts (MoE)
+		- Transformer² (Kasana AI)
+	- Au-delà du modèle, les nouveaux critères de performance (optimisation du coût et de ) :
+		- Prompt Engineering (expertise métier)
+		- Context Engineering (RAG)
+		- Harness Engineering (connection aux agents, chain of thoughts, agents ReAct)
+		- Dans le future : le loop Engineering ?
+		- Une chose est sûre, le monde de l'IA ne se cantonne plus aux choix de modèle, l'écosystème évolue et les pratiques également, pourtant, tout continue d'évoluer très vite ! Ce que les experts prédisaient en 2025, 2024 ne s'est pas réalisé.
+	- Les outils agentique grand public :
+		- Programmation : Codex, Cursor, Claude Code, GitHub Copilot (plugin d'IDE), Managed Agents (Claude)
+		- Harnais agentiques (MCP) : ChatGPT, Claude, Deepseek Harness...
+		- Question : Quelle différence entre un harnais et un moteur d'inférence ?
+	- Les outils d'orchestration, exemple pour un pipeline RAG
+		- Introduction au RAG
+		- Moteurs d'inference : Ollama, vLLM
+		- Les routeurs : LlamaIndex, `RouterChain` de LangChain, Aurelio AI, différentes technologies pour différent cas de figures
+			- Question : Pourquoi utiliser un routeur ?
+		- Moteur de requête (query engine), le corps du pipeline RAG, exemple avec Haystack :
+			- Les retrieveurs, FAISS, bases de données vectorielles, graphiques...
+			- Étapes intermédiaires : filtre, reformulation de la question...
+			- Les générateurs
+			- Étapes intermédiaires : post-processing, syntétiseur...
+	- Autres outils d'orchestration pour la conception backend pour harnais agentique (au-delà du RAG) :
+		- Agent SDK
+		- Deepseek Harness
+		- LangChain
+		- Goose
+		- Différent harnais pour différent cas d'usages
+	- L'intérêt des acteurs open sources
+		- Coût, car non dépendant à des API externes
+		- Fine-tuning
+		- Maitrise de la chaine de valeur, indépendance et autonomie technologique
+- Travaux pratique Création d'un RAG simple avec Python
